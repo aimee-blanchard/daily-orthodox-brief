@@ -243,6 +243,28 @@
     padding: 0.8rem 1.25rem 1.1rem;
   }
   .cs-body[hidden] { display: none; }
+  /* Pinned footer under a section's scroll box (Service Texts notes). */
+  .cs-foot {
+    position: sticky; bottom: 0; z-index: 3;
+    background: var(--card-bg); border-top: 1px solid var(--rule);
+    border-radius: 0 0 14px 14px; padding: 0.55rem 1.25rem calc(0.6rem + env(safe-area-inset-bottom));
+  }
+  .cs:not(.open) > .cs-foot { display: none; }
+  .svc-foot:not(:has(.svc-notes)):has(.anchored-summary[hidden]) { display: none; }
+  .cs[data-cs="services"] > .cs-body { max-height: calc(100vh - 80px - 3.6rem); max-height: calc(100dvh - 80px - 3.6rem); }
+  .cs[data-cs="services"].notes-open > .cs-body { max-height: calc(100vh - 80px - 17rem); max-height: calc(100dvh - 80px - 17rem); }
+  .svc-notes-row { display: flex; align-items: center; gap: 0.6rem; }
+  .svc-notes-toggle {
+    flex: 1; appearance: none; background: none; border: none; padding: 0.35rem 0; cursor: pointer; text-align: left;
+    color: var(--ink); font-family: var(--sans); font-size: 0.9rem; display: flex; align-items: center; gap: 0.45rem;
+  }
+  .svc-notes-chev { width: 0.45rem; height: 0.45rem; border-right: 2px solid var(--accent); border-bottom: 2px solid var(--accent); transform: translateY(0.1rem) rotate(-135deg); transition: transform 0.2s; }
+  .svc-notes-toggle[aria-expanded="true"] .svc-notes-chev { transform: translateY(-0.1rem) rotate(45deg); }
+  .svc-notes-row .notes-doxy { width: auto; margin: 0; flex-shrink: 0; }
+  .svc-notes-panel { padding-top: 0.5rem; }
+  .svc-notes-panel .notes-textarea { min-height: 7rem; }
+  .svc-foot .anchored-summary { margin-top: 0; padding-top: 0; border-top: none; }
+  .svc-notes + .anchored-summary:not([hidden]) { margin-top: 0.35rem; font-size: 0.8rem; }
   .cs-body::-webkit-scrollbar { width: 8px; }
   .cs-body::-webkit-scrollbar-track { background: transparent; }
   .cs-body::-webkit-scrollbar-thumb { background-color: #ffffff; border-radius: 8px; }
@@ -770,13 +792,14 @@
 
   /* A collapsible section: thin bar (title, optional one-line meta, chevron),
      collapsed by default. See wireCollapsibles(). */
-  function renderCollapsible(id, title, meta, inner, extraClass) {
+  function renderCollapsible(id, title, meta, inner, extraClass, foot) {
     return (
       '<section class="card cs' + (extraClass ? " " + extraClass : "") + '" data-cs="' + esc(id) + '">' +
       '<button type="button" class="cs-bar" aria-expanded="false" aria-controls="cs-body-' + esc(id) + '">' +
       '<span class="cs-titles"><span class="cs-title">' + esc(title) + '</span><span class="cs-meta">' + (meta ? esc(meta) : "") + "</span></span>" +
       '<span class="cs-chevron" aria-hidden="true"></span></button>' +
       '<div class="cs-body" id="cs-body-' + esc(id) + '" role="region" aria-label="' + esc(title) + '" hidden>' + inner + "</div>" +
+      (foot || "") +
       "</section>"
     );
   }
@@ -971,8 +994,35 @@
     serviceOrder = lit.service_texts.map(function (s) { return s.label; });
     return renderCollapsible("services", "Service Texts", lit.service_texts.map(function (s) { return s.label; }).join(" · "),
       renderTextChooser("service", items) +
-      '<p class="notes-hint">Tip: press and hold any line (or tap &ldquo;&#xFF0B; Note&rdquo;) to add a note there.</p>' +
-      '<div class="anchored-summary" hidden></div>');
+      '<p class="notes-hint">Tip: press and hold any line (or tap &ldquo;&#xFF0B; Note&rdquo;) to add a note there.</p>',
+      "", renderServiceNotesFoot(dateStr));
+  }
+
+  /* Notes footer pinned under the Service Texts scroll box (opens and closes
+     with the section). Sundays: a "Liturgy Notes" toggle that slides the
+     notes box open, plus Send to Doxy. Other days: just the pinned-notes
+     summary + Send to Doxy, shown once there's a note. */
+  function renderServiceNotesFoot(dateStr) {
+    var sunday = parseISODate(dateStr).getDay() === 0;
+    var notes = "";
+    if (sunday) {
+      var storageKey = "liturgyNotes:" + dateStr;
+      notes =
+        '<div class="notes-card svc-notes">' +
+        '<div class="svc-notes-row">' +
+        '<button type="button" class="svc-notes-toggle" aria-expanded="false" aria-controls="svcNotesPanel">&#x1F4DD; Liturgy Notes<span class="svc-notes-chev" aria-hidden="true"></span></button>' +
+        '<button type="button" class="notes-doxy">Send to Doxy &#8599;</button>' +
+        "</div>" +
+        '<div class="svc-notes-panel" id="svcNotesPanel" hidden>' +
+        '<textarea class="notes-textarea" data-storage-key="' + esc(storageKey) + '" autocapitalize="sentences" aria-label="Liturgy notes"></textarea>' +
+        '<div class="notes-actions">' +
+        '<button type="button" class="notes-copy">Copy notes</button>' +
+        '<button type="button" class="notes-text-link">Text to myself</button>' +
+        "</div>" +
+        '<span class="notes-copy-status" aria-live="polite"></span>' +
+        "</div></div>";
+    }
+    return '<div class="cs-foot svc-foot">' + notes + '<div class="anchored-summary" hidden></div></div>';
   }
 
   function renderNotesSection(dateStr) {
@@ -1337,8 +1387,8 @@
     if (summary) {
       summary.hidden = !notes.length;
       summary.innerHTML = notes.length
-        ? "<span>&#x1F4DD; " + notes.length + (notes.length === 1 ? " note" : " notes") + " on this day&rsquo;s services</span>" +
-          '<button type="button" class="notes-doxy">Send to Doxy &#8599;</button>'
+        ? "<span>&#x1F4DD; " + notes.length + (notes.length === 1 ? " note" : " notes") + " pinned in the texts</span>" +
+          (document.querySelector(".svc-notes .notes-doxy") ? "" : '<button type="button" class="notes-doxy">Send to Doxy &#8599;</button>')
         : "";
     }
   }
@@ -1558,8 +1608,8 @@
     html += renderFeastSection(lit);
     html += renderSaintsSection(lit);
     html += renderStoriesSection(lit);
-    html += renderServiceLinksSection(lit, dateStr);
-    html += renderNotesSection(dateStr);
+    var servicesHtml = renderServiceLinksSection(lit, dateStr);
+    html += servicesHtml || renderNotesSection(dateStr);
     html += '<div id="catechismSlot"></div>';
     html += renderEventsSection(day);
     html += renderPrayerListSection();
@@ -1607,6 +1657,21 @@
     if (sec && !sec.classList.contains("open")) setSectionOpen(sec, true);
   }
   window.BriefSections = { render: renderCollapsible, open: function (id) { setSectionOpen(document.querySelector('.cs[data-cs="' + id + '"]'), true); }, ensureOpen: ensureSectionOpen, setOpen: setSectionOpen };
+  document.addEventListener("click", function (e) {
+    var t = e.target.closest && e.target.closest(".svc-notes-toggle");
+    if (!t) return;
+    var open = t.getAttribute("aria-expanded") !== "true";
+    t.setAttribute("aria-expanded", open ? "true" : "false");
+    document.getElementById("svcNotesPanel").hidden = !open;
+    t.closest(".cs").classList.toggle("notes-open", open);
+    if (open) {
+      var ta = document.querySelector("#svcNotesPanel textarea");
+      // keep the open notes box on screen
+      var foot = t.closest(".cs-foot");
+      if (foot.getBoundingClientRect().bottom > window.innerHeight) foot.scrollIntoView({ block: "end" });
+      ta.focus({ preventScroll: true });
+    }
+  });
   document.addEventListener("click", function (e) {
     var bar = e.target.closest && e.target.closest(".cs-bar");
     if (!bar) return;
