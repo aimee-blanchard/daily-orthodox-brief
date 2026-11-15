@@ -1,0 +1,61 @@
+{
+  "date": "2027-03-27",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": [
+      "Memorial Saturday"
+    ],
+    "saints": [
+      "Martyr Matrona of Thessalonica",
+      "Paul, Bishop of Corinth"
+    ],
+    "summary_title": "Memorial Saturday",
+    "stories": [
+      {
+        "title": "Martyr Matrona of Thessalonica",
+        "html": "<p>She was a servant of the Jewish wife of the governor of Thessalonica. When she refused to enter the synagogue with her mistress, she was beaten, then locked in a cell until she starved to death. Finally, her mistress ordered her body thrown from the roof of the house and left to lie in the open. Christians took her body and buried it honorably, and the bishop, Alexander, built a church over her grave.</p>"
+      }
+    ],
+    "fasting": {
+      "description": "Lenten Fast",
+      "abstentions": [
+        "meat",
+        "fish",
+        "dairy",
+        "eggs"
+      ]
+    },
+    "readings": [
+      {
+        "display": "1 Thessalonians 4.13-17",
+        "text": "But I would not have you to be ignorant, brethren, concerning them which are asleep, that ye sorrow not, even as others which have no hope. For if we believe that Jesus died and rose again, even so them also which sleep in Jesus will God bring with him. For this we say unto you by the word of the Lord, that we which are alive and remain unto the coming of the Lord shall not prevent them which are asleep. For the Lord himself shall descend from heaven with a shout, with the voice of the archangel, and with the trump of God: and the dead in Christ shall rise first: Then we which are alive and remain shall be caught up together with them in the clouds, to meet the Lord in the air: and so shall we ever be with the Lord."
+      },
+      {
+        "display": "Hebrews 3.12-16",
+        "text": "Take heed, brethren, lest there be in any of you an evil heart of unbelief, in departing from the living God. But exhort one another daily, while it is called To day; lest any of you be hardened through the deceitfulness of sin. For we are made partakers of Christ, if we hold the beginning of our confidence stedfast unto the end; While it is said, To day if ye will hear his voice, harden not your hearts, as in the provocation. For some, when they had heard, did provoke: howbeit not all that came out of Egypt by Moses."
+      },
+      {
+        "display": "John 5.24-30",
+        "text": "Verily, verily, I say unto you, He that heareth my word, and believeth on him that sent me, hath everlasting life, and shall not come into condemnation; but is passed from death unto life. Verily, verily, I say unto you, The hour is coming, and now is, when the dead shall hear the voice of the Son of God: and they that hear shall live. For as the Father hath life in himself; so hath he given to the Son to have life in himself; And hath given him authority to execute judgment also, because he is the Son of man. Marvel not at this: for the hour is coming, in the which all that are in the graves shall hear his voice, And shall come forth; they that have done good, unto the resurrection of life; and they that have done evil, unto the resurrection of damnation. I can of mine own self do nothing: as I hear, I judge: and my judgment is just; because I seek not mine own will, but the will of the Father which hath sent me."
+      },
+      {
+        "display": "Mark 1.35-44",
+        "text": "And in the morning, rising up a great while before day, he went out, and departed into a solitary place, and there prayed. And Simon and they that were with him followed after him. And when they had found him, they said unto him, All men seek for thee. And he said unto them, Let us go into the next towns, that I may preach there also: for therefore came I forth. And he preached in their synagogues throughout all Galilee, and cast out devils. And there came a leper to him, beseeching him, and kneeling down to him, and saying unto him, If thou wilt, thou canst make me clean. And Jesus, moved with compassion, put forth his hand, and touched him, and saith unto him, I will; be thou clean. And as soon as he had spoken, immediately the leprosy departed from him, and he was cleansed. And he straitly charged him, and forthwith sent him away; And saith unto him, See thou say nothing to any man: but go thy way, shew thyself to the priest, and offer for thy cleansing those things which Moses commanded, for a testimony unto them."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 2
+  },
+  "events": [
+    {
+      "title": "Great Vespers",
+      "start": "2027-03-27 17:00:00",
+      "end": "2027-03-27 18:00:00",
+      "url": "https://www.constantinehelen.com/event/great-vespers/2027-03-27/"
+    }
+  ]
+}

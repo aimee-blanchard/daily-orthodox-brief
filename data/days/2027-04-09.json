@@ -1,0 +1,51 @@
+{
+  "date": "2027-04-09",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": null,
+    "saints": [
+      "Martyr Eupsychius of Caesarea in Cappadocia",
+      "Raphael, Nicholas, Irene, & Olympias of Mytilene",
+      "Vadim the Righteous of Persia"
+    ],
+    "summary_title": "Martyr Eupsychius of Caesarea in Cappadocia; Raphael, Nicholas, Irene, & Olympias of Mytilene; Vadim the Righteous of Persia",
+    "stories": [
+      {
+        "title": "Martyr Eupsychius of Caesarea in Cappadocia",
+        "html": "<p>This holy martyr was a married man, living in Cappadocia. During the reign of Julian the Apostate he, along with some other Christians, destroyed the pagan temple to the goddess Fortuna. (The <i>Prologue</i> says that it was his wedding day). For this he and his companions were cruelly tortured, then beheaded.</p>\n<p>At that time St Basil the Great governed the Church in that part of Cappadocia. When the apostate Emperor, going to fight the Persians, came to the town in which Eupsychius was martyred, St Basil went to meet him, bringing three barley loaves as a sign of honor and welcome. The Emperor, ever hostile to Christians, ordered that the bishop be given a fistful of hay in return. Saint Basil said to the Emperor \u2018You ridicule us now, O King; we bring you bread, by which we are fed, and you give us miserable food that you, with all your power, are unable to turn into nourishment for men.\u2019 The Emperor perished in the Persian campaign.</p>"
+      }
+    ],
+    "fasting": {
+      "description": "Lenten Fast",
+      "abstentions": [
+        "meat",
+        "fish",
+        "dairy",
+        "eggs",
+        "wine",
+        "oil"
+      ]
+    },
+    "readings": [
+      {
+        "display": "Isaiah 29.13-23",
+        "text": "Wherefore the Lord said, Forasmuch as this people draw near me with their mouth, and with their lips do honour me, but have removed their heart far from me, and their fear toward me is taught by the precept of men: Therefore, behold, I will proceed to do a marvellous work among this people, even a marvellous work and a wonder: for the wisdom of their wise men shall perish, and the understanding of their prudent men shall be hid. Woe unto them that seek deep to hide their counsel from the LORD, and their works are in the dark, and they say, Who seeth us? and who knoweth us? Surely your turning of things upside down shall be esteemed as the potter\u2019s clay: for shall the work say of him that made it, He made me not? or shall the thing framed say of him that framed it, He had no understanding? Is it not yet a very little while, and Lebanon shall be turned into a fruitful field, and the fruitful field shall be esteemed as a forest? And in that day shall the deaf hear the words of the book, and the eyes of the blind shall see out of obscurity, and out of darkness. The meek also shall increase their joy in the LORD, and the poor among men shall rejoice in the Holy One of Israel. For the terrible one is brought to nought, and the scorner is consumed, and all that watch for iniquity are cut off: That make a man an offender for a word, and lay a snare for him that reproveth in the gate, and turn aside the just for a thing of nought. Therefore thus saith the LORD, who redeemed Abraham, concerning the house of Jacob, Jacob shall not now be ashamed, neither shall his face now wax pale. But when he seeth his children, the work of mine hands, in the midst of him, they shall sanctify my name, and sanctify the Holy One of Jacob, and shall fear the God of Israel."
+      },
+      {
+        "display": "Genesis 12.1-7",
+        "text": "Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father\u2019s house, unto a land that I will shew thee: And I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing: And I will bless them that bless thee, and curse him that curseth thee: and in thee shall all families of the earth be blessed. So Abram departed, as the LORD had spoken unto him; and Lot went with him: and Abram was seventy and five years old when he departed out of Haran. And Abram took Sarai his wife, and Lot his brother\u2019s son, and all their substance that they had gathered, and the souls that they had gotten in Haran; and they went forth to go into the land of Canaan; and into the land of Canaan they came. And Abram passed through the land unto the place of Sichem, unto the plain of Moreh. And the Canaanite was then in the land. And the LORD appeared unto Abram, and said, Unto thy seed will I give this land: and there builded he an altar unto the LORD, who appeared unto him."
+      },
+      {
+        "display": "Proverbs 14.15-26",
+        "text": "The simple believeth every word: but the prudent man looketh well to his going. A wise man feareth, and departeth from evil: but the fool rageth, and is confident. He that is soon angry dealeth foolishly: and a man of wicked devices is hated. The simple inherit folly: but the prudent are crowned with knowledge. The evil bow before the good; and the wicked at the gates of the righteous. The poor is hated even of his own neighbour: but the rich hath many friends. He that despiseth his neighbour sinneth: but he that hath mercy on the poor, happy is he. Do they not err that devise evil? but mercy and truth shall be to them that devise good. In all labour there is profit: but the talk of the lips tendeth only to penury. The crown of the wise is their riches: but the foolishness of fools is folly. A true witness delivereth souls: but a deceitful witness speaketh lies. In the fear of the LORD is strong confidence: and his children shall have a place of refuge."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 2
+  },
+  "events": []
+}

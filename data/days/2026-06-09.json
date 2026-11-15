@@ -1,0 +1,56 @@
+{
+  "date": "2026-06-09",
+  "liturgical": {
+    "status": "ok",
+    "source": "antiochian",
+    "feasts": [
+      "2Nd Tuesday After Pentecost"
+    ],
+    "saints": [
+      "Cyril",
+      "Patriarch of Alexandria",
+      "3 Virgin-Martyrs of Chios",
+      "5 Nuns Beheaded in Persia: Thecla",
+      "Mariamne",
+      "Martha",
+      "Mary",
+      "& Enmatha",
+      "Righteous Father Columba of Iona",
+      "Righteous Father Cyril of Belozersk"
+    ],
+    "summary_title": "Cyril, Patriarch of Alexandria, 3 Virgin-Martyrs of Chios, 5 Nuns Beheaded in Persia: Thecla, Mariamne, Martha, Mary, & Enmatha, Righteous Father Columba of Iona, Righteous Father Cyril of Belozersk",
+    "stories": [],
+    "fasting": {
+      "description": "Abstain From Meat, Dairy, Eggs",
+      "abstentions": [
+        "meat",
+        "dairy",
+        "eggs"
+      ]
+    },
+    "readings": [
+      {
+        "display": "St. Paul's Letter to the Romans 4:4-12",
+        "text": "Brethren, to one who works, his wages are not reckoned as a gift but as his due. And to one who does not work but trusts him who justifies the ungodly, his faith is reckoned as righteousness. So also David pronounces a blessing upon the man to whom God reckons righteousness apart from works: \"Blessed are those whose iniquities are forgiven, and whose sins are covered; blessed is the man against whom the Lord will not reckon his sin.\" Is this blessing pronounced only upon the circumcised, or also upon the uncircumcised? We say that faith was reckoned to Abraham as righteousness. How then was it reckoned to him? Was it before or after he had been circumcised? It was not after, but before he was circumcised. He received circumcision as a sign or seal of the righteousness which he had by faith while he was still uncircumcised. The purpose was to make him the father of all who believe without being circumcised and who thus have righteousness reckoned to them, and likewise the father of the circumcised who are not merely circumcised but also follow the example of the faith which our father Abraham had before he was circumcised."
+      },
+      {
+        "display": "Matthew 7:15-21",
+        "text": "The Lord said, \"Beware of false prophets, who come to you in sheep's clothing but inwardly are ravenous wolves. You will know them by their fruits. Are grapes gathered from thorns, or figs from thistles? So, every sound tree bears good fruit, but the bad tree bears evil fruit. A sound tree cannot bear evil fruit, nor can a bad tree bear good fruit. Every tree that does not bear good fruit is cut down and thrown into the fire. Thus you will know them by their fruits. Not every one who says to me, 'Lord, Lord, ' shall enter the kingdom of heaven, but he who does the will of my Father who is in heaven."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [
+      {
+        "commemoration": "Righteous Father Columba of Iona",
+        "title": "St. Columba",
+        "url": "https://www.newadvent.org/cathen/04136a.htm",
+        "excerpt": "Abbot of Iona, b. at Garten, County Donegal, Ireland, 7 December, 521; d. 9 June, 597. He belonged to the Clan O'Donnell, and was of royal descent. His father's name was Fedhlimdh and that of his mother Eithne. On his father's side he was great-great-grandson of Niall of the Nine Hostages, an Irish king of the fourth century. His baptismal name was Colum, which signifies a dove, hence the latinized form Columba.",
+        "more": "Abbot of Iona, b. at Garten, County Donegal, Ireland, 7 December, 521; d. 9 June, 597. He belonged to the Clan O'Donnell, and was of royal descent. His father's name was Fedhlimdh and that of his mother Eithne. On his father's side he was great-great-grandson of Niall of the Nine Hostages, an Irish king of the fourth century. His baptismal name was Colum, which signifies a dove, hence the latinized form Columba. It assumes another form in Colum-cille, the suffix meaning \"of the Churches\". He was baptized at Tulach-Dubhglaise, now Temple-Douglas, by a priest named Cruithnechan, who afterwards became his tutor or foster-father. When sufficiently advanced in letters he entered the monastic school of Movilla under St. Finnian who had studied at St. Ninian's \"Magnum Monasterium\" on the shores of Galloway. Columba at Movilla monastic life and received the diaconate. In the same place his sanctity first manifested itself by miracles. By his prayers, tradition says, he converted water into wine for the Holy Sacrifice (Adam., II, i). Having completed his training at Movilla, he travelled southwards into Leinster, where he became a pupil of an aged bard named Gemman. On leaving him, Columba entered the monastery of Clonard, governed at that time by Finnian, a remarkable, like his namesake of Movilla, for sanctity and learning. Here he imbibed the traditions of the Welsh Church, for Finnian had been trained in the schools of St. David. Here also he became one those twelve Clonard disciples known in subsequent history as the Twelve Apostles of Ireland. About this same time he was promoted to the priesthood by Bishop Etchen of Clonfad. The story that St. Finnian wished Columba to be consecrated bishop, but through a mistake only priest's orders were conferred, is regarded by competent authorities as the invention of a later age (Reeves, Adam., 226).\n\nAnother preceptor of Columba was St. Mobhi, whose monastery at Glasnevin was frequented by such famous men as St. Canice, St. Comgall, and St. Ciaran. A pestilence which devastated Ireland in 544 caused the dispersion of Mobhi's disciples, and Columba returned to Ulster, the land of his kindred. The following years were marked by the foundation of several important monasteries, Derry, Durrow, and Kells. Derry and Durrow were always specially dear to Columba. While at Derry it is said that he planned a pilgrimage to Rome and Jerusalem, but did not proceed farther than Tours. Thence he brought a copy of those gospels that had lain on the bosom of St. Martin for the space of 100 years. This relic was deposited in Derry (Skene, Celtic Scotland, II, 483). Columba left Ireland and passed over into Scotland in 563. The motives for this migration have been frequently discussed. Bede simply says: \"Venit de Hibernia . . . praedicaturus verbum Dei\" (H. E., III, iv); Adarnnan: \"pro Christo perigrinari volens enavigavit\" (Praef., II). Later writers state that his departure was due to the fact that he had induced the clan Neill to rise and engage in battle against King Diarmait at Cooldrevny in 561."
+      }
+    ],
+    "newadvent_version": 2
+  },
+  "events": []
+}

@@ -1,0 +1,57 @@
+{
+  "date": "2027-03-15",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": [
+      "Beginning of the Great Fast"
+    ],
+    "saints": [
+      "Martyr Agapius and Seven with Him",
+      "Manuel the New Martyr of Crete",
+      "Holy Martyr Alexander (270-275)"
+    ],
+    "summary_title": "Beginning of the Great Fast",
+    "stories": [
+      {
+        "title": "Martyr Agapius and Seven with Him",
+        "html": "<p>These holy Martyrs contested during the reign of Diocletian 284-305), in Palestinian Caesarea. All eight were very young; only Agapius was a baptized Christian. Urbanus, the governor of the region, observed a pagan festival by having some Christians publicly tortured and executed: some by fire, others on the gallows, some by being thrown to wild beasts in the arena. Six of the youths (Timolaus, Dionysius, Romulus, Plesius, and two named Alexander), seeing the patience and serenity with which the Christians endured their torments, were reached by the Holy Spirit and, tying their own hands, presented themselves to Urbanus saying \u2018We too are Christians!\u2019 They were immediately cast into prison. A few days later Agapius, a prominent Christian in that town, also presented himself along with a second Dionysius. All eight were beheaded together at Caesarea. Their martyrdom is recorded in Eusebius\u2019 <i>Ecclesiastical History.</i></p>"
+      },
+      {
+        "title": "Holy Martyr Alexander (270-275)",
+        "html": "<p>\u201cHe was from the town of Side in Pamphylia. The Emperor Aurelian\u2019s governor asked him who he was, to which Alexander replied that he was a pastor of the flock of Christ. \u2018And where is this flock of Christ\u2019, further enquired the evil and suspicious governor. Alexander replied: \u2018Over the whole world live the people whom Christ the Lord created, among whom those who believe in Him are His sheep, but those who have fallen away from their Creator, who are enslaved to creation and the work of men\u2019s hands, to dead idols, such as you, are strangers to His flock, and at the Dreadful Judgement of God will be put to the left with the goats.\u2019 The wicked judge first commanded that he be whipped with iron flails and then thrown into a burning furnace. But the fire could in no way harm him. Then he was flayed and after that thrown to the wild beasts. But the beasts would not touch him. At last the governor ordered that he be beheaded. But as soon as the judge pronounced the sentence, an evil spirit took hold of him and made him rabid. He was led howling to his gods, the idols, but on the way the evil spirit wrested his wicked soul from him. St Alexander suffered between 270 and 275.\u2019 (<i>Prologue</i>)</p>\n<p>He is commemorated March 14 on the Greek calendar.</p>"
+      }
+    ],
+    "fasting": {
+      "description": "Lenten Fast",
+      "abstentions": [
+        "meat",
+        "fish",
+        "dairy",
+        "eggs",
+        "wine",
+        "oil"
+      ]
+    },
+    "readings": [
+      {
+        "display": "Isaiah 1.1-20",
+        "text": "The vision of Isaiah the son of Amoz, which he saw concerning Judah and Jerusalem in the days of Uzziah, Jotham, Ahaz, and Hezekiah, kings of Judah. Hear, O heavens, and give ear, O earth: for the LORD hath spoken, I have nourished and brought up children, and they have rebelled against me. The ox knoweth his owner, and the ass his master\u2019s crib: but Israel doth not know, my people doth not consider. Ah sinful nation, a people laden with iniquity, a seed of evildoers, children that are corrupters: they have forsaken the LORD, they have provoked the Holy One of Israel unto anger, they are gone away backward. Why should ye be stricken any more? ye will revolt more and more: the whole head is sick, and the whole heart faint. From the sole of the foot even unto the head there is no soundness in it; but wounds, and bruises, and putrifying sores: they have not been closed, neither bound up, neither mollified with ointment. Your country is desolate, your cities are burned with fire: your land, strangers devour it in your presence, and it is desolate, as overthrown by strangers. And the daughter of Zion is left as a cottage in a vineyard, as a lodge in a garden of cucumbers, as a besieged city. Except the LORD of hosts had left unto us a very small remnant, we should have been as Sodom, and we should have been like unto Gomorrah. Hear the word of the LORD, ye rulers of Sodom; give ear unto the law of our God, ye people of Gomorrah. To what purpose is the multitude of your sacrifices unto me? saith the LORD: I am full of the burnt offerings of rams, and the fat of fed beasts; and I delight not in the blood of bullocks, or of lambs, or of he goats. When ye come to appear before me, who hath required this at your hand, to tread my courts? Bring no more vain oblations; incense is an abomination unto me; the new moons and sabbaths, the calling of assemblies, I cannot away with; it is iniquity, even the solemn meeting. Your new moons and your appointed feasts my soul hateth: they are a trouble unto me; I am weary to bear them. And when ye spread forth your hands, I will hide mine eyes from you: yea, when ye make many prayers, I will not hear: your hands are full of blood. Wash you, make you clean; put away the evil of your doings from before mine eyes; cease to do evil; Learn to do well; seek judgment, relieve the oppressed, judge the fatherless, plead for the widow. Come now, and let us reason together, saith the LORD: though your sins be as scarlet, they shall be as white as snow; though they be red like crimson, they shall be as wool. If ye be willing and obedient, ye shall eat the good of the land: But if ye refuse and rebel, ye shall be devoured with the sword: for the mouth of the LORD hath spoken it."
+      },
+      {
+        "display": "Genesis 1.1-13",
+        "text": "In the beginning God created the heaven and the earth. And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters. And God said, Let there be light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day. And God said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters. And God made the firmament, and divided the waters which were under the firmament from the waters which were above the firmament: and it was so. And God called the firmament Heaven. And the evening and the morning were the second day. And God said, Let the waters under the heaven be gathered together unto one place, and let the dry land appear: and it was so. And God called the dry land Earth; and the gathering together of the waters called he Seas: and God saw that it was good. And God said, Let the earth bring forth grass, the herb yielding seed, and the fruit tree yielding fruit after his kind, whose seed is in itself, upon the earth: and it was so. And the earth brought forth grass, and herb yielding seed after his kind, and the tree yielding fruit, whose seed was in itself, after his kind: and God saw that it was good. And the evening and the morning were the third day."
+      },
+      {
+        "display": "Proverbs 1.1-20",
+        "text": "The proverbs of Solomon the son of David, king of Israel; To know wisdom and instruction; to perceive the words of understanding; To receive the instruction of wisdom, justice, and judgment, and equity; To give subtilty to the simple, to the young man knowledge and discretion. A wise man will hear, and will increase learning; and a man of understanding shall attain unto wise counsels: To understand a proverb, and the interpretation; the words of the wise, and their dark sayings. The fear of the LORD is the beginning of knowledge: but fools despise wisdom and instruction. My son, hear the instruction of thy father, and forsake not the law of thy mother: For they shall be an ornament of grace unto thy head, and chains about thy neck. My son, if sinners entice thee, consent thou not. If they say, Come with us, let us lay wait for blood, let us lurk privily for the innocent without cause: Let us swallow them up alive as the grave; and whole, as those that go down into the pit: We shall find all precious substance, we shall fill our houses with spoil: Cast in thy lot among us; let us all have one purse: My son, walk not thou in the way with them; refrain thy foot from their path: For their feet run to evil, and make haste to shed blood. Surely in vain the net is spread in the sight of any bird. And they lay wait for their own blood; they lurk privily for their own lives. So are the ways of every one that is greedy of gain; which taketh away the life of the owners thereof. Wisdom crieth without; she uttereth her voice in the streets:"
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 2
+  },
+  "events": []
+}

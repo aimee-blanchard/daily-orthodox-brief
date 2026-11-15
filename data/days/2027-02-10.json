@@ -55,7 +55,9 @@
     ],
     "service_texts": [],
     "synaxarion": null,
-    "great_feast": null
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 2
   },
   "events": [
     {

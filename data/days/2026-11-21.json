@@ -46,7 +46,9 @@
     "great_feast": {
       "name": "Presentation of the Theotokos in the Temple",
       "is_pascha": false
-    }
+    },
+    "newadvent": [],
+    "newadvent_version": 2
   },
   "events": [
     {

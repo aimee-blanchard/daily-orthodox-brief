@@ -1,0 +1,58 @@
+{
+  "date": "2027-05-09",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": [
+      "St Thomas Sunday"
+    ],
+    "saints": [
+      "Prophet Isaiah",
+      "Trans. Rel. St Nicholas the Wonderworker",
+      "Elder Hieronymos of Simonopetra",
+      "Monk-martyr Nicholas who lived in Vuneni, of Larissa in Thessaly",
+      "Epimachos the New Martyr of Alexandria",
+      "The New Martyrs of Novo Selo, Bulgaria",
+      "Holy Martyr Christopher (3rd c.)"
+    ],
+    "summary_title": "Antipascha: 2nd Sunday of Pascha",
+    "stories": [
+      {
+        "title": "Prophet Isaiah",
+        "html": "<p>He is counted as the greatest of the Old Testament Prophets. His incomparably beautiful verses foretell Christ in many places. He chastised, comforted, and counseled the pious king Hezekiah; but when he denounced the impiety and lawlessness of Hezekiah\u2019s son Manasseh, he was sawn in two outside Jerusalem, receiving a martyr\u2019s crown. His name means \u201cThe Lord is helper.\u201d</p>\n<p>The Fifth Biblical Ode, \u201cOut of the night my spirit waketh at dawn unto Thee, O God\u2026\u201d is taken from Isaiah.</p>"
+      },
+      {
+        "title": "Trans. Rel. St Nicholas the Wonderworker",
+        "html": "<p>In 1087 the Saint\u2019s relics were taken from Myra in Lycia (on the southern coast of present-day Turkey) to the town of Bari in Italy. This was done due to a Muslim attack on Lycia. At that time Bari was Orthodox and under the administration of the Patriarch of Constantinople. The Saint\u2019s relics now lie in a Roman Catholic church in Bari; each year the casket containing the relics is opened by a Roman Catholic and Orthodox bishop together, and quantities of fragrant myrrh are removed, for the healing and encouragement of the faithful.</p>"
+      },
+      {
+        "title": "Holy Martyr Christopher (3rd c.)",
+        "html": "<p>He was originally named Reprobus. In the time of the persecutions under the Emperor Decius, Reprobus, seeing the sufferings of the Christians, rebuked the rulers for their cruelty. The governor sent soldiers to arrest him, but he converted them and was baptised along with them, receiving the name Christopher. After he was brought before the governor, he was imprisoned with two harlots sent to seduce him, but he converted them also. He, the soldiers, and the former harlots were subjected to torture and finally beheaded.</p>\n<p>It is this Saint Christopher who is portrayed on the medals often worn for protection in the Latin West. The image of him carrying the child Jesus comes from his name, which means \u2018Christ-bearer,\u2019 not from any incident in his life.</p>"
+      }
+    ],
+    "fasting": null,
+    "readings": [
+      {
+        "display": "Matthew 28.16-20",
+        "text": "Then the eleven disciples went away into Galilee, into a mountain where Jesus had appointed them. And when they saw him, they worshipped him: but some doubted. And Jesus came and spake unto them, saying, All power is given unto me in heaven and in earth. Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost: Teaching them to observe all things whatsoever I have commanded you: and, lo, I am with you alway, even unto the end of the world. Amen."
+      },
+      {
+        "display": "Acts 5.12-20",
+        "text": "And by the hands of the apostles were many signs and wonders wrought among the people; (and they were all with one accord in Solomon\u2019s porch. And of the rest durst no man join himself to them: but the people magnified them. And believers were the more added to the Lord, multitudes both of men and women.) Insomuch that they brought forth the sick into the streets, and laid them on beds and couches, that at the least the shadow of Peter passing by might overshadow some of them. There came also a multitude out of the cities round about unto Jerusalem, bringing sick folks, and them which were vexed with unclean spirits: and they were healed every one. Then the high priest rose up, and all they that were with him, (which is the sect of the Sadducees,) and were filled with indignation, And laid their hands on the apostles, and put them in the common prison. But the angel of the Lord by night opened the prison doors, and brought them forth, and said, Go, stand and speak in the temple to the people all the words of this life."
+      },
+      {
+        "display": "John 20.19-31",
+        "text": "Then the same day at evening, being the first day of the week, when the doors were shut where the disciples were assembled for fear of the Jews, came Jesus and stood in the midst, and saith unto them, Peace be unto you. And when he had so said, he shewed unto them his hands and his side. Then were the disciples glad, when they saw the Lord. Then said Jesus to them again, Peace be unto you: as my Father hath sent me, even so send I you. And when he had said this, he breathed on them, and saith unto them, Receive ye the Holy Ghost: Whose soever sins ye remit, they are remitted unto them; and whose soever sins ye retain, they are retained. But Thomas, one of the twelve, called Didymus, was not with them when Jesus came. The other disciples therefore said unto him, We have seen the Lord. But he said unto them, Except I shall see in his hands the print of the nails, and put my finger into the print of the nails, and thrust my hand into his side, I will not believe. And after eight days again his disciples were within, and Thomas with them: then came Jesus, the doors being shut, and stood in the midst, and said, Peace be unto you. Then saith he to Thomas, Reach hither thy finger, and behold my hands; and reach hither thy hand, and thrust it into my side: and be not faithless, but believing. And Thomas answered and said unto him, My Lord and my God. Jesus saith unto him, Thomas, because thou hast seen me, thou hast believed: blessed are they that have not seen, and yet have believed. And many other signs truly did Jesus in the presence of his disciples, which are not written in this book: But these are written, that ye might believe that Jesus is the Christ, the Son of God; and that believing ye might have life through his name."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": {
+      "name": "Pascha",
+      "is_pascha": true
+    },
+    "newadvent": [],
+    "newadvent_version": 2
+  },
+  "events": []
+}

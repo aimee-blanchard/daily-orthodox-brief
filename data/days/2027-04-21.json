@@ -1,0 +1,69 @@
+{
+  "date": "2027-04-21",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": null,
+    "saints": [
+      "Hieromartyr Januarius and Companions",
+      "Our Holy Father Maximian, Patriarch of Constantinople",
+      "Theodore the Holy Martyr & his mother Philippa of Perge",
+      "Alexandra the Martyr",
+      "Anastasios the Monk of Sinai",
+      "Beuno, Abbot of Clynnog"
+    ],
+    "summary_title": "Hieromartyr Januarius and Companions; Our Holy Father Maximian, Patriarch of Constantinople; Theodore the Holy Martyr & his mother Philippa of Perge",
+    "stories": [
+      {
+        "title": "Hieromartyr Januarius and Companions",
+        "html": "<p>These martyrs gave glorious witness to Christ during the persecutions of Diocletian. St Januarius, Bishop of Benevento in Italy, was arrested and cast into a burning furnace, but he stood in the midst of the flames, singing praises to God, and emerged unharmed. After other cruel tortures, he was bound and cast in prison in Pozzuoli, along with his deacon Faustus and his reader Desiderius. With them in prison were two deacons from Pozzuoli, Proclus and Sossus, and two laymen, Eutychius and Acutius. All seven were cast to wild beasts; but when the animals came near the Saints, they fell affectionately at their feet and refused to harm them. Finally, all seven Christians were beheaded. Some Christians from Naples secretly took the body of Januarius and buried it in their church. Countless wonders have been worked at his grave, including the restoration of a dead man to life.</p>"
+      }
+    ],
+    "fasting": {
+      "description": "Lenten Fast",
+      "abstentions": [
+        "meat",
+        "fish",
+        "dairy",
+        "eggs",
+        "wine",
+        "oil"
+      ]
+    },
+    "readings": [
+      {
+        "display": "Isaiah 58.1-11",
+        "text": "Cry aloud, spare not, lift up thy voice like a trumpet, and shew my people their transgression, and the house of Jacob their sins. Yet they seek me daily, and delight to know my ways, as a nation that did righteousness, and forsook not the ordinance of their God: they ask of me the ordinances of justice; they take delight in approaching to God. Wherefore have we fasted, say they, and thou seest not? wherefore have we afflicted our soul, and thou takest no knowledge? Behold, in the day of your fast ye find pleasure, and exact all your labours. Behold, ye fast for strife and debate, and to smite with the fist of wickedness: ye shall not fast as ye do this day, to make your voice to be heard on high. Is it such a fast that I have chosen? a day for a man to afflict his soul? is it to bow down his head as a bulrush, and to spread sackcloth and ashes under him? wilt thou call this a fast, and an acceptable day to the LORD? Is not this the fast that I have chosen? to loose the bands of wickedness, to undo the heavy burdens, and to let the oppressed go free, and that ye break every yoke? Is it not to deal thy bread to the hungry, and that thou bring the poor that are cast out to thy house? when thou seest the naked, that thou cover him; and that thou hide not thyself from thine own flesh? Then shall thy light break forth as the morning, and thine health shall spring forth speedily: and thy righteousness shall go before thee; the glory of the LORD shall be thy rereward. Then shalt thou call, and the LORD shall answer; thou shalt cry, and he shall say, Here I am. If thou take away from the midst of thee the yoke, the putting forth of the finger, and speaking vanity; And if thou draw out thy soul to the hungry, and satisfy the afflicted soul; then shall thy light rise in obscurity, and thy darkness be as the noonday: And the LORD shall guide thee continually, and satisfy thy soul in drought, and make fat thy bones: and thou shalt be like a watered garden, and like a spring of water, whose waters fail not."
+      },
+      {
+        "display": "Genesis 43.26-31, 45.1-16",
+        "text": "And when Joseph came home, they brought him the present which was in their hand into the house, and bowed themselves to him to the earth. And he asked them of their welfare, and said, Is your father well, the old man of whom ye spake? Is he yet alive? And they answered, Thy servant our father is in good health, he is yet alive. And they bowed down their heads, and made obeisance. And he lifted up his eyes, and saw his brother Benjamin, his mother\u2019s son, and said, Is this your younger brother, of whom ye spake unto me? And he said, God be gracious unto thee, my son. And Joseph made haste; for his bowels did yearn upon his brother: and he sought where to weep; and he entered into his chamber, and wept there. And he washed his face, and went out, and refrained himself, and said, Set on bread. Then Joseph could not refrain himself before all them that stood by him; and he cried, Cause every man to go out from me. And there stood no man with him, while Joseph made himself known unto his brethren. And he wept aloud: and the Egyptians and the house of Pharaoh heard. And Joseph said unto his brethren, I am Joseph; doth my father yet live? And his brethren could not answer him; for they were troubled at his presence. And Joseph said unto his brethren, Come near to me, I pray you. And they came near. And he said, I am Joseph your brother, whom ye sold into Egypt. Now therefore be not grieved, nor angry with yourselves, that ye sold me hither: for God did send me before you to preserve life. For these two years hath the famine been in the land: and yet there are five years, in the which there shall neither be earing nor harvest. And God sent me before you to preserve you a posterity in the earth, and to save your lives by a great deliverance. So now it was not you that sent me hither, but God: and he hath made me a father to Pharaoh, and lord of all his house, and a ruler throughout all the land of Egypt. Haste ye, and go up to my father, and say unto him, Thus saith thy son Joseph, God hath made me lord of all Egypt: come down unto me, tarry not: And thou shalt dwell in the land of Goshen, and thou shalt be near unto me, thou, and thy children, and thy children\u2019s children, and thy flocks, and thy herds, and all that thou hast: And there will I nourish thee; for yet there are five years of famine; lest thou, and thy household, and all that thou hast, come to poverty. And, behold, your eyes see, and the eyes of my brother Benjamin, that it is my mouth that speaketh unto you. And ye shall tell my father of all my glory in Egypt, and of all that ye have seen; and ye shall haste and bring down my father hither. And he fell upon his brother Benjamin\u2019s neck, and wept; and Benjamin wept upon his neck. Moreover he kissed all his brethren, and wept upon them: and after that his brethren talked with him. And the fame thereof was heard in Pharaoh\u2019s house, saying, Joseph\u2019s brethren are come: and it pleased Pharaoh well, and his servants."
+      },
+      {
+        "display": "Proverbs 21.23-22.4",
+        "text": "Whoso keepeth his mouth and his tongue keepeth his soul from troubles. Proud and haughty scorner is his name, who dealeth in proud wrath. The desire of the slothful killeth him; for his hands refuse to labour. He coveteth greedily all the day long: but the righteous giveth and spareth not. The sacrifice of the wicked is abomination: how much more, when he bringeth it with a wicked mind? A false witness shall perish: but the man that heareth speaketh constantly. A wicked man hardeneth his face: but as for the upright, he directeth his way. There is no wisdom nor understanding nor counsel against the LORD. The horse is prepared against the day of battle: but safety is of the LORD. A good name is rather to be chosen than great riches, and loving favour rather than silver and gold. The rich and poor meet together: the LORD is the maker of them all. A prudent man foreseeth the evil, and hideth himself: but the simple pass on, and are punished. By humility and the fear of the LORD are riches, and honour, and life."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [
+      {
+        "commemoration": "Beuno, Abbot of Clynnog",
+        "title": "St. Beuno",
+        "url": "https://www.newadvent.org/cathen/02540a.htm",
+        "excerpt": "Abbot of Clynnog, d. 660(?), was, according to the \"Bucced Beuno\", born in Powis-land and, after education and ordination in the monastery of Bangor, in North Wales, became an active missioner, Cadvan, King of Gwynedd, being his generous benefactor. Cadwallon, Cadvan's son and successor, deceived Beuno about some land, and on the saint demanding justice proved obdurate.",
+        "more": "Abbot of Clynnog, d. 660(?), was, according to the \"Bucced Beuno\", born in Powis-land and, after education and ordination in the monastery of Bangor, in North Wales, became an active missioner, Cadvan, King of Gwynedd, being his generous benefactor. Cadwallon, Cadvan's son and successor, deceived Beuno about some land, and on the saint demanding justice proved obdurate. Thereupon, Cadwallon's cousin Gweddeint, in reparation, \"gave to God and Beuno forever his township\", where the saint (c. 616) founded the Abbey of Clynnog Fawr (Carnarvonshire).\n\nBeuno became the guardian and restorer to life of his niece, the virgin St. Winefride, whose clients still obtain marvellous favours at Holywell (Flintshire). He was relentless with hardened sinners, but full of compassion to those in distress. Before his death \"on the seventh day of Easter\" he had a wondrous vision. Eleven churches bearing St. Beuno's name, with various relics and local usages, witness to his far-reaching missionary zeal. He is commemorated on the 21st of April."
+      }
+    ],
+    "newadvent_version": 2
+  },
+  "events": [
+    {
+      "title": "Teen SOYO Meeting",
+      "start": "2027-04-21 19:00:00",
+      "end": "2027-04-21 20:30:00",
+      "url": "https://www.constantinehelen.com/event/teen-soyo-meeting/2027-04-21/"
+    }
+  ]
+}

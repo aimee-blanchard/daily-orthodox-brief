@@ -1,0 +1,51 @@
+{
+  "date": "2027-05-15",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": null,
+    "saints": [
+      "Ven. Pachomius the Great",
+      "Slain Crown Prince Dimitry of Moscow",
+      "Placing of the Honorable Head of the Apostle Titus",
+      "Barbaros the Myrrhbearer of Kerkyra",
+      "Andrew the Hermit & Wonderworker",
+      "Our Father among the Saints Achillius, Bishop of Larissa (330)"
+    ],
+    "summary_title": "Ven. Pachomius the Great; Slain Crown Prince Dimitry of Moscow; Our Father among the Saints Achillius, Bishop of Larissa (330)",
+    "stories": [
+      {
+        "title": "Ven. Pachomius the Great",
+        "html": "<p>His name in his native Coptic, <i>Pachom,</i> means \u201ceagle.\u201d He was an Egyptian pagan who entered the Roman army at a young age. While quartered at Thebes, he was amazed at the kindness of the local Christians, who brought food and drink to the soldiers. Learning who they were, he believed in Christ and vowed, once released from the army, to serve him for the rest of his life. At the end of his military service, he was baptised and became the disciple of the hermit Palamon, with whom he lived for ten years.</p>\n<p>At a place called Tabennisis an angel appeared to him dressed in the robes of a monk and gave him a tablet on which was written a rule for a cenobitic monastery \u2014 one in which the brethren live communally rather than as hermits, something that had not been seen before among Christians. The angel commanded him to found such a monastery. Pachomius set to work, building many cells though there was no one to live there but himself and his brother John. When John questioned the unnecessary building, Pachomius only said that he was following God\u2019s command, without saying who would live there or when.</p>\n<p>But soon men began to assemble there, and in time so many came to be his disciples that he eventually founded nine monasteries housing thousands of monks. The rule that he gave (or had been given) for these monasteries became the model for all communal Christian monasticism thereafter. St Pachomius reposed in 346, before his great Egyptian fellow-strugglers St Anthony the Great and St Athanasius the Great.</p>\n<p><i>Entertaining angels unawares: Christian believers\u2019 simple acts of kindness toward their pagan oppressors may have seemed foolish to many, but it was such acts that opened the eyes of Pachomius to the light of Christ, and which bore incalculably great fruit: the founding of the monastic life which is still the backbone of Christ\u2019s Church.</i></p>"
+      },
+      {
+        "title": "Our Father among the Saints Achillius, Bishop of Larissa (330)",
+        "html": "<p>He was born in Cappadocia, and was one of the 318 God-bearing Fathers who attended the First Ecumenical Council. At the council, Achillius took up a stone and said to the Arians, \u2018If Christ is a creature of God, as you say, tell oil to flow from this stone.\u2019 When the heretics kept silent, Achilleus went on, \u2018And if the Son of God is equal to the Father, as we believe, let oil flow from this stone,\u2019 at which oil flowed out. Returning to Larissa, the holy bishop cast down many pagan temples, built many churches, cast out many demons, and reposed in peace.</p>"
+      }
+    ],
+    "fasting": null,
+    "readings": [
+      {
+        "display": "Acts 5.21-32",
+        "text": "And when they heard that, they entered into the temple early in the morning, and taught. But the high priest came, and they that were with him, and called the council together, and all the senate of the children of Israel, and sent to the prison to have them brought. But when the officers came, and found them not in the prison, they returned, and told, Saying, The prison truly found we shut with all safety, and the keepers standing without before the doors: but when we had opened, we found no man within. Now when the high priest and the captain of the temple and the chief priests heard these things, they doubted of them whereunto this would grow. Then came one and told them, saying, Behold, the men whom ye put in prison are standing in the temple, and teaching the people. Then went the captain with the officers, and brought them without violence: for they feared the people, lest they should have been stoned. And when they had brought them, they set them before the council: and the high priest asked them, Saying, Did not we straitly command you that ye should not teach in this name? and, behold, ye have filled Jerusalem with your doctrine, and intend to bring this man\u2019s blood upon us. Then Peter and the other apostles answered and said, We ought to obey God rather than men. The God of our fathers raised up Jesus, whom ye slew and hanged on a tree. Him hath God exalted with his right hand to be a Prince and a Saviour, for to give repentance to Israel, and forgiveness of sins. And we are his witnesses of these things; and so is also the Holy Ghost, whom God hath given to them that obey him."
+      },
+      {
+        "display": "John 6.14-27",
+        "text": "Then those men, when they had seen the miracle that Jesus did, said, This is of a truth that prophet that should come into the world. When Jesus therefore perceived that they would come and take him by force, to make him a king, he departed again into a mountain himself alone. And when even was now come, his disciples went down unto the sea, And entered into a ship, and went over the sea toward Capernaum. And it was now dark, and Jesus was not come to them. And the sea arose by reason of a great wind that blew. So when they had rowed about five and twenty or thirty furlongs, they see Jesus walking on the sea, and drawing nigh unto the ship: and they were afraid. But he saith unto them, It is I; be not afraid. Then they willingly received him into the ship: and immediately the ship was at the land whither they went. The day following, when the people which stood on the other side of the sea saw that there was none other boat there, save that one whereinto his disciples were entered, and that Jesus went not with his disciples into the boat, but that his disciples were gone away alone; (Howbeit there came other boats from Tiberias nigh unto the place where they did eat bread, after that the Lord had given thanks:) When the people therefore saw that Jesus was not there, neither his disciples, they also took shipping, and came to Capernaum, seeking for Jesus. And when they had found him on the other side of the sea, they said unto him, Rabbi, when camest thou hither? Jesus answered them and said, Verily, verily, I say unto you, Ye seek me, not because ye saw the miracles, but because ye did eat of the loaves, and were filled. Labour not for the meat which perisheth, but for that meat which endureth unto everlasting life, which the Son of man shall give unto you: for him hath God the Father sealed."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 2
+  },
+  "events": [
+    {
+      "title": "Great Vespers",
+      "start": "2027-05-15 17:00:00",
+      "end": "2027-05-15 18:00:00",
+      "url": "https://www.constantinehelen.com/event/great-vespers/2027-05-15/"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "date": "2026-08-18",
+  "liturgical": {
+    "status": "ok",
+    "source": "antiochian",
+    "feasts": [
+      "12Th Tuesday After Pentecost"
+    ],
+    "saints": [
+      "Floros & Lauros the Monk-Martyrs of Illyria",
+      "Leontus the Martyr",
+      "Hermos the Martyr",
+      "John & George",
+      "Patriarchs of Constantinople",
+      "Relics of Arsenios the Righteous of Paros",
+      "Constantine the New Martyr of Capua",
+      "Matthew the New Martyr of Gerakari",
+      "Afterfeast of the Dormition of Our Most Holy Lady the Theotokos and Ever Virgin Mary"
+    ],
+    "summary_title": "Floros & Lauros the Monk-Martyrs of Illyria, Leontus the Martyr, Hermos the Martyr, John & George, Patriarchs of Constantinople, Relics of Arsenios the Righteous of Paros, Constantine the New Martyr of Capua, Matthew the New Martyr of Gerakari, Afterfeast of the Dormition of Our Most Holy Lady the Theotokos and Ever Virgin Mary",
+    "stories": [],
+    "fasting": null,
+    "readings": [
+      {
+        "display": "St. Paul's Second Letter to the Corinthians 5:15-21",
+        "text": "Brethren, Christ died for all, that those who live might live no longer for themselves but for him who for their sake died and was raised. From now on, therefore, we regard no one from a human point of view; even though we once regarded Christ from a human point of view, we regard him thus no longer. Therefore, if any one is in Christ, he is a new creation; the old has passed away, behold, the new has come. All this is from God, who through Christ reconciled us to himself and gave us the ministry of reconciliation; that is, God was in Christ reconciling the world to himself, not counting their trespasses against them, and entrusting to us the message of reconciliation. So we are ambassadors for Christ, God making his appeal through us. We beseech you on behalf of Christ, be reconciled to God. For our sake he made him to be sin who knew no sin, so that in him we might become the righteousness of God."
+      },
+      {
+        "display": "Mark 1:16-22",
+        "text": "At that time, Jesus, passing along by the Sea of Galilee, saw Simon and Andrew the brother of Simon casting a net in the sea; for they were fishermen. And Jesus said to them, \"Follow me and I will make you become fishers of men.\" And immediately they left their nets and followed him. And going on a little farther, he saw James the son of Zebedee and John his brother, who were in their boats mending the nets. And immediately he called them; and they left their father Zebedee in the boat with the hired servants, and followed him. And they went into Capernaum; and immediately on the sabbath he entered the synagogue and taught. And they were astonished at his teaching, for he taught them as one who had authority, and not as the scribes."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 2
+  },
+  "events": [
+    {
+      "title": "Daily Vespers at Holy Myrrhbearers Outreach",
+      "start": "2026-08-18 18:00:00",
+      "end": "2026-08-18 20:00:00",
+      "url": "https://www.constantinehelen.com/event/daily-vespers-at-holy-myrrhbearers-outreach/2026-08-18/"
+    }
+  ]
+}

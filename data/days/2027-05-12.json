@@ -1,0 +1,52 @@
+{
+  "date": "2027-05-12",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": null,
+    "saints": [
+      "St Epiphanius, Bishop of Cyprus",
+      "Removal of the Sacred Relics of Saint Joachim \"Papoulakis\" of Vatopaidi",
+      "Theodorus the Righteous of Cythera"
+    ],
+    "summary_title": "St Epiphanius, Bishop of Cyprus; Removal of the Sacred Relics of Saint Joachim \"Papoulakis\" of Vatopaidi; Theodorus the Righteous of Cythera",
+    "stories": [
+      {
+        "title": "St Epiphanius, Bishop of Cyprus",
+        "html": "<p><i>Saint Epiphanios</i> was born a Jew in Palestine, but he and his sister came to faith in Christ and were baptized together. Epiphanios gave all his possessions to the poor and became a monk. He knew St Hilarion the great (October 31), and traveled among the monks of Egypt to learn their ways and wisdom. The fame of his virtue spread so widely that several attempts were made to make him bishop, first in Egypt, then in Cyprus. Whenever Epiphanios heard of these plans, he fled the area. He was finally made bishop by means of a storm: told to go to Cyprus, he took ship instead for Gaza, but a contrary wind blew his ship directly to Cyprus, where \u201cEpiphanios fell into the hands of bishops who had come together to elect a successor to the newly-departed Bishop of Constantia, and the venerable Epiphanios was at last constrained to be consecrated, about the year 367.\u201d (<i>Great Horologion</i>). He guarded his flock faithfully for the remainder of his life, working many miracles, defending the Church against the Arian heresy, and composing several books, of which the best-loved is the <i>Panarion</i> (from the Latin for \u2018bread-box\u2019), an exposition of the Faith and an examination of eighty heresies. He was sometimes called the \u2018Five-tongued\u2019 because he was fluent in Hebrew, Egyptian, Syriac, Greek, and Latin.</p>\n<p><i>Saint Germanos</i> was the son of a prominent family, in Constantinople. He became Metropolitan of Cyzicus, then was elevated to the throne at Constantinople in 715. It was he who baptized the infant Constantine, who for his whole life was nicknamed \u201cCopronymos\u201d because he defecated in the baptismal font (though he was neither the first nor the last infant to do so). At this incident, Patriarch Germanos is said to have prophesied that the child would one day bring some foul heresy upon the Church, which he did, becoming a notorious iconoclast as emperor. Germanos openly opposed the decree of the Emperor Leo the Isaurian which began the persecution of the holy icons. For this he was deposed and driven into exile in 730. He lived the rest of his life in peace. Saint Germanos is the composer of many of the Church\u2019s hymns, notably those for the Feast of the Meeting in the Temple.</p>\n<p>These two Saints are always commemorated together.</p>"
+      }
+    ],
+    "fasting": {
+      "description": "Fast",
+      "abstentions": [
+        "meat",
+        "fish",
+        "dairy",
+        "eggs"
+      ]
+    },
+    "readings": [
+      {
+        "display": "Acts 4.13-22",
+        "text": "Now when they saw the boldness of Peter and John, and perceived that they were unlearned and ignorant men, they marvelled; and they took knowledge of them, that they had been with Jesus. And beholding the man which was healed standing with them, they could say nothing against it. But when they had commanded them to go aside out of the council, they conferred among themselves, Saying, What shall we do to these men? for that indeed a notable miracle hath been done by them is manifest to all them that dwell in Jerusalem; and we cannot deny it. But that it spread no further among the people, let us straitly threaten them, that they speak henceforth to no man in this name. And they called them, and commanded them not to speak at all nor teach in the name of Jesus. But Peter and John answered and said unto them, Whether it be right in the sight of God to hearken unto you more than unto God, judge ye. For we cannot but speak the things which we have seen and heard. So when they had further threatened them, they let them go, finding nothing how they might punish them, because of the people: for all men glorified God for that which was done. For the man was above forty years old, on whom this miracle of healing was shewed."
+      },
+      {
+        "display": "John 5.17-24",
+        "text": "But Jesus answered them, My Father worketh hitherto, and I work. Therefore the Jews sought the more to kill him, because he not only had broken the sabbath, but said also that God was his Father, making himself equal with God. Then answered Jesus and said unto them, Verily, verily, I say unto you, The Son can do nothing of himself, but what he seeth the Father do: for what things soever he doeth, these also doeth the Son likewise. For the Father loveth the Son, and sheweth him all things that himself doeth: and he will shew him greater works than these, that ye may marvel. For as the Father raiseth up the dead, and quickeneth them; even so the Son quickeneth whom he will. For the Father judgeth no man, but hath committed all judgment unto the Son: That all men should honour the Son, even as they honour the Father. He that honoureth not the Son honoureth not the Father which hath sent him. Verily, verily, I say unto you, He that heareth my word, and believeth on him that sent me, hath everlasting life, and shall not come into condemnation; but is passed from death unto life."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 2
+  },
+  "events": [
+    {
+      "title": "Teen SOYO Meeting",
+      "start": "2027-05-12 19:00:00",
+      "end": "2027-05-12 20:30:00",
+      "url": "https://www.constantinehelen.com/event/teen-soyo-meeting/2027-05-12/"
+    }
+  ]
+}

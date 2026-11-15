@@ -1,0 +1,72 @@
+{
+  "date": "2027-04-18",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": null,
+    "saints": [
+      "Ven. John, Disciple of Gregory Decapolites",
+      "Euthemios the Enlightener of Karelia",
+      "Cosmas, Bishop of Calcydon",
+      "Athanasia the Wonderworker of Aegina",
+      "St Mary of Egypt",
+      "The Holy Martyr John the New of Ioannina (1526)"
+    ],
+    "summary_title": "Fifth Sunday of Lent",
+    "stories": [
+      {
+        "title": "Ven. John, Disciple of Gregory Decapolites",
+        "html": "<p>He entered monastic life when young and became a disciple of St Gregory of Decapolis (Nov. 20). In the days of the iconoclast heresy, he was privileged to be tortured along with his teacher St Gregory and St Joseph the Hymnographer (April 3) for their defense of the holy icons. When Gregory died, John became Abbot of the Decapolite monastery in Constantinople. He reposed in peace around 820; St Joseph buried him near St Gregory\u2019s grave.</p>"
+      },
+      {
+        "title": "The Holy Martyr John the New of Ioannina (1526)",
+        "html": "<p>He moved as a young man to Constantinople to work as a craftsman. After the Turkish conquest of Constantinople, many Christians had denied Christ and embraced Islam. John spoke with many of these about the Faith and challenged them for their betrayal of Christ. Shamed and angered, some of them had him arrested, falsely stating that he had earlier accepted Islam and then returned to Christianity, which is punishable by death in Islamic law. He was tortured and cast into prison. When he was brought out for more torture on the day of Pascha, John came forward full of joy and singing \u2018Christ is risen from the dead!\u2019 To his torturers he cried, \u2018Do what you will to me, and send me as quickly as possible from this transient life into life eternal. I am Christ\u2019s servant; I follow Christ, and I die for Christ that I may live with Him.\u2019 He has bound in chains and taken to be burned, but when he ran joyfully into the fire, his tormentors pulled him from the flames and beheaded him instead, then threw his head and body into the fire. Christians were able to gather a few of his wonderworking relics and bury them in the Great Church in Constantinople.</p>"
+      }
+    ],
+    "fasting": {
+      "description": "Lenten Fast",
+      "abstentions": [
+        "meat",
+        "fish",
+        "dairy",
+        "eggs"
+      ]
+    },
+    "readings": [
+      {
+        "display": "Mark 16.1-8",
+        "text": "And when the sabbath was past, Mary Magdalene, and Mary the mother of James, and Salome, had bought sweet spices, that they might come and anoint him. And very early in the morning the first day of the week, they came unto the sepulchre at the rising of the sun. And they said among themselves, Who shall roll us away the stone from the door of the sepulchre? And when they looked, they saw that the stone was rolled away: for it was very great. And entering into the sepulchre, they saw a young man sitting on the right side, clothed in a long white garment; and they were affrighted. And he saith unto them, Be not affrighted: Ye seek Jesus of Nazareth, which was crucified: he is risen; he is not here: behold the place where they laid him. But go your way, tell his disciples and Peter that he goeth before you into Galilee: there shall ye see him, as he said unto you. And they went out quickly, and fled from the sepulchre; for they trembled and were amazed: neither said they any thing to any man; for they were afraid."
+      },
+      {
+        "display": "Hebrews 9.11-14",
+        "text": "But Christ being come an high priest of good things to come, by a greater and more perfect tabernacle, not made with hands, that is to say, not of this building; Neither by the blood of goats and calves, but by his own blood he entered in once into the holy place, having obtained eternal redemption for us. For if the blood of bulls and of goats, and the ashes of an heifer sprinkling the unclean, sanctifieth to the purifying of the flesh: How much more shall the blood of Christ, who through the eternal Spirit offered himself without spot to God, purge your conscience from dead works to serve the living God?"
+      },
+      {
+        "display": "Galatians 3.23-29",
+        "text": "But before faith came, we were kept under the law, shut up unto the faith which should afterwards be revealed. Wherefore the law was our schoolmaster to bring us unto Christ, that we might be justified by faith. But after that faith is come, we are no longer under a schoolmaster. For ye are all the children of God by faith in Christ Jesus. For as many of you as have been baptized into Christ have put on Christ. There is neither Jew nor Greek, there is neither bond nor free, there is neither male nor female: for ye are all one in Christ Jesus. And if ye be Christ\u2019s, then are ye Abraham\u2019s seed, and heirs according to the promise."
+      },
+      {
+        "display": "Mark 10.32-45",
+        "text": "And they were in the way going up to Jerusalem; and Jesus went before them: and they were amazed; and as they followed, they were afraid. And he took again the twelve, and began to tell them what things should happen unto him, Saying, Behold, we go up to Jerusalem; and the Son of man shall be delivered unto the chief priests, and unto the scribes; and they shall condemn him to death, and shall deliver him to the Gentiles: And they shall mock him, and shall scourge him, and shall spit upon him, and shall kill him: and the third day he shall rise again. And James and John, the sons of Zebedee, come unto him, saying, Master, we would that thou shouldest do for us whatsoever we shall desire. And he said unto them, What would ye that I should do for you? They said unto him, Grant unto us that we may sit, one on thy right hand, and the other on thy left hand, in thy glory. But Jesus said unto them, Ye know not what ye ask: can ye drink of the cup that I drink of? and be baptized with the baptism that I am baptized with? And they said unto him, We can. And Jesus said unto them, Ye shall indeed drink of the cup that I drink of; and with the baptism that I am baptized withal shall ye be baptized: But to sit on my right hand and on my left hand is not mine to give; but it shall be given to them for whom it is prepared. And when the ten heard it, they began to be much displeased with James and John. But Jesus called them to him, and saith unto them, Ye know that they which are accounted to rule over the Gentiles exercise lordship over them; and their great ones exercise authority upon them. But so shall it not be among you: but whosoever will be great among you, shall be your minister: And whosoever of you will be the chiefest, shall be servant of all. For even the Son of man came not to be ministered unto, but to minister, and to give his life a ransom for many."
+      },
+      {
+        "display": "Luke 7.36-50",
+        "text": "And one of the Pharisees desired him that he would eat with him. And he went into the Pharisee\u2019s house, and sat down to meat. And, behold, a woman in the city, which was a sinner, when she knew that Jesus sat at meat in the Pharisee\u2019s house, brought an alabaster box of ointment, And stood at his feet behind him weeping, and began to wash his feet with tears, and did wipe them with the hairs of her head, and kissed his feet, and anointed them with the ointment. Now when the Pharisee which had bidden him saw it, he spake within himself, saying, This man, if he were a prophet, would have known who and what manner of woman this is that toucheth him: for she is a sinner. And Jesus answering said unto him, Simon, I have somewhat to say unto thee. And he saith, Master, say on. There was a certain creditor which had two debtors: the one owed five hundred pence, and the other fifty. And when they had nothing to pay, he frankly forgave them both. Tell me therefore, which of them will love him most? Simon answered and said, I suppose that he, to whom he forgave most. And he said unto him, Thou hast rightly judged. And he turned to the woman, and said unto Simon, Seest thou this woman? I entered into thine house, thou gavest me no water for my feet: but she hath washed my feet with tears, and wiped them with the hairs of her head. Thou gavest me no kiss: but this woman since the time I came in hath not ceased to kiss my feet. My head with oil thou didst not anoint: but this woman hath anointed my feet with ointment. Wherefore I say unto thee, Her sins, which are many, are forgiven; for she loved much: but to whom little is forgiven, the same loveth little. And he said unto her, Thy sins are forgiven. And they that sat at meat with him began to say within themselves, Who is this that forgiveth sins also? And he said to the woman, Thy faith hath saved thee; go in peace."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [
+      {
+        "commemoration": "St Mary of Egypt",
+        "title": "St. Mary of Egypt",
+        "url": "https://www.newadvent.org/cathen/09763a.htm",
+        "excerpt": "Born probably about 344; died about 421. At the early age of twelve Mary left her home and came to Alexandria, where for upwards of seventeen years she led a life of public prostitution. At the end of that time, on the occasion of a pilgrimage to Jerusalem for the Feast of the Exaltation of the Holy Cross, she embarked for Palestine, not however with the intention of making the pilgrimage, but in the hope that life\u2026",
+        "more": "Born probably about 344; died about 421. At the early age of twelve Mary left her home and came to Alexandria, where for upwards of seventeen years she led a life of public prostitution. At the end of that time, on the occasion of a pilgrimage to Jerusalem for the Feast of the Exaltation of the Holy Cross, she embarked for Palestine, not however with the intention of making the pilgrimage, but in the hope that life on board ship would afford her new and abundant opportunities of gratifying an insatiable lust. Arrived in Jerusalem she persisted in her shameless life, and on the Feast of the Exaltation of the Cross joined the crowds towards the church where the sacred relic was venerated, hoping to meet in the gathering some new victims whom she might allure into sin. And now came the turning-point in her career. When she reached the church door, she suddenly felt herself repelled by some secret force, and having vainly attempted three or four times to enter, she retired to a corner of the churchyard, and was struck with remorse for her wicked life, which she recognized as the cause of her exclusion from the church. Bursting into bitter tears and beating her breast, she began to bewail her sins. Just then her eyes fell upon a statue of the Blessed Virgin above the spot where she was standing, and in deep faith and humility of heart she besought Our Lady for help, and permission to enter the church and venerate the sacred wood on which Jesus had suffered, promising that if her request were granted, she would then renounce forever the world and its ways, and forthwith depart whithersoever Our Lady might lead her. Encouraged by prayer and counting on the mercy of the Mother of God, she once more approached the door of the church, and this time succeeded in entering without the slightest difficulty. Having adored the Holy Cross and kissed the pavement of the church, she returned to Our Lady's statue, and while praying there for guidance as to her future course, she seemed to hear a voice from afar telling her that if she crossed the Jordan, she would find rest. That same evening Mary reached the Jordan and received Holy Communion in a church dedicated to the Baptist, and the day following crossed the river and wandered eastward into the desert that stretches towards Arabia.\n\nHere she had lived absolutely alone for forty-seven years, subsisting apparently on herbs, when a priest and monk, named Zosimus, who after the custom of his brethren had come out from his monastery to spend Lent in the desert, met her and learned from her own lips the strange and romantic story of her life. As soon as they met, she called Zosimus by his name and recognized him as a priest. After they had conversed and prayed together, she begged Zosimus to promise to meet her at the Jordan on Holy Thursday evening of the following year and bring with him the Blessed Sacrament. When the appointed evening arrived, Zosimus, we are told, put into a small chalice a portion of the undefiled Body and the precious Blood of Our Lord Jesus Christ (P.L. LXXIII, 686;"
+      }
+    ],
+    "newadvent_version": 2
+  },
+  "events": []
+}

@@ -49,7 +49,17 @@
     ],
     "service_texts": [],
     "synaxarion": null,
-    "great_feast": null
+    "great_feast": null,
+    "newadvent": [
+      {
+        "commemoration": "Holy Martyr Anastasius of Persia",
+        "title": "St. Anastasius",
+        "url": "https://www.newadvent.org/cathen/01455c.htm",
+        "excerpt": "St. Anastasius, once a magician, became a convert of the Holy Cross and was martyred in 628. He was a soldier in the army of Chosroes when that monarch carried the Cross from Jerusalem to Persia. The occasion prompted him to ask for information; then he left the army, became a Christian, and afterwards a monk in Jerusalem. His Persian name, Magundat, he changed to Anastasius.",
+        "more": "St. Anastasius, once a magician, became a convert of the Holy Cross and was martyred in 628. He was a soldier in the army of Chosroes when that monarch carried the Cross from Jerusalem to Persia. The occasion prompted him to ask for information; then he left the army, became a Christian, and afterwards a monk in Jerusalem. His Persian name, Magundat, he changed to Anastasius. After seven years of the most exact monastic observance, he was moved, as he thought, by the Holy Ghost to go in quest of martyrdom and went to C\u00e6sarea, then subject to the Persians. Reproaching his countrymen for their magic and fireworship, both of which he had once practised, he was taken prisoner, cruelly tortured to make him abjure, amid finally carried down near the Euphrates, to a place called Barsaloe, or Bethsaloe, according to the Bollandists, where his sufferings were renewed while at the same time the highest honours in the service of King Chosroes were promised him if he would renounce Christianity. Finally, with seventy others, he was strangled to death and decapitated, 22 January, 628. His body, which was thrown to the dogs, but was left untouched by them, was carried thence to Palestine, afterwards to Constantinople, and finally to Rome."
+      }
+    ],
+    "newadvent_version": 2
   },
   "events": []
 }

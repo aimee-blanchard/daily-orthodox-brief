@@ -1,0 +1,54 @@
+{
+  "date": "2026-08-03",
+  "liturgical": {
+    "status": "ok",
+    "source": "antiochian",
+    "feasts": [
+      "10Th Monday After Pentecost"
+    ],
+    "saints": [
+      "Isaacius",
+      "Dalmatus",
+      "& Faustus",
+      "Ascetics of the Dalmation Monastery",
+      "Salome the Holy Myrrhbearer",
+      "Theoctistus the Wonderworker"
+    ],
+    "summary_title": "Isaacius, Dalmatus, & Faustus, Ascetics of the Dalmation Monastery, Salome the Holy Myrrhbearer, Theoctistus the Wonderworker",
+    "stories": [],
+    "fasting": {
+      "description": "Abstain From Meat, Fish, Dairy, Eggs, Wine, Olive Oil",
+      "abstentions": [
+        "meat",
+        "fish",
+        "dairy",
+        "eggs",
+        "wine",
+        "olive oil"
+      ]
+    },
+    "readings": [
+      {
+        "display": "St. Paul's First Letter to the Corinthians 15:12-19",
+        "text": "Brethren, if Christ is preached as raised from the dead, how can some of you say that there is no resurrection of the dead? But if there is no resurrection of the dead, then Christ has not been raised; if Christ has not been raised, then our preaching is in vain. We are even found to be misrepresenting God, because we testified of God that he raised Christ, whom he did not raise if it is true that the dead are not raised. For if the dead are not raised, then Christ has not been raised. If Christ has not been raised, your faith is futile and you are still in your sins. Then those also who have fallen asleep in Christ have perished. If for this life only we have hoped in Christ, we are of all men most to be pitied."
+      },
+      {
+        "display": "Matthew 21:18-22",
+        "text": "At that time, as Jesus was returning to the city, he was hungry. And seeing a fig tree by the wayside he went to it, and found nothing on it but leaves only. And he said to it, \"May no fruit ever come from you again!\" And the fig tree withered at once. When the disciples saw it they marveled, saying, \"How did the fig tree wither at once?\" And Jesus answered them, \"Truly, I say to you, if you have faith and never doubt, you will not only do what has been done to the fig tree, but even if you say to this mountain, 'Be taken up and cast into the sea, ' it will be done. And whatever you ask in prayer, you will receive, if you have faith.\""
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 2
+  },
+  "events": [
+    {
+      "title": "AA Meeting",
+      "start": "2026-08-03 18:00:00",
+      "end": "2026-08-03 19:30:00",
+      "url": "https://www.constantinehelen.com/event/aa-meeting-10-2025-11-10-2/2026-08-03/"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "date": "2027-02-21",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": [
+      "Beginning of the Lenten Triodion"
+    ],
+    "saints": [
+      "Ven. Timothy of Symbola",
+      "St Eustathius, archbishop of Antioch (337)",
+      "St John the Scholastic, patriarch of Constantinople (577)",
+      "Saint Zachariah, Patriarch of Jerusalem (632)"
+    ],
+    "summary_title": "Sunday of the Publican and the Pharisee",
+    "stories": [
+      {
+        "title": "St Eustathius, archbishop of Antioch (337)",
+        "html": "<p>He was consecrated Bishop of Berea (Aleppo) in Syria, then of Antioch in 324. He took an active part in the Council of Nicea against the Arian heresy. His zeal for the Faith aroused the hatred of various heretics, who convened a council in Antioch where, by means of slanders and false witnesses, they were able to have the holy bishop deposed and exiled to Thrace, where he died a few years later.</p>\n<p>The deposition of the Saint caused a schism in the Church of Antioch which was not healed until 414 (see St Meletius, Feb. 12). Saint John Chrysostom publicly praised Eustathius as a Martyr, and his relics were finally brought back to Antioch in 482. The <i>Synaxarion</i> says \u201cThe people then went in jubilation to meet him with lights and incense, and escorted him as he made a triumphal entry into his city, which thus recovered its unity in the Faith and in the veneration of this champion of Orthodoxy.\u201d</p>"
+      },
+      {
+        "title": "St John the Scholastic, patriarch of Constantinople (577)",
+        "html": "<p>He came from the region of Antioch, and only became a clergyman at the age of fifty. He won a wide reputation as representative of the Patriarchate of Antioch at Constantinople, and was elected Patriarch of Constantinople following the deposition of Eutyches in 565. He compiled the <i>Nomocanon,</i> a collection of Church canons, and added the Communion hymn \u201cOf Thy Mystical Supper\u2026\u201d to the Divine Liturgy. He reposed in peace.</p>"
+      },
+      {
+        "title": "Saint Zachariah, Patriarch of Jerusalem (632)",
+        "html": "<p>He was the <i>Skevophylax</i>, keeper of the sacred vessels in the Church of Constantinople, then was made Patriarch of Jerusalem in 609. When the Persians took Jerusalem in 614 and took the Precious Cross of our Lord as a trophy, Zachariah went to Persia with the Cross, clasping it in his arms. In 631 the Emperor Heraclius conquered the Persians and recovered the Cross, bringing it to Constantinople. According to one account, Zachariah returned with the Cross, then returned to governing the Church in Jerusalem until his repose in 632 when Modestus (who had been acting in his absence) succeeded him. According to another account, Saint Zachariah died in exile, and Modestus was made Patriarch when the Holy Cross returned to Jerusalem.</p>"
+      }
+    ],
+    "fasting": null,
+    "readings": [
+      {
+        "display": "Luke 24.12-35",
+        "text": "Then arose Peter, and ran unto the sepulchre; and stooping down, he beheld the linen clothes laid by themselves, and departed, wondering in himself at that which was come to pass. And, behold, two of them went that same day to a village called Emmaus, which was from Jerusalem about threescore furlongs. And they talked together of all these things which had happened. And it came to pass, that, while they communed together and reasoned, Jesus himself drew near, and went with them. But their eyes were holden that they should not know him. And he said unto them, What manner of communications are these that ye have one to another, as ye walk, and are sad? And the one of them, whose name was Cleopas, answering said unto him, Art thou only a stranger in Jerusalem, and hast not known the things which are come to pass there in these days? And he said unto them, What things? And they said unto him, Concerning Jesus of Nazareth, which was a prophet mighty in deed and word before God and all the people: And how the chief priests and our rulers delivered him to be condemned to death, and have crucified him. But we trusted that it had been he which should have redeemed Israel: and beside all this, to day is the third day since these things were done. Yea, and certain women also of our company made us astonished, which were early at the sepulchre; And when they found not his body, they came, saying, that they had also seen a vision of angels, which said that he was alive. And certain of them which were with us went to the sepulchre, and found it even so as the women had said: but him they saw not. Then he said unto them, O fools, and slow of heart to believe all that the prophets have spoken: Ought not Christ to have suffered these things, and to enter into his glory? And beginning at Moses and all the prophets, he expounded unto them in all the scriptures the things concerning himself. And they drew nigh unto the village, whither they went: and he made as though he would have gone further. But they constrained him, saying, Abide with us: for it is toward evening, and the day is far spent. And he went in to tarry with them. And it came to pass, as he sat at meat with them, he took bread, and blessed it, and brake, and gave to them. And their eyes were opened, and they knew him; and he vanished out of their sight. And they said one to another, Did not our heart burn within us, while he talked with us by the way, and while he opened to us the scriptures? And they rose up the same hour, and returned to Jerusalem, and found the eleven gathered together, and them that were with them, Saying, The Lord is risen indeed, and hath appeared to Simon. And they told what things were done in the way, and how he was known of them in breaking of bread."
+      },
+      {
+        "display": "2 Timothy 3.10-15",
+        "text": "But thou hast fully known my doctrine, manner of life, purpose, faith, longsuffering, charity, patience, Persecutions, afflictions, which came unto me at Antioch, at Iconium, at Lystra; what persecutions I endured: but out of them all the Lord delivered me. Yea, and all that will live godly in Christ Jesus shall suffer persecution. But evil men and seducers shall wax worse and worse, deceiving, and being deceived. But continue thou in the things which thou hast learned and hast been assured of, knowing of whom thou hast learned them; And that from a child thou hast known the holy scriptures, which are able to make thee wise unto salvation through faith which is in Christ Jesus."
+      },
+      {
+        "display": "Luke 18.10-14",
+        "text": "Two men went up into the temple to pray; the one a Pharisee, and the other a publican. The Pharisee stood and prayed thus with himself, God, I thank thee, that I am not as other men are, extortioners, unjust, adulterers, or even as this publican. I fast twice in the week, I give tithes of all that I possess. And the publican, standing afar off, would not lift up so much as his eyes unto heaven, but smote upon his breast, saying, God be merciful to me a sinner. I tell you, this man went down to his house justified rather than the other: for every one that exalteth himself shall be abased; and he that humbleth himself shall be exalted."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [
+      {
+        "commemoration": "St Eustathius, archbishop of Antioch",
+        "title": "St. Eustathius",
+        "url": "https://www.newadvent.org/cathen/05627b.htm",
+        "excerpt": "Bishop of Antioch, b. at Side in Pamphylia, c. 270; d. in exile at Trajanopolis in Thrace, most probably in 360, according to some already in 336 or 337. He was at first Bishop of Ber\u00e6a in Syria, whence he was transferred to Antioch c. 323. At the Council of Nic\u00e6a (325), he was one of the most prominent opponents of Arianism and from 325-330 he was engaged in an almost continuous literary warfare against the Arians.",
+        "more": "Bishop of Antioch, b. at Side in Pamphylia, c. 270; d. in exile at Trajanopolis in Thrace, most probably in 360, according to some already in 336 or 337. He was at first Bishop of Ber\u00e6a in Syria, whence he was transferred to Antioch c. 323. At the Council of Nic\u00e6a (325), he was one of the most prominent opponents of Arianism and from 325-330 he was engaged in an almost continuous literary warfare against the Arians. By his fearless denunciation of Arianism and his refusal to engage any Arian priests in his diocese, he incurred the hatred of the Arians, who, headed by Eusebius of C\u00e6sarea and his namesake of Nicomedia, held a synod at Antioch (331) at which Eustathius was accused, by suborned witnesses, of Sabellianism, incontinency, cruelty, and other crimes. He was deposed by the synod and banished to Trajanopolis in Thrace by order of the Emperor Constantine, who gave credence to the scandalous tales spread about Eustathius. The people of Antioch, who loved and revered their holy and learned patriarch, became indignant at the injustice done to him and were ready to take up arms in his defence. But Eustathius kept them in check, exhorted them to remain true to the orthodox faith and humbly left for his place of exile, accompanied by a large body of his clergy. The adherents of Eustathius at Antioch formed a separate community by the name of Eustathians and refused to acknowledge the bishops set over them by the Arians. When, after the death of Eustathius, St. Meletius became Bishop of Antioch in 360 by the united vote of the Arians and the orthodox, the Eustathians would not recognize him, even after his election was approved by the Synod of Alexandria in 362. Their intransigent attitude gave rise to two factions among the orthodox, the so-called Meletian Schism, which lasted till the second decade of the fifth century (Cavallera, Le schisme d'Antioche, Paris, 1905).\n\nMost of the numerous dogmatic and exegetical treatises of Eustathius have been lost. His principal extant work is \"De Engastrimytho\", in which he maintains against Origen that the apparition of Samuel (1 Samuel 28) was not a reality but a mere phantasm called up in the brain of Saul by the witch of Endor. In the same work he severely criticizes Origen for his allegorical interpretation of the Bible. A new edition of it, together with the respective homily of Origen, was made by A. Jahn in Gebhardt and Harnack's \"Texte und Untersuchungen zur Gesch. der altchristl. Literatur\" (Leipzig, 1886), II, fasc. iv. Cavallera recently discovered a Christological homily: \"S. Eustathii ep. Antioch. in Lazarum, Mariam et Martham homilia christologica\", which he edited together with a commentary on the literary fragments of Eustathius (Paris, 1905). Fragments of lost writings are found in Migne (P.G., XVIII, 675-698), Pitra and Martin (Analecta Sacra, II, Proleg., 37-40; IV, 210-213 and 441-443). \"Commentarius in Hexaemeron\" (Migne, P.G., XVIII, 707-794) and \"Allocution ad Imp. Constantinum in Conc. Nic\u00e6no\" (Migne, P.G., XVIII, 673-676) are spurious. His feast is celebrated in the Latin Church on 16 July, in the Greek on 21 Feb. His relics were brought to Antioch."
+      }
+    ],
+    "newadvent_version": 2
+  },
+  "events": []
+}

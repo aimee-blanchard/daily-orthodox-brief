@@ -1,0 +1,58 @@
+{
+  "date": "2027-03-23",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": null,
+    "saints": [
+      "Martyr Nikon and 199 Disciples",
+      "Anatolios & Protoleon the Martyrs converted by the martyrdom of St. George",
+      "Luke the New Martyr of Mytilene"
+    ],
+    "summary_title": "Martyr Nikon and 199 Disciples; Anatolios & Protoleon the Martyrs converted by the martyrdom of St. George; Luke the New Martyr of Mytilene",
+    "stories": [
+      {
+        "title": "Martyr Nikon and 199 Disciples",
+        "html": "<p>He was born in Neapolis (Naples) to a pagan father and a Christian mother, and became an officer in the Roman army. Though he was not baptised, his mother had secretly instructed him in the Christian faith. Once, in a battle, his company was completely surrounded by the enemy, and Nikon recalled his mother\u2019s counseling that, whenever he was in trouble, he should make the sign of the Cross and call upon Christ. This he did, and was immediately filled with strength and resolution, so that the enemy\u2019s army was routed. Nikon went home, openly crying out \u2018Great is the God of the Christians!\u2019 to the great joy of his mother.</p>\n<p>He traveled secretly to Cyzicus in Asia, where the bishop Theodosius baptised him. He then entered a monastery to spend his days in prayer and study. But some years later Theodosius, who was near death, had a vision in which he was told to consecrate Nikon as his successor. He summoned Nikon from the monastery and, to the monk\u2019s amazement, immediately ordained him a deacon, then a priest, then a bishop.</p>\n<p>Later, bishop Nikon returned to Italy to preach the Gospel of Christ. In Naples, he found his mother still alive, and remained with her until her death. He then set out with nine disciples, former fellow-soldiers, to proclaim the Faith. Through the Saint\u2019s grace-filled preaching and example, many more disciples were soon added to this number. At that time a great persecution of Christians was underway, and Quintinianus, ruler of that region, seized Nikon and his companions and handed them over to the torturers. One hundred ninety of Nikon\u2019s companions perished under torture. Nikon himself was beaten, flayed, and even thrown from a high cliff, but was miraculously preserved. Finally he was slain by the sword and his body thrown in a field to be eaten by the beasts. A shepherd boy, possessed by a spirit of madness, found the body, fell on it, and was instantly healed. He told his story to some Christians, who found the body and gave it honorable burial. Saint Nikon contested during the reign of the Emperor Decius.</p>"
+      }
+    ],
+    "fasting": {
+      "description": "Lenten Fast",
+      "abstentions": [
+        "meat",
+        "fish",
+        "dairy",
+        "eggs",
+        "wine",
+        "oil"
+      ]
+    },
+    "readings": [
+      {
+        "display": "Isaiah 5.7-16",
+        "text": "For the vineyard of the LORD of hosts is the house of Israel, and the men of Judah his pleasant plant: and he looked for judgment, but behold oppression; for righteousness, but behold a cry. Woe unto them that join house to house, that lay field to field, till there be no place, that they may be placed alone in the midst of the earth! In mine ears said the LORD of hosts, Of a truth many houses shall be desolate, even great and fair, without inhabitant. Yea, ten acres of vineyard shall yield one bath, and the seed of an homer shall yield an ephah. Woe unto them that rise up early in the morning, that they may follow strong drink; that continue until night, till wine inflame them! And the harp, and the viol, the tabret, and pipe, and wine, are in their feasts: but they regard not the work of the LORD, neither consider the operation of his hands. Therefore my people are gone into captivity, because they have no knowledge: and their honourable men are famished, and their multitude dried up with thirst. Therefore hell hath enlarged herself, and opened her mouth without measure: and their glory, and their multitude, and their pomp, and he that rejoiceth, shall descend into it. And the mean man shall be brought down, and the mighty man shall be humbled, and the eyes of the lofty shall be humbled: But the LORD of hosts shall be exalted in judgment, and God that is holy shall be sanctified in righteousness."
+      },
+      {
+        "display": "Genesis 4.8-15",
+        "text": "And Cain talked with Abel his brother: and it came to pass, when they were in the field, that Cain rose up against Abel his brother, and slew him. And the LORD said unto Cain, Where is Abel thy brother? And he said, I know not: Am I my brother\u2019s keeper? And he said, What hast thou done? the voice of thy brother\u2019s blood crieth unto me from the ground. And now art thou cursed from the earth, which hath opened her mouth to receive thy brother\u2019s blood from thy hand; When thou tillest the ground, it shall not henceforth yield unto thee her strength; a fugitive and a vagabond shalt thou be in the earth. And Cain said unto the LORD, My punishment is greater than I can bear. Behold, thou hast driven me out this day from the face of the earth; and from thy face shall I be hid; and I shall be a fugitive and a vagabond in the earth; and it shall come to pass, that every one that findeth me shall slay me. And the LORD said unto him, Therefore whosoever slayeth Cain, vengeance shall be taken on him sevenfold. And the LORD set a mark upon Cain, lest any finding him should kill him."
+      },
+      {
+        "display": "Proverbs 5.1-15",
+        "text": "My son, attend unto my wisdom, and bow thine ear to my understanding: That thou mayest regard discretion, and that thy lips may keep knowledge. For the lips of a strange woman drop as an honeycomb, and her mouth is smoother than oil: But her end is bitter as wormwood, sharp as a twoedged sword. Her feet go down to death; her steps take hold on hell. Lest thou shouldest ponder the path of life, her ways are moveable, that thou canst not know them. Hear me now therefore, O ye children, and depart not from the words of my mouth. Remove thy way far from her, and come not nigh the door of her house: Lest thou give thine honour unto others, and thy years unto the cruel: Lest strangers be filled with thy wealth; and thy labours be in the house of a stranger; And thou mourn at the last, when thy flesh and thy body are consumed, And say, How have I hated instruction, and my heart despised reproof; And have not obeyed the voice of my teachers, nor inclined mine ear to them that instructed me! I was almost in all evil in the midst of the congregation and assembly. Drink waters out of thine own cistern, and running waters out of thine own well."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 2
+  },
+  "events": [
+    {
+      "title": "Divine Liturgy",
+      "start": "2027-03-23 09:30:00",
+      "end": "2027-03-23 11:00:00",
+      "url": "https://www.constantinehelen.com/event/tuesday-liturgy-2/2027-03-23/"
+    }
+  ]
+}

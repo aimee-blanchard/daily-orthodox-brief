@@ -1,0 +1,48 @@
+{
+  "date": "2026-08-20",
+  "liturgical": {
+    "status": "ok",
+    "source": "antiochian",
+    "feasts": [
+      "12Th Thursday After Pentecost"
+    ],
+    "saints": [
+      "Samuel the Prophet",
+      "Holy Martyr Luke of Bouleutos",
+      "Stephen",
+      "First King of Hungary",
+      "Hierotheos",
+      "Bishop of Hungary",
+      "Oswin the Martyr",
+      "King of Deira",
+      "Afterfeast of the Dormition of Our Most Holy Lady the Theotokos and Ever Virgin Mary"
+    ],
+    "summary_title": "Samuel the Prophet, Holy Martyr Luke of Bouleutos, Stephen, First King of Hungary, Hierotheos, Bishop of Hungary, Oswin the Martyr, King of Deira, Afterfeast of the Dormition of Our Most Holy Lady the Theotokos and Ever Virgin Mary",
+    "stories": [],
+    "fasting": null,
+    "readings": [
+      {
+        "display": "St. Paul's Second Letter to the Corinthians 7:1-10",
+        "text": "Brethren, let us cleanse ourselves from every defilement of body and spirit, and make holiness perfect in the fear of God. Open your hearts to us; we have wronged no one, we have corrupted no one, we have taken advantage of no one. I do not say this to condemn you, for I said before that you are in our hearts, to die together and to live together. I have great confidence in you; I have great pride in you; I am filled with comfort. With all our affliction, I am overjoyed. For even when we came into Macedonia, our bodies had no rest but we were afflicted at every turn --fighting without and fear within. But God, who comforts the downcast, comforted us by the coming of Titus, and not only by his coming but also by the comfort with which he was comforted in you, as he told us of your longing, your mourning, your zeal for me, so that I rejoiced still more. For even if I made you sorry with my letter, I do not regret it (though I did regret it), for I see that that letter grieved you, though only for a while. As it is, I rejoice, not because you were grieved, but because you were grieved into repenting; for you felt a godly grief, so that you suffered no loss through us. For godly grief produces a repentance that leads to salvation and brings no regret, but worldly grief produces death."
+      },
+      {
+        "display": "Mark 1:29-35",
+        "text": "At that time, Jesus entered the house of Simon and Andrew, with James and John. Now Simon's mother-in-law lay sick with a fever, and immediately they told him of her. And he came and took her by the hand and lifted her up, and the fever left her; and she served them. That evening, at sundown, they brought to him all who were sick or possessed with demons. And the whole city was gathered together about the door. And he healed many who were sick with various diseases, and cast out many demons; and he would not permit the demons to speak, because they knew him. And in the morning, a great while before day, he rose and went out to a lonely place, and there he prayed."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [
+      {
+        "commemoration": "Oswin the Martyr",
+        "title": "St. Oswin",
+        "url": "https://www.newadvent.org/cathen/11349a.htm",
+        "excerpt": "King and martyr, murdered at Gilling, near Richmond, Yorkshire, England, on 20 August, 651, son of Osric, King of Deira in Britain. On the murder of his father by Cadwalla in 634, Oswin still quite young was carried away for safety into Wessex, but returned on the death of his kinsman St.",
+        "more": "King and martyr, murdered at Gilling, near Richmond, Yorkshire, England, on 20 August, 651, son of Osric, King of Deira in Britain. On the murder of his father by Cadwalla in 634, Oswin still quite young was carried away for safety into Wessex, but returned on the death of his kinsman St. Oswald, in 642, either because Oswy had bestowed upon him Deira, one portion of the Kingdom of Northumbria, himself ruling Bernicia, or, as is more probable, because the people of Deira chose him for king in preference to Oswy. Under his sway of seven years, peace, order, and happiness reigned throughout the kingdom. But in the relations between Oswy and Oswin there was apparent peace only, the former was employing every subtlety to bring about his rival's death. At length Oswy declared an open warfare, and Oswin, unable to meet the superior forces of his adversary, disbanded his army, either from worldly prudence (Bede) or heroic virtue (monk of Tynemouth), and made his way for greater security to Hunwald an eorldoman upon whom he had lately conferred the fief of Gilling. Hunwald promised to conceal him but treacherously betrayed him to Ethelwin, one of Oswy's officers, and he was murdered. He was buried at Gilling and soon afterwards transferred to Tynemouth, though another account says he was buried at Tynemouth. The anonymous monk of St. Albans, who in the reign of King Stephen was resident at Tynemouth, and there wrote the saint's life, says that his memory was forgotten during the Danish troubles, but in 1065 his burial-place was made known by an apparition to a monk named Edmund, and his relics were translated on 11 March, 1100, and again on 20 August, 1103. At the dissolution of the monasteries under Henry VIII there was still a shrine containing the body and vestments of St. Oswin. A portion of his body was preserved as a relic at Durham (cf. Smith, \"Bede\", III, xiv). Eanfleda, Oswy's queen, daughter of St. Edwin, prevailed upon him to found in reparation a monastery at Gilling, some remains of which still exist, though it was destroyed by the Danes. Bede in his \"History\" (III, xiv) gives a description of his character and features: \"most generous to all men and above all things humble; tall of stature and of graceful bearing, with pleasant manner and engaging address\". There is now preserved in the British Museum (Cotton manuscript Galba A.5.) a psalter which until the fire of 1731 bore the inscription \"Liber Oswini Regis.\""
+      }
+    ],
+    "newadvent_version": 2
+  },
+  "events": []
+}

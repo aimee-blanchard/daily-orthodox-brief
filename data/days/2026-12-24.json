@@ -38,7 +38,9 @@
     "great_feast": {
       "name": "Nativity of Christ",
       "is_pascha": false
-    }
+    },
+    "newadvent": [],
+    "newadvent_version": 2
   },
   "events": []
 }

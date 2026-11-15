@@ -1,0 +1,63 @@
+{
+  "date": "2026-08-11",
+  "liturgical": {
+    "status": "ok",
+    "source": "antiochian",
+    "feasts": [
+      "11Th Tuesday After Pentecost"
+    ],
+    "saints": [
+      "Euplus the Holy Martyr & Archdeacon of Catania",
+      "Our Holy Father Niphonus",
+      "Patriarch of Constantinople",
+      "Commemoration of St. Spyridon's Miracle in Corfu Against the Turkish Invasion of 1716",
+      "Afterfeast of the Transfiguration of Our Lord and Savior Jesus Christ",
+      "Blane",
+      "Bishop of Bute"
+    ],
+    "summary_title": "Euplus the Holy Martyr & Archdeacon of Catania, Our Holy Father Niphonus, Patriarch of Constantinople, Commemoration of St. Spyridon's Miracle in Corfu Against the Turkish Invasion of 1716, Afterfeast of the Transfiguration of Our Lord and Savior Jesus Christ, Blane, Bishop of Bute",
+    "stories": [],
+    "fasting": {
+      "description": "Abstain From Meat, Fish, Dairy, Eggs, Wine, Olive Oil",
+      "abstentions": [
+        "meat",
+        "fish",
+        "dairy",
+        "eggs",
+        "wine",
+        "olive oil"
+      ]
+    },
+    "readings": [
+      {
+        "display": "St. Paul's Second Letter to the Corinthians 2:14-17; 3:1-3",
+        "text": "Brethren, thanks be to God, who in Christ always leads us in triumph, and through us spreads the fragrance of the knowledge of him everywhere. For we are the aroma of Christ to God among those who are being saved and among those who are perishing, to one a fragrance from death to death, to the other a fragrance from life to life. Who is sufficient for these things? For we are not, like so many, peddlers of God's word; but as men of sincerity, as commissioned by God, in the sight of God we speak in Christ. Are we beginning to commend ourselves again? Or do we need, as some do, letters of recommendation, to you, or from you? You yourselves are our letter of recommendation, written on our hearts, to be known and read by all men; and you show that you are a letter from Christ delivered by us, written not with ink but with the Spirit of the living God, not on tablets of stone but on tablets of human hearts."
+      },
+      {
+        "display": "Matthew 23:23-28",
+        "text": "The Lord said to the Jews who had come to him, \"Woe to you, scribes and Pharisees, hypocrites! for you tithe mint and dill and cumin, and have neglected the weightier matters of the law, justice and mercy and faith; these you ought to have done, without neglecting the others. You blind guides, straining out a gnat and swallowing a camel! Woe to you, scribes and Pharisees, hypocrites! for you cleanse the outside of the cup and of the plate, but inside they are full of extortion and rapacity. You blind Pharisee! first cleanse the inside of the cup and of the plate, that the outside also may be clean. Woe to you, scribes and Pharisees, hypocrites! for you are like whitewashed tombs, which outwardly appear beautiful, but within they are full of dead men's bones and all uncleanness. So you also outwardly appear righteous to men, but within you are full of hypocrisy and iniquity."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [
+      {
+        "commemoration": "Blane, Bishop of Bute",
+        "title": "St. Blane",
+        "url": "https://www.newadvent.org/cathen/02594b.htm",
+        "excerpt": "(Or BLAAN). Bishop and Confessor in Scotland, b. on the island of Bute, date unknown; d. 590. His feast is kept on 10 August. He was a nephew of St. Cathan, and was educated in Ireland under Sts. Comgall and Kenneth; he became a monk, went to Scotland, and eventually was bishop among the Picts. Several miracles are related of him, among them the restoration of a dead boy to life.",
+        "more": "(Or BLAAN).\n\nBishop and Confessor in Scotland, b. on the island of Bute, date unknown; d. 590. His feast is kept on 10 August. He was a nephew of St. Cathan, and was educated in Ireland under Sts. Comgall and Kenneth; he became a monk, went to Scotland, and eventually was bishop among the Picts. Several miracles are related of him, among them the restoration of a dead boy to life. The Aberdeen Breviary gives these and other details of the saint's life, which are rejected however, by the Bollandists. There can be no doubt that devotion to St. Blane was, from early times, popular in Scotland. His monastery became the site of the Cathedral of Dunblane. There was a church of St. Blane in Dumfries and another at Kilblane. The year of the saint's death is variously given as 446, 590, and 1000; 446 (Butler, Lives of the Saints) is evidently incorrect; the date 1000, found in Adam King, \"Kalendar of Scottish Saints\" (Paris, 1588), in Dempster, \"Menologium Scotorum\" (Bonn, 1622), and in the \"Acta SS.\", seems to have crept in by confusing St. Kenneth, whose disciple Blane was, with a Kenneth who was King of Scotland about A.D. 1000. The highest authorities say the saint died 590. The ruins of his church at Kingarth, Bute, where his remains were buried, are still standing and form an object of great interest to antiquarians; the bell of his monastery is preserved at Dunblane."
+      }
+    ],
+    "newadvent_version": 2
+  },
+  "events": [
+    {
+      "title": "Daily Vespers at Holy Myrrhbearers Outreach",
+      "start": "2026-08-11 18:00:00",
+      "end": "2026-08-11 20:00:00",
+      "url": "https://www.constantinehelen.com/event/daily-vespers-at-holy-myrrhbearers-outreach/2026-08-11/"
+    }
+  ]
+}

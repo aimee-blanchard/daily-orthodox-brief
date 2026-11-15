@@ -1,17 +1,17 @@
 {
- "generated_at": "2026-11-14T19:07:22.214525-06:00",
+ "generated_at": "2026-11-14T21:32:36.229416-06:00",
  "years": {
   "2026": {
    "source": "antiochian_pdf",
    "provisional": false,
    "url": "https://antiochianprodsa.blob.core.windows.net/liturgicalinstructions/2026%20Fasting%20Calendar.pdf",
-   "fetched_at": "2026-11-14T19:07:22.214525-06:00"
+   "fetched_at": "2026-11-14T21:32:36.229416-06:00"
   },
   "2027": {
    "source": "orthocal",
    "provisional": true,
    "url": "https://orthocal.info/api/greek/gregorian/",
-   "fetched_at": "2026-11-14T19:07:22.214525-06:00"
+   "fetched_at": "2026-11-14T21:32:36.229416-06:00"
   }
  },
  "levels": {
@@ -466,299 +466,299 @@
   },
   "2026-05-22": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-05-27": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-05-29": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-08": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-09": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-10": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-11": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-12": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-13": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-14": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-15": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-16": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-17": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-18": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-19": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-20": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-21": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-22": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-23": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-24": {
    "level": "wine_oil",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-25": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-26": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-27": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-06-28": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-07-01": {
    "level": "wine_oil",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-07-03": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-07-08": {
-   "level": "strict",
-   "source": "antiochian_pdf"
+   "level": "wine_oil",
+   "source": "antiochian_daily"
   },
   "2026-07-10": {
    "level": "wine_oil",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-07-15": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-07-17": {
    "level": "wine_oil",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-07-22": {
    "level": "wine_oil",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-07-24": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-07-29": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-07-31": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-08-01": {
    "level": "wine_oil",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-08-02": {
    "level": "wine_oil",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-08-03": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-08-04": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-08-05": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-08-06": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-08-07": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-08-08": {
    "level": "wine_oil",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-08-09": {
    "level": "wine_oil",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-08-10": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-08-11": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-08-12": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-08-13": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-08-14": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-08-19": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-08-21": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-08-26": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-08-28": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-08-29": {
    "level": "wine_oil",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-09-02": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-09-04": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-09-09": {
    "level": "wine_oil",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-09-11": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-09-14": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-09-16": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-09-18": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-09-23": {
    "level": "wine_oil",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-09-25": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-09-30": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-10-02": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-10-07": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-10-09": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-10-14": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-10-16": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-10-21": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-10-23": {
    "level": "wine_oil",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-10-28": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-10-30": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-11-04": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-11-06": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-11-11": {
    "level": "wine_oil",

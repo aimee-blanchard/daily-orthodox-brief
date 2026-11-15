@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-13",
+  "liturgical": {
+    "status": "ok",
+    "source": "antiochian",
+    "feasts": [
+      "Synaxis of Archangel Gabriel"
+    ],
+    "saints": [
+      "Synaxis of Archangel Gabriel",
+      "Stephen of Mar Sabbas Monastery",
+      "Holy Martyr Golinduc",
+      "Marcian the Martyr of Iconium",
+      "Serapion the Martyr"
+    ],
+    "summary_title": "Synaxis of Archangel Gabriel, Stephen of Mar Sabbas Monastery, Holy Martyr Golinduc, Marcian the Martyr of Iconium, Serapion the Martyr",
+    "stories": [],
+    "fasting": null,
+    "readings": [
+      {
+        "display": "St. Paul's Letter to the Hebrews 2:2-10",
+        "text": "Brethren, if the message declared by angels was valid and every transgression or disobedience received a just retribution, how shall we escape if we neglect such a great salvation? It was declared at first by the Lord, and it was attested to us by those who heard him, while God also bore witness by signs and wonders and various miracles and by gifts of the Holy Spirit distributed according to his own will. For it was not to angels that God subjected the world to come, of which we are speaking. It has been testified somewhere, \"What is man that thou art mindful of him, or the son of man, that thou carest for him? Thou didst make him for a little while lower than the angels, thou hast crowned him with glory and honor, putting everything in subjection under his feet.\" Now in putting everything in subjection to him, he left nothing outside his control. As it is, we do not yet see everything in subjection to him. But we see Jesus, who for a little while was made lower than the angels, crowned with glory and honor because of the suffering of death, so that by the grace of God he might taste death for every one. For it was fitting that he, for whom and by whom all things exist, in bringing many sons to glory, should make the pioneer of their salvation perfect through suffering."
+      },
+      {
+        "display": "Luke 10:16-21",
+        "text": "The Lord said to his disciples, \"He who hears you hears me, and he who rejects you rejects me, and he who rejects me rejects him who sent me.\" The seventy returned with joy, saying, \"Lord, even the demons are subject to us in your name!\" And he said to them, \"I saw Satan fall like lightning from heaven. Behold, I have given you authority to tread upon serpents and scorpions, and over all the power of the enemy; and nothing shall hurt you. Nevertheless do not rejoice in this, that the spirits are subject to you; but rejoice that your names are written in heaven.\" In that same hour he rejoiced in the Holy Spirit and said, \"I thank you, Father, Lord of heaven and earth, that you have hidden these things from the wise and understanding and revealed them to babes; yes, Father, for such was your gracious will.\""
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 2
+  },
+  "events": [
+    {
+      "title": "AA Meeting",
+      "start": "2026-07-13 18:00:00",
+      "end": "2026-07-13 19:30:00",
+      "url": "https://www.constantinehelen.com/event/aa-meeting-10-2025-11-10-2/2026-07-13/"
+    }
+  ]
+}
