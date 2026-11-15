@@ -216,6 +216,8 @@
   .na-bio[open] .na-more { display: none; }
   .na-full { font-family: var(--serif); font-size: 1.02rem; line-height: 1.6; color: var(--ink-soft); }
   .na-full p { margin: 0 0 0.6rem; }
+  .na-bio { scroll-margin-top: 0.75rem; }
+  .na-less { display: block; margin: 0 0 0.35rem; padding: 0; border: none; background: none; font: inherit; font-size: 0.85rem; color: var(--accent); cursor: pointer; }
   .na-link { display: inline-block; margin-top: 0.3rem; font-size: 0.85rem; }
   .na-note { font-size: 0.72rem; color: var(--ink-faint); margin: 0.2rem 0 0; }
 
@@ -746,7 +748,8 @@
         '<span class="na-excerpt">' + esc(b.excerpt) + "</span>" +
         (more ? '<span class="na-more">Read more &#9662;</span>' : "") +
         "</summary>" +
-        (more ? '<div class="na-full">' + b.more.split(/\n\n+/).map(function (para) { return "<p>" + esc(para) + "</p>"; }).join("") + "</div>" : "") +
+        (more ? '<div class="na-full">' + b.more.split(/\n\n+/).map(function (para) { return "<p>" + esc(para) + "</p>"; }).join("") + "</div>" +
+          '<button type="button" class="na-less">Read less &#9652;</button>' : "") +
         '<a class="na-link" href="' + esc(b.url) + '" target="_blank" rel="noopener">Full article on New Advent &#8599;</a>' +
         "</details>"
       );
@@ -1547,6 +1550,18 @@
     wireJumpButtons();
     wireAnchoredNotes(dateStr);
   }
+
+  // "Read less" collapses a New Advent biography and brings its start back into view.
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest && e.target.closest(".na-less");
+    if (!btn) return;
+    var bio = btn.closest("details.na-bio");
+    if (!bio) return;
+    e.preventDefault();
+    bio.open = false;
+    var top = bio.getBoundingClientRect().top;
+    if (top < 0 || top > window.innerHeight * 0.6) bio.scrollIntoView({ block: "start" });
+  });
 
   function goTo(dateStr) {
     if (index.available_dates.indexOf(dateStr) === -1) return;
