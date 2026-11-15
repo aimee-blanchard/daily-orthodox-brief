@@ -1,0 +1,77 @@
+/* Catechism class card (see catechism.js). Colors come from index.html's :root variables. */
+.cat-entry { display: flex; flex-direction: column; gap: 0.5rem; margin: 0 0 1rem; }
+.cat-open {
+  appearance: none; width: 100%; text-align: left; cursor: pointer;
+  background: var(--card-bg); border: 1px solid var(--rule); border-radius: 12px;
+  color: var(--accent); font-family: var(--sans); font-size: 0.9rem; padding: 0.7rem 0.9rem;
+}
+.cat-open:active { background: var(--rule); }
+.cat-recent { border-color: var(--accent); color: var(--ink); }
+.cat-head { display: flex; align-items: baseline; justify-content: space-between; }
+.cat-head h2 { margin-bottom: 0.2rem !important; }
+.cat-hide { appearance: none; background: none; border: none; color: var(--accent); font-size: 0.8rem; font-family: var(--sans); cursor: pointer; padding: 0.2rem 0; }
+.cat-sub { margin: 0 0 0.7rem; font-size: 0.85rem; color: var(--ink-soft); }
+.cat-tabs { display: flex; gap: 0.4rem; margin: 0 0 0.6rem; }
+.cat-tab {
+  flex: 1; appearance: none; background: none; cursor: pointer;
+  border: 1px solid var(--rule); border-radius: 999px; color: var(--ink-soft);
+  font-family: var(--sans); font-size: 0.82rem; padding: 0.45rem 0.6rem;
+}
+.cat-tab.active { border-color: var(--accent); color: var(--accent); }
+.cat-sticky {
+  position: sticky; top: 0; z-index: 2; background: var(--card-bg);
+  display: flex; gap: 0.5rem; align-items: center; padding: 0.25rem 0; border-bottom: 1px solid var(--rule);
+}
+.cat-select-wrap { flex: 1; min-width: 0; }
+.cat-select {
+  width: 100%; appearance: none; -webkit-appearance: none;
+  background: var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23d99a6c'/%3E%3C/svg%3E") no-repeat right 0.7rem center;
+  color: var(--ink); border: 1px solid var(--rule); border-radius: 8px;
+  padding: 0.5rem 1.8rem 0.5rem 0.7rem; font-size: 0.9rem; font-family: var(--sans);
+  text-overflow: ellipsis;
+}
+.cat-sticky .add-note-btn { margin: 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.cat-suggest { font-size: 0.78rem; color: var(--ink-faint); margin: 0.5rem 0 0; }
+.cat-lesson-title { font-family: var(--serif); font-weight: 400; font-size: 1.25rem; margin: 0.9rem 0 0.4rem; color: var(--ink); }
+.cat-synopsis { font-family: var(--serif); font-style: italic; font-size: 1rem; line-height: 1.55; color: var(--ink-soft); margin: 0 0 0.8rem; }
+.cat-synopsis span { font-style: normal; font-family: var(--sans); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-right: 0.3rem; }
+.cat-rows { font-family: var(--serif); font-size: 1.05rem; line-height: 1.6; color: var(--ink); }
+.cat-para { padding: 0.2rem 0.3rem; margin: 0 -0.3rem 0.45rem; border-radius: 8px; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+.cat-para.note-pressing { background: rgba(217, 154, 108, 0.12); }
+.cat-para.cat-flash { background: rgba(217, 154, 108, 0.2); transition: background 0.3s; }
+h4.cat-heading { font-family: var(--sans); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin: 1.1rem -0.3rem 0.45rem; }
+.cat-bullet { position: relative; padding-left: 1.6rem; }
+.cat-bullet::before { position: absolute; left: 0.55rem; top: 0.2rem; color: var(--accent); }
+.cat-bullet.cat-l1::before { content: "•"; }
+.cat-bullet.cat-l2 { margin-left: 1.1rem; font-size: 0.98rem; }
+.cat-bullet.cat-l2::before { content: "◦"; }
+.cat-bullet.cat-l3 { margin-left: 2.2rem; font-size: 0.95rem; }
+.cat-bullet.cat-l3::before { content: "▪"; font-size: 0.7em; top: 0.45rem; }
+.cat-fnref a { color: var(--accent); text-decoration: none; font-size: 0.75em; padding: 0 0.1em; }
+.cat-footnotes { font-size: 0.82rem; color: var(--ink-soft); border-top: 1px solid var(--rule); margin: 1rem 0 0; padding: 0.6rem 0 0 1.4rem; line-height: 1.45; }
+.cat-footnotes li { margin-bottom: 0.35rem; }
+.cat-rows .anchored-note { margin: -0.2rem 0 0.7rem 1.2rem; width: calc(100% - 1.2rem); }
+.cat-note-date { display: inline-block; margin-left: 0.4rem; font-size: 0.72rem; color: var(--ink-faint); }
+.cat-lesson-actions { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px solid var(--rule); font-size: 0.85rem; color: var(--ink-soft); }
+.cat-doxy {
+  appearance: none; background: none; border: 1px solid var(--accent); border-radius: 8px;
+  color: var(--accent); padding: 0.55rem 0.8rem; font-size: 0.85rem; font-family: var(--sans);
+  cursor: pointer; white-space: nowrap; flex-shrink: 0; margin-left: auto;
+}
+.cat-doxy:active { background: var(--rule); }
+.cat-doxy-small { padding: 0.35rem 0.6rem; font-size: 0.78rem; }
+.cat-empty { font-size: 0.9rem; color: var(--ink-soft); }
+.cat-note-group { border-top: 1px solid var(--rule); padding: 0.7rem 0 0.2rem; }
+.cat-note-group:first-child { border-top: none; padding-top: 0; }
+.cat-note-group-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.6rem; margin-bottom: 0.4rem; }
+.cat-note-group-head strong { display: block; font-size: 0.95rem; }
+.cat-note-group-head span { display: block; font-size: 0.8rem; color: var(--ink-soft); }
+.cat-note-list { list-style: none; margin: 0; padding: 0; }
+.cat-note-item { margin: 0 0 0.6rem; }
+.cat-goto {
+  appearance: none; background: none; border: none; padding: 0.15rem 0; cursor: pointer; text-align: left;
+  font-family: var(--serif); font-style: italic; font-size: 0.92rem; color: var(--ink-soft);
+}
+.cat-goto::after { content: "  ›"; color: var(--accent); font-style: normal; }
+.cat-note-list .anchored-note { margin: 0.2rem 0 0; width: 100%; }

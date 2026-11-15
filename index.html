@@ -7,6 +7,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/icon-180.png">
 <link rel="stylesheet" href="fasting.css">
+<link rel="stylesheet" href="catechism.css">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#060606">
@@ -619,6 +620,7 @@
 </main>
 
 <script src="fasting.js"></script>
+<script src="catechism.js"></script>
 <script>
 (function () {
   "use strict";
@@ -1282,7 +1284,7 @@
 
   function renderAnchoredMarkers(dateStr) {
     var notes = loadAnchored(dateStr);
-    document.querySelectorAll(".anchored-note").forEach(function (el) { el.remove(); });
+    document.querySelectorAll(".checkable-body .anchored-note").forEach(function (el) { el.remove(); });
     notes.forEach(function (n) {
       document.querySelectorAll(".checkable-body").forEach(function (body) {
         if (body.getAttribute("data-service") !== n.service) return;
@@ -1524,6 +1526,7 @@
     html += renderStoriesSection(lit);
     html += renderServiceLinksSection(lit, dateStr);
     html += renderNotesSection(dateStr);
+    html += '<div id="catechismSlot"></div>';
     html += renderEventsSection(day);
     html += renderPrayerListSection();
     html += renderReadingSection(lit);
@@ -1535,6 +1538,7 @@
         renderNavBar(dateStr) +
         '<div class="banner">Couldn&rsquo;t reach the liturgical calendar for this day.</div>' +
         renderNotesSection(dateStr) +
+        '<div id="catechismSlot"></div>' +
         renderEventsSection(day) +
         renderPrayerListSection() +
         renderFooter();
@@ -1549,6 +1553,9 @@
     wireTextSearch();
     wireJumpButtons();
     wireAnchoredNotes(dateStr);
+    if (window.Catechism) {
+      window.Catechism.mount(document.getElementById("catechismSlot"), { dateStr: dateStr, today: index.today, events: day.events });
+    }
   }
 
   // "Read less" collapses a New Advent biography and brings its start back into view.
