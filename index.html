@@ -654,6 +654,9 @@
   .reading-fill { border-left: 3px solid var(--accent); padding-left: 0.75rem; margin: 0 0 0.85rem; font-family: var(--serif); font-size: 1.05rem; line-height: 1.5; }
   .reading-fill p { margin: 0; }
   .reading-fill .reading-fill-src { font-size: 0.8rem; color: var(--ink-faint); font-style: italic; margin-bottom: 0.2rem; }
+  .parish-insert { margin: 1.1rem 0 1rem; border-left: 3px solid var(--accent); padding-left: 0.75rem; }
+  .parish-insert-title { font-weight: 600; letter-spacing: 0.02em; font-family: var(--serif); font-size: 1.05rem; }
+  .parish-insert-text { margin: 0.35rem 0 0; }
   .parish-skip { margin: 0.2rem 0 0.9rem; }
   .parish-skip-toggle {
     appearance: none; display: block; width: 100%; text-align: left; background: transparent;
@@ -830,6 +833,11 @@
     return fetchJSON("data/index.json").then(function (data) {
       index = data;
     });
+  }
+
+  var parish = null;
+  function loadParish() {
+    return fetchJSON("data/parish.json").then(function (d) { parish = d; }).catch(function () { parish = null; });
   }
 
   function loadDay(dateStr) {
@@ -1139,12 +1147,54 @@
     return pp;
   }
 
+  /* The parish's own apolytikion (data/parish.json), sung every Sunday at
+     the Little Entrance after the day's apolytikia and before the kontakion.
+     Not added when the day's texts already have it (their feast, May 21). */
+  var PARISH_APOLY_PRESENT_RE = /apolytikion\s+(?:of|for)\s+(?:ss|sts|saints)\.?\s+constantine\s+and\s+helen|Constantine who is Thine Apostle/i;
+  function parishApolytikionFor(lit, dateStr) {
+    var cfg = parish && parish.sunday_apolytikion;
+    if (!cfg || !cfg.text || parseISODate(dateStr).getDay() !== 0) return null;
+    var present = (lit.service_texts || []).some(function (s) { return PARISH_APOLY_PRESENT_RE.test(s.text || ""); });
+    return present ? null : cfg;
+  }
+  // Index of the paragraph the parish apolytikion goes after, or -1.
+  function parishApolytikionSlot(label, paras) {
+    if (!/divine liturgy/i.test(label || "")) return -1;
+    var i;
+    if (/full outline/i.test(label)) {
+      // After the apolytikia the choir chants following the eisodikon,
+      // before the thrice-holy prayer line and the kontakion.
+      var start = findPara(paras, "Then, the choir chants the appointed apolytikia");
+      if (start < 0) return -1;
+      for (i = start + 1; i < paras.length; i++) {
+        if (/^The priest says the prayer of the thrice-holy hymn/i.test(paras[i]) || /^The clergy then chant the appointed kontakion/i.test(paras[i])) return i - 1;
+        if (isHeadingLine(paras[i])) return -1;
+      }
+      return -1;
+    }
+    // Variables: right after "Now sing the apolytikion of the patron saint
+    // or feast of the temple", else after the last apolytikion before the
+    // first kontakion.
+    for (i = 0; i < paras.length; i++) if (/apolytikion of the patron saint/i.test(paras[i])) return i;
+    var lastApoly = -1;
+    for (i = 0; i < paras.length; i++) {
+      if (/^KONTAKION\b/.test(paras[i])) return lastApoly >= 0 ? i - 1 : -1;
+      if (isHeadingLine(paras[i]) && /APOLYTIKION/.test(paras[i])) lastApoly = i;
+    }
+    return -1;
+  }
+  function parishApolytikionHtml(cfg) {
+    return '<div class="parish-insert"><div class="parish-insert-head"><span class="parish-tag">Our parish</span> <span class="parish-insert-title">' + esc(cfg.heading) +
+      '</span></div><p class="parish-insert-text"><span class="line-text">' + esc(cfg.text) + "</span></p></div>";
+  }
+
   function parishRubricHtml(text) {
     return '<div class="parish-rubric"><span class="parish-tag">Our parish</span> <span class="parish-rubric-text">' + esc(text) + "</span></div>";
   }
 
-  function renderCheckableBody(text, storageKey, serviceLabel, lit) {
+  function renderCheckableBody(text, storageKey, serviceLabel, lit, apoly) {
     var paragraphs = text.split(/\n+/).map(function (p) { return p.trim(); }).filter(Boolean);
+    var apolySlot = apoly ? parishApolytikionSlot(serviceLabel, paragraphs) : -1;
     var preambleCount = countPreambleLines(paragraphs);
     var pp = parishPractice(serviceLabel, paragraphs, lit);
     function rowHtml(p, i) {
@@ -1190,6 +1240,7 @@
         continue;
       }
       html.push(rowHtml(paragraphs[i], i));
+      if (i === apolySlot) html.push(parishApolytikionHtml(apoly));
     }
     var rows = html.join("");
     return (
@@ -1214,10 +1265,11 @@
 
   function renderServiceLinksSection(lit, dateStr) {
     if (!lit || !lit.service_texts || !lit.service_texts.length) return "";
+    var apoly = parishApolytikionFor(lit, dateStr);
     var items = lit.service_texts.map(function (s) {
       if (!s.text) return s;
       var storageKey = "serviceProgress:" + dateStr + ":" + s.label;
-      return { label: s.label, html: renderCheckableBody(s.text, storageKey, s.label, lit) };
+      return { label: s.label, html: renderCheckableBody(s.text, storageKey, s.label, lit, apoly) };
     });
     serviceOrder = lit.service_texts.map(function (s) { return s.label; });
     return renderCollapsible("services", "Service Texts", lit.service_texts.map(function (s) { return s.label; }).join(" · "),
@@ -2032,7 +2084,7 @@
 
   // Optional ?d=YYYY-MM-DD opens the brief on that day (used by fasting.html's back button).
   var startDate = null;
-  Promise.all([loadIndex(), fastingReady])
+  Promise.all([loadIndex(), fastingReady, loadParish()])
     .then(function () {
       var q = new URLSearchParams(location.search).get("d") || "";
       startDate = (/^\d{4}-\d{2}-\d{2}$/.test(q) && index.available_dates.indexOf(q) !== -1) ? q : index.today;

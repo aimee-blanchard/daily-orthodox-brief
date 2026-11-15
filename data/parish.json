@@ -1,0 +1,8 @@
+{
+  "parish": "Sts. Constantine and Helen",
+  "sunday_apolytikion": {
+    "heading": "Apolytikion of Sts. Constantine and Helen",
+    "text": "Constantine who is Thine Apostle among kings O Lord, received his calling like Paul not from man, for he saw the sign of Thy Cross in the heavens, and placed his royal city into Thy hands; preserve both it and us in safety for all time, through the prayers of the Theotokos, only Lover of man.",
+    "note": "Sung every Sunday at the Little Entrance after the day's apolytikia, before the kontakion. Text exactly as printed in the parish bulletin (no tone given). index.html inserts it at render time in the Divine Liturgy Variables and Full Outline, unless the day's texts already include an apolytikion of Sts. Constantine and Helen (e.g. their feast, May 21)."
+  }
+}
