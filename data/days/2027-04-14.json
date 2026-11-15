@@ -1,0 +1,72 @@
+{
+  "date": "2027-04-14",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": null,
+    "saints": [
+      "St Martin the Confessor, Pope of Rome",
+      "Thomais the Martyr of Alexandria",
+      "Demetrios the New-Martyr of Arcadia",
+      "Apostles Aristarchus, Pudens and Trophimus of the Seventy",
+      "Holy Martyr Ardalion the Actor (3rd c.)"
+    ],
+    "summary_title": "Apostles Aristarchus, Pudens and Trophimus of the Seventy; Holy Martyr Ardalion the Actor (3rd c.); St Martin the Confessor, Pope of Rome",
+    "stories": [
+      {
+        "title": "Apostles Aristarchus, Pudens and Trophimus of the Seventy",
+        "html": "<p>All three are mentioned by name by the Apostle Paul.</p>\n<p><i>Aristarchus</i> is mentioned in Acts 19:29, Colossians 4:10 and Philemon 24. He was bishop of Apamea in Syria; St Paul calls him \u2018my fellow-prisoner\u2019 and \u2018my fellow-laborer\u2019.</p>\n<p><i>Pudens</i> is mentioned in 2 Timothy 4:21. He was a prominent Roman citizen who gave refuge to Christians; his house was first a place of refuge for the Apostles, then one of the first churches in Rome.</p>\n<p><i>Trophimus</i> is mentioned with Pudens in 2 Timothy 4:21, and in Acts 21:29, where we learn that he was from Ephesus. He accompanied the Apostle Paul on some of his missions.</p>\n<p>All three, like St Paul, were beheaded during Nero\u2019s persecutions.</p>"
+      },
+      {
+        "title": "Holy Martyr Ardalion the Actor (3rd c.)",
+        "html": "<p>He was a comic actor whose specialty was an act which mocked the Christian martyrs. But during an especially fierce persecution under the Emperor Maximian, his heart was changed in an unknown way, and during one of his performances he called out to the crowd that he was a Christian and that they must not laugh. For this, Ardalion was arrested and tried, and died by torture, as the <i>Prologue</i> says, \u201cplaying the role of martyr in very truth and with honour.\u201d</p>"
+      }
+    ],
+    "fasting": {
+      "description": "Lenten Fast",
+      "abstentions": [
+        "meat",
+        "fish",
+        "dairy",
+        "eggs",
+        "wine",
+        "oil"
+      ]
+    },
+    "readings": [
+      {
+        "display": "Isaiah 41.4-14",
+        "text": "Who hath wrought and done it, calling the generations from the beginning? I the LORD, the first, and with the last; I am he. The isles saw it, and feared; the ends of the earth were afraid, drew near, and came. They helped every one his neighbour; and every one said to his brother, Be of good courage. So the carpenter encouraged the goldsmith, and he that smootheth with the hammer him that smote the anvil, saying, It is ready for the sodering: and he fastened it with nails, that it should not be moved. But thou, Israel, art my servant, Jacob whom I have chosen, the seed of Abraham my friend. Thou whom I have taken from the ends of the earth, and called thee from the chief men thereof, and said unto thee, Thou art my servant; I have chosen thee, and not cast thee away. Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness. Behold, all they that were incensed against thee shall be ashamed and confounded: they shall be as nothing; and they that strive with thee shall perish. Thou shalt seek them, and shalt not find them, even them that contended with thee: they that war against thee shall be as nothing, and as a thing of nought. For I the LORD thy God will hold thy right hand, saying unto thee, Fear not; I will help thee. Fear not, thou worm Jacob, and ye men of Israel; I will help thee, saith the LORD, and thy redeemer, the Holy One of Israel."
+      },
+      {
+        "display": "Genesis 17.1-9",
+        "text": "And when Abram was ninety years old and nine, the LORD appeared to Abram, and said unto him, I am the Almighty God; walk before me, and be thou perfect. And I will make my covenant between me and thee, and will multiply thee exceedingly. And Abram fell on his face: and God talked with him, saying, As for me, behold, my covenant is with thee, and thou shalt be a father of many nations. Neither shall thy name any more be called Abram, but thy name shall be Abraham; for a father of many nations have I made thee. And I will make thee exceeding fruitful, and I will make nations of thee, and kings shall come out of thee. And I will establish my covenant between me and thee and thy seed after thee in their generations for an everlasting covenant, to be a God unto thee, and to thy seed after thee. And I will give unto thee, and to thy seed after thee, the land wherein thou art a stranger, all the land of Canaan, for an everlasting possession; and I will be their God. And God said unto Abraham, Thou shalt keep my covenant therefore, thou, and thy seed after thee in their generations."
+      },
+      {
+        "display": "Proverbs 15.20-16.9 (LXX)",
+        "text": "A wise son maketh a glad father: but a foolish man despiseth his mother. Folly is joy to him that is destitute of wisdom: but a man of understanding walketh uprightly. Without counsel purposes are disappointed: but in the multitude of counsellors they are established. A man hath joy by the answer of his mouth: and a word spoken in due season, how good is it! The way of life is above to the wise, that he may depart from hell beneath. The LORD will destroy the house of the proud: but he will establish the border of the widow. The thoughts of the wicked are an abomination to the LORD: but the words of the pure are pleasant words. He that is greedy of gain troubleth his own house; but he that hateth gifts shall live. The heart of the righteous studieth to answer: but the mouth of the wicked poureth out evil things. The LORD is far from the wicked: but he heareth the prayer of the righteous. The light of the eyes rejoiceth the heart: and a good report maketh the bones fat. The ear that heareth the reproof of life abideth among the wise. He that refuseth instruction despiseth his own soul: but he that heareth reproof getteth understanding. The fear of the LORD is the instruction of wisdom; and before honour is humility. The preparations of the heart in man, and the answer of the tongue, is from the LORD. All the ways of a man are clean in his own eyes; but the LORD weigheth the spirits. Commit thy works unto the LORD, and thy thoughts shall be established. The LORD hath made all things for himself: yea, even the wicked for the day of evil. Every one that is proud in heart is an abomination to the LORD: though hand join in hand, he shall not be unpunished. By mercy and truth iniquity is purged: and by the fear of the LORD men depart from evil. When a man\u2019s ways please the LORD, he maketh even his enemies to be at peace with him. Better is a little with righteousness than great revenues without right. A man\u2019s heart deviseth his way: but the LORD directeth his steps."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [
+      {
+        "commemoration": "St Martin the Confessor, Pope of Rome",
+        "title": "Pope St. Martin I",
+        "url": "https://www.newadvent.org/cathen/09723c.htm",
+        "excerpt": "Martyr, born at Todi on the Tiber, son of Fabricius; elected Pope at Rome, 21 July, 649, to succeed Theodore I; died at Cherson in the present peninsulas of Krym, 16 Sept., 655, after a reign of 6 years, one month and twenty six days, having ordained eleven priests, five deacons and thirty-three bishops.",
+        "more": "Martyr, born at Todi on the Tiber, son of Fabricius; elected Pope at Rome, 21 July, 649, to succeed Theodore I; died at Cherson in the present peninsulas of Krym, 16 Sept., 655, after a reign of 6 years, one month and twenty six days, having ordained eleven priests, five deacons and thirty-three bishops. 5 July is the date commonly given for his election, but 21 July (given by Lobkowitz, \"Statistik der Papste\" Freiburg, 1905) seems to correspond better with the date of his death and reign (Duchesne \"Lib. Pont.\", I, 336); his feast is on 12 November.The Greeks honor him on 13 April and 15 September, the Muscovites on 14 April. In the hymns of the Office the Greeks style him infallibilis fidei magister because he was the successor of St. Peter in the See of Rome (Nilles, \"Calendarium Manuale\", Innsbruck, 1896, I, 336).\n\nMartin, one of the noblest figures in a long line of Roman pontiffs (Hodgkin, \"Italy\", VI, 268) was, according to his biographer Theodore (Mai, \"Spicil. Rom.\", IV 293) of noble birth, a great student, of commanding intelligence, of profound learning, and of great charity to the poor. Piazza, II 45 7 states that he belonged to the order of St. Basil. He governed the Church at a time when the leaders of the Monothelite heresy, supported by the emperor, were making most strenuous efforts to spread their tenets in the East and West. Pope Theodore had sent Martin as apocrysiary to Constantinople to make arrangements for canonical deposition of the heretical patriarch, Pyrrhus. After his election, Martin had himself consecrated without waiting for the imperial confirmation, and soon called a council in the Lateran at which one hundred and five bishops met. Five sessions were held on 5, 8, 17, 119 and 31 Oct., 649 (Hefele, \"Conciliengeschichte\", III, 190). The \"Ecthesis\" of Heraclius and the \"Typus\" of Constans II were rejected; nominal excommunication was passed against Sergius, Pyrrus, and Paul of Constantinople, Cyrus of Alexandria and Theodore of Phran in Arabia; twenty canons were enacted defining the Catholic doctrine on the two wills of Christ. The decrees signed by the pope and the assembled bishops were sent to the other bishops and the faithful of the world together with an encyclical of Martin. The Acts with a Greek translation were also sent to the Emperor Constans II.\n\nThe pope appointed John, Bishop of Philadelphia, as his vicar in the East with necessary instructions and full authority . Bishop Paul of Thessalonica refused to recall his heretical letters previously sent to Rome and added others,\u2014he was, therefore, formally excommunicated and deposed. The Patriarch of Constantinople, Paul, had urged the emperor to use drastic means to force the pope and the Western Bishops at least to subscribe to the \"Typus\". The emperor sent Olympius as exarch to Italy, where he arrived while the council was still in session. Olympius tried to create a faction among the fathers to favor the views of the emperor, but without success. Then upon pretense of reconciliation he wished to receive Holy Communion from the hands of the pontiff with the intention of slaying him."
+      }
+    ],
+    "newadvent_version": 2
+  },
+  "events": [
+    {
+      "title": "Teen SOYO Meeting",
+      "start": "2027-04-14 19:00:00",
+      "end": "2027-04-14 20:30:00",
+      "url": "https://www.constantinehelen.com/event/teen-soyo-meeting/2027-04-14/"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "date": "2027-03-24",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": [
+      "Forefeast of Annunciation"
+    ],
+    "saints": [
+      "Ven. Zachariah the Recluse",
+      "Righteous Artemon, Bishop of Seleucia",
+      "Commemoration of the Miracle at the Monastery of the Caves in Kiev (?)"
+    ],
+    "summary_title": "Forefeast of Annunciation",
+    "stories": [
+      {
+        "title": "Ven. Zachariah the Recluse",
+        "html": "<p>His father, Carion the Egyptian, forsook his family to become a monk, taking Zacharias with him. Though very young, Zacharias manifested gifts of grace rarely seen among the elders of Sketis. Abba Moses once asked him, \u2018What does it mean to be a monk?\u2019, to which Zacharias replied by taking off his hat and treading it underfoot, saying \u2018If a man be not so broken, he cannot be a monk.\u2019 After shining as a great light among the holy monks of Scetis, he reposed at a young age.</p>"
+      },
+      {
+        "title": "Commemoration of the Miracle at the Monastery of the Caves in Kiev (?)",
+        "html": "<p>\u201cTwo friends, John and Sergius, swore brotherhood before the icon of the holy Mother of God in this monastery. John was a rich man, with a five-year-old son, Zachariah. John fell ill, and at his death commended his son to the care of Sergius, and left in Sergius\u2019 keeping a large sum of silver and gold for him to hand over to Zachariah when he had grown up. When Zachariah came of age, however, Sergius denied receiving anything from the deceased John. Then Zachariah said: \u2018Let him swear before the same icon of the most holy Mother of God, in front of which he accepted brotherhood with my late father, that he received nothing from John, and then I will seek nothing more from him.\u2019 Sergius agreed, but when he had sworn this and went up to kiss the icon, some force held him back and would not allow him to come near. Then, tormented all at once by a demon, he began to cry out: \u2018Holy fathers Antony and Theodosius, do not let this merciless angel destroy me!\u2019 The demon had attacked him by God\u2019s permission. He then told them of all the money which John had left. But when they opened the box, they found double the amount. Taking it, Zachariah gave it to the monastery and was himself tonsured as a monk. He lived a long time and was worthy of God\u2019s great gifts, entering peacefully into eternity.\u201d (<i>Prologue</i>)</p>"
+      }
+    ],
+    "fasting": {
+      "description": "Lenten Fast",
+      "abstentions": [
+        "meat",
+        "fish",
+        "dairy",
+        "eggs",
+        "wine",
+        "oil"
+      ]
+    },
+    "readings": [
+      {
+        "display": "Isaiah 5.16-25",
+        "text": "But the LORD of hosts shall be exalted in judgment, and God that is holy shall be sanctified in righteousness. Then shall the lambs feed after their manner, and the waste places of the fat ones shall strangers eat. Woe unto them that draw iniquity with cords of vanity, and sin as it were with a cart rope: That say, Let him make speed, and hasten his work, that we may see it: and let the counsel of the Holy One of Israel draw nigh and come, that we may know it! Woe unto them that call evil good, and good evil; that put darkness for light, and light for darkness; that put bitter for sweet, and sweet for bitter! Woe unto them that are wise in their own eyes, and prudent in their own sight! Woe unto them that are mighty to drink wine, and men of strength to mingle strong drink: Which justify the wicked for reward, and take away the righteousness of the righteous from him! Therefore as the fire devoureth the stubble, and the flame consumeth the chaff, so their root shall be as rottenness, and their blossom shall go up as dust: because they have cast away the law of the LORD of hosts, and despised the word of the Holy One of Israel. Therefore is the anger of the LORD kindled against his people, and he hath stretched forth his hand against them, and hath smitten them: and the hills did tremble, and their carcases were torn in the midst of the streets. For all this his anger is not turned away, but his hand is stretched out still."
+      },
+      {
+        "display": "Genesis 4.16-26",
+        "text": "And Cain went out from the presence of the LORD, and dwelt in the land of Nod, on the east of Eden. And Cain knew his wife; and she conceived, and bare Enoch: and he builded a city, and called the name of the city, after the name of his son, Enoch. And unto Enoch was born Irad: and Irad begat Mehujael: and Mehujael begat Methusael: and Methusael begat Lamech. And Lamech took unto him two wives: the name of the one was Adah, and the name of the other Zillah. And Adah bare Jabal: he was the father of such as dwell in tents, and of such as have cattle. And his brother\u2019s name was Jubal: he was the father of all such as handle the harp and organ. And Zillah, she also bare Tubal-cain, an instructer of every artificer in brass and iron: and the sister of Tubal-cain was Naamah. And Lamech said unto his wives, Adah and Zillah, Hear my voice; ye wives of Lamech, hearken unto my speech: for I have slain a man to my wounding, and a young man to my hurt. If Cain shall be avenged sevenfold, truly Lamech seventy and sevenfold. And Adam knew his wife again; and she bare a son, and called his name Seth: For God, said she, hath appointed me another seed instead of Abel, whom Cain slew. And to Seth, to him also there was born a son; and he called his name Enos: then began men to call upon the name of the LORD."
+      },
+      {
+        "display": "Proverbs 5.15-6.3",
+        "text": "Drink waters out of thine own cistern, and running waters out of thine own well. Let thy fountains be dispersed abroad, and rivers of waters in the streets. Let them be only thine own, and not strangers\u2019 with thee. Let thy fountain be blessed: and rejoice with the wife of thy youth. Let her be as the loving hind and pleasant roe; let her breasts satisfy thee at all times; and be thou ravished always with her love. And why wilt thou, my son, be ravished with a strange woman, and embrace the bosom of a stranger? For the ways of man are before the eyes of the LORD, and he pondereth all his goings. His own iniquities shall take the wicked himself, and he shall be holden with the cords of his sins. He shall die without instruction; and in the greatness of his folly he shall go astray. My son, if thou be surety for thy friend, if thou hast stricken thy hand with a stranger, Thou art snared with the words of thy mouth, thou art taken with the words of thy mouth. Do this now, my son, and deliver thyself, when thou art come into the hand of thy friend; go, humble thyself, and make sure thy friend."
+      },
+      {
+        "display": "Genesis 28.10-17",
+        "text": "And Jacob went out from Beer-sheba, and went toward Haran. And he lighted upon a certain place, and tarried there all night, because the sun was set; and he took of the stones of that place, and put them for his pillows, and lay down in that place to sleep. And he dreamed, and behold a ladder set up on the earth, and the top of it reached to heaven: and behold the angels of God ascending and descending on it. And, behold, the LORD stood above it, and said, I am the LORD God of Abraham thy father, and the God of Isaac: the land whereon thou liest, to thee will I give it, and to thy seed; And thy seed shall be as the dust of the earth, and thou shalt spread abroad to the west, and to the east, and to the north, and to the south: and in thee and in thy seed shall all the families of the earth be blessed. And, behold, I am with thee, and will keep thee in all places whither thou goest, and will bring thee again into this land; for I will not leave thee, until I have done that which I have spoken to thee of. And Jacob awaked out of his sleep, and he said, Surely the LORD is in this place; and I knew it not. And he was afraid, and said, How dreadful is this place! this is none other but the house of God, and this is the gate of heaven."
+      },
+      {
+        "display": "Ezekiel 43.27-44.4",
+        "text": "And when these days are expired, it shall be, that upon the eighth day, and so forward, the priests shall make your burnt offerings upon the altar, and your peace offerings; and I will accept you, saith the Lord GOD. Then he brought me back the way of the gate of the outward sanctuary which looketh toward the east; and it was shut. Then said the LORD unto me; This gate shall be shut, it shall not be opened, and no man shall enter in by it; because the LORD, the God of Israel, hath entered in by it, therefore it shall be shut. It is for the prince; the prince, he shall sit in it to eat bread before the LORD; he shall enter by the way of the porch of that gate, and shall go out by the way of the same. Then brought he me the way of the north gate before the house: and I looked, and, behold, the glory of the LORD filled the house of the LORD: and I fell upon my face."
+      },
+      {
+        "display": "Proverbs 9.1-11",
+        "text": "Wisdom hath builded her house, she hath hewn out her seven pillars: She hath killed her beasts; she hath mingled her wine; she hath also furnished her table. She hath sent forth her maidens: she crieth upon the highest places of the city, Whoso is simple, let him turn in hither: as for him that wanteth understanding, she saith to him, Come, eat of my bread, and drink of the wine which I have mingled. Forsake the foolish, and live; and go in the way of understanding. He that reproveth a scorner getteth to himself shame: and he that rebuketh a wicked man getteth himself a blot. Reprove not a scorner, lest he hate thee: rebuke a wise man, and he will love thee. Give instruction to a wise man, and he will be yet wiser: teach a just man, and he will increase in learning. The fear of the LORD is the beginning of wisdom: and the knowledge of the holy is understanding. For by me thy days shall be multiplied, and the years of thy life shall be increased."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 2
+  },
+  "events": [
+    {
+      "title": "Teen SOYO Meeting",
+      "start": "2027-03-24 19:00:00",
+      "end": "2027-03-24 20:30:00",
+      "url": "https://www.constantinehelen.com/event/teen-soyo-meeting/2027-03-24/"
+    }
+  ]
+}

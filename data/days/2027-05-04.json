@@ -1,0 +1,50 @@
+{
+  "date": "2027-05-04",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": null,
+    "saints": [
+      "Virgin Martyr Pelagia of Tarsus",
+      "Hilary the Wonderworker",
+      "Athanasios, Bishop of Corinth",
+      "Our Holy Father Nikephoros the Hesychast (14th c.)",
+      "St Monica, mother of Blessed Augustine (388)"
+    ],
+    "summary_title": "Bright Tuesday",
+    "stories": [
+      {
+        "title": "Virgin Martyr Pelagia of Tarsus",
+        "html": "<p>She was born in Tarsus (home of the Apostle Paul). Though her parents were prominent pagans, she heard of Christ from Christians in that city, and her heart was filled with love for the Savior. The Emperor Diocletian visited Tarsus, and during his stay the Emperor\u2019s son and heir fell in love with Pelagia and wished to marry her. To her parents\u2019 complete amazement, Pelagia replied that she was already promised to her betrothed, Christ the Lord. She then fled her parents\u2019 house and went to the holy Bishop Linus, who instructed her in the Faith and baptized her. Pelagia then gave away all her many possessions, returned home, and told her parents that she was baptised. The Emperor\u2019s son, despairing of marryng her, killed himself. Pelagia\u2019s mother then denounced her daughter to the Emperor, who summoned her for trial. When Pelagia freely confessed her unwavering faith in Christ, the Emperor condemned her to be burned in a metal ox heated by fire. An account of her martyrdom says that, entering the ox with prayers of thanksgiving on her lips, she instantly melted like wax. Bishop Linus, who had baptised her, found a few of her bones and buried them on a hill near Tarsus. During the reign of the Emperor Constantine Copronymus (741-775), a church was built there in her honor.</p>"
+      },
+      {
+        "title": "Our Holy Father Nikephoros the Hesychast (14th c.)",
+        "html": "<p>He was originally a Roman Catholic, but became Orthodox and lived in asceticism on the Holy Mountain as a monk. He was the spiritual father of St Gregory Palamas. His life was outwardly uneventful, and he reposed in peace in the 14th century. He left this very concise description of the hesychast\u2019s path:</p>\n<p><i>\u201cGather your mind and compel it to enter into your heart and remain there. When your mind is firmly in your heart, it must not remain empty, but must incessantly make the prayer: \u2018Lord Jesus Christ, Son of God, have mercy on me!\u2019 And it must never fall silent. Through this the whole string of the virtues: love, joy, peace and the others, will make their abode in you, by which, then, every request of yours to God will be fulfilled.\u201d</i></p>"
+      }
+    ],
+    "fasting": null,
+    "readings": [
+      {
+        "display": "Acts 2.14-21",
+        "text": "But Peter, standing up with the eleven, lifted up his voice, and said unto them, Ye men of Jud\u00e6a, and all ye that dwell at Jerusalem, be this known unto you, and hearken to my words: For these are not drunken, as ye suppose, seeing it is but the third hour of the day. But this is that which was spoken by the prophet Joel; And it shall come to pass in the last days, saith God, I will pour out of my Spirit upon all flesh: and your sons and your daughters shall prophesy, and your young men shall see visions, and your old men shall dream dreams: And on my servants and on my handmaidens I will pour out in those days of my Spirit; and they shall prophesy: And I will shew wonders in heaven above, and signs in the earth beneath; blood, and fire, and vapour of smoke: The sun shall be turned into darkness, and the moon into blood, before that great and notable day of the Lord come: And it shall come to pass, that whosoever shall call on the name of the Lord shall be saved."
+      },
+      {
+        "display": "Luke 24.12-35",
+        "text": "Then arose Peter, and ran unto the sepulchre; and stooping down, he beheld the linen clothes laid by themselves, and departed, wondering in himself at that which was come to pass. And, behold, two of them went that same day to a village called Emmaus, which was from Jerusalem about threescore furlongs. And they talked together of all these things which had happened. And it came to pass, that, while they communed together and reasoned, Jesus himself drew near, and went with them. But their eyes were holden that they should not know him. And he said unto them, What manner of communications are these that ye have one to another, as ye walk, and are sad? And the one of them, whose name was Cleopas, answering said unto him, Art thou only a stranger in Jerusalem, and hast not known the things which are come to pass there in these days? And he said unto them, What things? And they said unto him, Concerning Jesus of Nazareth, which was a prophet mighty in deed and word before God and all the people: And how the chief priests and our rulers delivered him to be condemned to death, and have crucified him. But we trusted that it had been he which should have redeemed Israel: and beside all this, to day is the third day since these things were done. Yea, and certain women also of our company made us astonished, which were early at the sepulchre; And when they found not his body, they came, saying, that they had also seen a vision of angels, which said that he was alive. And certain of them which were with us went to the sepulchre, and found it even so as the women had said: but him they saw not. Then he said unto them, O fools, and slow of heart to believe all that the prophets have spoken: Ought not Christ to have suffered these things, and to enter into his glory? And beginning at Moses and all the prophets, he expounded unto them in all the scriptures the things concerning himself. And they drew nigh unto the village, whither they went: and he made as though he would have gone further. But they constrained him, saying, Abide with us: for it is toward evening, and the day is far spent. And he went in to tarry with them. And it came to pass, as he sat at meat with them, he took bread, and blessed it, and brake, and gave to them. And their eyes were opened, and they knew him; and he vanished out of their sight. And they said one to another, Did not our heart burn within us, while he talked with us by the way, and while he opened to us the scriptures? And they rose up the same hour, and returned to Jerusalem, and found the eleven gathered together, and them that were with them, Saying, The Lord is risen indeed, and hath appeared to Simon. And they told what things were done in the way, and how he was known of them in breaking of bread."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 2
+  },
+  "events": [
+    {
+      "title": "Divine Liturgy \u2013 last day",
+      "start": "2027-05-04 09:30:00",
+      "end": "2027-05-04 11:00:00",
+      "url": "https://www.constantinehelen.com/event/tuesday-liturgy-2-2/"
+    }
+  ]
+}

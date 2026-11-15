@@ -1,0 +1,56 @@
+{
+  "date": "2027-04-08",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": null,
+    "saints": [
+      "Apostles of the Seventy Herodion, Agabus, Asyncritus, Rufuf, Phlegon, Hermes",
+      "The Holy New Martyr John the Ship-Builder who was martyred in Kos",
+      "Rufus the Obedient of the Kiev Caves",
+      "Saint Celestine, Pope of Rome (432)"
+    ],
+    "summary_title": "Apostles of the Seventy Herodion, Agabus, Asyncritus, Rufuf, Phlegon, Hermes; Saint Celestine, Pope of Rome (432); The Holy New Martyr John the Ship-Builder who was martyred in Kos",
+    "stories": [
+      {
+        "title": "Apostles of the Seventy Herodion, Agabus, Asyncritus, Rufuf, Phlegon, Hermes",
+        "html": "<p>All of these are numbered among the Seventy, and all are mentioned in the Epistles of St Paul.</p>\n<p>Herodion was a kinsmen of St Paul: \u2018Salute Herodion my kinsman\u2019 (Romans 16:11). After many sufferings for the Gospel, he worked with the Apostle Peter in Rome, and was beheaded with him.</p>\n<p>Agabus was granted a spirit of prophecy: two of his prophecies are important in the Acts of the Apostles (Acts 11:28, 21:11).</p>\n<p>Rufus was Bishop of Thebes. \u2018Salute Rufus, chosen in the Lord\u2019 (Romans 16:13).</p>\n<p>Asyncritus (Romans 16:14) was Bishop of Hyrcania in Asia.</p>\n<p>Phlegon, (Romans 16:14) was Bishop of Marathon in Thrace.</p>\n<p>Hermas (Romans 16:14) was a bishop in Dalmatia.</p>"
+      },
+      {
+        "title": "Saint Celestine, Pope of Rome (432)",
+        "html": "<p>A champion of the Orthodox faith, he sent an epistle to the Third Ecumenical Council, refuting and condemning the Nestorian heresy. He reposed in peace.</p>"
+      }
+    ],
+    "fasting": {
+      "description": "Lenten Fast",
+      "abstentions": [
+        "meat",
+        "fish",
+        "dairy",
+        "eggs",
+        "wine",
+        "oil"
+      ]
+    },
+    "readings": [
+      {
+        "display": "Isaiah 28.14-22",
+        "text": "Wherefore hear the word of the LORD, ye scornful men, that rule this people which is in Jerusalem. Because ye have said, We have made a covenant with death, and with hell are we at agreement; when the overflowing scourge shall pass through, it shall not come unto us: for we have made lies our refuge, and under falsehood have we hid ourselves: Therefore thus saith the Lord GOD, Behold, I lay in Zion for a foundation a stone, a tried stone, a precious corner stone, a sure foundation: he that believeth shall not make haste. Judgment also will I lay to the line, and righteousness to the plummet: and the hail shall sweep away the refuge of lies, and the waters shall overflow the hiding place. And your covenant with death shall be disannulled, and your agreement with hell shall not stand; when the overflowing scourge shall pass through, then ye shall be trodden down by it. From the time that it goeth forth it shall take you: for morning by morning shall it pass over, by day and by night: and it shall be a vexation only to understand the report. For the bed is shorter than that a man can stretch himself on it: and the covering narrower than that he can wrap himself in it. For the LORD shall rise up as in mount Perazim, he shall be wroth as in the valley of Gibeon, that he may do his work, his strange work; and bring to pass his act, his strange act. Now therefore be ye not mockers, lest your bands be made strong: for I have heard from the Lord GOD of hosts a consumption, even determined upon the whole earth."
+      },
+      {
+        "display": "Genesis 10.32-11.9",
+        "text": "These are the families of the sons of Noah, after their generations, in their nations: and by these were the nations divided in the earth after the flood. And the whole earth was of one language, and of one speech. And it came to pass, as they journeyed from the east, that they found a plain in the land of Shinar; and they dwelt there. And they said one to another, Go to, let us make brick, and burn them throughly. And they had brick for stone, and slime had they for morter. And they said, Go to, let us build us a city and a tower, whose top may reach unto heaven; and let us make us a name, lest we be scattered abroad upon the face of the whole earth. And the LORD came down to see the city and the tower, which the children of men builded. And the LORD said, Behold, the people is one, and they have all one language; and this they begin to do: and now nothing will be restrained from them, which they have imagined to do. Go to, let us go down, and there confound their language, that they may not understand one another\u2019s speech. So the LORD scattered them abroad from thence upon the face of all the earth: and they left off to build the city. Therefore is the name of it called Babel; because the LORD did there confound the language of all the earth: and from thence did the LORD scatter them abroad upon the face of all the earth."
+      },
+      {
+        "display": "Proverbs 13.19-14.6",
+        "text": "The desire accomplished is sweet to the soul: but it is abomination to fools to depart from evil. He that walketh with wise men shall be wise: but a companion of fools shall be destroyed. Evil pursueth sinners: but to the righteous good shall be repayed. A good man leaveth an inheritance to his children\u2019s children: and the wealth of the sinner is laid up for the just. Much food is in the tillage of the poor: but there is that is destroyed for want of judgment. He that spareth his rod hateth his son: but he that loveth him chasteneth him betimes. The righteous eateth to the satisfying of his soul: but the belly of the wicked shall want. Every wise woman buildeth her house: but the foolish plucketh it down with her hands. He that walketh in his uprightness feareth the LORD: but he that is perverse in his ways despiseth him. In the mouth of the foolish is a rod of pride: but the lips of the wise shall preserve them. Where no oxen are, the crib is clean: but much increase is by the strength of the ox. A faithful witness will not lie: but a false witness will utter lies. A scorner seeketh wisdom, and findeth it not: but knowledge is easy unto him that understandeth."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 2
+  },
+  "events": []
+}

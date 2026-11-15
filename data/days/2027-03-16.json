@@ -1,0 +1,68 @@
+{
+  "date": "2027-03-16",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": null,
+    "saints": [
+      "Martyr Sabinas of Egypt",
+      "Julian the Martyr",
+      "Romanos the Hieromartyr of Parium",
+      "Our Holy Father Christodoulos, Wonderworker of Patmos (1111)",
+      "Holy Apostle Aristobulus of the Seventy, first Bishop of Britain (1st c.)"
+    ],
+    "summary_title": "Martyr Sabinas of Egypt; Our Holy Father Christodoulos, Wonderworker of Patmos (1111); Holy Apostle Aristobulus of the Seventy, first Bishop of Britain (1st c.)",
+    "stories": [
+      {
+        "title": "Martyr Sabinas of Egypt",
+        "html": "<p>He was the administrator (we would say mayor) of the city of Hermopolis in Egypt. During a persecution, he and many other Christians fled to the mountains, where Sabinas shut himself in a hut and spent his days in fasting and prayer. But a poor man who brought him food (and whom Sabinas had helped in many ways) betrayed him to the authorities for two pieces of gold. Sabinas and six others were arrested, bound and brought before the governor Arian. After harsh torture, Sabinas was drowned in the Nile.</p>"
+      },
+      {
+        "title": "Our Holy Father Christodoulos, Wonderworker of Patmos (1111)",
+        "html": "<p>He was from the region of Nicaea, and was named John by his parents Theodore and Anna. He took up the monastic life at an early age, and was renamed Christodoulos (\u2018Slave of Christ\u2019). After going far in the ascetical life, he was given permission by the Emperor Alexis I (1081-1118) to establish a church and monastery on the island of Patmos, dedicated to St John the Evangelist. Both the church and the monastery stand and continue in use to this day. When Patmos was attacked by the Arabs, he and his disciples fled to Euboea, where he reposed. The Saint\u2019s disciples brought his relics back to his own monastery, where they continue to work miracles today.</p>"
+      },
+      {
+        "title": "Holy Apostle Aristobulus of the Seventy, first Bishop of Britain (1st c.)",
+        "html": "<p>\u201cHe was the brother of the Apostle Barnabas and was born in Cyprus. He was a follower of the Apostle Paul, who mentions him in his Epistle to the Romans (16:10). When the great Apostle Paul created many bishops for different parts of the world, he made this Aristobulus bishop of Britain (i.e. England). In Britain there was a wild people, pagan and wicked, and Aristobulus endured among them unmentionable torments, misfortunes and malice. They smote him without mercy, dragged him through the streets, mocked him and jeered at him. But in the end this holy man came to success by the power of the grace of God. He enlightened the people, baptised them in the name of Christ the Lord, built churches, ordained priests and deacons and finally died there in peace and went to the Kingdom of the Lord whom he had served so faithfully.\u201d (<i>Prologue</i>)</p>\n<p><i>Note: in the Greek calendar he is commemorated on March 15.</i></p>"
+      }
+    ],
+    "fasting": {
+      "description": "Lenten Fast",
+      "abstentions": [
+        "meat",
+        "fish",
+        "dairy",
+        "eggs",
+        "wine",
+        "oil"
+      ]
+    },
+    "readings": [
+      {
+        "display": "Isaiah 1.19-2.3",
+        "text": "If ye be willing and obedient, ye shall eat the good of the land: But if ye refuse and rebel, ye shall be devoured with the sword: for the mouth of the LORD hath spoken it. How is the faithful city become an harlot! it was full of judgment; righteousness lodged in it; but now murderers. Thy silver is become dross, thy wine mixed with water: Thy princes are rebellious, and companions of thieves: every one loveth gifts, and followeth after rewards: they judge not the fatherless, neither doth the cause of the widow come unto them. Therefore saith the Lord, the LORD of hosts, the mighty One of Israel, Ah, I will ease me of mine adversaries, and avenge me of mine enemies: And I will turn my hand upon thee, and purely purge away thy dross, and take away all thy tin: And I will restore thy judges as at the first, and thy counsellors as at the beginning: afterward thou shalt be called, The city of righteousness, the faithful city. Zion shall be redeemed with judgment, and her converts with righteousness. And the destruction of the transgressors and of the sinners shall be together, and they that forsake the LORD shall be consumed. For they shall be ashamed of the oaks which ye have desired, and ye shall be confounded for the gardens that ye have chosen. For ye shall be as an oak whose leaf fadeth, and as a garden that hath no water. And the strong shall be as tow, and the maker of it as a spark, and they shall both burn together, and none shall quench them. The word that Isaiah the son of Amoz saw concerning Judah and Jerusalem. And it shall come to pass in the last days, that the mountain of the LORD\u2019s house shall be established in the top of the mountains, and shall be exalted above the hills; and all nations shall flow unto it. And many people shall go and say, Come ye, and let us go up to the mountain of the LORD, to the house of the God of Jacob; and he will teach us of his ways, and we will walk in his paths: for out of Zion shall go forth the law, and the word of the LORD from Jerusalem."
+      },
+      {
+        "display": "Genesis 1.14-23",
+        "text": "And God said, Let there be lights in the firmament of the heaven to divide the day from the night; and let them be for signs, and for seasons, and for days, and years: And let them be for lights in the firmament of the heaven to give light upon the earth: and it was so. And God made two great lights; the greater light to rule the day, and the lesser light to rule the night: he made the stars also. And God set them in the firmament of the heaven to give light upon the earth, And to rule over the day and over the night, and to divide the light from the darkness: and God saw that it was good. And the evening and the morning were the fourth day. And God said, Let the waters bring forth abundantly the moving creature that hath life, and fowl that may fly above the earth in the open firmament of heaven. And God created great whales, and every living creature that moveth, which the waters brought forth abundantly, after their kind, and every winged fowl after his kind: and God saw that it was good. And God blessed them, saying, Be fruitful, and multiply, and fill the waters in the seas, and let fowl multiply in the earth. And the evening and the morning were the fifth day."
+      },
+      {
+        "display": "Proverbs 1.20-33",
+        "text": "Wisdom crieth without; she uttereth her voice in the streets: She crieth in the chief place of concourse, in the openings of the gates: in the city she uttereth her words, saying, How long, ye simple ones, will ye love simplicity? and the scorners delight in their scorning, and fools hate knowledge? Turn you at my reproof: behold, I will pour out my spirit unto you, I will make known my words unto you. Because I have called, and ye refused; I have stretched out my hand, and no man regarded; But ye have set at nought all my counsel, and would none of my reproof: I also will laugh at your calamity; I will mock when your fear cometh; When your fear cometh as desolation, and your destruction cometh as a whirlwind; when distress and anguish cometh upon you. Then shall they call upon me, but I will not answer; they shall seek me early, but they shall not find me: For that they hated knowledge, and did not choose the fear of the LORD: They would none of my counsel: they despised all my reproof. Therefore shall they eat of the fruit of their own way, and be filled with their own devices. For the turning away of the simple shall slay them, and the prosperity of fools shall destroy them. But whoso hearkeneth unto me shall dwell safely, and shall be quiet from fear of evil."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 2
+  },
+  "events": [
+    {
+      "title": "Divine Liturgy",
+      "start": "2027-03-16 09:30:00",
+      "end": "2027-03-16 11:00:00",
+      "url": "https://www.constantinehelen.com/event/tuesday-liturgy-2/2027-03-16/"
+    }
+  ]
+}

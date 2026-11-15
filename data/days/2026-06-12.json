@@ -1,0 +1,45 @@
+{
+  "date": "2026-06-12",
+  "liturgical": {
+    "status": "ok",
+    "source": "antiochian",
+    "feasts": [
+      "2Nd Friday After Pentecost"
+    ],
+    "saints": [
+      "Onuphrius of Egypt",
+      "Peter the Athonite",
+      "Holy Martyr Antonine",
+      "John the Soldier of Egypt"
+    ],
+    "summary_title": "Onuphrius of Egypt, Peter the Athonite, Holy Martyr Antonine, John the Soldier of Egypt",
+    "stories": [],
+    "fasting": {
+      "description": "Abstain From Meat, Fish, Dairy, Eggs, Wine, Olive Oil",
+      "abstentions": [
+        "meat",
+        "fish",
+        "dairy",
+        "eggs",
+        "wine",
+        "olive oil"
+      ]
+    },
+    "readings": [
+      {
+        "display": "St. Paul's Letter to the Romans 5:17-21; 6:1-2",
+        "text": "Brethren, if, because of one man's trespass, death reigned through that one man, much more will those who receive the abundance of grace and the free gift of righteousness reign in life through the one man Jesus Christ. Then as one man's trespass led to condemnation for all men, so one man's act of righteousness leads to acquittal and life for all men. For as by one man's disobedience many were made sinners, so by one man's obedience many will be made righteous. Law came in, to increase the trespass; but where sin increased, grace abounded all the more, so that, as sin reigned in death, grace also might reign through righteousness to eternal life through Jesus Christ our Lord. What shall we say then? Are we to continue in sin that grace may abound? By no means! How can we who died to sin still live in it?"
+      },
+      {
+        "display": "Matthew 9:14-17",
+        "text": "At that time, the disciples of John came to Jesus, saying, \"Why do we and the Pharisees fast, but your disciples do not fast?\" And Jesus said to them, \"Can the wedding guests mourn as long as the bridegroom is with them? The days will come, when the bridegroom is taken away from them, and then they will fast. And no one puts a piece of unshrunk cloth on an old garment, for the patch tears away from the garment, and a worse tear is made. Neither is new wine put into old wineskins; if it is, the skins burst, and the wine is spilled, and the skins are destroyed; but new wine is put into fresh wineskins, and so both are preserved.\""
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 2
+  },
+  "events": []
+}

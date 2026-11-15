@@ -1,0 +1,57 @@
+{
+  "date": "2027-03-21",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": [
+      "Sunday of Orthodoxy"
+    ],
+    "saints": [
+      "St James the Confessor of Catania",
+      "Thomas I, Patriarch of Constantinople",
+      "Philemon and Domninos",
+      "Our Holy Father Serapion (366)",
+      "St James the Confessor, Bishop of the Studion"
+    ],
+    "summary_title": "First Sunday of Lent",
+    "stories": [
+      {
+        "title": "Our Holy Father Serapion (366)",
+        "html": "<p>\u2018A companion of St Antony the Great, he lived in the Nitrian desert, in charge of the monastery of Arsina which contained 11,000 monks. Palladius and Sozomenes gave him the title \u201cthe Great\u201d. He entered into rest in about 366. St Serapion wrote: \u201cDo not think that sickness is grave; only sin is grave\u2026 Sickness leads us only to the tomb, but sin follows the sinner beyond it\u201d.\u2019 (<i>Prologue</i>)</p>"
+      },
+      {
+        "title": "St James the Confessor, Bishop of the Studion",
+        "html": "<p>His birthplace and the place of his episcopate are unknown. He was a monk of the Studion monastery in Constantinople, and a disciple of St Theodore the Studite. As a bishop he was severely persecuted by the iconoclasts in the time of the Emperor Constantine Copronymus, enduring hunger, imprisonment and mocking, thus earning the title \u201cConfessor.\u201d Saint Theodore wrote a homily in honor of him.</p>"
+      }
+    ],
+    "fasting": {
+      "description": "Lenten Fast",
+      "abstentions": [
+        "meat",
+        "fish",
+        "dairy",
+        "eggs"
+      ]
+    },
+    "readings": [
+      {
+        "display": "John 20.19-31",
+        "text": "Then the same day at evening, being the first day of the week, when the doors were shut where the disciples were assembled for fear of the Jews, came Jesus and stood in the midst, and saith unto them, Peace be unto you. And when he had so said, he shewed unto them his hands and his side. Then were the disciples glad, when they saw the Lord. Then said Jesus to them again, Peace be unto you: as my Father hath sent me, even so send I you. And when he had said this, he breathed on them, and saith unto them, Receive ye the Holy Ghost: Whose soever sins ye remit, they are remitted unto them; and whose soever sins ye retain, they are retained. But Thomas, one of the twelve, called Didymus, was not with them when Jesus came. The other disciples therefore said unto him, We have seen the Lord. But he said unto them, Except I shall see in his hands the print of the nails, and put my finger into the print of the nails, and thrust my hand into his side, I will not believe. And after eight days again his disciples were within, and Thomas with them: then came Jesus, the doors being shut, and stood in the midst, and said, Peace be unto you. Then saith he to Thomas, Reach hither thy finger, and behold my hands; and reach hither thy hand, and thrust it into my side: and be not faithless, but believing. And Thomas answered and said unto him, My Lord and my God. Jesus saith unto him, Thomas, because thou hast seen me, thou hast believed: blessed are they that have not seen, and yet have believed. And many other signs truly did Jesus in the presence of his disciples, which are not written in this book: But these are written, that ye might believe that Jesus is the Christ, the Son of God; and that believing ye might have life through his name."
+      },
+      {
+        "display": "Hebrews 11.24-26, 32-40",
+        "text": "By faith Moses, when he was come to years, refused to be called the son of Pharaoh\u2019s daughter; Choosing rather to suffer affliction with the people of God, than to enjoy the pleasures of sin for a season; Esteeming the reproach of Christ greater riches than the treasures in Egypt: for he had respect unto the recompence of the reward. And what shall I more say? for the time would fail me to tell of Gedeon, and of Barak, and of Samson, and of Jephthae; of David also, and Samuel, and of the prophets: Who through faith subdued kingdoms, wrought righteousness, obtained promises, stopped the mouths of lions, Quenched the violence of fire, escaped the edge of the sword, out of weakness were made strong, waxed valiant in fight, turned to flight the armies of the aliens. Women received their dead raised to life again: and others were tortured, not accepting deliverance; that they might obtain a better resurrection: And others had trial of cruel mockings and scourgings, yea, moreover of bonds and imprisonment: They were stoned, they were sawn asunder, were tempted, were slain with the sword: they wandered about in sheepskins and goatskins; being destitute, afflicted, tormented; (Of whom the world was not worthy:) they wandered in deserts, and in mountains, and in dens and caves of the earth. And these all, having obtained a good report through faith, received not the promise: God having provided some better thing for us, that they without us should not be made perfect."
+      },
+      {
+        "display": "John 1.43-51",
+        "text": "The day following Jesus would go forth into Galilee, and findeth Philip, and saith unto him, Follow me. Now Philip was of Bethsaida, the city of Andrew and Peter. Philip findeth Nathanael, and saith unto him, We have found him, of whom Moses in the law, and the prophets, did write, Jesus of Nazareth, the son of Joseph. And Nathanael said unto him, Can there any good thing come out of Nazareth? Philip saith unto him, Come and see. Jesus saw Nathanael coming to him, and saith of him, Behold an Israelite indeed, in whom is no guile! Nathanael saith unto him, Whence knowest thou me? Jesus answered and said unto him, Before that Philip called thee, when thou wast under the fig tree, I saw thee. Nathanael answered and saith unto him, Rabbi, thou art the Son of God; thou art the King of Israel. Jesus answered and said unto him, Because I said unto thee, I saw thee under the fig tree, believest thou? thou shalt see greater things than these. And he saith unto him, Verily, verily, I say unto you, Hereafter ye shall see heaven open, and the angels of God ascending and descending upon the Son of man."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 2
+  },
+  "events": []
+}

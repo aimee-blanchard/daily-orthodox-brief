@@ -169,7 +169,9 @@
     "great_feast": {
       "name": "Theophany",
       "is_pascha": false
-    }
+    },
+    "newadvent": [],
+    "newadvent_version": 2
   },
   "events": [
     {

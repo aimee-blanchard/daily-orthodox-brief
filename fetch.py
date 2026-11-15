@@ -9,8 +9,11 @@ from __future__ import annotations
 import html
 import io
 import json
+import os
 import re
 import sys
+import time
+import unicodedata
 import urllib.error
 import urllib.request
 from datetime import date, datetime, timedelta
@@ -22,8 +25,16 @@ from striprtf.striprtf import rtf_to_text
 from playwright.sync_api import sync_playwright
 
 CENTRAL = ZoneInfo("America/Chicago")
-WINDOW_BACK_DAYS = 7
-WINDOW_FORWARD_DAYS = 90
+# Keep roughly six months of days on either side of today. A fresh window is
+# filled incrementally: each run fetches at most MAX_LITURGICAL_FETCHES_PER_RUN
+# missing days (nearest to today first), so a full backfill is spread over a
+# few runs instead of blowing through the Action's time limit. Once filled,
+# a normal day only needs to fetch the one new day at the far end.
+WINDOW_BACK_DAYS = 183
+WINDOW_FORWARD_DAYS = 183
+MAX_LITURGICAL_FETCHES_PER_RUN = int(os.environ.get("MAX_LITURGICAL_FETCHES_PER_RUN", "60"))
+# Pause between antiochian.org page loads so a backfill is a polite trickle.
+ANTIOCHIAN_DELAY_SECONDS = 1.5
 # A day can legitimately have no service texts (an ordinary weekday), or it can
 # have none, or have some with missing text, because a transient scrape glitch
 # found no links (or failed to fetch a link's RTF text) that one time. We can't
@@ -730,6 +741,701 @@ def fetch_fasting_calendar_link() -> str:
 
 
 # ---------------------------------------------------------------------------
+# Source: Antiochian Archdiocese annual fasting calendar (PDF) -> data/fasting.json
+#
+# The Archdiocese publishes one color-coded PDF per year in a public Azure blob
+# container, at a predictable name ("2026 Fasting Calendar.pdf"). The next
+# year's PDF has historically appeared in late November. We read each day's
+# cell fill color and map it to the legend printed on the same PDF.
+#
+# Per-day precedence (most to least authoritative):
+#   1. antiochian.org's own daily page (already in data/days/, source=antiochian)
+#   2. the Archdiocese's annual fasting-calendar PDF
+#   3. orthocal.info Greek-tradition API -- only for a year whose Antiochian
+#      PDF isn't published yet; marked "provisional" so the UI can say so.
+# Days are never inferred from rules: every level comes from one of the above.
+# ---------------------------------------------------------------------------
+
+FASTING_PDF_URL = "https://antiochianprodsa.blob.core.windows.net/liturgicalinstructions/{year}%20Fasting%20Calendar.pdf"
+ORTHOCAL_MONTH_URL = "https://orthocal.info/api/greek/gregorian/{year}/{month}/"
+
+# Keyed by what is abstained from, matching the Antiochian PDF legend.
+FAST_LEVELS = {
+    "strict": {
+        "label": "Strict fast",
+        "allows": "No meat, dairy, eggs, fish, olive oil or wine",
+        "abstain": ["meat", "dairy", "eggs", "fish", "olive oil", "wine"],
+    },
+    "wine": {
+        "label": "Wine allowed",
+        "allows": "Wine allowed; no meat, dairy, eggs, fish or olive oil",
+        "abstain": ["meat", "dairy", "eggs", "fish", "olive oil"],
+    },
+    "wine_oil": {
+        "label": "Wine & oil allowed",
+        "allows": "Wine and olive oil allowed; no meat, dairy, eggs or fish",
+        "abstain": ["meat", "dairy", "eggs", "fish"],
+    },
+    "fish": {
+        "label": "Fish, wine & oil allowed",
+        "allows": "Fish, wine and olive oil allowed; no meat, dairy or eggs",
+        "abstain": ["meat", "dairy", "eggs"],
+    },
+    "dairy": {
+        "label": "Dairy, eggs & fish allowed",
+        "allows": "Dairy, eggs and fish allowed; no meat",
+        "abstain": ["meat"],
+    },
+}
+
+
+def fast_level_from_abstentions(abstentions) -> str | None:
+    a = {x.strip().lower() for x in abstentions or []}
+    a = {"olive oil" if x == "oil" else x for x in a}
+    if not a:
+        return None
+    if {"wine", "olive oil"} <= a:
+        return "strict"
+    if "olive oil" in a:
+        return "wine"
+    if "fish" in a:
+        return "wine_oil"
+    if "dairy" in a or "eggs" in a:
+        return "fish"
+    if "meat" in a:
+        return "dairy"
+    return None
+
+
+def _pdf_color(c) -> tuple | None:
+    if c is None:
+        return None
+    if isinstance(c, (int, float)):
+        c = (c,)
+    c = tuple(float(x) for x in c)
+    if len(c) == 1:
+        c = (c[0], c[0], c[0])
+    if len(c) != 3:
+        return None
+    return c
+
+
+def _is_neutral(c) -> bool:
+    return max(c) - min(c) < 0.05  # black / white / gray: borders & headers
+
+
+def parse_fasting_pdf(pdf_bytes: bytes, year: int) -> dict:
+    """Returns {"YYYY-MM-DD": level_key} for every fasting day in the PDF."""
+    import calendar as _cal
+    month_names = list(_cal.month_name)[1:]
+    with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
+        page = pdf.pages[0]
+        words = page.extract_words()
+        rects = [r for r in page.rects if r.get("fill") and r["width"] > 3 and r["height"] > 3]
+
+        def fill_at(x, y):
+            for r in rects:
+                if r["x0"] <= x <= r["x1"] and r["top"] <= y <= r["bottom"]:
+                    c = _pdf_color(r.get("non_stroking_color"))
+                    if c and not _is_neutral(c):
+                        return c
+            return None
+
+        # Legend: each colored row holds an "Abstain from ..." line.
+        lines = {}
+        for w in words:
+            lines.setdefault(round(w["top"]), []).append(w)
+        legend = []
+        for top, ws in lines.items():
+            text = " ".join(w["text"] for w in sorted(ws, key=lambda w: w["x0"]))
+            if not text.lower().startswith("abstain from"):
+                continue
+            c = fill_at((ws[0]["x0"] + ws[-1]["x1"]) / 2, (ws[0]["top"] + ws[0]["bottom"]) / 2)
+            level = fast_level_from_abstentions(re.sub(r"(?i)^abstain from\s*", "", text).split(","))
+            if c and level:
+                legend.append((c, level))
+        if len({lvl for _, lvl in legend}) < 4:
+            raise ValueError(f"fasting PDF {year}: legend not recognised ({legend})")
+
+        def nearest_level(c):
+            best = min(legend, key=lambda e: sum((a - b) ** 2 for a, b in zip(e[0], c)))
+            dist = sum((a - b) ** 2 for a, b in zip(best[0], c)) ** 0.5
+            if dist > 0.25:
+                raise ValueError(f"fasting PDF {year}: unknown cell color {c}")
+            return best[1]
+
+        heads = [w for w in words if w["text"] in month_names]
+        if len(heads) != 12:
+            raise ValueError(f"fasting PDF {year}: found {len(heads)} month headings")
+        title = " ".join(w["text"] for w in words[:6])
+        if str(year) not in title:
+            raise ValueError(f"fasting PDF {year}: title doesn't mention the year ({title!r})")
+
+        seen = {m: set() for m in range(1, 13)}
+        result = {}
+        for w in words:
+            if not w["text"].isdigit():
+                continue
+            cx, cy = (w["x0"] + w["x1"]) / 2, (w["top"] + w["bottom"]) / 2
+            above = [h for h in heads if h["top"] < cy and abs((h["x0"] + h["x1"]) / 2 - cx) < 110]
+            if not above:
+                continue
+            month = month_names.index(max(above, key=lambda h: h["top"])["text"]) + 1
+            day = int(w["text"])
+            seen[month].add(day)
+            c = fill_at(cx, cy)
+            if c:
+                result[date(year, month, day).isoformat()] = nearest_level(c)
+        for m, days in seen.items():
+            if days != set(range(1, _cal.monthrange(year, m)[1] + 1)):
+                raise ValueError(f"fasting PDF {year}: month {m} grid incomplete")
+    return result
+
+
+def fetch_antiochian_fasting_year(year: int) -> dict:
+    url = FASTING_PDF_URL.format(year=year)
+    return {"url": url, "days": parse_fasting_pdf(http_get(url), year)}
+
+
+def fetch_orthocal_fasting_year(year: int) -> dict:
+    days = {}
+    for month in range(1, 13):
+        for raw in http_get_json(ORTHOCAL_MONTH_URL.format(year=year, month=month)):
+            if not raw.get("fast_level"):
+                continue
+            level = fast_level_from_abstentions(raw.get("fast_abstentions"))
+            if raw.get("fast_exception_desc") == "Strict Fast":
+                level = "strict"
+            if level:
+                days[date(year, month, raw["day"]).isoformat()] = level
+    return {"url": "https://orthocal.info/api/greek/gregorian/", "days": days}
+
+
+def orthodox_pascha(year: int) -> date:
+    """Orthodox Pascha (Julian computus), as a Gregorian date. Used only to
+    *name* fasting seasons; the fasting levels themselves come from sources."""
+    a, b, c = year % 4, year % 7, year % 19
+    d = (19 * c + 15) % 30
+    e = (2 * a + 4 * b - d + 34) % 7
+    month, day = divmod(d + e + 114, 31)
+    return date(year, month, day + 1) + timedelta(days=13)
+
+
+def fasting_seasons(year: int) -> list:
+    p = orthodox_pascha(year)
+    pentecost = p + timedelta(days=49)
+    seasons = [
+        ("fast_free", "Fast-free: Nativity to Theophany", date(year, 1, 1), date(year, 1, 4)),
+        ("fast_free", "Fast-free week after the Publican & Pharisee", p - timedelta(days=69), p - timedelta(days=63)),
+        ("season", "Cheesefare Week", p - timedelta(days=55), p - timedelta(days=49)),
+        ("season", "Great Lent", p - timedelta(days=48), p - timedelta(days=7)),
+        ("season", "Holy Week", p - timedelta(days=6), p - timedelta(days=1)),
+        ("fast_free", "Fast-free: Bright Week", p, p + timedelta(days=6)),
+        ("fast_free", "Fast-free: Week after Pentecost", pentecost, pentecost + timedelta(days=6)),
+        ("season", "Apostles' Fast", pentecost + timedelta(days=8), date(year, 6, 28)),
+        ("season", "Dormition Fast", date(year, 8, 1), date(year, 8, 14)),
+        ("season", "Nativity Fast", date(year, 11, 15), date(year, 12, 24)),
+        ("fast_free", "Fast-free: Nativity to Theophany", date(year, 12, 25), date(year, 12, 31)),
+    ]
+    return [
+        {"kind": k, "name": n, "start": s.isoformat(), "end": e.isoformat()}
+        for k, n, s, e in seasons if s <= e
+    ]
+
+
+def build_fasting_calendar(today: date) -> bool:
+    """Writes data/fasting.json covering this year and next. Returns True if
+    every year got data from some source this run."""
+    path = DATA_DIR / "fasting.json"
+    prior = load_json(path) or {}
+    prior_years = prior.get("years", {})
+    years = [today.year, today.year + 1]
+    now_iso = datetime.now(CENTRAL).isoformat()
+
+    out_years, days = {}, {}
+    all_ok = True
+    for y in years:
+        meta, year_days = None, None
+        try:
+            got = fetch_antiochian_fasting_year(y)
+            meta = {"source": "antiochian_pdf", "provisional": False, "url": got["url"], "fetched_at": now_iso}
+            year_days = got["days"]
+        except Exception as exc:
+            print(f"[info] Antiochian fasting PDF for {y} unavailable: {exc}", file=sys.stderr)
+            prev = prior_years.get(str(y))
+            if prev and prev.get("source") == "antiochian_pdf":
+                # Keep the last good official data rather than downgrading.
+                meta = prev
+                year_days = {k: v["level"] for k, v in prior.get("days", {}).items()
+                             if k.startswith(f"{y}-") and v.get("source") == "antiochian_pdf"}
+            else:
+                try:
+                    got = fetch_orthocal_fasting_year(y)
+                    meta = {"source": "orthocal", "provisional": True, "url": got["url"], "fetched_at": now_iso}
+                    year_days = got["days"]
+                except Exception as exc2:
+                    print(f"[warn] orthocal fasting fallback for {y} failed: {exc2}", file=sys.stderr)
+                    if prev:
+                        meta = prev
+                        year_days = {k: v["level"] for k, v in prior.get("days", {}).items() if k.startswith(f"{y}-")}
+                    else:
+                        all_ok = False
+                        continue
+        out_years[str(y)] = meta
+        for k, lvl in year_days.items():
+            days[k] = {"level": lvl, "source": meta["source"]}
+
+    # antiochian.org's own daily pages override the annual sources.
+    for p in DAYS_DIR.glob("*.json"):
+        d = load_json(p) or {}
+        lit = d.get("liturgical") or {}
+        if lit.get("status") != "ok" or lit.get("source") != "antiochian" or d.get("date", "")[:4] not in out_years:
+            continue
+        key = d["date"]
+        level = fast_level_from_abstentions((lit.get("fasting") or {}).get("abstentions"))
+        prev = days.get(key, {}).get("level")
+        if prev != level:
+            print(f"[info] fasting {key}: antiochian.org daily page says {level}, annual source said {prev}", file=sys.stderr)
+        if level:
+            days[key] = {"level": level, "source": "antiochian_daily"}
+        else:
+            days.pop(key, None)
+
+    seasons = [s for y in years if str(y) in out_years for s in fasting_seasons(y)]
+    data = {
+        "generated_at": now_iso,
+        "years": out_years,
+        "levels": FAST_LEVELS,
+        "seasons": seasons,
+        "days": dict(sorted(days.items())),
+        "sources": {
+            "antiochian_daily": "antiochian.org daily liturgical page",
+            "antiochian_pdf": "Antiochian Archdiocese annual fasting calendar (PDF)",
+            "orthocal": "orthocal.info (Greek/Antiochian tradition, beta) -- provisional until the Archdiocese publishes its calendar",
+        },
+        "note": "On the day of a parish's patronal feast, fish, wine and oil are allowed if it falls on a fasting day. When fasting, consult your spiritual father.",
+    }
+    if out_years:
+        path.write_text(json.dumps(data, indent=1))
+    return all_ok and bool(out_years)
+
+
+# ---------------------------------------------------------------------------
+# Source: newadvent.org -- Catholic Encyclopedia (1913) saint biographies
+#
+# Attached to a day's commemorated saints only when we're confident the
+# article is about the same person. The rule of thumb is "no match beats a
+# wrong match": many saints share a first name, and post-schism Orthodox
+# saints usually have no (or no fair) entry.
+#
+# Matching, per commemorated saint:
+#   1. Only CE index entries the Encyclopedia itself titles as a saint
+#      ("Cyril of Alexandria, Saint", "Nicholas I, Saint, Pope").
+#   2. The given name must match (after normalising Greek/Latin spellings:
+#      Dionysios ~ Dionysius, Nektarios ~ Nectarius).
+#   3. Every distinguishing word in the CE title (a place, an epithet like
+#      "Chrysostom") must appear in the commemoration or the day's
+#      Synaxarion -- so "Nicholas of Tolentino" can never match "Nicholas,
+#      Archbishop of Myra".
+#   4. Every distinguishing word in the commemoration (place names,
+#      epithets) must appear somewhere in the article text. A bare name with
+#      no qualifier ("Guria") must be the only CE saint with that name AND
+#      the article must mention the commemoration's role (apostle, prophet,
+#      martyr...), or it's skipped.
+#   5. If more than one entry survives, nothing is attached.
+# Index pages and articles are cached in data/cache/newadvent.json so a
+# given article is fetched once, not daily.
+# ---------------------------------------------------------------------------
+
+NEWADVENT_BASE = "https://www.newadvent.org/cathen/"
+NEWADVENT_CACHE_PATH = DATA_DIR / "cache" / "newadvent.json"
+NEWADVENT_MATCH_VERSION = 2
+NEWADVENT_INDEX_MAX_AGE_DAYS = 180
+NEWADVENT_MAX_FETCHES_PER_RUN = 150
+NEWADVENT_DELAY_SECONDS = 1.0
+NEWADVENT_EXCERPT_CHARS = 420
+NEWADVENT_MORE_CHARS = 3200
+NEWADVENT_CACHE_TEXT_CHARS = 12000
+
+# Honorifics / roles that say nothing about *which* person this is.
+NA_GENERIC_WORDS = {
+    "saint", "saints", "st", "sts", "holy", "great", "martyr", "martyrs", "greatmartyr",
+    "hieromartyr", "new", "righteous", "venerable", "ven", "our", "father", "fathers",
+    "mother", "among", "the", "of", "and", "his", "her", "their", "with", "those", "who",
+    "apostle", "apostles", "evangelist", "prophet", "prophetess", "virgin", "virginmartyr",
+    "confessor", "confessors", "bishop", "archbishop", "patriarch", "metropolitan", "pope",
+    "abbot", "abbess", "monk", "nun", "deacon", "archdeacon", "presbyter", "priest",
+    "hermit", "ascetic", "wonderworker", "first", "called", "disciple", "blessed", "in",
+    "at", "a", "an", "to", "or", "also", "pope", "bishops", "archbishops", "patriarchs",
+    "wife", "children", "companions", "companion", "others", "other", "emperor", "empress",
+    "king", "queen", "i", "ii", "iii", "iv", "v", "vi", "bearer", "godbearer", "elder",
+    "younger", "doctor", "church", "founder", "teacher",
+}
+# Same person, different English names in Orthodox use vs the 1913 Encyclopedia.
+NA_ALIASES = [
+    (r"\bthe Studite\b", "of Studium"),
+    (r"\bthe Merciful\b", "the Almsgiver"),
+    (r"^Lucia\b", "Lucy"),
+    (r"^Spyridon\b", "Spiridion"),
+    (r"\bTrymithous\b", "Tremithus"),
+]
+# "New Martyr" / "the New" saints are almost always post-schism (often
+# Ottoman-era) namesakes of an ancient saint; skip rather than risk a mismatch.
+# Also skip relatives described through a more famous saint ("father of St
+# Gregory the Theologian"): their words would point at the famous one.
+NA_SKIP_MENTION = re.compile(r"\bnew\b|of the (70|seventy)\b|\b(father|mother|brother|sister|son|daughter|disciple|wife) of\b", re.IGNORECASE)
+_NA_OF_OK = {"bishop", "archbishop", "patriarch", "church", "see", "city", "diocese", "province",
+             "saint", "st", "native", "born", "metropolitan", "abbot", "monastery", "desert", "people"}
+
+
+def na_word_in_lead(lead: str, word: str, given: str) -> bool:
+    """True if `word` (normalised) occurs in `lead` other than as another
+    person's byname: "St. Alexander of Alexandria" doesn't make an article
+    about Macarius of Jerusalem a match for "Macarius of Alexandria"."""
+    toks = re.findall(r"[A-Za-z\u00C0-\u024F'-]+", lead)
+    for i, t in enumerate(toks):
+        if word not in na_words(t):
+            continue
+        if i >= 2 and toks[i - 1].lower() == "of" and toks[i - 2][:1].isupper():
+            prev = toks[i - 2]
+            if na_norm_word(prev) != given and prev.lower() not in _NA_OF_OK:
+                continue  # someone else's "X of Place"
+        return True
+    return False
+# Roles we can verify in the article text for an otherwise bare name.
+NA_ROLE_WORDS = {"apostle", "evangelist", "prophet", "martyr", "virgin", "bishop",
+                 "archbishop", "patriarch", "pope", "abbot", "hermit", "deacon", "confessor"}
+# A commemoration's role is confirmed by any word of its family in the article.
+_NA_HIERARCH = {"bishop", "archbishop", "patriarch", "pope", "metropolitan", "prelate", "see"}
+NA_ROLE_FAMILIES = {r: _NA_HIERARCH for r in ("bishop", "archbishop", "patriarch", "pope")}
+NA_ROLE_FAMILIES.update({
+    "martyr": {"martyr", "martyrdom", "martyred", "suffered"},
+    "virgin": {"virgin", "martyr"},
+    "apostle": {"apostle", "apostles"},
+    "evangelist": {"evangelist", "apostle", "gospel"},
+})
+# Pieces after a comma that describe the previous name rather than start a new one.
+NA_CONTINUATION = re.compile(
+    r"^(and |& |archbishop|bishop|patriarch|metropolitan|pope|abbess|abbot|nun|monk|"
+    r"founder|brother|sister|mother|father of|wife|martyrs? and|apostles? of|new hieromartyr of|"
+    r"missionary|patron|poet|who |ascetic|archdeacon|president|the mother|monastery|"
+    r"kanons|the martyrs?$|the righteous$|\(|\d)", re.IGNORECASE)
+NA_NOT_A_SAINT = re.compile(
+    r"\b(sunday|saturday|forefeast|afterfeast|apodosis|leavetaking|synaxis|nativity|"
+    r"theophany|entrance|presentation|conception|consecration|commemoration|rememberance|"
+    r"remembrance|opening|founding|fast|week|eve of|adoration|translation of the relics)\b",
+    re.IGNORECASE)
+NA_HONORIFIC_PREFIX = re.compile(
+    r"^((our|holy|righteous|venerable|ven\.?|st\.?|saint|great|new|the|hieromartyr|martyrs?|"
+    r"father|fathers|mother|among|saints|apostle|prophet|holy prophet|glorious|king|blessed|"
+    r"empress|virgin-martyr|nun-martyr)\s+)+", re.IGNORECASE)
+
+
+class NewAdventBudgetExhausted(Exception):
+    pass
+
+
+def na_norm_word(w: str) -> str:
+    w = unicodedata.normalize("NFKD", w).encode("ascii", "ignore").decode().lower()
+    w = re.sub(r"[^a-z]", "", w)
+    w = w.replace("k", "c").replace("ph", "f").replace("y", "i").replace("th", "t")
+    w = re.sub(r"(os|us|as|es|ius|ios)$", "", w)
+    w = re.sub(r"(.)\1", r"\1", w)
+    return w
+
+
+def na_words(text: str) -> set:
+    """Word set for comparing places/epithets. Also folds demonyms onto the
+    place ("Egyptian" ~ "Egypt", "Persian" ~ "Persia")."""
+    out = set()
+    for w in re.findall(r"[A-Za-z\u00C0-\u024F'-]+", html.unescape(text or "")):
+        n = na_norm_word(w)
+        n = re.sub(r"(ians?|ia|ns)$", "", n) if len(n) > 5 else n
+        if n:
+            out.add(n)
+    return out
+
+
+NA_GENERIC_NORM = {na_norm_word(w) for w in NA_GENERIC_WORDS}
+NA_CONTEXT_STOP = {na_norm_word(w) for w in (
+    "God", "Christ", "Jesus", "Lord", "Holy", "Spirit", "Saint", "Saints", "Church", "Christian",
+    "Christians", "Amen", "Verses", "Glory", "Father", "Son", "Theotokos", "Virgin", "Emperor",
+    "When", "After", "Then", "This", "They", "There", "Their", "With", "From", "Being", "Having",
+    "Mercy", "Through", "Intercessions", "Also", "Today", "Commemorate", "Orthodox", "January",
+    "February", "March", "April", "June", "July", "August", "September", "October", "November",
+    "December", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")}
+
+
+
+
+def na_split_mentions(saints: list) -> list:
+    """Regroup antiochian.org's comma-split commemorations into one string
+    per saint (e.g. ["John Chrysostom", "Archbishop of Constantinople"] ->
+    ["John Chrysostom, Archbishop of Constantinople"])."""
+    out = []
+    for piece in saints or []:
+        piece = re.sub(r"\s*\(\d{3,4}\)\.?$", "", piece.strip()).strip(" .")
+        if not piece:
+            continue
+        if out and NA_CONTINUATION.match(piece):
+            out[-1] = out[-1] + ", " + piece
+        else:
+            out.append(piece)
+    return out
+
+
+def na_parse_mention(text: str) -> dict | None:
+    if NA_NOT_A_SAINT.search(text) or NA_SKIP_MENTION.search(text):
+        return None
+    original = text
+    text = NA_HONORIFIC_PREFIX.sub("", text.strip())
+    for pattern, repl in NA_ALIASES:
+        text = re.sub(pattern, repl, text)
+    head = re.split(r",| & | and ", text, maxsplit=1)[0]
+    head = NA_HONORIFIC_PREFIX.sub("", head.strip())
+    m = re.match(r"([A-Z][A-Za-z\u00C0-\u024F'-]+)", head)
+    if not m:
+        return None
+    given = m.group(1)
+    words = na_words(text)
+    distinct = words - NA_GENERIC_NORM - na_words(given)
+    roles = {r for r in NA_ROLE_WORDS if re.search(rf"\b{r}", original, re.IGNORECASE)}
+    if "pope" in roles:
+        distinct -= {na_norm_word("rome")}  # "Pope of Rome" adds nothing
+    return {"text": original, "given": na_norm_word(given), "distinct": distinct, "roles": roles}
+
+
+def na_parse_index_title(title: str) -> dict | None:
+    t = html.unescape(title)
+    if not re.search(r"\bSaints?\b", t) or t.lower().startswith("sainte "):
+        return None
+    if re.search(r"\b(Order|Monastery|Church|Abbey|Congregation|Sisters|Brothers|Diocese|Feast|Island|Oratory|Gospel|Epistle|Rule|Liturgy|Acts|Mass)\b", t):
+        return None
+    paren = " ".join(re.findall(r"\(([^)]*)\)", t))
+    base = re.sub(r"\([^)]*\)", "", t)
+    parts = [p.strip() for p in base.split(",") if p.strip()]
+    # "Gonzaga, Saint Aloysius" -> given name follows "Saint"
+    m = re.match(r"^(?:Pope\s+)?Saints?\s+(.+)$", parts[-1]) if len(parts) > 1 else None
+    if m and len(parts) == 2:
+        name_part, extra = m.group(1), parts[0]
+    else:
+        name_part = parts[0]
+        extra = " ".join(p for p in parts[1:] if not re.fullmatch(r"(Pope\s+)?Saints?( and Martyrs?)?|Pope|Saint", p))
+    group = re.split(r",| and ", name_part)
+    givens = []
+    for g in group:
+        g = g.strip()
+        gm = re.match(r"([A-Z][A-Za-z'-]+)", g)
+        if gm:
+            givens.append(na_norm_word(gm.group(1)))
+    if not givens:
+        return None
+    distinct = na_words(name_part + " " + extra + " " + paren) - NA_GENERIC_NORM - set(givens)
+    distinct -= {w for g in group for w in na_words(g.strip().split(" ")[0])}
+    distinct = {w for w in distinct if not re.fullmatch(r"[ivxl]+", w)}
+    return {"title": t, "givens": givens, "distinct": distinct, "pope": bool(re.search(r"\bPope\b", t))}
+
+
+def na_article_text(page_html: str) -> tuple[str, list]:
+    """Returns (h1 title, [paragraph texts]) for a Catholic Encyclopedia page."""
+    h1 = re.search(r"<h1>(.*?)</h1>", page_html, re.DOTALL)
+    title = html.unescape(re.sub(r"<[^>]+>", "", h1.group(1))).strip() if h1 else ""
+    body = page_html[h1.end():] if h1 else page_html
+    body = re.split(r'<div class="cenotes"|<div id="ogdenville"', body)[0]
+    paras = []
+    for p in re.findall(r"<p>(.*?)</p>", body, re.DOTALL):
+        if "gumroad.com" in p or "Please help support" in p:
+            continue
+        text = html.unescape(re.sub(r"<[^>]+>", "", p))
+        text = re.sub(r"\s+", " ", text).strip()
+        if text:
+            paras.append(text)
+    return title, paras
+
+
+def na_truncate(text: str, limit: int) -> str:
+    if len(text) <= limit:
+        return text
+    cut = text[:limit]
+    stop = max(cut.rfind(". "), cut.rfind("; "))
+    return (cut[: stop + 1] if stop > limit * 0.5 else cut.rsplit(" ", 1)[0] + "\u2026").strip()
+
+
+class NewAdventMatcher:
+    def __init__(self):
+        self.cache = load_json(NEWADVENT_CACHE_PATH) or {}
+        self.cache.setdefault("articles", {})
+        self.fetches = 0
+        self.dirty = False
+        self._entries = None
+
+    def _get(self, url: str) -> str:
+        if self.fetches >= NEWADVENT_MAX_FETCHES_PER_RUN:
+            raise NewAdventBudgetExhausted()
+        if self.fetches:
+            time.sleep(NEWADVENT_DELAY_SECONDS)
+        self.fetches += 1
+        return http_get(url).decode("latin-1")
+
+    def _ensure_index(self):
+        fetched = self.cache.get("index_fetched_at")
+        fresh = fetched and (datetime.now(CENTRAL) - datetime.fromisoformat(fetched)).days < NEWADVENT_INDEX_MAX_AGE_DAYS
+        if not (fresh and self.cache.get("index")):
+            todo = [f"{c}.htm" for c in "abcdefghijklmnopqrstuvwxyz"]
+            seen, index = set(), {}
+            while todo:
+                page = todo.pop(0)
+                if page in seen:
+                    continue
+                seen.add(page)
+                h = self._get(NEWADVENT_BASE + page)
+                todo += [s for s in re.findall(r'href="\.\./cathen/([a-z]-[a-z]+\.htm)"', h) if s not in seen]
+                for href, title in re.findall(r'<a href="\.\./cathen/(\d+[a-z]?)\.htm">([^<]+)</a>', h):
+                    if na_parse_index_title(title):
+                        index[href] = html.unescape(title).strip()
+            if len(index) < 300:
+                raise ValueError(f"New Advent index looks wrong ({len(index)} saint entries)")
+            self.cache["index"] = index
+            self.cache["index_fetched_at"] = datetime.now(CENTRAL).isoformat()
+            self.dirty = True
+        if self._entries is None:
+            self._entries = []
+            for aid, title in self.cache["index"].items():
+                parsed = na_parse_index_title(title)
+                if parsed:
+                    parsed["id"] = aid
+                    self._entries.append(parsed)
+
+    def _article(self, aid: str) -> dict:
+        art = self.cache["articles"].get(aid)
+        if art is None:
+            title, paras = na_article_text(self._get(f"{NEWADVENT_BASE}{aid}.htm"))
+            text = "\n\n".join(paras)
+            art = {"title": title, "text": text[:NEWADVENT_CACHE_TEXT_CHARS]}
+            self.cache["articles"][aid] = art
+            self.dirty = True
+        return art
+
+    @staticmethod
+    def _bare_context(mention: dict, context_text: str) -> set:
+        """Distinctive capitalised words from the day's Synaxarion/stories
+        sentences that mention this saint (e.g. "Tarsus" for Boniface)."""
+        words = set()
+        for sentence in re.split(r"(?<=[.;!?])\s+", context_text or ""):
+            toks = re.findall(r"[A-Za-z\u00C0-\u024F'-]+", sentence)
+            if not any(na_norm_word(t) == mention["given"] for t in toks):
+                continue
+            for t in toks:
+                if t[:1].isupper() and len(t) > 3:
+                    words |= na_words(t)
+        return words - NA_GENERIC_NORM - NA_CONTEXT_STOP - na_words(mention["given"]) - {mention["given"]}
+
+    def match(self, mention: dict, context_words: set, context_text: str = "") -> dict | None:
+        cands = [e for e in self._entries if mention["given"] in e["givens"]]
+        known = mention["distinct"]  # (not the day's context: too loose)
+        survivors = []
+        for e in cands:
+            if len(e["givens"]) > 1:
+                continue  # joint articles ("Cyril and Methodius") -- skip, too easy to mismatch
+            if not e["distinct"] <= known:
+                continue  # CE title names a place/epithet the commemoration doesn't
+            if e["pope"] != ("pope" in mention["roles"]):
+                continue  # a pope only matches a commemoration that says "Pope"
+            survivors.append(e)
+        bare_ctx = set()
+        if not mention["distinct"]:
+            # Bare name ("Philip the Apostle"): exactly one plain CE entry may
+            # survive, and its opening must confirm the role (apostle...).
+            if len(survivors) != 1 or survivors[0]["distinct"] or not mention["roles"]:
+                return None
+            # If the day's Synaxarion says more about this saint (a place, a
+            # persecutor...), the article must share at least one of those.
+            bare_ctx = self._bare_context(mention, context_text)
+            # With nothing else to go on, only a name the Encyclopedia uses
+            # for a single saint (or a biblical apostle/prophet) is safe:
+            # "Boniface the Martyr" must not land on Boniface of Germany.
+            biblical = mention["roles"] & {"apostle", "evangelist", "prophet", "pope"}
+            if not bare_ctx and not biblical and len(cands) != 1:
+                return None
+        results = []
+        for e in survivors:
+            art = self._article(e["id"])
+            art_words = na_words(art["title"] + " " + art["text"])
+            lead_words = na_words(art["title"] + " " + art["text"][:500])
+            # If the CE title itself carries the distinguishing words
+            # ("Nicholas of Myra"), the article body may confirm them anywhere;
+            # a plain title ("Peter, Saint") must confirm them in its opening,
+            # otherwise "Peter, Archbishop of Alexandria" could land on the
+            # Apostle Peter just because his article mentions Alexandria.
+            if e["distinct"] & mention["distinct"]:
+                if not mention["distinct"] <= art_words:
+                    continue
+            else:
+                lead = art["title"] + " " + art["text"][:260]  # opening only
+                if not all(na_word_in_lead(lead, w, mention["given"]) for w in mention["distinct"]):
+                    continue
+            if bare_ctx and not (bare_ctx & art_words):
+                continue
+            # An article that opens "Bishop of Samosata..." is about a hierarch;
+            # don't give it to a commemoration that isn't one ("Eusebius the
+            # Righteous of Syria") unless the CE title itself pins the match.
+            opening = art["text"][:80].lower()
+            if (len(cands) > 1 and not (e["distinct"] & mention["distinct"])
+                    and not re.search(r"hieromartyr", mention["text"], re.IGNORECASE)
+                    and re.match(r"(arch)?bishop|patriarch|pope", opening)
+                    and not (mention["roles"] & {"bishop", "archbishop", "patriarch", "pope"})):
+                continue
+            strong = bool(e["distinct"] & mention["distinct"])
+            if mention["roles"] and not strong:
+                ok_words = set()
+                for r in mention["roles"]:
+                    ok_words |= NA_ROLE_FAMILIES.get(r, {r})
+                if not any(na_norm_word(w) in lead_words for w in ok_words):
+                    continue
+            score = len(mention["distinct"] & art_words) + 2 * len(e["distinct"] & mention["distinct"])
+            results.append((score, e, art))
+        if not results:
+            return None
+        results.sort(key=lambda r: -r[0])
+        if len(results) > 1 and results[0][0] == results[1][0]:
+            return None  # ambiguous
+        _, e, art = results[0]
+        paras = art["text"].split("\n\n")
+        lead = paras[0] if paras else ""
+        # The first paragraph is sometimes just a one-line feast/date note.
+        if len(lead) < 200 and len(paras) > 1:
+            lead = lead + " " + paras[1]
+        return {
+            "commemoration": mention["text"],
+            "title": art["title"] or e["title"],
+            "url": f"{NEWADVENT_BASE}{e['id']}.htm",
+            "excerpt": na_truncate(lead, NEWADVENT_EXCERPT_CHARS),
+            "more": na_truncate(art["text"], NEWADVENT_MORE_CHARS),
+        }
+
+    def biographies_for(self, liturgical: dict) -> list:
+        self._ensure_index()
+        context_text = " ".join(filter(None, [liturgical.get("synaxarion")] + [
+            re.sub(r"<[^>]+>", " ", s.get("html") or "") for s in liturgical.get("stories") or []]))
+        context = na_words(context_text) - NA_GENERIC_NORM
+        out, seen = [], set()
+        for text in na_split_mentions(liturgical.get("saints") or []):
+            mention = na_parse_mention(text)
+            if not mention:
+                continue
+            found = self.match(mention, context, context_text)
+            if found and found["url"] not in seen:
+                seen.add(found["url"])
+                out.append(found)
+        return out
+
+    def save(self):
+        if self.dirty:
+            NEWADVENT_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+            NEWADVENT_CACHE_PATH.write_text(json.dumps(self.cache, indent=0, ensure_ascii=False))
+
+
+# ---------------------------------------------------------------------------
 # Cache helpers
 # ---------------------------------------------------------------------------
 
@@ -755,8 +1461,10 @@ def service_texts_incomplete(service_texts) -> bool:
     return any(e.get("rtf_url") and not e.get("text") for e in service_texts)
 
 
-def build_day_files(window_start: date, window_end: date) -> tuple[str, bool, bool]:
-    """Returns (generated_at timestamp, any_liturgical_ok, any_events_ok)."""
+def build_day_files(window_start: date, window_end: date) -> tuple[str, bool, bool, bool]:
+    """Returns (generated_at timestamp, any_liturgical_ok, any_events_ok,
+    window_complete). window_complete is False while an incremental backfill
+    still has days left to fetch (the 2-hourly health-check run picks it up)."""
     now_iso = datetime.now(CENTRAL).isoformat()
     today = window_start + timedelta(days=WINDOW_BACK_DAYS)
     service_text_retry_cutoff = today + timedelta(days=SERVICE_TEXT_RETRY_DAYS)
@@ -775,8 +1483,18 @@ def build_day_files(window_start: date, window_end: date) -> tuple[str, bool, bo
         existing_liturgical = (existing or {}).get("liturgical") or {}
         status_ok = existing_liturgical.get("status") == "ok"
         missing_service_texts = status_ok and service_texts_incomplete(existing_liturgical.get("service_texts"))
-        if not status_ok or (missing_service_texts and d <= service_text_retry_cutoff):
+        # Only recent/upcoming days are worth re-checking for service texts;
+        # long-past days are settled.
+        recent = today - timedelta(days=2) <= d <= service_text_retry_cutoff
+        if not status_ok or (missing_service_texts and recent):
             dates_needing_liturgical.append(d)
+
+    # Nearest days first, capped per run so a backfill spreads across runs.
+    dates_needing_liturgical.sort(key=lambda d: (abs((d - today).days), d))
+    deferred = dates_needing_liturgical[MAX_LITURGICAL_FETCHES_PER_RUN:]
+    dates_needing_liturgical = dates_needing_liturgical[:MAX_LITURGICAL_FETCHES_PER_RUN]
+    if deferred:
+        print(f"[info] {len(deferred)} day(s) deferred to a later run (backfill in progress)", file=sys.stderr)
 
     liturgical_by_date = {}
     any_liturgical_ok = False
@@ -793,13 +1511,32 @@ def build_day_files(window_start: date, window_end: date) -> tuple[str, bool, bo
                 print(f"[warn] antiochian.org unavailable this run: {exc}", file=sys.stderr)
                 id_map = {}
 
-            for d in dates_needing_liturgical:
+            # antiochian.org only publishes so far ahead (e.g. through Dec 31).
+            # Once a future day fails there, go straight to orthocal for any
+            # later day this run instead of waiting on more page loads.
+            antiochian_horizon = None
+            for i, d in enumerate(dates_needing_liturgical):
+                if i:
+                    time.sleep(ANTIOCHIAN_DELAY_SECONDS)
+                use_antiochian = d in id_map and not (antiochian_horizon and d >= antiochian_horizon)
                 try:
-                    liturgical_by_date[d] = fetch_liturgical_day(page, id_map, d) if d in id_map else fetch_orthocal_day(d)
+                    if use_antiochian:
+                        try:
+                            liturgical_by_date[d] = fetch_antiochian_day(page, id_map[d], d)
+                        except Exception as exc:
+                            print(f"[warn] antiochian.org fetch failed for {d}: {exc}", file=sys.stderr)
+                            if d > today and (antiochian_horizon is None or d < antiochian_horizon):
+                                antiochian_horizon = d
+                            liturgical_by_date[d] = fetch_orthocal_day(d)
+                    else:
+                        liturgical_by_date[d] = fetch_orthocal_day(d)
                     any_liturgical_ok = True
                 except Exception as exc:
                     print(f"[warn] liturgical fetch failed for {d}: {exc}", file=sys.stderr)
             browser.close()
+
+    newadvent = NewAdventMatcher()
+    window_complete = not deferred
 
     for d in date_range(window_start, window_end):
         existing = load_json(day_file_path(d))
@@ -809,12 +1546,26 @@ def build_day_files(window_start: date, window_end: date) -> tuple[str, bool, bo
         elif existing and existing.get("liturgical", {}).get("status") == "ok":
             liturgical = existing["liturgical"]
             any_liturgical_ok = True
+        elif existing:
+            liturgical = existing.get("liturgical") or {"status": "error"}
         else:
-            liturgical = (existing or {}).get("liturgical") or {"status": "error"}
+            # Never fetched yet (backfill still in progress): don't publish a
+            # half-empty day; it'll appear once a run gets to it.
+            window_complete = False
+            continue
 
         if liturgical.get("status") == "ok":
             text_blob = " ".join(filter(None, [liturgical.get("summary_title")] + (liturgical.get("feasts") or [])))
             liturgical["great_feast"] = identify_great_feast(text_blob)
+            if liturgical.get("newadvent_version") != NEWADVENT_MATCH_VERSION:
+                try:
+                    bios = newadvent.biographies_for(liturgical)
+                    liturgical["newadvent"] = bios
+                    liturgical["newadvent_version"] = NEWADVENT_MATCH_VERSION
+                except NewAdventBudgetExhausted:
+                    window_complete = False  # finish matching on a later run
+                except Exception as exc:
+                    print(f"[warn] New Advent lookup failed for {d}: {exc}", file=sys.stderr)
 
         if events_ok:
             events = events_by_date.get(d.isoformat(), [])
@@ -828,7 +1579,8 @@ def build_day_files(window_start: date, window_end: date) -> tuple[str, bool, bo
         }
         day_file_path(d).write_text(json.dumps(day_data, indent=2))
 
-    return now_iso, any_liturgical_ok, events_ok
+    newadvent.save()
+    return now_iso, any_liturgical_ok, events_ok, window_complete
 
 
 def prune_old_day_files(window_start: date, window_end: date):
@@ -852,7 +1604,7 @@ def main():
     prior_last_successful = prior_index.get("last_successful", {})
     prior_links = prior_index.get("links", {})
 
-    now_iso, liturgical_ok, events_ok = build_day_files(window_start, window_end)
+    now_iso, liturgical_ok, events_ok, window_complete = build_day_files(window_start, window_end)
     prune_old_day_files(window_start, window_end)
 
     try:
@@ -870,6 +1622,12 @@ def main():
         print(f"[warn] fasting calendar link fetch failed: {exc}", file=sys.stderr)
         fasting_calendar_link = None
         fasting_calendar_ok = False
+
+    try:
+        fasting_ok = build_fasting_calendar(today)
+    except Exception as exc:
+        print(f"[warn] fasting calendar build failed: {exc}", file=sys.stderr)
+        fasting_ok = False
 
     links = dict(STATIC_LINKS)
     links["bulletin_pdf"] = (bulletin or {}).get("url") or prior_links.get("bulletin_pdf")
@@ -896,6 +1654,8 @@ def main():
         last_successful["fasting_calendar"] = now_iso
     if prayer_list_ok:
         last_successful["prayer_list"] = now_iso
+    if fasting_ok:
+        last_successful["fasting_data"] = now_iso
 
     available_dates = sorted(p.stem for p in DAYS_DIR.glob("*.json"))
 
@@ -912,6 +1672,10 @@ def main():
             "bulletin_ok": bulletin_ok,
             "fasting_calendar_ok": fasting_calendar_ok,
             "prayer_list_ok": prayer_list_ok,
+            "fasting_data_ok": fasting_ok,
+            # False while the ~6-month window is still being backfilled; makes
+            # the 2-hourly health-check run keep going until it's complete.
+            "window_complete": window_complete,
         },
     }
     (DATA_DIR / "index.json").write_text(json.dumps(index, indent=2))
@@ -919,7 +1683,7 @@ def main():
     print(f"Wrote {len(available_dates)} day files. Today: {today.isoformat()}")
     print(f"liturgical_ok={liturgical_ok} parish_events_ok={events_ok} "
           f"bulletin_ok={bulletin_ok} fasting_calendar_ok={fasting_calendar_ok} "
-          f"prayer_list_ok={prayer_list_ok}")
+          f"prayer_list_ok={prayer_list_ok} fasting_data_ok={fasting_ok}")
 
 
 if __name__ == "__main__":

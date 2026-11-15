@@ -1,0 +1,46 @@
+{
+  "date": "2026-08-27",
+  "liturgical": {
+    "status": "ok",
+    "source": "antiochian",
+    "feasts": [
+      "13Th Thursday After Pentecost"
+    ],
+    "saints": [
+      "Pimen the Great",
+      "Holy Martyr Phanurius",
+      "Anthousa the Martyr",
+      "Poimen of Palestine",
+      "Hosisos the Confessor",
+      "Liverios",
+      "Pope of Rome",
+      "Monica"
+    ],
+    "summary_title": "Pimen the Great, Holy Martyr Phanurius, Anthousa the Martyr, Poimen of Palestine, Hosisos the Confessor, Liverios, Pope of Rome, Monica",
+    "stories": [],
+    "fasting": null,
+    "readings": [
+      {
+        "display": "St. Paul's Second Letter to the Corinthians 10:7-18",
+        "text": "Brethren, if any one is confident that he is Christ's, let him remind himself that as he is Christ's, so are we. For even if I boast a little too much of our authority, which the Lord gave for building you up and not for destroying you, I shall not be put to shame. I would not seem to be frightening you with letters. For they say, \"His letters are weighty and strong, but his bodily presence is weak, and his speech of no account.\" Let such people understand that what we say by letter when absent, we do when present. Not that we venture to class or compare ourselves with some of those who commend themselves. But when they measure themselves by one another, and compare themselves with one another, they are without understanding. But we will not boast beyond limit, but will keep to the limits God has apportioned us, to reach even to you. For we are not overextending ourselves, as though we did not reach you; we were the first to come all the way to you with the gospel of Christ. We do not boast beyond limit, in other men's labors; but our hope is that you may be greatly enlarged, so that we may preach the gospel in lands beyond you, without boasting of work already done in another's field. \"Let him who boasts, boast of the Lord.\" For it is not the man who commends himself that is accepted, but the man whom the Lord commends."
+      },
+      {
+        "display": "Mark 3:28-35",
+        "text": "The Lord said, \"Truly, I say to you, all sins will be forgiven the sons of men, and whatever blasphemies they utter; but whoever blasphemes against the Holy Spirit never has forgiveness, but is guilty of an eternal sin\" for they had said, \"He has an unclean spirit.\" And his mother and his brothers came; and standing outside they sent to him and called him. And a crowd was sitting about him; and they said to him, \"Your mother and your brothers are outside, asking for you.\" And he replied, \"Who are my mother and my brothers?\" And looking around on those who sat about him, he said, \"Here are my mother and my brothers! Whoever does the will of God is my brother, and sister, and mother."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 2
+  },
+  "events": [
+    {
+      "title": "Women\u2019s Fellowship Swim Night",
+      "start": "2026-08-27 19:00:00",
+      "end": "2026-08-27 21:30:00",
+      "url": "https://www.constantinehelen.com/event/womens-fellowship-swim-night/"
+    }
+  ]
+}

@@ -45,8 +45,10 @@ has it.
 
 ### Navigation
 
-- Toggle forward through days, as far ahead as the source calendar allows
-- Toggle backward, but **only 7 days** — no further
+- Toggle forward and backward through about **six months each way**
+  (changed from the original 7-days-back / 90-ahead at Aimee's request)
+- Tap the date heading for a Year / Month / Day dropdown picker limited to
+  the days that exist in `data/days/`
 - Day view (one day at a time), not a list or month grid
 
 ---
@@ -55,8 +57,12 @@ has it.
 
 **Rolling pre-fetched window, static hosting, no server.**
 
-A scheduled job runs once daily and fetches a window of `today−7` through
-`today+90`. Each day is written as its own small JSON file, plus a lightweight
+A scheduled job runs once daily and maintains a window of `today−183` through
+`today+183`. Only missing days are fetched (nearest to today first, at most
+`MAX_LITURGICAL_FETCHES_PER_RUN` per run, with a pause between antiochian.org
+page loads), so a fresh backfill spreads over several runs; `status.window_complete`
+stays false until it's done, which keeps the 2-hourly health-check run going.
+Days that haven't been fetched yet simply don't exist (the UI skips them). Each day is written as its own small JSON file, plus a lightweight
 index. The page loads today instantly and fetches other days on demand when the
 user toggles.
 
@@ -74,7 +80,7 @@ repo/
 
 ### Why this shape
 
-- **The 7-day backward limit is free.** The window slides and old files are
+- **The backward limit is free.** The window slides and old files are
   pruned, so there is nothing to enforce in the UI — old days simply don't exist.
 - **Resilient.** If a source is down on a given morning, yesterday's cached data
   is still on disk and the app still works.
@@ -128,6 +134,32 @@ The daily lectionary lives at `https://www.antiochian.org/epistleliturgicday/`.
   this directly determines whether forward-toggling is possible from this source
 - Where the annual fasting calendar PDF lives and whether its URL is
   year-predictable or must be hardcoded and updated each September
+
+### Fasting calendar (data/fasting.json, fasting.html)
+
+Built daily by `build_fasting_calendar()` in `fetch.py` for this year and next.
+Per-day precedence: antiochian.org daily page (in the 98-day window) >
+the Archdiocese's annual color-coded PDF
+(`antiochianprodsa.blob.core.windows.net/liturgicalinstructions/{year} Fasting Calendar.pdf`,
+cell colors mapped through the legend printed on the PDF) > orthocal.info Greek
+API, used only for a year whose PDF isn't published yet and flagged
+`provisional`. The next year's PDF has appeared in late November. Season names
+(Great Lent, Apostles' Fast, fast-free weeks...) are computed from the
+Paschalion purely as labels; fast levels always come from a source.
+`index.html` shows a mini month calendar at the top; tapping opens
+`fasting.html` in a new tab. Shared code: `fasting.js`, `fasting.css`.
+
+### newadvent.org (Catholic Encyclopedia biographies)
+
+`NewAdventMatcher` in `fetch.py` attaches short biographies to a day's
+commemorated saints (`liturgical.newadvent`), shown under the Synaxarion.
+It only uses CE entries titled as saints, requires the name *and* every
+distinguishing word (place, epithet) to agree in both directions, ignores
+"X of Place" bynames of other people in the article, skips "New Martyr" /
+"father of ..." commemorations and joint articles, and attaches nothing when
+two candidates tie. Prefer no match over a wrong one. The index and fetched
+articles are cached in `data/cache/newadvent.json`; bump
+`NEWADVENT_MATCH_VERSION` to re-match every day after changing the rules.
 
 ### constantinehelen.com
 

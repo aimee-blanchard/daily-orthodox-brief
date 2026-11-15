@@ -1,0 +1,59 @@
+{
+  "date": "2027-04-01",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": null,
+    "saints": [
+      "Ven. Mary of Egypt",
+      "Ven. Euthymius of Suzdal",
+      "Martyrs Gerontius and Basilides"
+    ],
+    "summary_title": "Ven. Mary of Egypt; Ven. Euthymius of Suzdal; Martyrs Gerontius and Basilides",
+    "stories": [
+      {
+        "title": "Ven. Mary of Egypt",
+        "html": "<p>Her radiant life is also commemorated on the Fifth Sunday of the Great Fast. The <i>Life of St Mary of Egypt,</i> written by St Sophronios of Jerusalem, is read in its entirety on the Thursday of the Great Canon during Lent. Click on the link to read it.</p>\n<p>The date of her repose is very unclear: it is given variously as 378, 437, and 522.</p>"
+      }
+    ],
+    "fasting": {
+      "description": "Lenten Fast",
+      "abstentions": [
+        "meat",
+        "fish",
+        "dairy",
+        "eggs",
+        "wine",
+        "oil"
+      ]
+    },
+    "readings": [
+      {
+        "display": "Isaiah 11.10-12.2",
+        "text": "And in that day there shall be a root of Jesse, which shall stand for an ensign of the people; to it shall the Gentiles seek: and his rest shall be glorious. And it shall come to pass in that day, that the Lord shall set his hand again the second time to recover the remnant of his people, which shall be left, from Assyria, and from Egypt, and from Pathros, and from Cush, and from Elam, and from Shinar, and from Hamath, and from the islands of the sea. And he shall set up an ensign for the nations, and shall assemble the outcasts of Israel, and gather together the dispersed of Judah from the four corners of the earth. The envy also of Ephraim shall depart, and the adversaries of Judah shall be cut off: Ephraim shall not envy Judah, and Judah shall not vex Ephraim. But they shall fly upon the shoulders of the Philistines toward the west; they shall spoil them of the east together: they shall lay their hand upon Edom and Moab; and the children of Ammon shall obey them. And the LORD shall utterly destroy the tongue of the Egyptian sea; and with his mighty wind shall he shake his hand over the river, and shall smite it in the seven streams, and make men go over dryshod. And there shall be an highway for the remnant of his people, which shall be left, from Assyria; like as it was to Israel in the day that he came up out of the land of Egypt. And in that day thou shalt say, O LORD, I will praise thee: though thou wast angry with me, thine anger is turned away, and thou comfortedst me. Behold, God is my salvation; I will trust, and not be afraid: for the LORD JEHOVAH is my strength and my song; he also is become my salvation."
+      },
+      {
+        "display": "Genesis 7.11-8.3",
+        "text": "In the six hundredth year of Noah\u2019s life, in the second month, the seventeenth day of the month, the same day were all the fountains of the great deep broken up, and the windows of heaven were opened. And the rain was upon the earth forty days and forty nights. In the selfsame day entered Noah, and Shem, and Ham, and Japheth, the sons of Noah, and Noah\u2019s wife, and the three wives of his sons with them, into the ark; They, and every beast after his kind, and all the cattle after their kind, and every creeping thing that creepeth upon the earth after his kind, and every fowl after his kind, every bird of every sort. And they went in unto Noah into the ark, two and two of all flesh, wherein is the breath of life. And they that went in, went in male and female of all flesh, as God had commanded him: and the LORD shut him in. And the flood was forty days upon the earth; and the waters increased, and bare up the ark, and it was lift up above the earth. And the waters prevailed, and were increased greatly upon the earth; and the ark went upon the face of the waters. And the waters prevailed exceedingly upon the earth; and all the high hills, that were under the whole heaven, were covered. Fifteen cubits upward did the waters prevail; and the mountains were covered. And all flesh died that moved upon the earth, both of fowl, and of cattle, and of beast, and of every creeping thing that creepeth upon the earth, and every man: All in whose nostrils was the breath of life, of all that was in the dry land, died. And every living substance was destroyed which was upon the face of the ground, both man, and cattle, and the creeping things, and the fowl of the heaven; and they were destroyed from the earth: and Noah only remained alive, and they that were with him in the ark. And the waters prevailed upon the earth an hundred and fifty days. And God remembered Noah, and every living thing, and all the cattle that was with him in the ark: and God made a wind to pass over the earth, and the waters asswaged; The fountains also of the deep and the windows of heaven were stopped, and the rain from heaven was restrained; And the waters returned from off the earth continually: and after the end of the hundred and fifty days the waters were abated."
+      },
+      {
+        "display": "Proverbs 10.1-22",
+        "text": "The proverbs of Solomon. A wise son maketh a glad father: but a foolish son is the heaviness of his mother. Treasures of wickedness profit nothing: but righteousness delivereth from death. The LORD will not suffer the soul of the righteous to famish: but he casteth away the substance of the wicked. He becometh poor that dealeth with a slack hand: but the hand of the diligent maketh rich. He that gathereth in summer is a wise son: but he that sleepeth in harvest is a son that causeth shame. Blessings are upon the head of the just: but violence covereth the mouth of the wicked. The memory of the just is blessed: but the name of the wicked shall rot. The wise in heart will receive commandments: but a prating fool shall fall. He that walketh uprightly walketh surely: but he that perverteth his ways shall be known. He that winketh with the eye causeth sorrow: but a prating fool shall fall. The mouth of a righteous man is a well of life: but violence covereth the mouth of the wicked. Hatred stirreth up strifes: but love covereth all sins. In the lips of him that hath understanding wisdom is found: but a rod is for the back of him that is void of understanding. Wise men lay up knowledge: but the mouth of the foolish is near destruction. The rich man\u2019s wealth is his strong city: the destruction of the poor is their poverty. The labour of the righteous tendeth to life: the fruit of the wicked to sin. He is in the way of life that keepeth instruction: but he that refuseth reproof erreth. He that hideth hatred with lying lips, and he that uttereth a slander, is a fool. In the multitude of words there wanteth not sin: but he that refraineth his lips is wise. The tongue of the just is as choice silver: the heart of the wicked is little worth. The lips of the righteous feed many: but fools die for want of wisdom. The blessing of the LORD, it maketh rich, and he addeth no sorrow with it."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [
+      {
+        "commemoration": "Ven. Mary of Egypt",
+        "title": "St. Mary of Egypt",
+        "url": "https://www.newadvent.org/cathen/09763a.htm",
+        "excerpt": "Born probably about 344; died about 421. At the early age of twelve Mary left her home and came to Alexandria, where for upwards of seventeen years she led a life of public prostitution. At the end of that time, on the occasion of a pilgrimage to Jerusalem for the Feast of the Exaltation of the Holy Cross, she embarked for Palestine, not however with the intention of making the pilgrimage, but in the hope that life\u2026",
+        "more": "Born probably about 344; died about 421. At the early age of twelve Mary left her home and came to Alexandria, where for upwards of seventeen years she led a life of public prostitution. At the end of that time, on the occasion of a pilgrimage to Jerusalem for the Feast of the Exaltation of the Holy Cross, she embarked for Palestine, not however with the intention of making the pilgrimage, but in the hope that life on board ship would afford her new and abundant opportunities of gratifying an insatiable lust. Arrived in Jerusalem she persisted in her shameless life, and on the Feast of the Exaltation of the Cross joined the crowds towards the church where the sacred relic was venerated, hoping to meet in the gathering some new victims whom she might allure into sin. And now came the turning-point in her career. When she reached the church door, she suddenly felt herself repelled by some secret force, and having vainly attempted three or four times to enter, she retired to a corner of the churchyard, and was struck with remorse for her wicked life, which she recognized as the cause of her exclusion from the church. Bursting into bitter tears and beating her breast, she began to bewail her sins. Just then her eyes fell upon a statue of the Blessed Virgin above the spot where she was standing, and in deep faith and humility of heart she besought Our Lady for help, and permission to enter the church and venerate the sacred wood on which Jesus had suffered, promising that if her request were granted, she would then renounce forever the world and its ways, and forthwith depart whithersoever Our Lady might lead her. Encouraged by prayer and counting on the mercy of the Mother of God, she once more approached the door of the church, and this time succeeded in entering without the slightest difficulty. Having adored the Holy Cross and kissed the pavement of the church, she returned to Our Lady's statue, and while praying there for guidance as to her future course, she seemed to hear a voice from afar telling her that if she crossed the Jordan, she would find rest. That same evening Mary reached the Jordan and received Holy Communion in a church dedicated to the Baptist, and the day following crossed the river and wandered eastward into the desert that stretches towards Arabia.\n\nHere she had lived absolutely alone for forty-seven years, subsisting apparently on herbs, when a priest and monk, named Zosimus, who after the custom of his brethren had come out from his monastery to spend Lent in the desert, met her and learned from her own lips the strange and romantic story of her life. As soon as they met, she called Zosimus by his name and recognized him as a priest. After they had conversed and prayed together, she begged Zosimus to promise to meet her at the Jordan on Holy Thursday evening of the following year and bring with him the Blessed Sacrament. When the appointed evening arrived, Zosimus, we are told, put into a small chalice a portion of the undefiled Body and the precious Blood of Our Lord Jesus Christ (P.L. LXXIII, 686;"
+      }
+    ],
+    "newadvent_version": 2
+  },
+  "events": []
+}

@@ -1,0 +1,65 @@
+{
+  "date": "2027-04-17",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": [
+      "Saturday of the Akathist to the Most-Holy Theotokos"
+    ],
+    "saints": [
+      "Hieromartyr Simeon of Persia",
+      "Ven. Zosima of Solovetsk",
+      "Makarios, Bishop of Corinth",
+      "Agapetos of Rome",
+      "Hadrian the New-Martyr",
+      "Donnan, Abbot of Eigg, and the Monk-Martyrs with him"
+    ],
+    "summary_title": "Saturday of the Akathist to the Most-Holy Theotokos",
+    "stories": [
+      {
+        "title": "Hieromartyr Simeon of Persia",
+        "html": "<p>The Holy Symeon was bishop of the royal cities of Seleucia and Ctesiphon in Persia, during a great persecution under King Sapor II. The king had been incited by (Zoroastrian) Magi jealous of the growth of the Faith in their territory, and by some Jews living in Persia. The king was already displeased with the holy bishop: his eunuch, Ustazan, a secret Christian, had denied Christ, but when reprimanded by Symeon, had confessed the Faith before the King, for which he was executed. On Holy Friday of 343 Symeon, along with at least a hundred other servants of the Church, was sent out to be slain. Symeon exhorted each to be of good courage, and was himself slain last. One year later, again on Holy Friday, the King\u2019s eunuch Azat was executed for Christ, along with a great number of the faithful. It is said that more than 1,000 Christians died as martyrs during this persecution.</p>\n<p><i>The Zoroastrians still live in parts of Iran as a small, somewhat persecuted minority under the Islamic government.</i></p>"
+      }
+    ],
+    "fasting": {
+      "description": "Lenten Fast",
+      "abstentions": [
+        "meat",
+        "fish",
+        "dairy",
+        "eggs"
+      ]
+    },
+    "readings": [
+      {
+        "display": "Hebrews 9.24-28",
+        "text": "For Christ is not entered into the holy places made with hands, which are the figures of the true; but into heaven itself, now to appear in the presence of God for us: Nor yet that he should offer himself often, as the high priest entereth into the holy place every year with blood of others; For then must he often have suffered since the foundation of the world: but now once in the end of the world hath he appeared to put away sin by the sacrifice of himself. And as it is appointed unto men once to die, but after this the judgment: So Christ was once offered to bear the sins of many; and unto them that look for him shall he appear the second time without sin unto salvation."
+      },
+      {
+        "display": "Hebrews 9.1-7",
+        "text": "Then verily the first covenant had also ordinances of divine service, and a worldly sanctuary. For there was a tabernacle made; the first, wherein was the candlestick, and the table, and the shewbread; which is called the sanctuary. And after the second veil, the tabernacle which is called the Holiest of all; Which had the golden censer, and the ark of the covenant overlaid round about with gold, wherein was the golden pot that had manna, and Aaron\u2019s rod that budded, and the tables of the covenant; And over it the cherubims of glory shadowing the mercyseat; of which we cannot now speak particularly. Now when these things were thus ordained, the priests went always into the first tabernacle, accomplishing the service of God. But into the second went the high priest alone once every year, not without blood, which he offered for himself, and for the errors of the people:"
+      },
+      {
+        "display": "Mark 8.27-31",
+        "text": "And Jesus went out, and his disciples, into the towns of C\u00e6sarea Philippi: and by the way he asked his disciples, saying unto them, Whom do men say that I am? And they answered, John the Baptist: but some say, Elias; and others, One of the prophets. And he saith unto them, But whom say ye that I am? And Peter answereth and saith unto him, Thou art the Christ. And he charged them that they should tell no man of him. And he began to teach them, that the Son of man must suffer many things, and be rejected of the elders, and of the chief priests, and scribes, and be killed, and after three days rise again."
+      },
+      {
+        "display": "Luke 1.39-49, 56",
+        "text": "And Mary arose in those days, and went into the hill country with haste, into a city of Juda; And entered into the house of Zacharias, and saluted Elisabeth. And it came to pass, that, when Elisabeth heard the salutation of Mary, the babe leaped in her womb; and Elisabeth was filled with the Holy Ghost: And she spake out with a loud voice, and said, Blessed art thou among women, and blessed is the fruit of thy womb. And whence is this to me, that the mother of my Lord should come to me? For, lo, as soon as the voice of thy salutation sounded in mine ears, the babe leaped in my womb for joy. And blessed is she that believed: for there shall be a performance of those things which were told her from the Lord. And Mary said, My soul doth magnify the Lord, And my spirit hath rejoiced in God my Saviour. For he hath regarded the low estate of his handmaiden: for, behold, from henceforth all generations shall call me blessed. For he that is mighty hath done to me great things; and holy is his name. And Mary abode with her about three months, and returned to her own house."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 2
+  },
+  "events": [
+    {
+      "title": "Great Vespers",
+      "start": "2027-04-17 17:00:00",
+      "end": "2027-04-17 18:00:00",
+      "url": "https://www.constantinehelen.com/event/great-vespers/2027-04-17/"
+    }
+  ]
+}

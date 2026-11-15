@@ -1,0 +1,62 @@
+{
+  "date": "2026-06-08",
+  "liturgical": {
+    "status": "ok",
+    "source": "antiochian",
+    "feasts": [
+      "Removal of the Relics of Theodore the Commander"
+    ],
+    "saints": [
+      "Removal of the Relics of Theodore the Commander",
+      "Kalliope the Martyr",
+      "Melania the Righteous",
+      "Anastasios the New Martyr of Constantinople",
+      "Theophanes the New Martyr of Constantinople"
+    ],
+    "summary_title": "Removal of the Relics of Theodore the Commander, Kalliope the Martyr, Melania the Righteous, Anastasios the New Martyr of Constantinople, Theophanes the New Martyr of Constantinople",
+    "stories": [],
+    "fasting": {
+      "description": "Abstain From Meat, Dairy, Eggs",
+      "abstentions": [
+        "meat",
+        "dairy",
+        "eggs"
+      ]
+    },
+    "readings": [
+      {
+        "display": "St. Paul's Letter to the Ephesians 2:4-10",
+        "text": "Brethren, God who is rich in mercy, out of the great love with which he loved us, even when we were dead through our trespasses, made us alive together with Christ (by grace you have been saved), and raised us up with him, and made us sit with him in the heavenly places in Christ Jesus, that in the coming ages he might show the immeasurable riches of his grace in kindness toward us in Christ Jesus. For by grace you have been saved through faith; and this is not your own doing, it is the gift of God: not because of works, lest any man should boast. For we are his workmanship, created in Christ Jesus for good works, which God prepared beforehand, that we should walk in them."
+      },
+      {
+        "display": "Matthew 10:16-22",
+        "text": "The Lord said to his disciples, \"Behold, I send you out as sheep in the midst of wolves; so be wise as serpents and innocent as doves. Beware of men; for they will deliver you up to councils, and flog you in their synagogues, and you will be dragged before governors and kings for my sake, to bear testimony before them and the Gentiles. When they deliver you up, do not be anxious how you are to speak or what you are to say; for what you are to say will be given to you in that hour; for it is not you who speak, but the Spirit of your Father speaking through you. Brother will deliver up brother to death, and the father his child, and children will rise against parents and have them put to death; and you will be hated by all for my name's sake. But he who endures to the end will be saved.\""
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 2
+  },
+  "events": [
+    {
+      "title": "Parish Hall Renovation",
+      "start": "2026-06-08 00:00:00",
+      "end": "2026-07-25 23:59:59",
+      "url": "https://www.constantinehelen.com/event/parish-hall-renovation/"
+    },
+    {
+      "title": "Apostles\u2019 Fast (Peter & Paul Fast) Begins",
+      "start": "2026-06-08 00:00:00",
+      "end": "2026-06-08 23:59:59",
+      "url": "https://www.constantinehelen.com/event/apostles-fast-peter-paul-fast-begins/"
+    },
+    {
+      "title": "AA Meeting",
+      "start": "2026-06-08 18:00:00",
+      "end": "2026-06-08 19:30:00",
+      "url": "https://www.constantinehelen.com/event/aa-meeting-10-2025-11-10/2026-06-08/"
+    }
+  ]
+}

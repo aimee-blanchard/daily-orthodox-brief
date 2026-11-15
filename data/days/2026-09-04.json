@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-04",
+  "liturgical": {
+    "status": "ok",
+    "source": "antiochian",
+    "feasts": [
+      "14Th Friday After Pentecost"
+    ],
+    "saints": [
+      "Babylas the Holy Martyr",
+      "Moses the Prophet & Godseer",
+      "Our Righteous Father Anthimus of Coroucle in Cephallenia",
+      "Anthimos the New Ascetic",
+      "Hermione the Martyr",
+      "Daughter of St. Philip the Deacon"
+    ],
+    "summary_title": "Babylas the Holy Martyr, Moses the Prophet & Godseer, Our Righteous Father Anthimus of Coroucle in Cephallenia, Anthimos the New Ascetic, Hermione the Martyr, Daughter of St. Philip the Deacon",
+    "stories": [],
+    "fasting": {
+      "description": "Abstain From Meat, Fish, Dairy, Eggs, Wine, Olive Oil",
+      "abstentions": [
+        "meat",
+        "fish",
+        "dairy",
+        "eggs",
+        "wine",
+        "olive oil"
+      ]
+    },
+    "readings": [
+      {
+        "display": "St. Paul's Letter to the Galatians 2:6-10",
+        "text": "Brethren, from those who were reputed to be something (what they were makes no difference to me; God shows no partiality) - those, I say, who were of repute added nothing to me; but on the contrary, when they saw that I had been entrusted with the gospel to the uncircumcised, just as Peter had been entrusted with the gospel to the circumcised (for he who worked through Peter for the mission to the circumcised worked through me also for the Gentiles), and when they perceived the grace that was given to me, James and Cephas and John, who were reputed to be pillars, gave to me and Barnabas the right hand of fellowship, that we should go to the Gentiles and they to the circumcised; only they would have us remember the poor, which very thing I was eager to do."
+      },
+      {
+        "display": "Mark 5:22-24, 35-43; 6:1",
+        "text": "At that time, there came to Jesus one of the rulers of the synagogue, Jairus by name; and seeing him, he fell at his feet, and besought him, saying, \"My little daughter is at the point of death. Come and lay your hands on her, so that she may be made well, and live.\" And he went with him. While he was still speaking, there came from the ruler's house some who said, \"Your daughter is dead. Why trouble the Teacher any further?\" But ignoring what they said, Jesus said to the ruler of the synagogue, \"Do not fear, only believe.\" And he allowed no one to follow him except Peter and James and John the brother of James. When they came to the house of the ruler of the synagogue, he saw a tumult, and people weeping and wailing loudly. And when he had entered, he said to them, \"Why do you make a tumult and weep? The child is not dead but sleeping.\" And they laughed at him. But he put them all outside, and took the child's father and mother and those who were with him, and went in where the child was. Taking her by the hand he said to her, \"Talitha cumi\"; which means, \"Little girl, I say to you, arise.\" And immediately the girl got up and walked (she was twelve years of age), and they were immediately overcome with amazement. And he strictly charged them that no one should know this, and told them to give her something to eat. He went away from there and came to his own country; and his disciples followed him."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [
+      {
+        "commemoration": "Babylas the Holy Martyr",
+        "title": "St. Babylas",
+        "url": "https://www.newadvent.org/cathen/02178c.htm",
+        "excerpt": "Bishop and Martyr. He was the successor of Zebinus as Bishop of Antioch in the reign of the Emperor Gordianus (238-244), being the twelfth bishop of this Oriental metropolis. During the Decian persecution (250) he made an unwavering confession of faith and was thrown into prison where he died from his sufferings. He was, therefore, venerated as a martyr. St.",
+        "more": "Bishop and Martyr. He was the successor of Zebinus as Bishop of Antioch in the reign of the Emperor Gordianus (238-244), being the twelfth bishop of this Oriental metropolis. During the Decian persecution (250) he made an unwavering confession of faith and was thrown into prison where he died from his sufferings. He was, therefore, venerated as a martyr. St. John Chrysostom and the \"Acts of the Martyrs\" relate further concerning him, that Babylas once refused an emperor, on account of his wrongdoing, permission to enter the church and had ordered him to take his place among the penitents. Chrysostom does not give the name of the emperor; the Acts mention Numerianus. It is more probably Philip the Arabian (244-249) of whom Eusebius (Church History VI.34) reports that a bishop would not let him enter the gathering of Christians at the Easter vigil. The burial-place of St. Babylas became very celebrated. The Caesar Gallus built a new church in honor of the holy martyr at Daphne, a suburb of Antioch, and the bones of the saint were transferred to it. When after this Julian the Apostate consulted the oracle of Apollo at the temple to his god which was near by, he received no answer because of the proximity of the saint. He therefore, had the sarcophagus of the martyr taken back to its original place of burial. In the middle ages the bones of Babylas were carried to Cremona. The Latin Church keeps his feast on January 24th, the Greek Church on September 4th."
+      }
+    ],
+    "newadvent_version": 2
+  },
+  "events": []
+}

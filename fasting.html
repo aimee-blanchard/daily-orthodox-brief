@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fasting Calendar &middot; Daily Orthodox Brief</title>
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="stylesheet" href="fasting.css">
+<meta name="theme-color" content="#060606">
+<style>
+  :root {
+    --bg: #060606;
+    --ink: #f7f4ec;
+    --ink-soft: #cbc6b8;
+    --ink-faint: #8f897a;
+    --rule: #302f2c;
+    --accent: #d99a6c;
+    --card-bg: #1c1c1a;
+    --warn-bg: #2c2314;
+    --warn-ink: #e0b878;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  body { padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); min-height: 100vh; }
+  a { color: var(--accent); }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.1rem 4rem; }
+  header.page { text-align: center; margin-bottom: 1.25rem; }
+  header.page h1 { font-family: var(--serif); font-weight: 400; font-size: 1.6rem; margin: 0 0 0.2rem; }
+  header.page p { margin: 0; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); }
+  section.card { background: var(--card-bg); border: 1px solid var(--rule); border-radius: 14px; padding: 1rem 1.1rem; margin-bottom: 1rem; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+  section.card h2 { margin: 0 0 0.6rem; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+  .month-nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; }
+  .month-nav h2.month-title { font-family: var(--serif); font-size: 1.35rem; letter-spacing: 0; text-transform: none; color: var(--ink); font-weight: 400; margin: 0; text-align: center; flex: 1; }
+  .nav-btn { appearance: none; border: none; background: none; color: var(--ink); font-size: 1.5rem; line-height: 1; padding: 0.4rem 0.75rem; cursor: pointer; border-radius: 8px; }
+  .nav-btn:disabled { color: var(--rule); cursor: default; }
+  .nav-btn:not(:disabled):active { background: var(--rule); }
+  .today-link { display: block; margin: -0.35rem auto 0.6rem; background: none; border: none; color: var(--accent); font-size: 0.85rem; cursor: pointer; }
+  #monthGrid .fc-cell { cursor: pointer; font-size: 1rem; aspect-ratio: auto; height: clamp(2.5rem, 11.5vw, 3.6rem); }
+  .detail { margin-top: 0.9rem; padding-top: 0.8rem; border-top: 1px solid var(--rule); min-height: 4.2rem; }
+  .detail-date { font-family: var(--serif); font-size: 1.15rem; margin: 0 0 0.25rem; }
+  .detail-level { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; margin: 0 0 0.2rem; }
+  .detail-allows { margin: 0; color: var(--ink-soft); font-size: 0.92rem; line-height: 1.45; }
+  .detail-meta { margin: 0.35rem 0 0; color: var(--ink-faint); font-size: 0.78rem; }
+  .level-list { list-style: none; margin: 0; padding: 0; }
+  .level-list li { display: flex; gap: 0.7rem; align-items: flex-start; padding: 0.5rem 0; border-bottom: 1px solid var(--rule); }
+  .level-list li:last-child { border-bottom: none; }
+  .level-list .fc-swatch { width: 1.1rem; height: 1.1rem; border-radius: 4px; flex-shrink: 0; margin-top: 0.1rem; }
+  .level-list strong { display: block; font-size: 0.95rem; }
+  .level-list span.allows { font-size: 0.85rem; color: var(--ink-soft); }
+  .season-list { list-style: none; margin: 0; padding: 0; }
+  .season-list li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.45rem 0; border-bottom: 1px solid var(--rule); font-size: 0.9rem; }
+  .season-list li:last-child { border-bottom: none; }
+  .season-list .dates { color: var(--ink-faint); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .season-list li.free .name { color: var(--accent); }
+  .year-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem 0.9rem; }
+  @media (min-width: 600px) { .year-grid { grid-template-columns: repeat(3, 1fr); } }
+  .year-month { cursor: pointer; border-radius: 10px; padding: 0.3rem; }
+  .year-month:active, .year-month.current { background: #262623; }
+  .year-month h3 { margin: 0 0 0.3rem; font-size: 0.8rem; font-weight: 600; color: var(--ink-soft); text-align: center; }
+  .year-month .fc-grid { gap: 2px; }
+  .year-month .fc-dow { font-size: 0.55rem; }
+  .year-month .fc-cell { aspect-ratio: auto; height: 1.2rem; font-size: 0.6rem; border-radius: 3px; }
+  .year-month .fc-today { box-shadow: 0 0 0 1.5px var(--ink); }
+  .year-tabs { display: flex; gap: 0.5rem; margin-bottom: 0.8rem; }
+  .year-tabs button { appearance: none; background: none; border: 1px solid var(--rule); color: var(--ink-soft); border-radius: 8px; padding: 0.35rem 0.8rem; font-size: 0.85rem; cursor: pointer; }
+  .year-tabs button.active { border-color: var(--accent); color: var(--accent); }
+  .banner { background: var(--warn-bg); color: var(--warn-ink); border-radius: 10px; padding: 0.7rem 0.9rem; font-size: 0.85rem; margin-bottom: 1rem; line-height: 1.45; }
+  footer { text-align: center; color: var(--ink-faint); font-size: 0.75rem; margin-top: 1.5rem; line-height: 1.6; }
+  .empty-state { text-align: center; color: var(--ink-faint); padding: 3rem 1rem; font-family: var(--serif); font-size: 1.1rem; }
+</style>
+</head>
+<body>
+<main id="app">
+  <div class="empty-state">Loading the fasting calendar&hellip;</div>
+</main>
+<script src="fasting.js"></script>
+<script>
+(function () {
+  var F = window.Fasting;
+  var app = document.getElementById("app");
+  var data = null;
+  var today = F.todayCentral();
+  var view = { y: +today.slice(0, 4), m: +today.slice(5, 7) };
+  var selected = today;
+  var yearShown = view.y;
+
+  var params = new URLSearchParams(location.search);
+  if (/^\d{4}-\d{2}$/.test(params.get("m") || "")) {
+    view = { y: +params.get("m").slice(0, 4), m: +params.get("m").slice(5, 7) };
+  }
+  if (/^\d{4}-\d{2}-\d{2}$/.test(params.get("d") || "")) selected = params.get("d");
+
+  var SOURCE_NAMES = {
+    antiochian_daily: "antiochian.org daily calendar",
+    antiochian_pdf: "Antiochian Archdiocese fasting calendar",
+    orthocal: "orthocal.info (provisional)",
+  };
+
+  function years() { return Object.keys(data.years).map(Number).sort(); }
+  function monthKey(v) { return v.y * 12 + v.m; }
+  function minView() { return { y: years()[0], m: 1 }; }
+  function maxView() { var ys = years(); return { y: ys[ys.length - 1], m: 12 }; }
+  function clampView() {
+    if (monthKey(view) < monthKey(minView())) view = minView();
+    if (monthKey(view) > monthKey(maxView())) view = maxView();
+  }
+
+  function fmtLong(ds) {
+    var d = new Date(Date.UTC(+ds.slice(0, 4), +ds.slice(5, 7) - 1, +ds.slice(8, 10)));
+    return d.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
+  }
+  function fmtShort(ds) {
+    var d = new Date(Date.UTC(+ds.slice(0, 4), +ds.slice(5, 7) - 1, +ds.slice(8, 10)));
+    return d.toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
+  }
+
+  function renderDetail(ds) {
+    var info = F.dayInfo(data, ds);
+    var html = '<p class="detail-date">' + F.esc(fmtLong(ds)) + (ds === today ? " &middot; Today" : "") + "</p>";
+    if (!info.covered) return html + '<p class="detail-allows">No fasting data for this year yet.</p>';
+    if (info.levelInfo) {
+      html += '<p class="detail-level"><span class="fc-swatch fc-' + info.level + '"></span>' + F.esc(info.levelInfo.label) + "</p>" +
+        '<p class="detail-allows">' + F.esc(info.levelInfo.allows) + "</p>";
+    } else if (info.fastFree) {
+      html += '<p class="detail-level"><span class="fc-swatch fc-free"></span>Fast-free</p>' +
+        '<p class="detail-allows">No fasting, even on Wednesday and Friday.</p>';
+    } else {
+      html += '<p class="detail-level">No fast</p><p class="detail-allows">No fasting restrictions this day.</p>';
+    }
+    var meta = [];
+    if (info.season) meta.push(info.season.name);
+    if (info.fastFree) meta.push(info.fastFree.name.replace(/^Fast-free: /, "Fast-free: "));
+    if (info.levelInfo && info.source) meta.push("Source: " + (SOURCE_NAMES[info.source] || info.source));
+    if (meta.length) html += '<p class="detail-meta">' + F.esc(meta.join(" · ")) + "</p>";
+    return html;
+  }
+
+  function render() {
+    clampView();
+    var y = view.y, m = view.m;
+    var yearMeta = data.years[String(y)] || {};
+    var html = '<header class="page"><h1>Fasting Calendar</h1><p>Antiochian Archdiocese &middot; New Calendar</p></header>';
+
+    if (yearMeta.provisional) {
+      html += '<div class="banner">The Antiochian Archdiocese hasn&rsquo;t published its ' + y +
+        ' fasting calendar yet, so ' + y + ' is shown from orthocal.info (Greek tradition) as a provisional guide, with striped days. ' +
+        'It may differ from the Archdiocese in places (for example Wednesdays and Fridays after Pascha). ' +
+        'This page switches to the official calendar automatically once it&rsquo;s posted.</div>';
+    }
+
+    html += '<section class="card"><div class="month-nav">' +
+      '<button class="nav-btn" id="prevM" aria-label="Previous month"' + (monthKey(view) <= monthKey(minView()) ? " disabled" : "") + ">&larr;</button>" +
+      '<h2 class="month-title">' + F.MONTHS[m - 1] + " " + y + "</h2>" +
+      '<button class="nav-btn" id="nextM" aria-label="Next month"' + (monthKey(view) >= monthKey(maxView()) ? " disabled" : "") + ">&rarr;</button></div>";
+    if (y !== +today.slice(0, 4) || m !== +today.slice(5, 7)) html += '<button class="today-link" id="toToday">Back to this month</button>';
+    html += '<div id="monthGrid">' + F.monthGrid(data, y, m, { today: today, selected: selected }) + "</div>";
+    html += F.legend(data, F.LEVEL_ORDER, { free: true, today: true });
+    html += '<div class="detail" id="detail">' + renderDetail(selected.slice(0, 7) === y + "-" + F.pad(m) ? selected : (today.slice(0, 7) === y + "-" + F.pad(m) ? today : F.iso(y, m, 1))) + "</div>";
+    html += "</section>";
+
+    html += '<section class="card"><h2>What each fast allows</h2><ul class="level-list">';
+    F.LEVEL_ORDER.forEach(function (k) {
+      var l = data.levels[k];
+      html += '<li><span class="fc-swatch fc-' + k + '"></span><div><strong>' + F.esc(l.label) + '</strong><span class="allows">' + F.esc(l.allows) + "</span></div></li>";
+    });
+    html += '<li><span class="fc-swatch fc-free"></span><div><strong>Fast-free</strong><span class="allows">No fasting, even on Wednesday and Friday</span></div></li>';
+    html += '<li><span class="fc-swatch" style="box-shadow: inset 0 0 0 1px var(--rule)"></span><div><strong>No fast</strong><span class="allows">An ordinary day with no fasting</span></div></li>';
+    html += "</ul></section>";
+
+    html += '<section class="card"><h2>Year at a glance</h2><div class="year-tabs">';
+    years().forEach(function (yy) {
+      html += '<button data-year="' + yy + '" class="' + (yy === yearShown ? "active" : "") + '">' + yy + (data.years[String(yy)].provisional ? " (provisional)" : "") + "</button>";
+    });
+    html += '</div><div class="year-grid">';
+    for (var mm = 1; mm <= 12; mm++) {
+      html += '<div class="year-month' + (yearShown === y && mm === m ? " current" : "") + '" data-y="' + yearShown + '" data-m="' + mm + '"><h3>' + F.MONTHS[mm - 1] + "</h3>" +
+        F.monthGrid(data, yearShown, mm, { today: today, compact: true }) + "</div>";
+    }
+    html += "</div></section>";
+
+    var seasons = data.seasons.filter(function (s) { return s.start.slice(0, 4) === String(yearShown); });
+    html += '<section class="card"><h2>Fasts &amp; fast-free periods, ' + yearShown + '</h2><ul class="season-list">';
+    seasons.forEach(function (s) {
+      var dates = s.start === s.end ? fmtShort(s.start) : fmtShort(s.start) + " – " + fmtShort(s.end);
+      html += '<li class="' + (s.kind === "fast_free" ? "free" : "") + '"><span class="name">' + F.esc(s.name) + '</span><span class="dates">' + F.esc(dates) + "</span></li>";
+    });
+    html += '<li><span class="name">Wednesdays &amp; Fridays</span><span class="dates">year-round, except fast-free periods</span></li>';
+    html += "</ul></section>";
+
+    var srcLinks = years().map(function (yy) {
+      var meta = data.years[String(yy)];
+      var name = meta.source === "antiochian_pdf" ? "Antiochian Archdiocese " + yy + " fasting calendar" : "orthocal.info " + yy + " (provisional)";
+      return '<a href="' + F.esc(meta.url) + '" target="_blank" rel="noopener">' + F.esc(name) + "</a>";
+    });
+    html += "<footer>" + F.esc(data.note) + "<br>Sources: " + srcLinks.join(" &middot; ") +
+      ', confirmed against <a href="https://www.antiochian.org/liturgicday" target="_blank" rel="noopener">antiochian.org</a> daily pages' +
+      "<br>Updated " + F.esc(new Date(data.generated_at).toLocaleString("en-US", { timeZone: "America/Chicago", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" })) + " CT" +
+      '<br><a href="index.html">&larr; Daily brief</a></footer>';
+
+    app.innerHTML = html;
+    wire();
+  }
+
+  function go(y, m) {
+    view = { y: y, m: m };
+    yearShown = y;
+    history.replaceState(null, "", "?m=" + y + "-" + F.pad(m));
+    render();
+  }
+
+  function wire() {
+    var prev = document.getElementById("prevM"), next = document.getElementById("nextM"), back = document.getElementById("toToday");
+    if (prev) prev.addEventListener("click", function () { var d = new Date(Date.UTC(view.y, view.m - 2, 1)); go(d.getUTCFullYear(), d.getUTCMonth() + 1); });
+    if (next) next.addEventListener("click", function () { var d = new Date(Date.UTC(view.y, view.m, 1)); go(d.getUTCFullYear(), d.getUTCMonth() + 1); });
+    if (back) back.addEventListener("click", function () { selected = today; go(+today.slice(0, 4), +today.slice(5, 7)); });
+    document.getElementById("monthGrid").addEventListener("click", function (e) {
+      var cell = e.target.closest(".fc-cell[data-date]");
+      if (!cell) return;
+      selected = cell.getAttribute("data-date");
+      document.querySelectorAll("#monthGrid .fc-selected").forEach(function (c) { c.classList.remove("fc-selected"); });
+      if (selected !== today) cell.classList.add("fc-selected");
+      document.getElementById("detail").innerHTML = renderDetail(selected);
+    });
+    document.querySelectorAll(".year-month").forEach(function (el) {
+      el.addEventListener("click", function () {
+        go(+el.getAttribute("data-y"), +el.getAttribute("data-m"));
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+    document.querySelectorAll(".year-tabs button").forEach(function (b) {
+      b.addEventListener("click", function () { yearShown = +b.getAttribute("data-year"); render(); });
+    });
+  }
+
+  F.load()
+    .then(function (d) { data = d; render(); })
+    .catch(function (err) {
+      app.innerHTML = '<div class="empty-state">Couldn&rsquo;t load the fasting calendar.<br><span style="font-size:0.8rem">' + F.esc(err.message) + "</span></div>";
+    });
+})();
+</script>
+</body>
+</html>

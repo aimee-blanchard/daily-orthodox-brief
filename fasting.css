@@ -1,0 +1,63 @@
+/* Shared fasting-calendar styles (mini calendar + full page). */
+:root {
+  --fc-strict: #c8483d;
+  --fc-wine: #d6b247;
+  --fc-wine_oil: #4f9a62;
+  --fc-fish: #3b8bc2;
+  --fc-dairy: #c27a3a;
+}
+.fc-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+.fc-dow {
+  text-align: center;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  padding-bottom: 2px;
+}
+.fc-cell {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+.fc-compact { gap: 3px; }
+.fc-compact .fc-cell { aspect-ratio: auto; height: 1.85rem; font-size: 0.8rem; border-radius: 6px; }
+.fc-empty { visibility: hidden; }
+.fc-strict, .fc-wine, .fc-wine_oil, .fc-fish, .fc-dairy { color: #fff; font-weight: 600; }
+.fc-wine { color: #1c1c1a; }
+.fc-strict { background: var(--fc-strict); }
+.fc-wine { background: var(--fc-wine); }
+.fc-wine_oil { background: var(--fc-wine_oil); }
+.fc-fish { background: var(--fc-fish); }
+.fc-dairy { background: var(--fc-dairy); }
+.fc-free { color: var(--accent); box-shadow: inset 0 0 0 1px rgba(217, 154, 108, 0.45); }
+.fc-nodata { color: var(--rule); }
+.fc-provisional.fc-strict, .fc-provisional.fc-wine, .fc-provisional.fc-wine_oil,
+.fc-provisional.fc-fish, .fc-provisional.fc-dairy {
+  background-image: repeating-linear-gradient(135deg, rgba(0,0,0,0.22) 0 3px, transparent 3px 7px);
+}
+.fc-today { box-shadow: 0 0 0 2px var(--ink); z-index: 1; }
+.fc-today .fc-num { font-weight: 800; }
+.fc-selected { box-shadow: 0 0 0 2px var(--accent); z-index: 1; }
+
+.fc-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.8rem;
+  margin-top: 0.6rem;
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+}
+.fc-legend-item { display: inline-flex; align-items: center; gap: 0.3rem; white-space: nowrap; }
+.fc-swatch { width: 0.7rem; height: 0.7rem; border-radius: 3px; display: inline-block; }
+.fc-swatch.fc-free { box-shadow: inset 0 0 0 1px var(--accent); }
+.fc-swatch-today { box-shadow: inset 0 0 0 2px var(--ink); }

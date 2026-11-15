@@ -1,0 +1,78 @@
+{
+  "date": "2027-03-20",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": null,
+    "saints": [
+      "Holy Fathers Slain at St Sabbas Monastery",
+      "Myron the New Martyr of Crete",
+      "St Theodore Tyro (the Recruit), Great-martyr",
+      "St Photine the Samaritan Woman (66)",
+      "St Cuthbert the Wonderworker, Bishop of Lindisfarne (687)"
+    ],
+    "summary_title": "Holy Fathers Slain at St Sabbas Monastery; St Photine the Samaritan Woman (66); St Cuthbert the Wonderworker, Bishop of Lindisfarne (687)",
+    "stories": [
+      {
+        "title": "Holy Fathers Slain at St Sabbas Monastery",
+        "html": "<p>The holy Monastery of St Sabbas is still in existence today, by the providence of God, though several times in its history it has been plundered and left empty. At one time it was attacked by Arab raiders. The monks considered fleeing, but their abbot, Thomas, said, \u2018We have fled from the world into this wilderness for the love of Christ; it would be shameful for us now to flee from the wilderness for fear of men. If we are killed here, we shall be killed through love for Christ, for whose sake we have come here to live.\u2019 So the monks agreed with one mind to wait their attackers unarmed. The Arabs killed some with arrows, and shut some in the cave of St Sabbas, lighting a fire at the entrance to suffocate them with smoke. The whole company of monks were thus privileged to give their lives for Christ\u2019s sake.</p>\n<p>Accounts of the date differ substantially: the <i>Great Horologion</i> says that they died during the reign of the Emperor Heraclius, when St Modestus was Patriarch of Jerusalem (632-634); the <i>Prologue</i> that they died in 796 during the reign of Constantine and Irene, when Elias was Patriarch of Jerusalem.</p>"
+      },
+      {
+        "title": "St Photine the Samaritan Woman (66)",
+        "html": "<p>See her commemoration on February 26.</p>"
+      },
+      {
+        "title": "St Cuthbert the Wonderworker, Bishop of Lindisfarne (687)",
+        "html": "<p>\u2018Saint Cuthbert was born in Britain about the year 635, and became a monk in his youth at the monastery of Melrose by the River Tweed. After many years of struggle as a true priest of Christ, in the service both of his own brethren and of the neglected Christians of isolated country villages, he became a solitary on Farne Island in 676. After eight years as a hermit, he was constrained to leave his quiet to become Bishop of Lindisfarne, in which office he served for almost two years. He returned to his hermitage two months before he reposed in peace in 687.</p>\n<p>\u2018Because of the miracles he wrought both during his life and at his tomb after death, he is called the \u201cWonderworker of Britain.\u201d The whole English people honoured him, and kings were both benefactors to his shrine and suppliants of his prayers. Eleven years after his death, his holy relics were revealed to be incorrupt; when his body was translated from Lindisfarne to Durham Cathedral in August of 1104, his body was still found to be untouched by decay, giving off \u201can odour of the sweetest fragrancy,\u201d and \u201cfrom the flexibility of its joints representing a person asleep rather than dead.\u201d Finally, when the most impious Henry VIII desecrated his shrine, opening it to despoil it of its valuables, his body was again found incorrupt, and was buried in 1542. It is believed that after this the holy relics of Saint Cuthbert were hidden to preserve them from further desecration.\u2019 (<i>Great Horologion</i>)</p>"
+      }
+    ],
+    "fasting": {
+      "description": "Lenten Fast",
+      "abstentions": [
+        "meat",
+        "fish",
+        "dairy",
+        "eggs"
+      ]
+    },
+    "readings": [
+      {
+        "display": "Hebrews 1.1-12",
+        "text": "God, who at sundry times and in divers manners spake in time past unto the fathers by the prophets, Hath in these last days spoken unto us by his Son, whom he hath appointed heir of all things, by whom also he made the worlds; Who being the brightness of his glory, and the express image of his person, and upholding all things by the word of his power, when he had by himself purged our sins, sat down on the right hand of the Majesty on high; Being made so much better than the angels, as he hath by inheritance obtained a more excellent name than they. For unto which of the angels said he at any time, Thou art my Son, this day have I begotten thee? And again, I will be to him a Father, and he shall be to me a Son? And again, when he bringeth in the firstbegotten into the world, he saith, And let all the angels of God worship him. And of the angels he saith, Who maketh his angels spirits, and his ministers a flame of fire. But unto the Son he saith, Thy throne, O God, is for ever and ever: a sceptre of righteousness is the sceptre of thy kingdom. Thou hast loved righteousness, and hated iniquity; therefore God, even thy God, hath anointed thee with the oil of gladness above thy fellows. And, Thou, Lord, in the beginning hast laid the foundation of the earth; and the heavens are the works of thine hands: They shall perish; but thou remainest; and they all shall wax old as doth a garment; And as a vesture shalt thou fold them up, and they shall be changed: but thou art the same, and thy years shall not fail."
+      },
+      {
+        "display": "2 Timothy 2.1-10",
+        "text": "Thou therefore, my son, be strong in the grace that is in Christ Jesus. And the things that thou hast heard of me among many witnesses, the same commit thou to faithful men, who shall be able to teach others also. Thou therefore endure hardness, as a good soldier of Jesus Christ. No man that warreth entangleth himself with the affairs of this life; that he may please him who hath chosen him to be a soldier. And if a man also strive for masteries, yet is he not crowned, except he strive lawfully. The husbandman that laboureth must be first partaker of the fruits. Consider what I say; and the Lord give thee understanding in all things. Remember that Jesus Christ of the seed of David was raised from the dead according to my gospel: Wherein I suffer trouble, as an evil doer, even unto bonds; but the word of God is not bound. Therefore I endure all things for the elect\u2019s sakes, that they may also obtain the salvation which is in Christ Jesus with eternal glory."
+      },
+      {
+        "display": "Mark 2.23-3.5",
+        "text": "And it came to pass, that he went through the corn fields on the sabbath day; and his disciples began, as they went, to pluck the ears of corn. And the Pharisees said unto him, Behold, why do they on the sabbath day that which is not lawful? And he said unto them, Have ye never read what David did, when he had need, and was an hungred, he, and they that were with him? How he went into the house of God in the days of Abiathar the high priest, and did eat the shewbread, which is not lawful to eat but for the priests, and gave also to them which were with him? And he said unto them, The sabbath was made for man, and not man for the sabbath: Therefore the Son of man is Lord also of the sabbath. And he entered again into the synagogue; and there was a man there which had a withered hand. And they watched him, whether he would heal him on the sabbath day; that they might accuse him. And he saith unto the man which had the withered hand, Stand forth. And he saith unto them, Is it lawful to do good on the sabbath days, or to do evil? to save life, or to kill? But they held their peace. And when he had looked round about on them with anger, being grieved for the hardness of their hearts, he saith unto the man, Stretch forth thine hand. And he stretched it out: and his hand was restored whole as the other."
+      },
+      {
+        "display": "John 15.17-16.2",
+        "text": "These things I command you, that ye love one another. If the world hate you, ye know that it hated me before it hated you. If ye were of the world, the world would love his own: but because ye are not of the world, but I have chosen you out of the world, therefore the world hateth you. Remember the word that I said unto you, The servant is not greater than his lord. If they have persecuted me, they will also persecute you; if they have kept my saying, they will keep yours also. But all these things will they do unto you for my name\u2019s sake, because they know not him that sent me. If I had not come and spoken unto them, they had not had sin: but now they have no cloke for their sin. He that hateth me hateth my Father also. If I had not done among them the works which none other man did, they had not had sin: but now have they both seen and hated both me and my Father. But this cometh to pass, that the word might be fulfilled that is written in their law, They hated me without a cause. But when the Comforter is come, whom I will send unto you from the Father, even the Spirit of truth, which proceedeth from the Father, he shall testify of me: And ye also shall bear witness, because ye have been with me from the beginning. These things have I spoken unto you, that ye should not be offended. They shall put you out of the synagogues: yea, the time cometh, that whosoever killeth you will think that he doeth God service."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [
+      {
+        "commemoration": "St Cuthbert the Wonderworker, Bishop of Lindisfarne",
+        "title": "St. Cuthbert",
+        "url": "https://www.newadvent.org/cathen/04578a.htm",
+        "excerpt": "Bishop of Lindisfarne, patron of Durham, born about 635; died 20 March, 687. His emblem is the head of St. Oswald, king and martyr, which he is represented as bearing in his hands. His feast is kept in Great Britain and Ireland on the 20th of March, and he is patron of the Diocese of Hexham and Newcastle, where his commemoration is inserted among the Suffrages of the Saints.",
+        "more": "Bishop of Lindisfarne, patron of Durham, born about 635; died 20 March, 687. His emblem is the head of St. Oswald, king and martyr, which he is represented as bearing in his hands. His feast is kept in Great Britain and Ireland on the 20th of March, and he is patron of the Diocese of Hexham and Newcastle, where his commemoration is inserted among the Suffrages of the Saints. His early biographers give no particulars of his birth, and the accounts in the \"Libellus de ortu\", which represent him as the son of an Irish king named Muriahdach, though recently supported by Cardinal Moran and Archbishop Healy, are rejected by later English writers as legendary. Moreover, St. Bede's phrase, Brittania . . . genuit (Vita Metricia, c. i), points to his English birth. He was probably born in the neighbourhood of Mailros (Melrose) of lowly parentage, for as a boy he used to tend sheep on the mountain-sides near that monastery. While still a child living with his foster-mother Kenswith his future lot as bishop had been foretold by a little play-fellow, whose prophecy had a lasting effect on his character. He was influenced, too, by the holiness of the community of Mailros, where St. Eata was abbot and St. Basil prior. In the year 651, while watching his sheep, he saw in a vision the soul of St. Aidan carried to heaven by angels, and inspired by this became a monk at Mailros. Yet it would seem that the troubled state of the country hindered him from carrying out his resolution at once. Certain it is that at one part of his life he was a soldier, and the years which succeed the death of St. Aidan and Oswin of Deira seem to have been such as would call for the military service of most of the able-bodied men of Northumbria, which was constantly threatened at this time by the ambition of its southern neighbor, King Penda of Mercia. Peace was not restored to the land until some four years later, as the consequence of a great battle which was fought between the Northumbrians and the Mercians at Winwidfield. It was probably after this battle that Cuthbert found himself free once more to turn to the life he desired. He arrived at Mailros on horseback and armed with a spear. Here he soon became eminent for holiness and learning, while from the first his life was distinguished by supernatural occurrences and miracles. When the monastery at Ripon was founded he went there as guest-master, but in 661 he, with other monks who adhered to the customs of Celtic Christianity, returned to Mailros owing to the adoption at Ripon of the Roman Usage in celebrating Easter and other matters. Shortly after his return he was struck by a pestilence which then attacked the community, but he recovered, and became prior in place of St. Boisil, who died of the disease in 664. In this year the Synod of Whitby decided in favour of the Roman Usage, and St. Cuthbert, who accepted the decision, was sent by St. Eata to be prior at Lindisfarne, in order that he might introduce the Roman customs into that house."
+      }
+    ],
+    "newadvent_version": 2
+  },
+  "events": [
+    {
+      "title": "Great Vespers",
+      "start": "2027-03-20 17:00:00",
+      "end": "2027-03-20 18:00:00",
+      "url": "https://www.constantinehelen.com/event/great-vespers/2027-03-20/"
+    }
+  ]
+}
