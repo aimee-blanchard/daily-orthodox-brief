@@ -72,7 +72,9 @@ repo/
 ├── data/
 │   ├── index.json            # available dates + today pointer + last-run stamp
 │   └── days/2026-09-09.json  # one file per day in the window
-├── index.html                # the app (single page)
+├── index.html                # the brief (loads brief.css / brief.js)
+├── services.html             # Service Texts page (same brief.css / brief.js, <body data-page="services">)
+├── brief.css, brief.js       # shared styles and app code (bump the ?v= in both HTML files when changing them)
 ├── manifest.webmanifest      # makes "Add to Home Screen" behave like an app
 ├── icons/
 └── .github/workflows/daily.yml
@@ -167,13 +169,20 @@ articles are cached in `data/cache/newadvent.json`; bump
 
 - Synaxarion (Saints Commemorated + New Advent bios), Service Texts, Catechism, Parish Events, Prayer List and Daily Bible Readings render via `renderCollapsible()` in index.html as thin bars (title, one-line summary, chevron), collapsed by default. Several can be open at once; open/closed state isn't remembered.
 - An open section's body is the one scroll box: `max-height: calc(100dvh - 80px)` (vh fallback), `overflow-y: auto`, vertical scroll chaining left on (a swipe past the end carries on scrolling the page), white scrollbar like the old service-text panel. The service-text panel no longer scrolls on its own inside it. The bar is sticky, and the service-text search header and catechism lesson picker stick to the top of the scroll box.
-- Notes live inside Service Texts: a footer pinned under its scroll box (`renderServiceNotesFoot`) opens and closes with the section. On Sundays it has a "📝 Liturgy Notes" toggle that slides the notes textarea (Copy / Text to myself) open, plus Send to Doxy. The scroll box shrinks while it's open. Other days it shows only the pinned-notes count + Send to Doxy, once a note exists. The standalone Liturgy Notes card renders only when a day has no Service Texts section.
-- Switching service texts: a sticky chip row (`.text-switch`, built by `renderTextChooser`) sits at the very top of the Service Texts scroll box, and the search header sticks just under it (`--switch-h`, measured in `wireTextChoosers`). It used to be a plain `<select>` at the top of the scroll box that scrolled out of view, especially with Liturgy Notes open, so on her phone there was no way to switch texts (Nov 2026). Keep the switcher pinned. Readings show Epistle and Gospel together, so they need no switcher. The catechism lesson picker (`.cat-sticky`) is already pinned.
+- Service Texts has its own page, services.html?d=YYYY-MM-DD. It opens in a new tab like the fasting calendar, from a bar on the brief with an ↗ icon, the list of texts, and a 📝 note count that updates through the `storage` event. The page has:
+  - "← Back to brief" (focuses the opener tab and closes this one, else a plain link)
+  - the sticky chip row, with the text's search / Resume / ＋ Note header stuck under it (the window scrolls, not an inner box)
+  - all the parish-practice transforms
+  - a fixed bottom bar with the note count and one Send to Doxy button
+  It reopens the text she last chose that day (`serviceTextChoice:<date>`).
+- Chip order: the Full Outline comes immediately before the Variables (`orderedServiceTexts`).
+- There's no Liturgy Notes box any more (Nov 2026: she notes inline instead). Send to Doxy sends every inline note for the day, from every text, in one doxy-notes issue grouped by text. Text she typed in the old box (`liturgyNotes:<date>`) isn't lost: the services page shows it read-only in an "Earlier Liturgy Notes" card with a Delete button, and Send to Doxy includes it.
+- Switching service texts: the chip row (`.text-switch`, built by `renderTextChooser`) must stay pinned. It used to be a plain `<select>` that scrolled out of view, so on her phone there was no way to switch texts (Nov 2026). `--switch-h` (measured in `wireTextChoosers`) stacks the search header under it.
 - `window.BriefSections` (`render`, `open`, `setOpen`, `ensureOpen`) lets other code open a section: search hits, "Resume where I left off", and the catechism review reminder auto-expand a collapsed section. Opening and closing fire a bubbling `cs-toggle` event; catechism.js uses it to load lessons lazily.
 
 ### Parish practice in the Divine Liturgy (Full Outline)
 
-- `parishPractice()` in index.html applies Aimee's notes from attending Liturgy at her parish to the "Divine Liturgy (Full Outline)" text at render time, so every day's data gets them, past and future, with no data edits. It matches lines of `liturgy_outline.txt` by their opening words. If a line isn't found, that one change is skipped quietly.
+- `parishPractice()` in brief.js applies Aimee's notes from attending Liturgy at her parish to the "Divine Liturgy (Full Outline)" text at render time, so every day's data gets them, past and future, with no data edits. It matches lines of `liturgy_outline.txt` by their opening words. If a line isn't found, that one change is skipped quietly.
 - Rule: never add liturgical text. It only re-styles existing lines, hides blocks behind a "Show text" toggle, repeats the response the book itself names, and adds short "Our parish" rubrics in her words (italic, accent colour, pill tag, never a checkbox).
 - Current rules:
   - The Epistle and Gospel are shown as reading blocks, with their reference on the announcing line. If the outline only has the bulletin fallback, the text is filled from the day's readings.
@@ -187,10 +196,10 @@ articles are cached in `data/cache/newadvent.json`; bump
   - Our Father: "We hold out our hands. Said in English, then in Arabic."
   - The fraction dialogue ("Divide, master…" through "The warmth of the Holy Spirit. Amen.") is collapsed: "Not said aloud at our parish".
 - Paragraph indexes (`data-para`) stay the same, so saved progress and pinned notes still line up. Search and Resume open a collapsed block when they land inside it.
-- Liturgy Notes textarea:
-  - Every new line starts with "• ". This is handled on beforeinput (insertParagraph / insertLineBreak), on keydown, and by an input-time check, because iOS doesn't always let keydown cancel Enter.
-  - The caret is kept in view.
-  - The scrollbar is white.
+- Sts. Constantine and Helen apolytikion: `data/parish.json` holds the text exactly as printed in the bulletin, with no tone. Every Sunday it's inserted as an "Our parish" block in both Liturgy texts:
+  - Variables: after "Now sing the apolytikion of the patron saint or feast of the temple" (or else after the last apolytikion before the first kontakion).
+  - Full Outline: after the apolytikia that follow the eisodikon, before the thrice-holy prayer line and the kontakion.
+  It's skipped when any of the day's texts already has an apolytikion of Sts. Constantine and Helen (their feast, May 21).
 
 ### Catechism class (data/catechism/lessons.json, catechism.js, catechism.css)
 
