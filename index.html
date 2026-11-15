@@ -273,6 +273,7 @@
   /* Sticky headers inside the scroll box sit flush with its top edge; the shadow
      covers the box's top padding so text doesn't peek through above them. */
   .cs-body .checkable-header { top: -0.8rem; box-shadow: 0 -0.8rem 0 var(--card-bg); }
+  .cs-body .text-switch ~ .service-text-scroll .checkable-header { top: calc(-0.8rem + var(--switch-h, 0px)); box-shadow: none; }
 
   .na-section { margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--rule); }
   .na-heading { margin: 0 0 0.6rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
@@ -358,6 +359,25 @@
     font-family: var(--sans);
   }
   .service-text-scroll { margin-top: 0.5rem; }
+  .text-switch {
+    position: sticky; top: -0.8rem; z-index: 3;
+    background: var(--card-bg); box-shadow: 0 -0.8rem 0 var(--card-bg);
+    margin: 0 -1.25rem; padding: 0.15rem 0 0.45rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .text-chips {
+    display: flex; gap: 0.4rem; overflow-x: auto; -webkit-overflow-scrolling: touch;
+    padding: 0 1.25rem; scrollbar-width: none; overscroll-behavior-x: contain;
+  }
+  .text-chips::-webkit-scrollbar { display: none; }
+  .text-chip {
+    flex-shrink: 0; appearance: none; cursor: pointer; white-space: nowrap;
+    background: var(--bg); color: var(--ink-soft); border: 1px solid var(--rule); border-radius: 999px;
+    padding: 0.45rem 0.85rem; font-size: 0.85rem; font-family: var(--sans);
+  }
+  .text-chip.active { border-color: var(--accent); color: var(--accent); background: rgba(217, 154, 108, 0.1); font-weight: 600; }
+  .text-switch-prompt { margin: 0.6rem 0 0; font-size: 0.85rem; color: var(--ink-faint); }
+  .text-switch-prompt[hidden] { display: none; }
   .service-text-panel {
     max-height: calc(50vh + 192px);
     overflow-y: auto;
@@ -905,10 +925,14 @@
 
   function renderTextChooser(groupId, items) {
     if (!items || !items.length) return "";
-    var options = '<option value="">Choose a text to view&hellip;</option>' +
-      items
-        .map(function (it, i) { return '<option value="' + i + '">' + esc(it.label) + "</option>"; })
-        .join("");
+    // A row of chips (scrolls sideways if it doesn't fit), pinned at the top of
+    // the section's scroll box so she can switch texts from anywhere in one.
+    var chips = items
+      .map(function (it, i) {
+        return '<button type="button" class="text-chip" role="tab" aria-selected="false" data-group="' + esc(groupId) +
+          '" data-index="' + i + '">' + esc(it.label) + "</button>";
+      })
+      .join("");
     var panels = items
       .map(function (it, i) {
         var body = it.html
@@ -923,7 +947,8 @@
       })
       .join("");
     return (
-      '<select class="service-select text-select" data-group="' + esc(groupId) + '">' + options + "</select>" +
+      '<div class="text-switch" data-group="' + esc(groupId) + '"><div class="text-chips" role="tablist" aria-label="Choose a text">' + chips + "</div></div>" +
+      '<p class="text-switch-prompt" data-group="' + esc(groupId) + '">Tap a text above to open it.</p>' +
       '<div class="service-text-scroll">' + panels + "</div>"
     );
   }
@@ -1212,14 +1237,34 @@
   }
 
   function wireTextChoosers() {
-    document.querySelectorAll(".text-select").forEach(function (select) {
-      var group = select.getAttribute("data-group");
-      select.addEventListener("change", function () {
-        document.querySelectorAll('.service-text-panel[data-group="' + group + '"]').forEach(function (p) { p.hidden = true; });
-        if (select.value !== "") {
-          var target = document.querySelector('.service-text-panel[data-group="' + group + '"][data-index="' + select.value + '"]');
-          if (target) target.hidden = false;
-        }
+    document.querySelectorAll(".text-switch").forEach(function (sw) {
+      var group = sw.getAttribute("data-group");
+      var sec = sw.closest(".cs");
+      // Stack the text's own sticky header (Resume / Note / search) right under the chips.
+      function measure() { if (sec && sw.offsetHeight) sec.style.setProperty("--switch-h", sw.offsetHeight + "px"); }
+      if (sec) sec.addEventListener("cs-toggle", function () { setTimeout(measure, 0); });
+      window.addEventListener("resize", measure);
+      measure();
+      sw.addEventListener("click", function (e) {
+        var chip = e.target.closest(".text-chip");
+        if (!chip) return;
+        var idx = chip.getAttribute("data-index");
+        sw.querySelectorAll(".text-chip").forEach(function (c) {
+          var on = c === chip;
+          c.classList.toggle("active", on);
+          c.setAttribute("aria-selected", on ? "true" : "false");
+        });
+        document.querySelectorAll('.service-text-panel[data-group="' + group + '"]').forEach(function (p) {
+          p.hidden = p.getAttribute("data-index") !== idx;
+        });
+        var prompt = document.querySelector('.text-switch-prompt[data-group="' + group + '"]');
+        if (prompt) prompt.hidden = true;
+        chip.scrollIntoView({ block: "nearest", inline: "nearest" });
+        // Start the newly chosen text at its top (Resume jumps to her place).
+        var scroller = sw.closest(".cs-body");
+        var panel = document.querySelector('.service-text-panel[data-group="' + group + '"][data-index="' + idx + '"]');
+        if (scroller && panel) scroller.scrollTop = Math.max(0, panel.offsetTop - scroller.offsetTop - sw.offsetHeight);
+        measure();
       });
     });
   }
