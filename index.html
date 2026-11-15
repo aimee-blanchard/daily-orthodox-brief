@@ -781,7 +781,7 @@
       ? '<p class="fast-abstentions">Abstain from: ' + f.abstentions.map(esc).join(", ") + "</p>"
       : "";
     var calLink =
-      '<p class="fast-cal-link"><a href="fasting.html" target="_blank" rel="noopener">Full fasting calendar &rarr;</a>' +
+      '<p class="fast-cal-link"><a href="fasting.html" target="_blank" rel="opener">Full fasting calendar &rarr;</a>' +
       (index.links.fasting_calendar_pdf
         ? ' &middot; <a href="' + esc(index.links.fasting_calendar_pdf) + '" target="_blank" rel="noopener">Archdiocese PDF</a>'
         : "") +
@@ -814,7 +814,7 @@
     var levels = F.levelsInMonth(fastingData, y, m);
     var href = "fasting.html?m=" + y + "-" + F.pad(m) + "&d=" + dateStr;
     return (
-      '<a class="mini-fast" href="' + href + '" target="_blank" rel="noopener" aria-label="Open the full fasting calendar">' +
+      '<a class="mini-fast" href="' + href + '" target="_blank" rel="opener" aria-label="Open the full fasting calendar">' +
       '<section class="card"><div class="mini-fast-head"><h2>Fasting &middot; ' + F.MONTHS[m - 1] + " " + y + "</h2>" +
       '<span class="mini-fast-open">Full calendar &#8599;</span></div>' +
       F.monthGrid(fastingData, y, m, { today: today, selected: dateStr, compact: true }) +
@@ -1564,9 +1564,15 @@
     ? window.Fasting.load().then(function (d) { fastingData = d; }).catch(function () { fastingData = null; })
     : Promise.resolve();
 
+  // Optional ?d=YYYY-MM-DD opens the brief on that day (used by fasting.html's back button).
+  var startDate = null;
   Promise.all([loadIndex(), fastingReady])
-    .then(function () { return loadDay(index.today); })
-    .then(function (day) { render(index.today, day); })
+    .then(function () {
+      var q = new URLSearchParams(location.search).get("d") || "";
+      startDate = (/^\d{4}-\d{2}-\d{2}$/.test(q) && index.available_dates.indexOf(q) !== -1) ? q : index.today;
+      return loadDay(startDate);
+    })
+    .then(function (day) { render(startDate, day); })
     .catch(function (err) {
       app.innerHTML = '<div class="empty-state">Couldn&rsquo;t load the brief.<br><span style="font-size:0.8rem">' + esc(err.message) + "</span></div>";
     });

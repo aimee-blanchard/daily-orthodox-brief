@@ -27,6 +27,10 @@
   a { color: var(--accent); }
   main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.1rem 4rem; }
   header.page { text-align: center; margin-bottom: 1.25rem; }
+  .back-bar { margin: 0 0 0.9rem; }
+  .back-link { display: inline-flex; align-items: center; gap: 0.3rem; color: var(--accent); text-decoration: none; font-size: 0.95rem; padding: 0.45rem 0.85rem; border: 1px solid var(--rule); border-radius: 999px; background: var(--card-bg); }
+  .back-link:hover, .back-link:focus-visible { border-color: var(--accent); }
+  .back-link:active { background: var(--rule); }
   header.page h1 { font-family: var(--serif); font-weight: 400; font-size: 1.6rem; margin: 0 0 0.2rem; }
   header.page p { margin: 0; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); }
   section.card { background: var(--card-bg); border: 1px solid var(--rule); border-radius: 14px; padding: 1rem 1.1rem; margin-bottom: 1rem; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
@@ -137,11 +141,39 @@
     return html;
   }
 
+  // The brief day this page was opened from (?d=), captured before month navigation rewrites the URL.
+  var briefDate = new URLSearchParams(location.search).get("d") || "";
+  function briefHref() {
+    var d = briefDate;
+    return /^\d{4}-\d{2}-\d{2}$/.test(d) ? "index.html?d=" + d : "index.html";
+  }
+  function briefOpener() {
+    try {
+      var o = window.opener;
+      if (!o || o.closed || o.location.origin !== location.origin) return null;
+      var path = o.location.pathname;
+      var base = location.pathname.replace(/[^\/]*$/, "");
+      return (path === base || path === base + "index.html") ? o : null;
+    } catch (e) { return null; }  // cross-origin opener
+  }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest("#backToBrief");
+    if (!a) return;
+    var o = briefOpener();
+    if (!o) return;  // plain link navigation to index.html
+    e.preventDefault();
+    try { o.focus(); } catch (err) {}
+    window.close();
+    // If the browser refused to close this tab, fall back to navigating.
+    setTimeout(function () { if (!window.closed) location.href = a.href; }, 300);
+  });
+
   function render() {
     clampView();
     var y = view.y, m = view.m;
     var yearMeta = data.years[String(y)] || {};
-    var html = '<header class="page"><h1>Fasting Calendar</h1><p>Antiochian Archdiocese &middot; New Calendar</p></header>';
+    var html = '<div class="back-bar"><a class="back-link" id="backToBrief" href="' + briefHref() + '">&larr; Back to brief</a></div>' +
+      '<header class="page"><h1>Fasting Calendar</h1><p>Antiochian Archdiocese &middot; New Calendar</p></header>';
 
     if (yearMeta.provisional) {
       html += '<div class="banner">The Antiochian Archdiocese hasn&rsquo;t published its ' + y +
