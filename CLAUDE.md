@@ -161,10 +161,16 @@ two candidates tie. Prefer no match over a wrong one. The index and fetched
 articles are cached in `data/cache/newadvent.json`; bump
 `NEWADVENT_MATCH_VERSION` to re-match every day after changing the rules.
 
+### Collapsible sections
+
+- Synaxarion (Saints Commemorated + New Advent bios), Service Texts, Catechism and Daily Bible Readings render via `renderCollapsible()` in index.html as thin bars (title, one-line summary, chevron), collapsed by default. Several can be open at once; open/closed state isn't remembered.
+- An open section's body is the one scroll box: `max-height: calc(100dvh - 80px)` (vh fallback), `overflow-y: auto`, `overscroll-behavior: contain`, white scrollbar like the old service-text panel. The service-text panel no longer scrolls on its own inside it. The bar is sticky, and the service-text search header and catechism lesson picker stick to the top of the scroll box.
+- `window.BriefSections` (`render`, `open`, `setOpen`, `ensureOpen`) lets other code open a section: search hits, "Resume where I left off", and the catechism review reminder auto-expand a collapsed section. Opening and closing fire a bubbling `cs-toggle` event; catechism.js uses it to load lessons lazily.
+
 ### Catechism class (data/catechism/lessons.json, catechism.js, catechism.css)
 
 - Lesson text comes from the parish's Adult Catechism handout ("Adult Catechism – All Lessons (complete) – rev 05", 80 pp, 14 lessons). `tools/extract_catechism.py` turns the PDF into `data/catechism/lessons.json`: per lesson `id`, `title`, `synopsis`, `blocks` (`heading` / `para` / `bullet` with `level` 1–3) and `footnotes` (`[^n]` refs inline). Page numbers and PDF artifacts are dropped and line wraps re-joined heuristically. It's static: re-run the script only when the parish issues a new revision. `fetch.py` doesn't touch it.
-- Class detection is client-side: a day's parish events (`events[].title`) matching /catechism|catechumen|inquirer/i, excluding titles starting with "No" or containing "cancel"/"postpon" (the parish posts "No Catechism Class" on skipped Saturdays). On those days a "Catechism Class" card opens before Parish Events. Every other day shows a small "Catechism lessons & class notes" link in that slot, plus a reminder if there are notes from a class in the past 6 days.
+- Class detection is client-side: a day's parish events (`events[].title`) matching /catechism|catechumen|inquirer/i, excluding titles starting with "No" or containing "cancel"/"postpon" (the parish posts "No Catechism Class" on skipped Saturdays). On those days the collapsible bar is titled "Catechism Class" (highlighted, with the class time). Every other day it reads "Catechism lessons & class notes". A reminder button above it appears if there are notes from a class in the past 6 days.
 - Lesson choice: remembered per class date (`catechismLesson:<date>`) and overall (`catechismLastLesson`). A later class day suggests the next lesson.
 - Notes: localStorage `catechismNotes` (one list: lesson, classDate, para index, quote, section, text). Same press-and-hold / "＋ Note" interaction and note sheet as the service-text notes, but separate storage. "Notes from class" lists them by class date and lesson.
 - "Send to Doxy" opens a prefilled GitHub new-issue URL (label `doxy-catechism`, title "Catechism notes – Lesson NN – YYYY-MM-DD", notes in lesson order with anchor quotes, URL capped at 7,500 chars with truncation notice). No token in the site.

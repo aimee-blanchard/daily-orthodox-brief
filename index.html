@@ -203,7 +203,50 @@
   }
 
   .synaxarion-panel { margin-top: 0.5rem; }
-  .service-text-panel.synaxarion-panel { max-height: calc(25vh + 96px); }
+
+  /* Collapsible sections: a thin bar with a chevron; the open body scrolls
+     inside itself and stops just short of the screen height. */
+  section.card.cs { padding: 0; }
+  .cs-bar {
+    appearance: none; display: flex; align-items: center; gap: 0.6rem; width: 100%;
+    background: var(--card-bg); border: none; border-radius: 14px; color: var(--ink);
+    padding: 0.5rem 0.75rem 0.5rem 1.25rem; text-align: left; cursor: pointer; font-family: var(--sans);
+    position: sticky; top: 0; z-index: 3;
+  }
+  .cs.open > .cs-bar { border-radius: 14px 14px 0 0; border-bottom: 1px solid var(--rule); }
+  .cs-bar:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .cs-titles { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+  .cs-title { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+  .cs-meta { font-size: 0.85rem; color: var(--ink-soft); margin-top: 0.1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .cs-meta:empty { display: none; }
+  .cs-highlight .cs-title { color: var(--accent); }
+  .cs-chevron {
+    flex-shrink: 0; width: 1.9rem; height: 1.9rem; border-radius: 50%; border: 1px solid var(--rule);
+    display: flex; align-items: center; justify-content: center; color: var(--accent);
+  }
+  .cs-chevron::before {
+    content: ""; width: 0.5rem; height: 0.5rem; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+    transform: translateY(-0.12rem) rotate(45deg); transition: transform 0.2s;
+  }
+  .cs.open .cs-chevron::before { transform: translateY(0.12rem) rotate(-135deg); }
+  .cs-body {
+    max-height: calc(100vh - 80px);
+    max-height: calc(100dvh - 80px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    scrollbar-color: #ffffff transparent;
+    padding: 0.8rem 1.25rem 1.1rem;
+  }
+  .cs-body[hidden] { display: none; }
+  .cs-body::-webkit-scrollbar { width: 8px; }
+  .cs-body::-webkit-scrollbar-track { background: transparent; }
+  .cs-body::-webkit-scrollbar-thumb { background-color: #ffffff; border-radius: 8px; }
+  /* Inside a collapsible the section body is the one scroller (no nested scroll boxes). */
+  .cs-body .service-text-panel { max-height: none; overflow: visible; }
+  /* Sticky headers inside the scroll box sit flush with its top edge; the shadow
+     covers the box's top padding so text doesn't peek through above them. */
+  .cs-body .checkable-header { top: -0.8rem; box-shadow: 0 -0.8rem 0 var(--card-bg); }
 
   .na-section { margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--rule); }
   .na-heading { margin: 0 0 0.6rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
@@ -723,19 +766,27 @@
     );
   }
 
+  /* A collapsible section: thin bar (title, optional one-line meta, chevron),
+     collapsed by default. See wireCollapsibles(). */
+  function renderCollapsible(id, title, meta, inner, extraClass) {
+    return (
+      '<section class="card cs' + (extraClass ? " " + extraClass : "") + '" data-cs="' + esc(id) + '">' +
+      '<button type="button" class="cs-bar" aria-expanded="false" aria-controls="cs-body-' + esc(id) + '">' +
+      '<span class="cs-titles"><span class="cs-title">' + esc(title) + '</span><span class="cs-meta">' + (meta ? esc(meta) : "") + "</span></span>" +
+      '<span class="cs-chevron" aria-hidden="true"></span></button>' +
+      '<div class="cs-body" id="cs-body-' + esc(id) + '" role="region" aria-label="' + esc(title) + '" hidden>' + inner + "</div>" +
+      "</section>"
+    );
+  }
+
   function renderSaintsSection(lit) {
     if (!lit || !lit.saints || !lit.saints.length) return "";
     var summary = lit.summary_title ? '<p class="summary-title">' + esc(lit.summary_title) + "</p>" : "";
     var synaxarion = lit.synaxarion
-      ? '<div class="service-text-panel synaxarion-panel"><div class="service-text-body">' + esc(lit.synaxarion) + "</div></div>"
+      ? '<div class="synaxarion-panel"><div class="service-text-body">' + esc(lit.synaxarion) + "</div></div>"
       : "";
-    return (
-      '<section class="card"><h2>Saints Commemorated</h2>' +
-      summary +
-      synaxarion +
-      renderNewAdvent(lit) +
-      "</section>"
-    );
+    return renderCollapsible("synaxarion", "Synaxarion · Saints Commemorated", lit.summary_title || lit.saints.slice(0, 2).join(" · "),
+      summary + synaxarion + renderNewAdvent(lit));
   }
 
   /* Biographies from the Catholic Encyclopedia (1913) on newadvent.org,
@@ -845,7 +896,8 @@
         );
       })
       .join("");
-    return '<section class="card"><h2>Reading</h2>' + blocks + "</section>";
+    var meta = lit.readings.map(function (r) { return r.display; }).join(" · ");
+    return renderCollapsible("readings", "Daily Bible Readings", meta, blocks);
   }
 
   function renderTextChooser(groupId, items) {
@@ -937,12 +989,10 @@
       return { label: s.label, html: renderCheckableBody(s.text, storageKey, s.label) };
     });
     serviceOrder = lit.service_texts.map(function (s) { return s.label; });
-    return (
-      '<section class="card"><h2>Service Texts</h2>' + renderTextChooser("service", items) +
+    return renderCollapsible("services", "Service Texts", lit.service_texts.map(function (s) { return s.label; }).join(" · "),
+      renderTextChooser("service", items) +
       '<p class="notes-hint">Tip: press and hold any line (or tap &ldquo;&#xFF0B; Note&rdquo;) to add a note there.</p>' +
-      '<div class="anchored-summary" hidden></div>' +
-      "</section>"
-    );
+      '<div class="anchored-summary" hidden></div>');
   }
 
   function renderNotesSection(dateStr) {
@@ -1173,6 +1223,7 @@
         var lastChecked = container.querySelector('.line-check[data-index="' + (n - 1) + '"]');
         if (!lastChecked) return;
         var line = lastChecked.closest(".checkable-line");
+        ensureSectionOpen(line);
         line.scrollIntoView({ block: "center" });
         line.classList.add("search-current");
         setTimeout(function () { line.classList.remove("search-current"); }, 1500);
@@ -1194,6 +1245,7 @@
         currentIndex = ((i % matches.length) + matches.length) % matches.length;
         matches.forEach(function (el) { el.parentElement.classList.remove("search-current"); });
         var target = matches[currentIndex];
+        ensureSectionOpen(target);
         target.parentElement.classList.add("search-current");
         target.scrollIntoView({ block: "center" });
         countEl.textContent = (currentIndex + 1) + " of " + matches.length;
@@ -1240,7 +1292,7 @@
       });
       clearBtn.addEventListener("click", function (e) {
         e.preventDefault();
-        var panel = container.closest(".service-text-panel");
+        var panel = container.closest(".cs-body") || container.closest(".service-text-panel");
         var panelTop = panel ? panel.scrollTop : 0;
         var winY = window.scrollY;
         input.value = "";
@@ -1557,6 +1609,31 @@
       window.Catechism.mount(document.getElementById("catechismSlot"), { dateStr: dateStr, today: index.today, events: day.events });
     }
   }
+
+  /* Collapsible sections. Several can be open at once. window.BriefSections
+     lets other code (catechism.js, jumps to a note or search hit) open one. */
+  function setSectionOpen(sec, open) {
+    if (!sec) return;
+    var bar = sec.querySelector(".cs-bar"), body = sec.querySelector(".cs-body");
+    sec.classList.toggle("open", open);
+    bar.setAttribute("aria-expanded", open ? "true" : "false");
+    body.hidden = !open;
+    sec.dispatchEvent(new CustomEvent("cs-toggle", { detail: { open: open }, bubbles: true }));
+  }
+  function ensureSectionOpen(el) {
+    var sec = el && el.closest ? el.closest(".cs") : null;
+    if (sec && !sec.classList.contains("open")) setSectionOpen(sec, true);
+  }
+  window.BriefSections = { render: renderCollapsible, open: function (id) { setSectionOpen(document.querySelector('.cs[data-cs="' + id + '"]'), true); }, ensureOpen: ensureSectionOpen, setOpen: setSectionOpen };
+  document.addEventListener("click", function (e) {
+    var bar = e.target.closest && e.target.closest(".cs-bar");
+    if (!bar) return;
+    var sec = bar.closest(".cs");
+    var opening = !sec.classList.contains("open");
+    setSectionOpen(sec, opening);
+    // When closing a section she had scrolled into, bring its bar back into view.
+    if (!opening && sec.getBoundingClientRect().top < 0) sec.scrollIntoView({ block: "start" });
+  });
 
   // "Read less" collapses a New Advent biography and brings its start back into view.
   document.addEventListener("click", function (e) {
