@@ -1,0 +1,4973 @@
+{
+ "source": "Adult Catechism – All Lessons (parish handout, rev 05)",
+ "lessons": [
+  {
+   "number": 1,
+   "id": "01",
+   "synopsis": "In this lesson we will discuss some characteristics to describe the uniqueness of Orthodox Christianity.",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The Orthodox Church confesses itself to be the original, ancient, “One, Holy, Catholic and Apostolic” Church, founded by God through Jesus Christ, by the descent and abiding presence of the Holy Spirit on the day of Pentecost."
+    },
+    {
+     "type": "bullet",
+     "text": "Historically, its Tradition has no breaks (reformation or counter-reformation) through the vicissitudes of history. Rather, it seeks continual renewal, but not reform.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Ecclesiologically, the Orthodox Church is both hierarchical and conciliar.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "It has hierarchical authority, but no pope, believing Christ Himself to be Head of the universal Church.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "It has a sacramental priesthood, in which hierarchs are monastics, but priests can marry before ordination.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "It believes that the entire Church – both clerical and lay – share the charisma of truth – the power to discern and the responsibility to defend doctrinal and moral truth – in each in the proper manner.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Thus, it is Hierarchical and Charismatic simultaneously, the gifts of the priesthood and the laity being complementary and interdependent.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Organizationally, the Orthodox Church is organized by regional churches.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Each church shares the same sacraments, traditions, orders, liturgical practices and canon law.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The local churches are one, organic, living organism, a unity of faith and life: The Church. They do not constitute a mere federation of independent bodies.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "These include the ancient Patriarchates of Constantinople, Alexandria, Antioch, Jerusalem, and the national churches of Greece, Serbia, Russia, Romania, Bulgaria, Georgia, and others.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The churches are autonomous and locally governed; the sacraments, liturgical calendar, canon law, etc., is all the same, albeit worship is in the local language.",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": "As a brief overview, we can describe Orthodoxy with the following general characteristics:"
+    },
+    {
+     "type": "para",
+     "text": "Traditional, Mystical, Ascetic and Therapeutic."
+    },
+    {
+     "type": "heading",
+     "text": "[i] Traditional"
+    },
+    {
+     "type": "para",
+     "text": "The Church and Tradition coexist from Pentecost."
+    },
+    {
+     "type": "bullet",
+     "text": "Tradition is the real-life, practical application of Divine Revelation, and this begins with the Apostles, from the day of Pentecost.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Scripture comes later – the New Testament was not yet written – and it arises in the Church, as an already existing reality, for the Church, as part of its Tradition.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Ultimately, Divine Revelation is Jesus Christ in the Holy Spirit;",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Scriptures witness to this Revelation, but never substitute for it.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Tradition is the entire way of life that brings us into communion with the Holy Trinity.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Tradition (παράδοσις) is that which is passed on, delivered"
+    },
+    {
+     "type": "bullet",
+     "text": "From Christ, to the Apostles, the Apostolic Fathers, the Fathers, down to our own day.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“All things have been delivered [παρεδόθη] to Me by My Father…” (Mt 11:27).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“Therefore, brethren, stand fast, and hold the traditions which ye have been taught, whether by word, or our epistle” (2 Thess 2:15).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "A Gospel “once delivered [παραδοθείσῃ] to the Saints” (Jude 1:3),",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "A “deposit” (1 Tim 6:20), as St Irenaeus likes to say.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "The Fathers of the Church defended the faith, teachings and practices of the Apostles."
+    },
+    {
+     "type": "bullet",
+     "text": "Each era, however, including our own, has new questions which require both listening and response, new articulation, understanding, in love.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Tradition guides our discernment and our answers, but does not lead to doctrinal development – because “Jesus Christ is the same yesterday, today and forever” (Heb 13:8).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Tradition implies that the Church is both Apostolic and Patristic; in fact, it cannot be Apostolic if it is not Patristic.",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[ii] Mystical"
+    },
+    {
+     "type": "para",
+     "text": "Many have characterized Orthodoxy as a “mystical” form of Christianity."
+    },
+    {
+     "type": "bullet",
+     "text": "“Mystical” refers to an experience of God that cannot be captured in words.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Due to God’s immanence, through His uncreated grace, in our churches.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The immediate, personal and uncreated presence of God, abides also in the temple of the human being (1 Cor 3:16), in the altar of the heart.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Thus, Orthodox spirituality maintains an emphasis on holiness, manifest as glory and beauty in Orthodox churches.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "The Divine Liturgy is very heart of the Orthodox Church."
+    },
+    {
+     "type": "bullet",
+     "text": "It is not simply a remembrance, but the actual presence of Christ, the Spirit, the angels, the Saints, standing before God like Moses, face to face (Ex 33:11).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "In short, our worship is participation of heaven and earth.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "St Vladimir’s emissaries to Constantinople felt this.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Icons – “windows to heaven.”",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[iii] Ascetical"
+    },
+    {
+     "type": "para",
+     "text": "Asceticism is the practice self-denial for a greater good; an athletic training; a re-orientation of our energies or faculties from egotism to serving God and others."
+    },
+    {
+     "type": "para",
+     "text": "In Orthodoxy, asceticism leads to spiritual and bodily health, its goal not being the destruction of the powers and energies of human nature, but their purification and reorientation to the service of God and righteousness."
+    },
+    {
+     "type": "bullet",
+     "text": "Asceticism is an act of love, by the conquering of self-love (egotism).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Egotism is the root of all sin; it prevents self-less service and love, and thereby constricts and isolates us.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Thus, Orthodoxy holds asceticism to be necessary for a wholistic Christian life.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Thus, the ascetic practices of the Orthodox Church complement the heavenly glory of its Liturgy."
+    },
+    {
+     "type": "bullet",
+     "text": "By disciplining the body, we regain the powers of the soul.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Orthodox Church alone has retained 40-day vegan fasts, considered to be periods of “bright sadness,” or “joy-making mourning.”",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[iv] Therapeutic"
+    },
+    {
+     "type": "para",
+     "text": "The chief paradigm of Orthodox spirituality is that of healing."
+    },
+    {
+     "type": "bullet",
+     "text": "Paradigm not one of crime and punishment, but of illness and health.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Church is a Hospital, and Christ the Great Physician (Mk 2:17)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "This is a communal effort.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Gospel and the Church calendar are filled with repenting sinners, called to be Saints.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Salvation is not a legal transaction, which would not involve our efforts, but the healing of our nature and our union with God.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Orthodox Church takes issue with certain Western doctrines of Original Sin,[^1] the “total depravity” of man,[^2] and penal substitutionary atonement.[^3]",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": "In the Fall, the egotism (self-love) led the first human beings to use the world for themselves, for self-deification, and not as a thanksgiving offering to God, or a means of union with Him."
+    },
+    {
+     "type": "bullet",
+     "text": "Such egotism caused separation and conflict, in place of union and harmony.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Divisions between: God and man; man and woman; man and creation; man and the angelic realm; mind and heart; body and soul, etc.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Christ healed these divisions, and healed human nature, through His entire economy: His incarnation from a virgin, His sinless life, His Resurrection from the dead, and finally ascension to heaven.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "In short, Christ restored human nature to being fit for communion with God, as it was intended."
+    },
+    {
+     "type": "bullet",
+     "text": "Jesus Christ in the Holy Spirit is the center of all Orthodox spiritual life: worship, teaching, practice.",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "Key Points and Practical Applications for our Life in Christ"
+    },
+    {
+     "type": "para",
+     "text": "Orthodoxy is an Integral Christianity."
+    },
+    {
+     "type": "bullet",
+     "text": "It intentionally includes all aspects of human life – body and soul, heart and mind – how we eat, how we work, how we pray, how we understand the world, etc.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "It looks to the heart, and cannot be reduced to ethics or obligation.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "It sees egotism as the root of all sin, hence it emphasizes prayer with ascetic life.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Salvation in the Orthodox Church involves the healing of our nature, and our union with God."
+    },
+    {
+     "type": "bullet",
+     "text": "Both are simultaneous, interdependent and unending.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "For the former, our ascetic effort is necessary.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "For the latter, a free gift of grace – because we can never achieve incorruptibility.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Both were achieved to the maximum extent possible in Jesus Christ.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Such is offered to us in the Church: through baptism, Eucharist, the other Sacraments, and the whole life of the Church.",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "From the Fathers"
+    },
+    {
+     "type": "para",
+     "text": "“But, beyond these sayings, let us look at the very tradition, teaching, and faith of the Catholic Church from the beginning, which the Lord gave, the Apostles preached, and the Fathers safe-guarded. Upon this the Church is founded, and he who should fall away from it would not be a Christian, and should no longer be so called.” – St Athanasius (+298), Ad Serapion I, 28."
+    },
+    {
+     "type": "para",
+     "text": "“Moreover, in the Catholic Church itself, all possible care must be taken, that we hold that faith which has been believed everywhere, always, by all [quod ubique, quod semper, quod ad omnibus creditum est].” – St. Vincent of Lerins (+450), Commonitory ch. II, §6; NPNF 2:11, p. 132."
+    },
+    {
+     "type": "para",
+     "text": "“Our opinion agrees with the Eucharist, and the Eucharist in turn confirms our opinion.” – St Irenaeus of Lyons (+202), Against Heresies IV.18.5."
+    }
+   ],
+   "footnotes": [
+    {
+     "n": 1,
+     "text": "That is, not only the effects of sin in our nature, but also the culpability and the personal guilt of Adam were transmitted to each of his descendants."
+    },
+    {
+     "n": 2,
+     "text": "Being ultimately the loss of man’s free will – the loss of an ability to will the good."
+    },
+    {
+     "n": 3,
+     "text": "We accept “substitutionary” (Christ did suffer and die on our behalf), but not “penal” (meaning, that God had to punish man to satisfy His own wrath, without which justice would be overthrown – e.g., Anselm of Canterbury, Cur Deus Homo)."
+    }
+   ],
+   "page_start": 1,
+   "title": "Introduction, Characteristics of Orthodox Christianity"
+  },
+  {
+   "number": 2,
+   "id": "02",
+   "synopsis": "Divine Revelation refers to the fact that God reveals Himself to us, both through the things of creation (their order, intelligence, and beauty) and apart from them, directly and personally, through His uncreated grace. For the former, the Holy Scriptures testify and glorify God as Creator, and for the latter, they record the events in which He revealed Himself at certain times and places, to certain people. The Holy Scriptures, as inspired records, are windows to Revelation, and thereby convey and mediate Revelation, bringing us into the presence of God. The fulness of Divine Revelation is Jesus Christ, in the Holy Spirit. Divine Revelation lives and continues in the Church, where Jesus presides and the Holy Spirit guides. Tradition is the living transmission, expression and manifestation of Divine Revelation, “once delivered to the Saints (Jude 3). The New Testament itself is part of Tradition, insofar as it was written within the Church and from its experience of God, which preceded the written text.",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "[i] Divine Revelation"
+    },
+    {
+     "type": "para",
+     "text": "The fundamental principle of the Christian Faith: God has revealed Himself to us."
+    },
+    {
+     "type": "para",
+     "text": "General Revelation"
+    },
+    {
+     "type": "bullet",
+     "text": "As known through Creation (Ps 19:1-6; Romans 1:18-20)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "As known from the Conscience (Romans 2:13-15)",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Special, or Personal, Revelation (Heb. 1:1-3)"
+    },
+    {
+     "type": "bullet",
+     "text": "Abraham (Genesis 12:1-4; 17:1-5)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Moses (Exodus 3:1-6,13-15)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Judges and Kings",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Prophets and Wise Men",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Holy Virgin, the woman perfectly prepared to give flesh to the Word (Lk 1:26-39)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Jesus Christ, the Word made Flesh, Revelation Itself (Jn 1:1, 14; Lk 21:8; Acts 4:12)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Holy Spirit, the Witness to the Revelation given in Christ (Jn 14:26; Jn 15:26; Jn 16:13-15)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Prophecy after Christ",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Book of Acts (21:9-11)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "False Prophets (Matthew 24:24)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The rise of Monasticism, Eldership",
+     "level": 2
+    },
+    {
+     "type": "heading",
+     "text": "[ii] Holy Tradition"
+    },
+    {
+     "type": "para",
+     "text": "Tradition is the real-life, practical application of Divine Revelation, and this occurs with the Apostles from the day of Pentecost, and continues in the community they passed on."
+    },
+    {
+     "type": "bullet",
+     "text": "The Church and Tradition coexist from Pentecost.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Scripture comes later – the New Testament was not yet written – and it arises from the Church and its experience of Revelation, as an already existing reality.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Ultimately, Divine Revelation is Jesus Christ in the Holy Spirit; the Scriptures witness to this Revelation, but never substitute for it.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Scripture itself is part of Tradition – the inspired, permanent witness of the Apostolic era for all subsequent Christians",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Definitions of Holy Tradition"
+    },
+    {
+     "type": "bullet",
+     "text": "The inspired, human response to Divine Revelation.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The life of the Church is guided by the Holy Spirit",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Gift of the Holy Spirit to the Church (John 14:26; John 15:26; John 16:13- 15) is the content of Tradition",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The historical, tangible manifestation of the life of the Holy Spirit in the Church Aspects of Holy Tradition",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Written and unwritten (II Thess. 2:15; I Cor. 11:2).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Bible: Inspired Record of Revelation (II Timothy 3:16)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Bible is part of Tradition",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Church and Tradition come before the New Testament",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The formation of the Canon of Scripture is also inspired",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "As a historical and revelatory document, Scripture needs to be interpreted (Acts 8:31)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Fathers",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Councils",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Canons",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Saints",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Church Art and etiquette",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": "Holy Tradition forms an indivisible whole"
+    },
+    {
+     "type": "bullet",
+     "text": "Tradition is passed on orally, in practice, or in writing",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "It encompasses the entire life of the Church: dogmatic belief (I Cor 15:3-7), liturgical practice (1 Cor 11:23-6), and guidelines for Christian moral and spiritual life.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "In short, Holy Tradition is the life of the Holy Spirit in the Church, from the day of Pentecost until now.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "New questions require new answers, but never such that they contradict or abrogate what was given.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Tradition does not ossify; it guides us, ensuring authentic versus erroneous responses to life’s dilemmas.",
+     "level": 2
+    },
+    {
+     "type": "heading",
+     "text": "Key Points and Practical Applications for our Life in Christ"
+    },
+    {
+     "type": "para",
+     "text": "“Nothing in the Church is arbitrary, or isolated, or mechanically added… All things flow and proceed from the knowledge of the Holy Trinity.” – Archimandrite Vasileios, Hymn of Entry (New York: SVS Press, 1984) p. 11."
+    },
+    {
+     "type": "para",
+     "text": "“Jesus did not leave behind Him a new philosophical system, nor did He institute a mere religion. He left His body and sent His Spirit. And the Gospel consists of fundamental elements from the life of Jesus and the experience of the new community in Christ” (op. cit., p. 17)."
+    },
+    {
+     "type": "heading",
+     "text": "From the Fathers"
+    },
+    {
+     "type": "para",
+     "text": "“The Church, having received this preaching and this faith, although scattered throughout the whole world, yet, as if occupying but one house, carefully preserves it."
+    },
+    {
+     "type": "para",
+     "text": "She also believes these points [of doctrine] just as if she had but one soul, and one and the same heart, and she proclaims them, and teaches them, and hands them down, with perfect harmony, as if she possessed only one mouth. For, although the languages of the world are dissimilar, yet the import of the tradition is one and the same. …” (St Irenaeus of Lyons, Against Heresies, I.10.2, ANF 1:331)."
+    },
+    {
+     "type": "para",
+     "text": "“Of the beliefs and practices whether generally accepted or publicly enjoined which are preserved in the Church some we possess derived from written teaching; others we have received delivered to us in a mystery by the tradition of the apostles; and both of these in relation to true religion have the same force. And these no one who is even moderately versed in the institutions of the Church will gainsay. For were we to attempt to reject such customs as have no written authority, on the ground that the importance they possess is small, we should unintentionally injure the Gospel in its very vitals; or, rather, should make our public definition a mere phrase and nothing more. For instance, to take the first and most general example, who is thence who has taught us in writing to sign with the sign of the cross those who have trusted in the name of our Lord Jesus Christ? What writing has taught us to turn to the East at the prayer? Which of the saints has left us in writing the words of the invocation at the displaying of the bread of the Eucharist and the cup of blessing? For we are not, as is well known, content with what the apostle or the Gospel has recorded, but both in preface and conclusion we add other words as being of great importance to the validity of the ministry, and these we derive from unwritten teaching. Moreover, we bless the water of baptism and the oil of the chrism, and besides this the catechumen who is being baptized. On what written authority do we do this? Is not our authority silent and mystical tradition? Nay, by what written word is the anointing of oil itself taught?"
+    },
+    {
+     "type": "para",
+     "text": "And whence comes the custom of baptizing thrice? And as to the other customs of baptism from what Scripture do we derive the renunciation of Satan and his angels?"
+    },
+    {
+     "type": "para",
+     "text": "Does not this come from that unpublished and unspoken teaching which our fathers guarded in a silence out of the reach of curious meddling and inquisitive investigation?"
+    },
+    {
+     "type": "para",
+     "text": "Well had they learnt the lesson that the awful dignity of the mysteries is best preserved by silence. What the uninitiated are not even allowed to look at was hardly likely to be publicly paraded about in written documents. What was the meaning of the mighty Moses in not making all the parts of the tabernacle open to everyone? … In the same manner, the Apostles and Fathers who laid down laws for the Church from the beginning thus guarded the awful dignity of the mysteries in secrecy and silence, for what is bruited abroad random among the common folk is no mystery at all. This is the reason for our tradition of unwritten precepts and practices, that the knowledge of our dogmas may not become neglected and contemned by the multitude through familiarity."
+    },
+    {
+     "type": "para",
+     "text": "For dogma (δόγμα) is one thing, and kerugma (κήρυγμα) another; the former is observed in silence; the latter is proclaimed to all the world….”"
+    },
+    {
+     "type": "para",
+     "text": "– St. Basil the Great, On the Holy Spirit, c. 66 (PG 32:188-89)."
+    }
+   ],
+   "footnotes": [],
+   "page_start": 7,
+   "title": "Sources of the Orthodox Faith"
+  },
+  {
+   "number": 3,
+   "id": "03",
+   "synopsis": "The one, true God is distinguished from all else that exists by the fact He alone created all things from nothing (ex nihilo). As sole and unique Creator, only He should be worshipped. Before creating the material world, God created the immaterial – or “noetic” – world, the world of thought (intelligibility, logoi) and of the angels. All that He created is good, and the culmination of His creation is Mankind, made in His own “image,” and uniting the immaterial and material realms. Evil came into the world through an act of self-love, the “fall,” by the prompting of the devil from envy. The fall fragmented human existence, causing division between man and God, between male and female, between man and creation, and even within the human being, between mind and heart, and ultimately, between body and soul in death. Through the sinful egotism of the fall, man was separated from God and became subject to corruption and death, both spiritual and physical.",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "[I] Biblical Monotheism"
+    },
+    {
+     "type": "para",
+     "text": "The first principle of all Biblical theology:"
+    },
+    {
+     "type": "bullet",
+     "text": "God alone always existed (Ps 89:2 LXX)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "He created all things: “the heaven, the earth, the sea and all that is therein” (Ps 145: 5-7 LXX)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“I believe in one God, the Father Almighty, maker of heaven and earth…” (Creed)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Therefore, He alone should be worshipped (Is 42:5-8; Ps 94:1-6 LXX).",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[II] The Meaning of “ex nihilo” (“out of nothing”)"
+    },
+    {
+     "type": "bullet",
+     "text": "Holding that God created all things from nothing is unique to the Biblical faith.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "God had no helper – creation is uniquely His work (Is 44:24)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "He needed nothing aside from Himself to create: omnipotence.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "He created “ex nihilo” (“out of nothing”) (Heb 11:3; 2 Mac 7:28; Rom 4:17).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "No pre-existing matter limited His freedom in creating.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Therefore, creation is an expression of His will alone.",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[III] The Content and Goodness of Creation"
+    },
+    {
+     "type": "bullet",
+     "text": "God created heaven and earth (Gen 1)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“Heaven” understood to be the noetic (spiritual, intelligible) and angelic realm (Col. 1:16)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The intelligible world is also created – only God is eternal and uncreated.. This distinguishes Christian cosmology from Platonism",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "All creation is good (no dualism)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Created by God, for Man",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Paradise/Eden is structured, a “garden” (harmony and communion)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The world was meant to be a medium of dialogue, intellectual growth and communion",
+     "level": 2
+    },
+    {
+     "type": "heading",
+     "text": "[IV] Humanity: The Pinnacle of Creation (Ps 8:4-5)"
+    },
+    {
+     "type": "bullet",
+     "text": "Man as the “Image” (ikon) of God (Gen 1:26-7)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Created in the image of the Son/Logos (Rom 8:29). Reason, free will, dominion over creation",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Created in the image of the Holy Trinity (Genesis 1:27). Personal, capability of pure love, communion",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Created male and female",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Created in grace-filled communion with God. Innocent (naked, like a child), but not perfected (requires our will)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Image and Likeness",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Image: An indelible part of nature",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Likeness: Our capacity for unending growth in God (theosis)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Body and soul",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "United immaterial and material creation",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Man as priest, prophet and steward/royal of creation",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[V] The Fall of Man"
+    },
+    {
+     "type": "para",
+     "text": "Two Trees: Tree of Life, Tree of Knowledge"
+    },
+    {
+     "type": "bullet",
+     "text": "God’s Commandment: Keep a fast",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Meant to occasion spiritual growth",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "To learn good and evil by doing good",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "If you eat, you will die (not, “I will kill you”)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The temptation of the serpent",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The lie: Become god without God",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The truth: Alienation from God is death.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The essence of the sin: self-love, egotism",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Man places his goals above his love for God",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Misuses nature, and his own nature",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": "The Effects of the Fall"
+    },
+    {
+     "type": "bullet",
+     "text": "Breaking of relationship (Shame, nakedness, hiding from God)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "between man and God, man and woman, man and creation, man and the angelic realm, between body and soul, mind and heart",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Squandered opportunity for repentance (each blames the other)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Physical: subject to corruption (pain, disease, physical death)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Spiritual: subject to moral confusion, weakness of will, emotional imbalance, inward alienation",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Expulsion from Paradise",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "God’s act of mercy",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Death: motivation for repentance",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "God’s promise of a Deliverer",
+     "level": 2
+    },
+    {
+     "type": "heading",
+     "text": "A Note on Original vs. Ancestral Sin"
+    },
+    {
+     "type": "bullet",
+     "text": "All of us, as children of Adam and Eve, are born with their fallen nature, subject to corruption, ignorance, concupiscence (an inclination towards egotism and sin), and death.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "This fact is referred to as “ancestral” or “original” sin.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "However, the Orthodox Church does not accept an understanding of original sin that would imply that we additionally inherit the personal culpability (or guilt) of Adam.",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "Key Points and Practical Applications for our Life in Christ"
+    },
+    {
+     "type": "para",
+     "text": "“Come let us rejoice in the Lord, let us shout with jubilation unto God our Savior. Let us come before His countenance with thanksgiving, and with psalms let us shout in jubilation unto Him. For the Lord is a great God and a great king over all the earth. For in His hand are the ends of the earth, and the heights of the mountains are His. For the sea is His, and He made it; and the dry land His hands have fashioned. O come, let us worship and fall down before Him, and let us weep before the Lord Who made us. For He is our God, and we are the people of His pasture and the sheep of His hand. Today if ye will hear His voice, harden not your hearts…” (Ps 94:1-7 LXX)"
+    },
+    {
+     "type": "heading",
+     "text": "From the Fathers"
+    },
+    {
+     "type": "para",
+     "text": "“Believe thou first and foremost that there is one God who created and arranged all things and brought them out of non-existence into being” (Shepherd of Hermas, II.1)."
+    },
+    {
+     "type": "para",
+     "text": "“From it [the Christian Faith] we know that, because there is Mind behind the universe, it did not originate itself; because God is infinite, not finite, it was not made from pre-existent matter, but out of nothing and out of non-existence absolute and utter God brought it into being through the Word” (St Athanasius, On the Incarnation, 3)."
+    },
+    {
+     "type": "para",
+     "text": "Prayer at Holy God (Liturgy of St John Chrysostom): “O Holy God… who out of nothingness hast brought all things into being…” “With great gladness let us accept the proclamation of the Fast: for if Adam our forefather had fasted, we should not have suffered banishment from Eden. The fruit that brought death upon me was pleasant to the eyes and good for food. Then let us not be taken prisoner by our eyes; let not our tongue delight in costly foods, for once they have been eaten they are worthless. Let us shun all greed: then we shall not become slaves to the passions which follow an excess of food and drink. Let us sign ourselves with the blood of Him who for our sakes willingly was led to death, and the destroying angel will not touch us [cf. connection between blood on door-posts and blood of Christ], and may we eat the Holy Passover of Christ for the salvation of our souls.” (Lenten Triodion, Orthros, 1st Friday, p. 272)."
+    }
+   ],
+   "footnotes": [],
+   "page_start": 13,
+   "title": "Creation and the Fall"
+  },
+  {
+   "number": 4,
+   "id": "04",
+   "synopsis": "“Who do men say that I am?” (Mt 16:13ff) is a question for every generation and each person. After His Resurrection and Pentecost, the early Church saw Jesus revealed as the Messiah, the new Adam, the eschatological Son of Man (Dan.7), the Son of the eternal Father, and the Word of God, through whom the world was created. This lofty understanding of Christ – as God Incarnate, fully human and fully divine – was foreshadowed in the Old Testament, fully manifest in His life, witnessed in the writings of the New Testament, encapsulated in the Creed, defended by the Fathers, and experienced in the life of the Church, especially in the Divine Liturgy, where the Lord Jesus is always present with us.",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "[I] Christ in the Old Testament"
+    },
+    {
+     "type": "para",
+     "text": "From earliest Christianity, Christ was held to be the subject (skopos) of all Scripture (Lk 24:26-7, 44-5; Jn 5:39, 45-7; Acts 2:14-36), His person and His whole life (I Cor 15:3-4) being seen in the prophecy, typology and Yahweh theophanies of the Old Testament."
+    },
+    {
+     "type": "para",
+     "text": "[i] In Messianic Prophecies"
+    },
+    {
+     "type": "bullet",
+     "text": "Genesis 3:15, Isaiah 7:14, 66:7; Micah 5:2-5; etc.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "[ii] In Images and Fore-shadowing (“types,” typology)"
+    },
+    {
+     "type": "bullet",
+     "text": "Isaac, bound and sacrificed on Mount Moriah (Zion 2 Chron 3:1)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Joseph the Betrothed (betrayed by brothers, accused, condemned, imprisoned, raised, king, savior, forgiveness) (Gen 37-50)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Jonah in the whale (dies and is raised to preach to the Gentiles)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Adam (Rom 5:14; 1 Cor 15:45-9): disobedient/obedient; tree/tree of Cross (1 Pet 2:24); no human father, but uniquely “son of God”",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "As the Paschal lamb (Ex. 12, Jn 1)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "As the Atonement (Heb 9:7)",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "[iii] In Theophanies"
+    },
+    {
+     "type": "bullet",
+     "text": "Abraham (Gen 12, 15, 17, 18, etc.), Isaac (Gen 22) and Jacob (Gen 28, 32)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Moses: Burning Bush (Ex 3, 33, etc.) (I Cor 10:4)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "To the three young men in the furnace (Dan 3:25)",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[II] The Divinity of Christ"
+    },
+    {
+     "type": "para",
+     "text": "[i] He is the Logos-Creator"
+    },
+    {
+     "type": "bullet",
+     "text": "“In the beginning was the Word, and the Word was with God, and the Word was God. All things were made by him; and without him was not any thing made that was made. (John 1:1-3; 1:10)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "And to make all men see what is the fellowship of the mystery, which from the beginning of the world hath been hid in God, who created all things by Jesus Christ (Eph 3:9; Also, Col 1:12-17; I Cor 8:4-6; Heb 1:1-2; 2:9-10)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Nicene Creed: “through whom all things were made” (δι' οὗ τὰ πάντα ἐγένετο)",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "[ii] He is the Incarnate Son"
+    },
+    {
+     "type": "bullet",
+     "text": "He is the Son, sent by the Father (Rom 8:3-4; Gal 4:4-6)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“The Word became flesh and dwelt among us” (John 1:14).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "He was made of the seed of David (Rom 1:3-4).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Being equal to God, He humbled Himself, taking human form (Phil 2:6-10)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Being rich, He became poor (2 Cor 8:9)",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "[iii] He is the True God of True God"
+    },
+    {
+     "type": "bullet",
+     "text": "“Before Abraham was, I AM” (Jn 8:58; cf 6:20, 18:4-8, etc.; Mk 14:62)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "To Him every knee shall bow (Is 45:21-4, Phil 2:6-10)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "In whom all the fulness of the Godhead dwells bodily (Col 2:9)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Nicene Creed: “Begotten, not made [created], of one essence with the Father” [iv] He is the Savior",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Born in the city of David, a Savior, who is Christ the Lord",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "He has asked the Father for those given Him (Jn 17:24)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "He is the One Mediator between God and man (1 Tim 2:5)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "With us always, to the end of the world (Mt 28:20)",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[III] Objectives of Christ’s Economy"
+    },
+    {
+     "type": "bullet",
+     "text": "The healing of human nature (Incarnation, sinless life)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The forgiveness of sins (Passion)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The destruction of death (Resurrection)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Healing and restoration of humanity to communion with God (Pentecost)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Deification of Man (Ascension, Sitting at the Right Hand)",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[IV] Jesus Christ, the Incarnate Word, Fully Divine and Fully Human"
+    },
+    {
+     "type": "bullet",
+     "text": "As a man he weeps, as God He raises Lazarus (John 11).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“Christ did human things divinely, and divine things humanly” – St Maximus the Confessor, Letter 15 (PG 91: 573B).",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "Key Points and Practical Applications for our Life in Christ"
+    },
+    {
+     "type": "para",
+     "text": "Reflections:"
+    },
+    {
+     "type": "bullet",
+     "text": "On the Nicene Creed: A call to worship the incarnate Logos who unites us to the Father.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "On the “Jesus Prayer”: A summary of the Creed and Gospel in one simple prayer.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "On our response: To believe in the Son of God (Jn 9:35), to confess Jesus as Christ and Lord (Mt 10:32; Rom 10:9; 1 Jn 4:15), living in obedience to His will.",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "From the Fathers"
+    },
+    {
+     "type": "para",
+     "text": "“Thus the mystery of the Lord prefigured from of old through the vision of a type … Thus, if you wish to see the Lord, look at Abel who likewise was slain, at Isaac who was tied up, Joseph who was betrayed, David who was hunted down, the prophets who suffered for the sake of Christ...” – Melito of Sardis, On the Pascha, P58-9."
+    },
+    {
+     "type": "para",
+     "text": "“He who hung the earth is hanging. He who fixed the heavens in place has been fixed in place. He who laid the foundations of the universe has been laid on a tree.” – Melito of Sardis, On the Pascha, P96."
+    },
+    {
+     "type": "para",
+     "text": "“He made all things out of nothing through His own Word, our Lord Jesus Christ” – St Athanasius, On the Incarnation, 3."
+    },
+    {
+     "type": "para",
+     "text": "“… for the first fact that you must grasp is this: the renewal of creation has been wrought by the self-same Word who made it in the beginning.” – St Athanasius, On the Incarnation, 1.1."
+    },
+    {
+     "type": "para",
+     "text": "“But how could we be joined to incorruptibility and immortality, unless, first, incorruptibility and immorality had become that which we also are…?” – St Irenaeus of Lyon, Against Heresies, 3.19.1."
+    },
+    {
+     "type": "para",
+     "text": "“God became man, so that man might become god [lit., He became a human being, so that we might be deified]” – St Athanasius, On the Incarnation, c. 54."
+    },
+    {
+     "type": "para",
+     "text": "The Chalcedonian Definition: “Following, therefore, the holy fathers, we all in harmony teach confession of one and the same Son, our Lord Jesus Christ; the same one perfect in Godhead and the same one perfect in manhood; the same one truly God and truly man, of a rational soul and body; the same one consubstantial with the Father in respect of the Godhead, and consubstantial with us in respect of the manhood, like us in all things apart from sin; the same one begotten from the Father before the ages in respect of the Godhead, and in the last days for us and for our salvation from the Virgin Mary the Theotokos in respect of the manhood; one and the same Christ, Son, Lord, Only-begotten, acknowledged in two natures; without confusion, change, division, or separation, the difference of the natures being in no way destroyed by the union, but rather the distinctive character of each nature being preserved and coming together into one person and one hypostasis, not parted or divided into two persons, but one and the same Son, Only-begotten, God, Word, Lord, Jesus Christ, even as the prophets from of old and Jesus Christ himself taught us about him and the Creed of the fathers has handed down to us…”"
+    }
+   ],
+   "footnotes": [],
+   "page_start": 18,
+   "title": "Jesus Christ, the Incarnate Word"
+  },
+  {
+   "number": 5,
+   "id": "05",
+   "synopsis": "Soteriology (lit., “doctrine of salvation”) refers to all that Christ did for our salvation: He healed our nature which was subject to corruption and death, and united us to God, restoring our communion with the Holy Trinity. Eschatology (literally, the doctrine of “last things”), is the culmination of the work of Christ His Second Coming, at which time the general Resurrection and Last Judgment will take place.",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "[i] Introduction to the Divine Economy"
+    },
+    {
+     "type": "para",
+     "text": "The “Economy” refers to all that Christ did for our salvation:"
+    },
+    {
+     "type": "bullet",
+     "text": "The Incarnation: The healing of our nature, subject to corruption and death.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "His Entire Sinless Life: The healing of the human will to obey God.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "His Passion on the Cross: The victory over sin, demonic powers and hades.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "His Resurrection: The conquering of death and corruption.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "His Ascension: The full and permanent deification of man.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "His Sending of the Spirit at Pentecost: Communion in the life of the Holy Trinity.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "The Orthodox view of Redemption is thereby wholistic:"
+    },
+    {
+     "type": "bullet",
+     "text": "The whole economy of Christ saves us, in our whole existence, body and soul.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Orthodox Church rejects penal substitutionary atonement which views redemption primarily as a legal transaction, appeasing the abstract justice of a wrathful God.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Anselm of Canterbury, Cur Deus Homo: Penal Satisfaction Atonement",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Calvin – The total depravity of man",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Luther - Justification by faith “alone”",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "“Once saved, always saved”",
+     "level": 2
+    },
+    {
+     "type": "heading",
+     "text": "[ii] Redemption and the Role of Christ"
+    },
+    {
+     "type": "para",
+     "text": "Images of Redemption:"
+    },
+    {
+     "type": "bullet",
+     "text": "Christ became our Paschal Lamb (Jn 1:29)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "He is our Atonement Sacrifice (Heb 9)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "He paid our “ransom” (Mk 10:45; 1 Tim 2:5-6; Ps 48:8-10 LXX)[^4]",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "To grant us the “adoption” to be sons and daughters of the Father (Gal 4:5; Eph 1:5).",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "The Incarnation"
+    },
+    {
+     "type": "bullet",
+     "text": "The Logos of God takes a body with a rational soul upon Himself",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "He becomes man; He does not dwell in a (pre-existing, personally-separate) man",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "His birth is outside brokenness (pleasure and pain)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Therefore, His flesh is passionless, not subject to egotistical tendencies, but innocent and pure",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "He unites human nature with divine nature (understood in Chalcedonian terms)",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "His Pure Life"
+    },
+    {
+     "type": "bullet",
+     "text": "All Jesus did sanctified each stage of human life, forging a path for us.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "He is passionless, and heals human passions.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "The Passion and the Cross"
+    },
+    {
+     "type": "bullet",
+     "text": "He took sin upon Himself (1 Peter 2:24)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "He became a curse for us (Gal 3:13)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "His death is voluntary (e.g. Mt 26:53; John 10:18)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "He demonstrates His love for us (John 15:13; Rom 5:8).",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "The Resurrection"
+    },
+    {
+     "type": "bullet",
+     "text": "The central event of salvation history (1 Corinthians 15:20).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Christ defeats death permanently (Rom 6:9)",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[iii] Soteriology: Salvation as Theosis"
+    },
+    {
+     "type": "para",
+     "text": "Pentecost"
+    },
+    {
+     "type": "bullet",
+     "text": "Pentecost effectuates the power of the Resurrection (Rom 8:11)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Prior: no preaching, no baptism, no breaking of bread – in short, no active Church",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Through baptism, we are adopted as sons of the Father, made brothers of Jesus, such that the Holy Spirit resides in us, as it did in Christ, as a human being.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Being “in Christ” is brought about by the Holy Spirit, in the Church Theosis as the Journey and the Goal Key point: Salvation is the healing of our nature and our union with God",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Both are unending processes that require our effort",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Healing of the nous (mind/spirit) and purification of the heart",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Defeat of the passions (soul ruling the body)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Loving God and neighbor, fulfilling Christ’s commandments",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Being filled with the Spirit",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Synergy: Human cooperation with the Spirit",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Freedom is respected in the process of salvation.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Not merely moral improvement, but participation in the divine life (2 Peter 1:4).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Ultimately, incorruption is a gift of grace – we cannot achieve it",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "It is given through the sacraments and prayer",
+     "level": 2
+    },
+    {
+     "type": "heading",
+     "text": "[iv] Eschatology: Second Coming of Christ and Last Judgment"
+    },
+    {
+     "type": "para",
+     "text": "Eschatology (literally, the doctrine of “last things”), the culmination of the work of Christ at His Second Coming."
+    },
+    {
+     "type": "bullet",
+     "text": "The Great Tribulation (Mt 25; Mk 13; 2 Thess 5; 2 Tim 4:3; etc.)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Second Coming: Christ will return in glory to judge the living and the dead (Mt 13:40-3; 25:31–46; Jn 5:27; I Cor 15:28).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The General Resurrection: all human beings from every era",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Last Judgment: based on actions reflecting faith and love (Mt 25; James 2:17)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The New Heaven and New Earth (1 Pet 3:13; Rev. 21:1)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "His Kingdom “shall have no end” (Lk 1:33; Creed): Rejection of Millennialism The nature of hell and condemnation",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The fire of Love: God’s single energy towards mankind (Heb 12:29; 2 Thess 1:9)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“For those who love the Lord, His Presence will be infinite joy, paradise and eternal life. For those who hate the Lord, the same Presence will be infinite torture, hell and eternal death” (Fr Thomas Hopko).",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[v] Conclusion"
+    },
+    {
+     "type": "bullet",
+     "text": "All aspects of the life and work of Christ serve to heal our fallen nature and restore humanity to communion with the Holy Trinity",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Theosis is the goal of Salvation: both the journey and the destination of Christian life.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Salvation is the healing of our nature and our union with God.",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "Key Points and Practical Applications for our Life in Christ"
+    },
+    {
+     "type": "para",
+     "text": "The Orthodox Church’s soteriology and eschatology are a call to action:"
+    },
+    {
+     "type": "bullet",
+     "text": "Engage actively in the life of the Church and cooperate with God’s grace",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Participation in the sacraments (especially Eucharist and Confession).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Ascetic struggle, being the cultivation of humility and prayer.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "A call to vigilance and preparedness (Matthew 24:44).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Living with repentance, prayer, and love for one’s neighbor.",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "From the Fathers"
+    },
+    {
+     "type": "para",
+     "text": "“And unless humanity had been joined to God, he could never have become a partaker of incorruptibility … On what basis could we be sharers in adoption as God’s sons? We had to receive, through the Son’s agency, that participation in Him. The Word, having been made flesh, had to share Himself with us. Wherefore also He passed through every stage of life, restoring to all communion with God” (St Irenaeus of Lyons, Against Heresies, 3.18.7). “…perhaps He goes to sleep, that He might bless sleep also; perhaps He is tired, that He might hallow weariness also; perhaps He weeps, that He might make tears blessed.\" (St Gregory Nazianzus, Or. 37.2) On the fact that the Word of God assumed all of human nature, including a rational soul (nous): “Whoever has set his hope on a human being without mind is actually mindless himself and unworthy of being saved in his entirety. What is not assumed is not healed but that which is united to the Godhead is saved” (St Gregory the Theologian, Letter 101 to Cledonius (ET Wickham, On God and Christ p. 158)."
+    }
+   ],
+   "footnotes": [
+    {
+     "n": 4,
+     "text": "The ransom or debt is to the necessity of death, from which Christ was exempt (St Athanasius, On the Incarnation, c. 20; St Basil’s Anaphora, citing Rom 7:14; cf., St Gregory Nazianzus, Or. 45.22)."
+    }
+   ],
+   "page_start": 23,
+   "title": "Jesus Christ our Redeemer"
+  },
+  {
+   "number": 6,
+   "id": "06",
+   "synopsis": "Our God has revealed Himself as Trinity: Father, Son and Holy Spirit; a unity in three Persons, a Communion of perfect Love, one is Essence, Being, Will and Energy.",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "This doctrine is, for the Orthodox Church, “the unshakable foundation of all religious thought, of all piety, of all spiritual life, of all experience. It is the Trinity that we seek in seeking after God, when we search for the fullness of being, for the end and meaning of existence” –Vladimir Lossky (Mystical Theology, p. 65)"
+    },
+    {
+     "type": "heading",
+     "text": "[i] The Mystery of the Holy Trinity"
+    },
+    {
+     "type": "bullet",
+     "text": "The Trinity is ultimately a Mystery, beyond analogy or comprehension.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "God is simultaneously One and Three.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Father is Unbegotten; the Son is begotten; the Spirit proceeds from the Father (Jn 5:26)",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "“One of the Trinity Suffered in the Flesh”"
+    },
+    {
+     "type": "bullet",
+     "text": "The Trinity is revealed through the life of the Incarnate Son, our Lord Jesus Christ.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "E.g. Revealed at Christ’s Baptism (Luke 3:22).",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "In the Great Commission (Mt 28:18-22).",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Holy Spirit proceeds from the Father, rests in the Son, and shines forth from the Son, as consubstantial and co-eternal with the Father and the Son (St John of Damascus, De Fide, I.7, 8)",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[ii] One God, Three Persons: Monad and Triad Simultaneously"
+    },
+    {
+     "type": "bullet",
+     "text": "The fourth-century Cappadocian Fathers (SS. Basil the Great, Gregory the Theologian and Gregory of Nyssa) articulated the mystery of the Trinity as such:",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "God is one in Essence (ousia, physis), Three in Persons (hypostases, prosopa).",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Three Persons, One in Essence/Being/Existence",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Three Persons, in perfect personal unity (perichoresis)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "No subordinationism: the Son and the Spirit are fully God.",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": "One God, because One Principle (the Father)"
+    },
+    {
+     "type": "bullet",
+     "text": "“But to us there is but one God, the Father, of whom are all things, and we in him; and one Lord Jesus Christ, by whom are all things, and we by him” (1 Cor 8:6; Eph 4:6; Col 1:15-10).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“For with Him were always present the Word and Wisdom, the Son and the Spirit…” (St Irenaeus of Lyons, Against Heresies, IV.20).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "E.g. “Amen, Amen, I say to you, before Abraham was I am (John 8:58) [Creed: “very God of very God”]",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "E.g. Divine Liturgy (anaphora): “for Thou art God inexpressible, inconceivable, invisible, incomprehensible, ever-existing and eternally the same, Thou and Thine only-begotten Son and Thy Holy Spirit.”",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "One God, because there is One Divine Essence"
+    },
+    {
+     "type": "bullet",
+     "text": "“I and the Father are one” (Jn 10:30). [Creed: homoousios, “of one essence”] One God, because of the Mutual Indwelling of the Divine Hypostases",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“I am in the Father and the Father is in Me” (Jn 14:11).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“No one knows the Father except the Son, and no one knows the Son, except the Father” (Mt 11:27).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“Perichoresis” – the “mutual indwelling” of the Hypostases",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "Key Points and Practical Applications for our Life in Christ"
+    },
+    {
+     "type": "bullet",
+     "text": "The Communion of the Holy Trinity is extended to us: “ We will come to him and make Our abode with him” (Jn 14:23).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Holy Trinity is the perfection of unselfish love, the love that created and sustains the universe.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "We are in the image of the Holy Trinity",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "We are many persons in one nature.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "We need each other – we cannot be alone.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Persons and love give our life meaning.",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "From the Fathers"
+    },
+    {
+     "type": "para",
+     "text": "“God the Father, uncreated, immaterial, invisible; one God, the Creator of all things: this is the first point of our faith. The second point is this: the Word of God, Son of God, Christ Jesus our Lord, Who was manifested to the prophets according to the form of their prophesying and according to the method of the dispensation of the Father. Is He through Whom (i.e. the Word) all things were made; Who also at the end of the times, to complete and gather up all things, was made man among men, visible and tangible, in order to abolish death and show forth life and produce a community of union between God and man. And the third point is: the Holy Spirit, through Whom the prophets prophesied, and the Fathers learned the things of God, and the righteous were led into the way of righteousness; and Who in the end of the times was poured out in a new way upon mankind in all the earth, renewing man unto God” (St Irenaeus of Lyons, Epideixis, c. 6; ET Kelly, Early Christian Creeds, pp. 77-8)."
+    },
+    {
+     "type": "para",
+     "text": "“God is one because there is one Divinity: unoriginate, simple, beyond being, without parts, indivisible. The Divinity is both unity and trinity – wholly one and wholly three. It is wholly one in respect of the essence, wholly three in respect of the hypostases or person. For the Divinity is Father, Son and Holy Spirit, and is in Father, Son and Holy Spirit. The whole Divinity is in the whole Father and the whole Father is in the whole Divinity…[he modifies and repeats the formula for Son and Spirit] … For, the whole Father is completely in the whole Son and Spirit … Therefore, the Father, the Son and the Holy Spirit are one God.” (St Maximus the Confessor, Two Hundred Texts on Theology and the Incarnation, 2, c. 1, ET Philokalia v. 2, 137-8)."
+    }
+   ],
+   "footnotes": [],
+   "page_start": 29,
+   "title": "The Holy Trinity"
+  },
+  {
+   "number": 7,
+   "id": "07",
+   "synopsis": "The Church was founded on the Day of Pentecost and from that moment is the central locus of the continuation of the work of Christ. It is not an institution but a living organism: the Body of Christ in the Holy Spirit. It is the milieu in which the New Testament was written and the Biblical Canon formed, of the Liturgy, the preaching and doctrine of the Church, and all its Sacraments. It is simultaneously a hospital, a foretaste of paradise and the Kingdom of God, the Bride of the Lamb, and the New Jerusalem. In short, it is where we enter into the life of the Holy Trinity as offered to us by the economy of Christ.",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "[i] The Church and the Kingdom of God"
+    },
+    {
+     "type": "para",
+     "text": "The Church was founded in an exclusively divine act on the Day of Pentecost: the descent of the Holy Spirit on the Apostles and disciples."
+    },
+    {
+     "type": "bullet",
+     "text": "All preaching and all sacraments began immediately.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Holy Spirit is the Kingdom of God; the Church, the primary locus of the Kingdom of God.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Spirit abides in the Church.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Simultaneously, the Spirit transcends the Church as God, whom nothing can contain (“everywhere present and fillest all things”).",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Therefore, the Spirit and the Kingdom are not exclusively contained by the Church.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Church owes her obedience to Christ, her divine Head.",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": "The word “church” is from the Greek ekklesia – literally, “a calling out” – not from synangogi, a “gathering,” or “congregation.”"
+    },
+    {
+     "type": "bullet",
+     "text": "Refers to those called by God to be Saints (Rom 1:7; 1 Cor 1:24; 2 Cor 6:17; 1 Pet 2:9)",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "The Church is not a building, nor an institution, but a living organism:"
+    },
+    {
+     "type": "bullet",
+     "text": "The Church is more than a Sacrament: It is the milieu of all the Sacraments.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Church is a Hospital, the Physician Christ, and we the nurses and the sick.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Church is the Body of Christ, Christ Himself is the Head (Eph 5:23; Col 1:18).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Church is the Bride of the Lamb (Rev 21:2, 9, 17)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Church is the Ark of Salvation.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Church is a foretaste of Paradise, the locus of the Kingdom of God on earth.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Church is where our life in the Holy Trinity, our salvation and deification, is imparted to us.",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[ii] The Attributes of the Church"
+    },
+    {
+     "type": "para",
+     "text": "“I believe in One, Holy, Catholic and Apostolic Church” (Nicene Creed)."
+    },
+    {
+     "type": "bullet",
+     "text": "The attributes of the Church are divine attributes, imparted to us.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "The Church is One"
+    },
+    {
+     "type": "bullet",
+     "text": "Its oneness reflects the unity of the Holy Trinity (Jn 17:21)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Both in nature, and among persons",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Natural unity: ontological oneness in Body and Spirit, in dogma and sacrament",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Personal unity: the unity in heart and soul of all its members, in every age and place (Rom 12:16; 15:6; Phil 1:27; Jn 10:15-6).",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "“There is one body and one Spirit, just as you were called in one hope of your calling; one Lord, one faith, one baptism; one God and Father of all, who is above all, and through all, and in you all” (Eph 4:4-6; 1 Cor 12:13).",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "The Church is Holy"
+    },
+    {
+     "type": "bullet",
+     "text": "We are called to be Holy – offered completely to God (1 Pet 1:15-6)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "A royal priesthood, a holy nation, a special people (1 Pet 2:9).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "A glorious church, holy and without blemish (Eph 5:27)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Any sin of a member of the Church is not a sin of the Church, but against the Church.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "The Church is Catholic"
+    },
+    {
+     "type": "bullet",
+     "text": "The word “catholic” means “according to the whole,” that is, full, complete, whole, nothing lacking.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Church is called to manifest all the gifts of God.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "However, in God alone is there nothing lacking.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "It also refers to the universal aspect of the Church’s existence, the same in doctrine and grace in every place (St Irenaeus, Against Heresies, 1.10.1).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Every local church dependent on the other;",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "No ministry exercised in isolation from the whole (Eph 4:11; 1 Cor 12)",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "The Church is Apostolic"
+    },
+    {
+     "type": "para",
+     "text": "Its Apostolicity – based on being “sent” – reflects the Trinitarian taxis – divine life proceeds from and returns to the Father, as both the Son and the Spirit were the ones “sent”"
+    },
+    {
+     "type": "bullet",
+     "text": "Jesus Christ whom thou hast sent (Jn 17:3)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "As the Father sent Me, so I send you (Jn 20:21; Eph 2:19-22)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "You did not choose me but I have chosen you, and appointed you (jn 15:16)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Apostolic Succession of the Clergy is the historical witness and ontological confirmation of the identity of the Church in every age and place.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Laying on of hands",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Apostolic succession of the clergy was already taught by St Irenaeus of Lyons (+130 AD) (Against Heresies 3.3.1-4).",
+     "level": 2
+    },
+    {
+     "type": "heading",
+     "text": "Key Points and Practical Applications for our Life in Christ"
+    },
+    {
+     "type": "para",
+     "text": "The Church, as the living Body of Christ in the Spirit, owes obedience to its Head, Christ Himself."
+    },
+    {
+     "type": "bullet",
+     "text": "Christ left no writings; instead, He left His body and sent His Spirit.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Church continues the ministry of Christ and the Apostles, down to our day.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Church never replaces Christ, to whom it owes its obedience and devotion.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Church is the Ark of Salvation: only Christ has the authority to walk outside it (Mk 6:48).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "He brings Peter back to the boat.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "His goal is to unite all to Himself, such that there is one flock and one Shepherd (Jn 10:16)",
+     "level": 2
+    },
+    {
+     "type": "heading",
+     "text": "From the Fathers"
+    },
+    {
+     "type": "para",
+     "text": "“The Church is called catholic because she extends throughout the whole universe, to the very limits of the earth, and because she teaches all the doctrines, leaving nothing out… she treats and heals every sort of sin ‘in a catholic manner’ (καθολικῶς) and every virtue is found in her” – St Cyril of Jerusalem, 18th Baptismal Catechesis, 23."
+    },
+    {
+     "type": "para",
+     "text": "“In a word, what the soul is to the body, Christians are to the world. The soul is dispersed through all the members of the body, and Christians throughout the cities of the world. The soul dwells in the body, but is not of the body, likewise Christians dwell in the world, but are not of the world…Such is the important position to which God has appointed them, and it is not right for them to decline it” – Epistle to Diognetus."
+    },
+    {
+     "type": "para",
+     "text": "“For where the Church is, there is the Spirit of God, and where the Spirit of God is, there is the Church and all grace” – St Irenaeus of Lyon, Against Heresies, 3.24.1."
+    }
+   ],
+   "footnotes": [],
+   "page_start": 33,
+   "title": "The Holy Spirit and the Church"
+  },
+  {
+   "number": 8,
+   "id": "08",
+   "synopsis": "The veneration of the Mary as Ever-Virgin and Theotokos is inseparably linked to our understanding of Christology and to our own destiny in Christ. She is the center of the Church’s devotion to Christ, and the Mother of all Christians.",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "[i] The Presence of the Theotokos in the Church"
+    },
+    {
+     "type": "para",
+     "text": "Theologically, her title as Theotokos (Lk 1:43; Mt 1:23) is central to the Faith of the Church."
+    },
+    {
+     "type": "bullet",
+     "text": "Canonized at the Third Ecumenical Council, it witnesses that God was conceived and born as a man; He did not dwell in an already existing, specially-graced man.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "A single, unique Person is thereby God and man at once.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Pastorally, the presence of the Theotokos is central to the life of the Church."
+    },
+    {
+     "type": "bullet",
+     "text": "Inseparable from Christ from the beginning (Cana) to the end (Cross) of His ministry.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "She was singled out as present, praying with the first Church in Jerusalem, during Pentecost (Acts 1:12-14).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "She is commemorated in each and every service of the Orthodox Church.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "She is integral to every celebration of the Eucharist (Proskomedia, Axion)",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[ii] The Foreshadowing of the Theotokos in the Old Testament"
+    },
+    {
+     "type": "para",
+     "text": "The Early Church extended its typology of Christ in the Old Testament to His Mother."
+    },
+    {
+     "type": "bullet",
+     "text": "Christ is the New Adam, Mary is the New Eve (undoing what Eve did).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "God’s presence in the Tabernacle, God’s presence in Mary:",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“overshadowed” (Ex 40:29; Lk 1:35)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Christ foreshadowed in the Ark – in the Manna (Eucharist), the Commandments (Gospel), and Aaron’s rod that budded (Resurrection) – Mary foreshadowed as the Ark containing these things.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Note the parallel between Mary (Lk 2) and the Ark of the Covenant (2 Sam 6).",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": "A. Many types are found in the Akathist Hymn, such as: Jacob’s Ladder (Gen 28:12-19); the Burning Bush (Ex 3); the table of the bread of presence (Ex 25:30); the Jar containing the Manna (Exodus 16: 32-36); the Uncut Stone (Dan 2:34); Psalm 44 (LXX); the Eastern Gate of the Temple (Ez. 44:1-3); etc."
+    },
+    {
+     "type": "heading",
+     "text": "[iii] Mary in the New Testament"
+    },
+    {
+     "type": "bullet",
+     "text": "The one who discerns and surrenders to the will of God (Luke 1:38)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Who ponders all in her heart (Lk 2:19)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Who has motherly boldness in her intercessions (John 2).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The one chosen and blessed (Lk 1:42-8; 11:27)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Mother of all Christians (Jn 19:26-7)",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[iv] Titles of the Mother of God"
+    },
+    {
+     "type": "bullet",
+     "text": "Ever-virgin: canonized at the Fifth Ecumenical Council.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Luke 1:34 denotes a permanent state, a vow; else it makes no sense.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The brothers of the Lord are, according the Protevangelion of James, the sons of Joseph, who was a widower.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "According to St Jerome, they are the children of Mary, the wife of Cleopa, who was the brother of Joseph the Betrothed.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Handing His mother over to “the beloved disciple” at the Cross would make no sense if she had other children.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "All-holy (Panaghia) – referring to her lack of any personal sin.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“Holiest of all the Saints”",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "This does not mean that she did not also need a Savior, her Son",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Without stain, and without pain, in giving birth (Is 66:7).",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "She was the best humanity had to offer, totally devoted to God in thought, word and deed.",
+     "level": 2
+    },
+    {
+     "type": "heading",
+     "text": "[v] The Orthodox Veneration"
+    },
+    {
+     "type": "bullet",
+     "text": "The Orthodox Church does not accept the Western doctrine of the Immaculate Conception, believing the Virgin Mary to have been specially privileged at her conception, on account of the future merits of her Son, to be free from original sin.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Such would set her apart from the rest of humanity before Christ, the entire chain of the righteous who prepared for the coming of Christ.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Rather, though she shared our common birth, the effects of the fall had no mastery over her, and so the Orthodox believe her to be sinless, “immaculate.”",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Orthodox Church believes in the bodily assumption of the Virgin Mary into heaven, but firmly proclaims her death beforehand.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The presence of the Theotokos is in the very center of the Church from the day of Pentecost (Acts 1:14); and remains integral to every Eucharist and liturgical service.",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "Key Points and Practical Applications for our Life in Christ"
+    },
+    {
+     "type": "para",
+     "text": "Mary is both “Mother of God” and “All-Holy, Ever-Virgin” – uniquely combining maternal care and tenderness with monastic fortitude."
+    },
+    {
+     "type": "bullet",
+     "text": "She is the prime example of following Christ, and the mother and protectress of all Christians.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "As Mother of the Lord of Hosts (Mt 26:53), she herself is Queen of the Angels, “more honorable than the Cherubim and beyond compare more glorious than the Cherubim.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "She knows our needs and intercedes for us before we even ask (John 2).",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Due to her pivotal participation in the incarnation, and her unique intimacy and boldness with her Son, she stunningly also receives the prayer, “Most holy Theotokos, save us.”"
+    },
+    {
+     "type": "bullet",
+     "text": "She does not substitute for Christ, as Savior and unique mediator.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "She needs her Son as Savior, as well.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "But just as a friend can save us by calling for help, Mary saves us by bringing the Savior to us, and us to the Savior.",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "From the Fathers"
+    },
+    {
+     "type": "para",
+     "text": "“Whoever does not confess the Holy Mary as the Mother of God is cut off from the Godhead. Whoever says that He [the Word of God] was channeled, as it were through the Virgin but not formed within her … is likewise godless [ἄθεος]. Whoever says the human being was formed and then God put him on to wear him is condemned: this is not God’s birth but the avoidance of birth” (St Gregory the Theologian, Ep. 101 to Cledonius). “Whoever does not acknowledge Emmanuel to be truly God, and hence the holy Virgin, Theotokos (for she gave fleshly birth to the Word of God made flesh), let him be anathema” (St Cyril of Alexandria, 3rd Letter to Nestorius)"
+    },
+    {
+     "type": "para",
+     "text": "“This name [Theotokos] contains the whole mystery of the Incarnation” (St John Damascene, De Fide Orth. III.12)"
+    },
+    {
+     "type": "para",
+     "text": "“She is the cause of what came before her, the champion of what came after her and the agent of things eternal. She is the substance of the prophets, the principle of the apostles, the firm foundation of the martyrs and the premise of the teachers of the Church. She is the glory of those upon earth, the joy of celestial beings, the adornment of all creation. She is the beginning and the source and root of unutterable good things; she is the summit and consummation of everything holy” (St Gregory Palamas, On the Dormition)."
+    }
+   ],
+   "footnotes": [],
+   "page_start": 38,
+   "title": "The Theotokos and Ever-Virgin Mary"
+  },
+  {
+   "number": 9,
+   "id": "09",
+   "synopsis": "The whole of the Christian life must be seen as a mystery (sacrament) – a means of our union with God through Christ in the Holy Spirit – and so, ultimately, everything which is in and of the Church is sacramental or mystical. Yet in the Holy Mysteries, material things (water, oil, bread, wine, etc.) become distinct means of our participation and incorporation into the Kingdom of God, as a foretaste, in this life.",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "The Holy Mysteries – Our Life of God"
+    },
+    {
+     "type": "para",
+     "text": "The Sacraments are inseparable and indispensably vital to the healing of our nature and union with God brought about by the economy of Christ in the Holy Spirit."
+    },
+    {
+     "type": "bullet",
+     "text": "They sustain us on our path to salvation:",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Purification – the healing of our nature, our passions, egotism, lack of love.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Illumination – the healing of our spiritual and intellectual powers, to discern and follow the will of God in all things.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Deification – our ever-growing union with God and sanctification by His uncreated grace",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Becoming a member of the Church is to join a living, visible organism, the Body of Christ, and to be filled with His Holy Spirit.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The rites of initiation form an integral whole: Confession of Faith (Acts 8:37), Baptism, Chrismation, and Eucharist Holy Baptism – Purification The essential elements of Baptism are the invocation of the Trinity and the triple emersion in water (Didache).",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": "The basis of our baptism is the example and commandment of Christ (Mt 28:19; Mk 16:16)."
+    },
+    {
+     "type": "bullet",
+     "text": "We participate in the death and Resurrection of Christ (Rom 6:4; Col 2:12)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "We die to the old man, and are endowed with newness of life",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "We are cleansed of sin, and delivered from the domination of sin in our members.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“One baptism for the remission of sins” (Nicene Creed; Acts 2:38).",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Noah and the Flood (1 Pet 3:21)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Moses and the Red Sea (1 Cor 10:2)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "We have Christ dwelling in the depth of our being (St Mark the Ascetic, O",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "We reborn, granted the “adoption,” as sons and daughters of the Father (Rom 8:15)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "We are made members of the Body of Christ (1 Cor 12:13)",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Holy Chrismation – Illumination"
+    },
+    {
+     "type": "para",
+     "text": "The Sanctification of Chrism"
+    },
+    {
+     "type": "bullet",
+     "text": "A special oil made of hundreds of ingredients, to represent the gifts of the Holy Spirit.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "It is consecrated by all the hierarchs of a local church, to manifest our entry into the communion of the Universal Church.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "The Spirit unites to the Son in Baptism (1 Cor 12:13), so the Son gives us His Spirit in Chrismation (Mt 1:8; Jn 20:22)."
+    },
+    {
+     "type": "bullet",
+     "text": "Chrismation is the power to live in Christ by the Holy Spirit and His gifts.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The “seal of the gift of the Holy Spirit” (2 Cor 1:22; Eph 1:13; Eph 4:30) – applied to all our senses, to do God’s will with our whole being.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Chrismation completes our incorporation into the Body of Christ; for as we are one Body, we partake of one Spirit (1 Cor 12:13; Eph 4:4)."
+    },
+    {
+     "type": "bullet",
+     "text": "It is often used as the sacrament of completion and reconciliation of non-Orthodox.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "The Holy Eucharist – Deification (Union with Christ in the Holy Spirit)"
+    },
+    {
+     "type": "para",
+     "text": "In the Holy Eucharist, bread and wine are consecrated by the Holy Spirit to become the Body and Blood of Christ, not merely symbols or a remembrance of such."
+    },
+    {
+     "type": "bullet",
+     "text": "Based on the words of Christ Himself (Mt 26:26; Mk 14:22; Lk 22:19-20; John 6:51)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "St Paul witnesses this in the Early Church (I Cor 11:23-29; Acts 2:42)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "We are united to Christ, partaking of His deified Body and Blood",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The manner of transformation of the Gifts is a mystery",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "We join our offering to the offering of Christ (“Thine own of thine own”)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Our benefit from the Eucharist presupposes our preparation to draw near “with the fear of God, faith and love”",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Fasting (from midnight) and confession (guided by one’s priest) is the traditional preparation (1 Cor 11:27-30)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "It is a “Divine Liturgy” – an action of and for the whole Church",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The priest cannot celebrate without an “Amen” from the people.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "We draw near to God and to each other as members of one Body",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": "Holy Repentance"
+    },
+    {
+     "type": "bullet",
+     "text": "Confessing sins as a concrete act is an apostolic practice (James 5:16)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The tears of repentance are considered a renewal of baptism.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The elements are: genuine remorse for sin, confession of sin (to speak forth one’s sins), and absolution of sin (the forgiveness of God bestowed upon the repentant sinner, through the witness of the Church, being the priest).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "We reconcile with the Body of Christ (the Church) to partake of the Body of Christ (Eucharist).",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Confession is a mercy seat of forgiveness and restoration",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Grace for further resistance of temptation – given due to the promise of change, as witnessed by confession",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Holy Unction"
+    },
+    {
+     "type": "bullet",
+     "text": "Unction is olive oil and wine, consecrated on Holy Wednesday, or as needed.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "It is anointed for bodily and spiritual healing.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "An Apostolic practice (James 5:14-16; Mark 6:13)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Christ is the Great Physician, and since He remains in the Church through the Holy Spirit, the power of His healing is ministered by the Church",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": "Holy Matrimony"
+    },
+    {
+     "type": "para",
+     "text": "The Mystery of matrimony unites a man and a woman to each other by a special charisma of the Holy Spirit."
+    },
+    {
+     "type": "bullet",
+     "text": "Established by God the Father, in paradise, before the fall, being intended for all mankind from the beginning (Genesis 1:27; Matt. 19:4-6).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "In Christian marriage, Christ is the High Priest that bestows this gift, inseparable from Himself (Marriage service; John 2:1-2).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "It reflects the unity of the Trinity, and is likened even to the eschatological unity of Christ and the Church (Eph. 5:22-32).",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "The Uniqueness of Marriage"
+    },
+    {
+     "type": "bullet",
+     "text": "The Orthodox teaching is that only one marriage can contain the perfect meaning and significance which Christ has given to this reality.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Second and subsequent marriages are by economia.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Divorce is not part of God’s intention (Matt. 19:9).",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The liturgical service invokes the blessings given to the godly couples of the Scripture and Church upon the couple.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Crowns of glory but also of sacrifice",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Sexual relations outside of marriage; homosexuality; birth control; abortion;",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Such do not image the complementary, creative union intended by God.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "They do not foster the sanctity of human life and the stability of the family.",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": "Holy Orders"
+    },
+    {
+     "type": "para",
+     "text": "Holy Orders are a means of actualizing the perpetual work and presence of Christ in His Church on earth."
+    },
+    {
+     "type": "bullet",
+     "text": "Christ is the only Head, High-Priest, Shepherd, Teacher, Forgiver and Healer of His Church",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Bishops, priests and deacons have no other function or service than to manifest the presence and action of Christ to His people.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "They are not vicars of Christ and do not act on behalf of Christ or instead of Christ Three main “orders” of priesthood: bishops, priests, and deacons.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Bishops, priests and deacons chosen from the faithful (laos) and set apart for their specific ministry in the Body of Christ",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Three Bishops consecrate a Bishop – to manifest the unity of the Church",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Bishop ordains Priests and Deacons",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Celibate and married clergy",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": "Monasticism"
+    },
+    {
+     "type": "bullet",
+     "text": "Monasticism is a continuation of the office of the New Testament prophet (e.g Acts 11:28; 21:10) – simultaneously a prophetic and evangelical life.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "It is a charismatic sacrament (not one bestowed by the hierarchical priesthood).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "It is an effort to follow the Gospel call with total dedication: poverty (Lk 12:33), chastity (Mt 19:12), and obedience in humility (Lk 22:42)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "History of Monasticism",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Types of Monasticism: Coenobitic, skete life, hermitical",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Burial"
+    },
+    {
+     "type": "bullet",
+     "text": "Burial is the final act of offering of oneself to God.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Death is accepted as the Father’s will, in His providential care, meant for our total cleansing, resurrection and eternal freedom in Christ",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Orthodox Church does not practice cremation, but brings the body one last time to face the altar.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "As the final confession of baptism: “I look for the Resurrection of the dead”",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "As every Eucharist proclaims the death and coming again of Christ (1 Cor 11:26), so does the death of the believer strive to confess faith in the Eucharist, as “the medicine of immortality, and the antidote to death, that we should live forever in Jesus Christ” (St Ignatius of Antioch, Ephesians; cf. Jn 6:51).",
+     "level": 2
+    },
+    {
+     "type": "heading",
+     "text": "From the Fathers"
+    },
+    {
+     "type": "para",
+     "text": "“Great is the Baptism that lies before you: a ransom to captives; a remission of offenses; a death of sin; a new-birth of the soul; a garment of light; a holy indissoluble seal; a chariot to heaven; the delight of Paradise; a welcome into the kingdom; the gift of adoption!” – St Cyril of Jerusalem, Procatechesis, 16."
+    },
+    {
+     "type": "para",
+     "text": "“… ye are figures of Christ. He also bathed Himself in the rive Jordan, and having imparted of the fragrance of His Godhead to the waters, He came up from them and the Holy Spirit in substance lighted on Him, like resting upon like. In the same manner to you also, after you had come up from the pool of the sacred streams, were given the Unction, the sign of that wherewith Christ was anointed, and this is the Holy Spirit” – St Cyril of Jerusalem, On the Holy Chrism, 2."
+    },
+    {
+     "type": "para",
+     "text": "“Since He Himself has declared and said of the Bread, ‘This is My body,’ who shall dare to doubt any longer? And since He has affirmed and said, ‘This is My blood,’ who shall ever hesitate, saying, that this is not His blood?” – St Cyril of Jerusalem, On the Eucharistic Food, 1."
+    }
+   ],
+   "footnotes": [],
+   "page_start": 43,
+   "title": "The Holy Mysteries (Sacraments)"
+  },
+  {
+   "number": 10,
+   "id": "10",
+   "synopsis": "Orthodox Christian spirituality is centered in the Holy Trinity with the goal being the healing of our nature (from passions to virtues) and our union with God (theosis). These goals are interdependent, and are accomplished in the Church through repentance, participation in the Holy Mysteries, prayer, and obedience to the divine commandments.",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "[i] What is the “spiritual life”?"
+    },
+    {
+     "type": "bullet",
+     "text": "The everyday activity of life in communion with God (1 Cor 10:31)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "There are two simultaneous inseparable goals:",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "(i) The reorientation of our nature from slavery to the passions to freedom in Christ through the virtues.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "(ii) Our union with God (theosis)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "This involves our efforts, and divine grace.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The central teaching: Man is called to become by divine grace all that God Himself is by nature (cf., St. Maximus the Confessor, Amb. 7, 1088C)",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[ii] Orthodox Christian spiritual life is centered on the Holy Trinity"
+    },
+    {
+     "type": "bullet",
+     "text": "Centered on God the Father: The chief recipient of our prayers (Mt 6:9; anaphora); for whom we strive for perfection (Matt. 5:48).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Centered on Christ: to live continually “in Christ” so that one can accomplish God’s will and not sin (Rom 6:11; 8:1; I John 3:6; 2 Cor 5:17; Eph 2:10; etc).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Centered on the Holy Spirit: spiritual life is in and by the Holy Spirit (Jn 14:15-17; Romans 5:5; 8:1ff; 1 Cor. 2:10; 12:1-13; Gal 5:16).",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[iii] Some highlights of Orthodox Spirituality"
+    },
+    {
+     "type": "bullet",
+     "text": "God reveals Himself to man in a mystery. Man must respond.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Man acquires faith by hearing (the response)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "not to merely understand it rationally, but to obey its biddings",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "such that our hearts are cleansed and we experience Revelation in a transformative manner.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Synergy: God operating (offering His grace) and man co-operating (accepting and utilizing God’s grace), the result being man’s union with God",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "An integral spirituality which incorporates mind and heart, body and soul",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[iv] The Three Stages of the Spiritual Life: Purification, Illumination, Deification."
+    },
+    {
+     "type": "bullet",
+     "text": "The spiritual life is a process in which we grow into the likeness of God through direct union with Him",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Literally “being saved” (Acts 2:47; 1 Cor 1:18; 2 Cor 2:15)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Seraphim of Sarov calls it the “acquisition of the Holy Spirit.”",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "It involves the total transformation of the human person by divine grace and glory so that we can become authentically human",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“Man is nothing less than a creature that has received the order to become god” (St. Basil the Great)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The stages of the spiritual life are not entirely sequential.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Purification"
+    },
+    {
+     "type": "bullet",
+     "text": "This is our effort to acquire the grace of God being purified of all passions, free of demonic influence, and sinful habits; and by obedience to the commandments and by true doctrine",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Watchfulness: a reordering of human faculties to the proper hierarchy:",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Soul over body",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Mind and Heart harmonized",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Ascetic practices (fasting and almsgiving) to defeat egotism.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Prayer: “Psalmody” – learning the vocabulary of the Psalms and prayers",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The actualization of Baptism and Confession",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Illumination"
+    },
+    {
+     "type": "bullet",
+     "text": "The spiritual senses become illumined by grace, perceiving the presence and will of God in all things.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The natural energies of the nous (reason, intuition, will) are restored (Rom 12:2)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“Be ye transformed, by the renewal of your mind”",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Prayer: The Jesus Prayer, or “Prayer of the Heart,” entering the closet (Mt 6:6)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The actualization of Chrismation",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Deification"
+    },
+    {
+     "type": "bullet",
+     "text": "Our original calling, our original temptation",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“partakers of the divine nature” (2 Peter 1:4);",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "To share in God’s life, love, energy – without becoming identical with God",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "“Partakers” – meaning the uncreated energies, not His essence. Energies (God in immanence): His grace, power, actions, love. Essence (God in transcendence): His nature, inner being, otherness",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "To become one with God (Jn 17:22)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Prayer: “pure prayer” (2 Cor 12:2-3; Rom 8:26)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Foretaste of the Future Age in which Christ will be “all in all” (I Cor 15:28, Eph 1:23, etc)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The actualization of Holy Communion",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[v] Theosis is a gift of divinizing grace, which we must accept and appropriate"
+    },
+    {
+     "type": "bullet",
+     "text": "Through Holy Mysteries (Sacraments)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Especially regular confession and preparation for Holy Communion",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Through Repentance (metanoia – a change of mind)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Theosis keeps producing within us an increased sensitivity to our sinfulness and failings, which leads to a continual attitude of humility and repentance.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Since repentance cures our diseased and unnatural state, it brings joy.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Through Prayer",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Personal prayer – the daily discipline of the prayer rule",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Corporate prayer – faithful participation in the Divine Liturgy, Vespers, Matins, special services",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Through keeping the divine commandments and pursuing the virtues",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The virtues require struggle (ascesis)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "We gain purity of heart",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Almsgiving",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Through the Church",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Church is a hospital, where Christ the Great Physician works through all",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Utilizing the guidance of bishops, priests and our fellow faithful",
+     "level": 2
+    },
+    {
+     "type": "heading",
+     "text": "Key Points and Practical Applications for our Life in Christ"
+    },
+    {
+     "type": "para",
+     "text": "While in many ways the Orthodox spiritual life may seem lofty, it is also “down to earth.” St Theophan the Recluse teaches that the path to spiritual growth is simply consistency:"
+    },
+    {
+     "type": "bullet",
+     "text": "Keeping our daily prayer rule, with attention and a warm heart.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Reading the Psalms and Holy Scriptures daily",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Celebrating the Feasts and keeping the Fasts",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Through frequent confession and Holy Communion",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Through almsgiving, forgiveness, and self-less service of others",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "In short, by loving our neighbors as ourselves.",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": "“If you pray only when you are inclined to, you will cease praying altogether; this is what the flesh desires. The Kingdom of God suffers violence. You will not be able to work out your salvation without forcing yourself” (St. John of Kronstadt)"
+    },
+    {
+     "type": "heading",
+     "text": "From the Fathers"
+    },
+    {
+     "type": "para",
+     "text": "The “Lord… by inaugurating for human nature a birth unchanged by the contrary realities of pleasure and pain… [and] having given our human nature impassibility through his Passion, remission through his toils, and eternal life through his death, he restored that nature again, renewing the habitudes of human nature… and granting to human nature… the supernatural grace of deification… God became a man and provided another beginning, a second genesis for human nature” (St Maximus the Confessor, Ad Thallasium 61). “We shall become that which in no way results from our natural ability, since our human nature has no faculty for grasping what transcends nature. For nothing created is by nature capable of inducing deification… Grace alone… elevates our nature above its proper limits in excess of glory” (St Maximus the Confessor, Ad Thallasium 22)."
+    }
+   ],
+   "footnotes": [],
+   "page_start": 50,
+   "title": "Spiritual Life in Christ"
+  },
+  {
+   "number": 11,
+   "id": "11",
+   "synopsis": "Prayer, Fasting, and Almsgiving are three basic disciplines, along with a moral and ethical life, to the Orthodox faith. Progress in the spiritual life presupposes one's participation in these spiritual practices. Each of these spiritual exercises lead to the purification and sanctification of our soul, and specifically each correspond to one of the three powers of the soul: prayer for the noetic/intelligent power, fasting for the desiring/appetitive, and almsgiving for the incessive (i.e. anger, zeal). These powers of the soul are purified and directed toward God, resulting in a deeper communion with God.",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "[i] Prayer"
+    },
+    {
+     "type": "bullet",
+     "text": "Prayer is an action of the whole person (mind, heart, body) in which we unite our mind and heart to God, in praise, thanksgiving, petition and intercession for others.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Teachings of Christ (“When you pray”: Matt. 6:5-13; Lk 18:1-14)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Example of Christ (Lk 6:12; 21:36; Mt 26:38-44)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Prayer is healing for the noetic (intelligent) power of the soul (Rom. 12:2)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“Nous”: The organ of spiritual reception; the “eye of the soul;” the center of the person",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Prayer overcomes the darkening of the nous (pride/ignorance)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Prayer sets the mind on things above (Col 3:2)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Prayer is the solution to logιsmoi (i.e. intrusive, negative thoughts)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Prayer must be undistracted (Mt 6:6)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "If thoughts wander, we should bring them back, with patience and persistence",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "“Gathering” the nous/”mind” into the heart",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Prayer is the primary means of “acquiring the Holy Spirit” (St Seraphim of Sarov)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "To be in communion with God is the natural condition of man (Gen. 2:7)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Spirit helps us pray deeply (Rom. 8:26)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Pray without ceasing (1 Thess 5:17)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Prayer guides us from Pride to Humility",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[ii] Fasting"
+    },
+    {
+     "type": "para",
+     "text": "Fasting is a means of strengthening the power of the soul over the body, in order to discipline it for prayer and to fight our typically passionate, egotistical relationship with the world."
+    },
+    {
+     "type": "bullet",
+     "text": "Fasting in the Old Testament: Adam, Moses, Elijah, etc.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The first commandment of God in Paradise (Gen. 2:16-17)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Fasting precedes an encounter with God",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Fasting in the New Testament: Christ, Paul",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The teachings of Christ (“When you fast”: Matt. 6:16)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The power of fasting and prayer (Mk 9:29)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Fasting heals the desiring (appetitive) power of the soul",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Bringing the flesh back into subjection to the soul",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "“The inordinate love of the body” (St. Maximos the Confessor)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "“Whose god is their belly” (Phil. 3:19)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Fasting is Obedience",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Deny yourself (daily) and follow Me (Matt. 16:24; Lk. 19:23)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The control of self-will vs. God’s will",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The virtue of self-control (Gal. 5:23)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Fasting is Focus",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Remembrance of God",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "“Strength to pray lies in the deliberate privation of food.” St. Ilias the Presbyter",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Fasting guides us from being Carnally to Spiritually-Minded",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[iii] Almsgiving"
+    },
+    {
+     "type": "para",
+     "text": "Almsgiving and acts of mercy are those deeds done privately, selflessly, without counting the cost or hoping for recompense, for the sake of others less fortunate than ourselves, placing them and their needs above our own, for the sake of Christ."
+    },
+    {
+     "type": "bullet",
+     "text": "The Teachings of Christ (“When you give alms”: Matt: 6:2)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Almsgiving is an offering received by God",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“Your prayers and your alms have come up for a memorial before God” (Acts 10:4)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "“…give alms…a treasure in heaven that does not fail….” (Lk. 12:33)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Almsgiving is unto salvation",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“The least of My brethren” (Matt. 25:31-46)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "“But rather give alms…then indeed all things are clean to you” (Lk. 11:44)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Almsgiving/Stewardship affects the heart",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“For where your treasure is, there will your heart be also” (Matt. 6:21)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Almsgiving forms God-like love",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“But love your enemies, do good, and lend, hoping for nothing in return; and your reward will be great, and you will be sons of the Most High. For He is kind to the unthankful and evil” (Lk. 6:35)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Almsgiving heals for the Incensive (Irascible) power of the soul",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Nurturing detachment from earthly things",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Nurturing attachment to God and love of others (acts of mercy)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "“Love…does not behave rudely, does not seek its own way” (1 Cor. 13:5)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Almsgiving guides us from self-centeredness (anger, self-justification) to love and zeal for God, through acts for others.",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "Key Points and Practical Applications for our Life in Christ"
+    },
+    {
+     "type": "para",
+     "text": "Practical guidelines for prayer"
+    },
+    {
+     "type": "bullet",
+     "text": "Beginning a prayer rule (in dialog with spiritual father)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The use of the Prayer Book",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Other options: Psalms, Akathists, Canons, Hours",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Considerations of quality and quantity",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Extemporaneous prayer should complement, but not substitute for, written prayers",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Jesus Prayer",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "In addition, chose prayers that uplift you.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Setting up a consecrated prayer area",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Posture: standing, kneeling, metania (small bows) and prostrations",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Fasting and almsgiving gives prayer “wings” (St. John Chrysostom)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Ask God to help you pray.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Practical Guidelines for Fasting"
+    },
+    {
+     "type": "bullet",
+     "text": "“An indispensable means” for acquiring the Holy Spirit (St. Seraphim of Sarov)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Not a “diet,” must be combined with prayer and almsgiving",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Understanding the fasting guidelines",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“Fasting” and complete abstinence (when and why?)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Avoiding extremes, legalism and vainglory (the “royal path”)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Dealing with situations with non-Orthodox friends and relatives",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Fasting from sin while fasting from food",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Fasting for the eyes, ears, mouth, nose and hands (touch)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Fasting as a family (1 Cor. 7:5)",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Practical Guidelines for Almsgiving"
+    },
+    {
+     "type": "bullet",
+     "text": "Do secretly, without fanfare (Matt. 6:3)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Giving to Christ in the poor and needy (“the least of My brethren”)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Hospitality and cheerful giving (2 Cor 9:7)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "A means of acquiring grace/salvation",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "St John Chrysostom likes almsgiving to offering a Liturgy at any time, by giving bread to the poor",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "From the Fathers"
+    },
+    {
+     "type": "para",
+     "text": "“Would you see His altar also? … This altar is composed of the very members of Christ, and the body of the Lord becomes an altar. This altar is more venerable even than the one which we now use [in church]. For this one is … but a stone by nature, though it becomes holy because it receives Christ’s Body. But that altar is holy because it is itself Christ’s body …which you may see lying everywhere, in the alleys and in the market places. On it you may sacrifice any time … when you see a poor believer, believe that you are beholding an altar. When you see this one as a beggar, do not only refrain from insulting him, but rather give him honor.” – St John Chrysostom, Homily 20 on 2 Corinthians (10:15)."
+    },
+    {
+     "type": "para",
+     "text": "“There are three powers of the soul – the noetic [understanding], the excitable, and the desiring. By the noetic power we seek to understand what is good; by the desiring power we desire the good we have understood; by the excitable power we strive and fight for it.”"
+    },
+    {
+     "type": "para",
+     "text": "Saint Maximus the Confessor"
+    },
+    {
+     "type": "para",
+     "text": "“Abba Lot went to see Abba Joseph and said to him, 'Abba as far as I can I say my little office, I fast a little, I pray and meditate, I live in peace, and, as far as I can, I purify my thoughts."
+    },
+    {
+     "type": "para",
+     "text": "What else can I do?' Then the old man stood up and stretched his hands towards heaven. His fingers became like ten lamps of fire and he said to him, 'If you will, you can become all flame.'” – Sayings of the Desert Fathers"
+    }
+   ],
+   "footnotes": [],
+   "page_start": 55,
+   "title": "Prayer, Fasting, Almsgiving"
+  },
+  {
+   "number": 12,
+   "id": "12",
+   "synopsis": "Time and space are fundamental aspects of creation, revealed by God and intended to be sanctified by man (Eph 5:16; Col 4:5). The various cycles of commemoration (yearly, monthly, weekly, daily) are meant to present before us the great acts of the economy of Christ, to experience their spiritual power, and to always have them in remembrance, such that the can have a transformative influence in our lives.",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "[i] The Yearly Liturgical Cycle: Christ, the Theotokos, St John the Baptist"
+    },
+    {
+     "type": "para",
+     "text": "Liturgical cycles were instituted by God in the Law to bring the spiritual power of His salvific actions to the experience of every generation."
+    },
+    {
+     "type": "bullet",
+     "text": "The first liturgical cycle instituted by God: the Sabbath",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "A cessation of all worldly activities to commune with God",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "To prevent man from becoming engrossed in creation",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The world was created for him, not he for the world",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Man’s purpose and meaning comes from God, not the world In the Church, the first and foremost cycle commemorates the Life of Christ, in one year.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Included also in this sequence are the feasts of the Theotokos and St John the Baptist.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The New Year of Commemorations begins every year on September 1.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Fixed Feasts (on the same calendar date, every year)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Nativity (Birth) of the Theotokos (Sept. 8)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Exaltation of the Cross (Sept. 14, Fast Day)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Entry of Theotokos into Temple (Nov. 21)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Nativity of Christ (Dec. 25)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Theophany (Baptism of Christ, Jan. 6)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Meeting of our Lord in the Temple (Feb. 2)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Annunciation of the Theotokos (March 25)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Transfiguration of Christ (August 6)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Dormition of the Theotokos (August 15)",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": "In addition to these Feasts is the Feast of Feasts, the Resurrection of Christ (Holy Pascha)"
+    },
+    {
+     "type": "bullet",
+     "text": "The date of Pascha is different every year.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "It is the first Sunday after the first full moon after the Spring Equinox, provided that Sunday is not also the Passover.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Based on the date of Pascha, the following feasts are arranged:",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Palm Sunday (One week before Pascha)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Ascension of Christ (40 days after Pascha, always Thursday)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Pentecost Sunday (50 days after Pascha)",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": "Four feasts of the Church are honored with a fasting period of more than one day:"
+    },
+    {
+     "type": "bullet",
+     "text": "Great Lent (40 days before Pascha) – the strictest fast of the year.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Nativity Fast (40 days before Christmas)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Dormition Fast (August 1 to 14)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Apostles Fast (begins Monday after All Saints until the Feast of Ss. Peter Paul, June 29)",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "There are four fast free weeks every year:"
+    },
+    {
+     "type": "bullet",
+     "text": "The Week of the Publican and the Pharisee (3 weeks prior to Great Lent)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Bright Week (Pascha night through following Saturday).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Christmas to Theophany: Dec. 25 to Jan. 4.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The week following Pentecost",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[ii] The Weekly Cycle of Commemorations"
+    },
+    {
+     "type": "para",
+     "text": "The chief celebrations of the year are also contained in each week, culminating in the celebration of the Resurrection on Sunday, the Lord’s Day."
+    },
+    {
+     "type": "bullet",
+     "text": "Monday: The Angels",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Tuesday: St. John the Baptist",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Wednesday: The Betrayal and Passion of Jesus; The Holy Martyrs (Fast Day)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Thursday: The Apostles and St. Nicholas",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Friday: The Cross and Passion of Jesus (Fast Day)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Saturday: The Theotokos and All the Christian Departed",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Sunday: The Resurrection of Jesus Christ",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[iii] The Monthly Cycle of Commemorations"
+    },
+    {
+     "type": "bullet",
+     "text": "On each day of the calendar year, various Saints are commemorated (usually the day of their repose or martyrdom).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The “Menaion” Book (or book of the “months”) contains the special hymns for each Saint and for other fixed Feasts.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "For example, St Nicholas is commemorated every year on December 6.",
+     "level": 2
+    },
+    {
+     "type": "heading",
+     "text": "[iv] The Daily Cycle"
+    },
+    {
+     "type": "para",
+     "text": "All of salvation history is commemorated yet again in services of each day."
+    },
+    {
+     "type": "bullet",
+     "text": "The Church follows Chaldean (Biblical) time for commemorations",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The day begins at sunset with Vespers",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Church follows Roman time for fasting (The day begins at midnight).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The daily cycle of services parallel the Temple services, which took place every three hours and in which tradition the Apostles participated (Acts 3:1; 10:9)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "These constitute the full schedule of services that can be prayed each day:",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Vespers"
+    },
+    {
+     "type": "bullet",
+     "text": "Evening Prayer: Inaugurates the beginning of the new day (at the setting of the sun).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Theme: creation, sin and fall from God, and salvation in Christ.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Compline"
+    },
+    {
+     "type": "bullet",
+     "text": "“Bed Time” prayers (“Grant, O Master, when we depart to sleep…”",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Theme: Repentance, thanksgiving, cry of deliverance from evil and darkness.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Midnight Office"
+    },
+    {
+     "type": "bullet",
+     "text": "“Morning Prayers,” a glorification of God before sunrise",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Theme: Praising God for His revelation (Ps 118) and petition for grace",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Orthros/Matins"
+    },
+    {
+     "type": "bullet",
+     "text": "Theme: Repentance, expulsion from paradise, Resurrection (Sunday) and glorification of God",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The main morning service, and commemorations of the day",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "First Hour (6:00am): Pss. 5, 89, 100 (LXX)"
+    },
+    {
+     "type": "bullet",
+     "text": "Theme: The light of new day and the light of God’s commandments",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Third Hour (9:00am): Pss. 16, 24, 50 (LXX)"
+    },
+    {
+     "type": "bullet",
+     "text": "Prayer at the time of the coming of the Holy Spirit (Pentecost)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Theme: righteousness and wisdom vs. iniquity and foolishness",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Sixth Hour (12:00 noon): 53, 54, 90 (LXX)"
+    },
+    {
+     "type": "bullet",
+     "text": "Prayer at the time of Christ’s crucifixion",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Theme: adversity, temptation to despair, deliverance",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Ninth Hour (3:00pm): 83, 84, 85"
+    },
+    {
+     "type": "bullet",
+     "text": "The last service of the day (sometimes held directly before Vespers)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Theme: Christ’s saving death on the Cross",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[v] A Brief Introduction to the Divine Liturgy"
+    },
+    {
+     "type": "para",
+     "text": "The Divine Liturgy is the central Eucharistic Celebration of the Orthodox Church."
+    },
+    {
+     "type": "bullet",
+     "text": "Technically speaking, it is not part of the daily cycle of services.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "It transcends time and makes present Christ’s work of salvation in the here and now.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "It touches the heavenly realm, uniting the earthly with the heavenly (Eph. 1:10).",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "“Liturgy” means “common work” of, or for, the people"
+    },
+    {
+     "type": "bullet",
+     "text": "A priest cannot celebrate alone",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "There must be “Lord have mercy” and an “Amen” from the laity",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Not merely prayer, but a corporate act and offering",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“Do this in remembrance of Me” (Lk. 22:19; 1 Cor. 11:24)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“Eucharist”: our “thanksgiving” to God",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "“Divine” refers to the work of the Holy Trinity"
+    },
+    {
+     "type": "bullet",
+     "text": "Jesus is Celebrant: “the one who offers and is offered.”",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "He offers to the Father, who sends the Holy Spirit",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Liturgy makes the entire life and work of Christ present to us.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Life of Christ – infancy, public ministry, sacrifice, Resurrection,",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": "Ascension, sitting at right hand, second coming"
+    },
+    {
+     "type": "bullet",
+     "text": "The Pentecostal descent of the Spirit, which founded the Church.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "His servants, the angels and saints, worship with us (Heb. 12:22-24)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Holy Gifts become truly the Body and Blood of Christ by the Holy Spirit.",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": "The Structure of the Divine Liturgy"
+    },
+    {
+     "type": "bullet",
+     "text": "The Divine Liturgy has three main sections:",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "[i] The Proskomedia (“Liturgy of Preparation” – done privately by the priest)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The bread and wine are prepared with the following themes:. The mystery hidden from all eternity (Col 1:26). The lamb slain from the foundation of the world (Rev 13:8). The nativity of Christ (Mt 2:9)",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": ". The Creation of the world (Ps 93:1)"
+    },
+    {
+     "type": "para",
+     "text": ". The manifestation of the Church (Ps 45:9)"
+    },
+    {
+     "type": "bullet",
+     "text": "[ii] Liturgy of the Catechumens (fulfillment of synagogue worship)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“Blessed is the Kingdom” – the beginning of the public ministry of Christ",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Kinship with Synagogue worship",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Hymns of Praise: Psalms and Hymns",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Little Entrance (entering with Gospel and the angels)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Trisagion (angelic hymn)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Climax: Communion with the Word of God through Epistle/Gospel readings",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Didactic: The Sermon",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Prayers for and dismissal of catechumens",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "[iii] Liturgy of the Faithful/Eucharist (fulfillment of Temple sacrifices)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Cherubic Hymn (Heavenly worship; “Lay aside all earthly cares”)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Great Entrance (offering our Gifts)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Unity of Love and Faith: “Let us love one another” and Creed",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Anaphora (“Offering”): The heart of the Liturgy. The anamnesis (remembrance) of God’s economy,. Prayers of Thanksgiving,. Words of Institution. Invocation and Consecration. Commemoration of all the faithful",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Lord’s Prayer",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Fracture: “Holy Things for the holy”",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Pre-Communion Prayers (partaking worthily)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Holy Communion with Christ through His Body and Blood",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "“Let us depart in peace” (the “liturgy after the Liturgy”)",
+     "level": 2
+    },
+    {
+     "type": "heading",
+     "text": "Key Points and Practical Applications for our Life in Christ"
+    },
+    {
+     "type": "para",
+     "text": "Woven through the cycles of fasts and feasts of the Liturgical year of the Orthodox Church is Christ Himself, manifested in the lives of His saints and the events of His life."
+    },
+    {
+     "type": "para",
+     "text": "Participation in this life forms Christ in us, from his birth to His Passion and Resurrection, bringing us step by step into the full stature of the perfect man."
+    },
+    {
+     "type": "heading",
+     "text": "From the Fathers"
+    },
+    {
+     "type": "para",
+     "text": "“Communion, then, is God’s union with us, our deification, sanctification, fullness of grace, enlightenment, prevention of everything against us, and granting of every good."
+    },
+    {
+     "type": "para",
+     "text": "What else is both a commingling and communion with God? This is the mystery of mysteries, the sanctification of saints, truly the holy of holies, the rite of all rites, both the beginning author and final completion of the rites. Since the originator of the rite, the Word, alone established it and passed it on, He Himself is the rite; and in order that He remain with us, He has passed it on.” – St Symeon of Thessalonika, On the Sacred Liturgy, c. 6."
+    }
+   ],
+   "footnotes": [],
+   "page_start": 61,
+   "title": "The Liturgical Cycles of Worship"
+  },
+  {
+   "number": 13,
+   "id": "13",
+   "synopsis": "In the Orthodox Church, iconography and church architecture bear witness to the reality of the Kingdom of God on earth and the Lord’s Presence with us in our worship. Icons are not only permissible in worship but spiritually necessary because God Himself in Christ has become visible and dwelt among us. Therefore, we can depict Him, His Beloved Mother, and the Saints and Angels who gather to worship with us to provide us with the reality of the Kingdom of Heaven in our midst",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "[i] The Physical Arrangement of an Orthodox Church"
+    },
+    {
+     "type": "para",
+     "text": "The Scriptures present two perspectives of God’s presence in the world:"
+    },
+    {
+     "type": "bullet",
+     "text": "First, God “does not dwell in temples made by hands” (Acts 17:24).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "He is everywhere present and fills all things",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "“Where shall I flee from your presence?” (Ps. 139:7).",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Second, God is personally manifest in holy places of His choosing",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Burning bush (Ex 3:5); Joshua (Joshua 5:15); Jacob (Gen 28:17)",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "“And the LORD spoke to Moses, saying… let them make me a sanctuary; that I may dwell among them” (Ex 25:1, 8).",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "God is both transcendent and immanent simultaneously.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "There two main features of the architectural layout of an Orthodox Church incorporate these two Biblical perspectives:"
+    },
+    {
+     "type": "bullet",
+     "text": "First, the dome over the central nave.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "God is equally with us at all stages of our life, from the back of the Church to the Altar",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Second, the separation of the sanctuary by the iconostasis and curtain",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "God is personally manifest in consecrated space, made holy unto Him",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The presence of heaven",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The veil conceals and reveals heaven. As did the veil of the flesh of Christ (Heb 6:19; 10:20)",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": ". Heaven by definition is ineffable and must be sought The structure of an Orthodox church has three main areas: Sanctuary, Nave, Narthex"
+    },
+    {
+     "type": "bullet",
+     "text": "This structure is similar to the Tabernacle revealed to Moses",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The first day of creation: the Holy of Holies, the noetic, heavenly, angelic realm",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The second day of creation: the firmament, the veil; etc.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "St Maximus the Confessor (Mystagogia, chs. 1-5). likens the structure to that of the world and the human being",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Sanctuary is the nous, the altar being the heart of man",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The nave, the soul",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The narthex, the body",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Church is thus a microcosm of the world redeemed, and the human being a temple of God (1 Cor 3:16)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The one High Priest is the same for all three liturgies: Christ",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "In the world, as Logos",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "In the human heart, from baptism",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "In the temple, as the officiant of every Liturgy, the “Offerer and Offered”",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": "The Structure of the Orthodox temple is thus a fulfillment of the revelation to Moses; a microcosm of the world as it is meant to be; and a path back to paradise."
+    },
+    {
+     "type": "heading",
+     "text": "[ii] Icons"
+    },
+    {
+     "type": "para",
+     "text": "Early Church Art and Symbols"
+    },
+    {
+     "type": "bullet",
+     "text": "Virgin Mary by St. Luke",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Holy Napkin – some believe to be the Shroud of Turin",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Iconoclasts – Who were they?"
+    },
+    {
+     "type": "bullet",
+     "text": "The Orthodox Response:",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "St. John of Damascus",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "St. Theodore the Studite",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Seventh Ecumenical Council",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The Sunday of the Triumph of Orthodoxy",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": "The Theology of the Icon"
+    },
+    {
+     "type": "bullet",
+     "text": "Worship vs. Veneration",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Concept of Presence",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Dogmatic essence: a Confession that God became truly man",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "The Necessity of Icons in Worship"
+    },
+    {
+     "type": "bullet",
+     "text": "Explanation of Icons and their Placement",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Icon of Christ",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Icon of the Theotokos",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Selected Feast-day Icons Explained",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Use of Color and facial features",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Other Symbols in Icons",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "Key Points and Practical Applications for our Life in Christ"
+    },
+    {
+     "type": "para",
+     "text": "“Standing in the Temple of Thy Glory, We Think Ourselves to Stand in Heaven, O Theotokos.” While on the one hand we are children in our Father’s house, enjoying the liberty of the children of God, on the other hand, the holiness of the church temple should inspire us to piety and respect."
+    },
+    {
+     "type": "para",
+     "text": "Appropriate dress"
+    },
+    {
+     "type": "bullet",
+     "text": "Shows reverence to God and respect towards our fellow worshippers",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Should always be becoming of a Christian",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "We offer Christ our best",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Shorts, tank-tops, immodest dress, or shirts with writing are not appropriate Entering the Temple",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "We should make the sign of the Cross, venerate the icons",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Refrain from speech by greeting others with a nod and smile",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Arrive on time",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "One should not receive Communion if late for the Scripture Readings",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Conduct in Church"
+    },
+    {
+     "type": "bullet",
+     "text": "Have a reverent attitude and demeanor at all times in Church",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Be patient and loving to all",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Do not cross legs, chew gum or talk during the Divine Liturgy",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Receiving Holy Communion"
+    },
+    {
+     "type": "bullet",
+     "text": "Be a faithful, practicing Orthodox Christian",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Prepare by reading the pre-Communion prayers at home, fasting from midnight, and repentance/confession",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Approach the chalice with reverence, arms crossed and one’s mind on Christ Leaving the Temple",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Reverently, making the Cross",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "From the Fathers"
+    },
+    {
+     "type": "para",
+     "text": "“Christ, the Lord’s sheep is sacrificed; when you hear the words, “Let us pray” when you behold the curtains drawn up, then imagine that the Heavens are let down from above, and that the Angels are descending!” – St John Chrysostom, Homily 3 in Ephesians (NPNF 1.13, p.64)"
+    },
+    {
+     "type": "para",
+     "text": "For this holy altar, too, by which I stand, is stone, ordinary in its nature, nowise different from the other slabs of stone that build our houses and adorn our pavements; but seeing that it was consecrated to the service of God, and received the benediction, it is a holy table, an altar undefiled, no longer touched by the hands of all, but of the priests alone, and that with reverence. – St Gregory of Nyssa, On the Baptism of Christ (NPNF 2.05, p. 175)."
+    },
+    {
+     "type": "para",
+     "text": "“For he entered the Church attended by the whole of his train; it was the festival of the Epiphany, and the Church was crowded, and, by taking his place among the people, he made a profession of unity.... Upon his entrance he was struck by the thundering roll of the Psalms, by the sea of heads of the congregation, and by the angelic rather than human order which pervaded the sanctuary and its precincts…” – St Gregory the Theologian (describing the Emperor Valens entering the church of St Basil), Funeral Oration for St Basil the Great, c. 52."
+    }
+   ],
+   "footnotes": [],
+   "page_start": 69,
+   "title": "The Church Building and Holy Space"
+  },
+  {
+   "number": 14,
+   "id": "14",
+   "synopsis": "God is wondrous in His saints! The Church on earth communes with the Church victorious in heaven and venerates the saints for the glorious work that God has accomplished in the world through them. They are not distant to us, but form one Body of the Church with the living. Hence, they are open to our supplications, and assist us in following the Lord.",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "[i] What is Sanctity?"
+    },
+    {
+     "type": "bullet",
+     "text": "Something is holy if [i] it is set apart for a sacred purpose, and [ii] manifests the presence of God’s uncreated grace and power.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Just as our churches are consecrated with chrism to be set apart as God’s temples, so is the same chrism used to mark the bodies of the newly baptized, setting them apart as God’s living temples (1 Cor 6:19).",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "[ii] What is a Saint?"
+    },
+    {
+     "type": "bullet",
+     "text": "Saints are those separated from the world (2 Cor 6:17; Jn 15:19), in order to be sanctified by the indwelling and operation of the Holy Spirit.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "By striving to overcome our sinful desires and leave the harmful patterns of worldly life behind us, we become separate from the world (1 Jn 3:1).",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The promise of our faith is the gift of the Spirit in Christ, and the life of the age to come.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Holiness, as incorruptible grace, is a gift of God.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Holiness is cultivated through our life in Christ, through the Sacraments, and following His teachings.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The first Christian saints were martyrs.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Through their suffering, martyrs bear witness to their hidden life with Christ.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "All the other kinds of saints, in their own way, imitate the martyric ideal.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "All Christians are called by God to be saints (Rom 1:7; 1 Cor 1:2)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Church recognizes those distinguished by their exceptional holiness, witness to the Gospel, and power of intercession as canonized saints.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "This recognition helps believers recognize and imitate authentic sanctity.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The canonized saints do not exhaust the choir of saints known to God alone.",
+     "level": 2
+    },
+    {
+     "type": "heading",
+     "text": "[iii] The Communion of Saints"
+    },
+    {
+     "type": "para",
+     "text": "All those who share in the life of Christ are united in fellowship, both here on earth and in heaven (Heb 12:22-24). The saints in heaven do not cease being conscious because they are truly alive in Christ (Lk 20:29040; Rev 6:9-10)."
+    },
+    {
+     "type": "bullet",
+     "text": "The Christians still living on earth are called the Church Militant because we are still striving to battle the world, the flesh, and the devil.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Christians in heaven (the saints) are the Church Triumphant because they have finished their part of the struggle.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“We live together with them (the Saints in heaven) in the House of the Heavenly Father, only in di55fferent parts of it. We live in the earthly, they in the heavenly half; but we can Converse with them and they with us” (St. John of Kronstadt).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "We gather with the Theotokos, the angelic hosts, and all the Saints (living and departed) to worship the Holy Trinity.",
+     "level": 2
+    },
+    {
+     "type": "heading",
+     "text": "[iv] The Cult of the Saints"
+    },
+    {
+     "type": "para",
+     "text": "The saints, as the friends of God, have the ability to pray for us."
+    },
+    {
+     "type": "bullet",
+     "text": "“The effective, fervent prayer of a righteous man avails much” (James 5:16)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The intercession of the Saints bring about a great reversal in irreversible situations.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Abraham prays for Abimalech (Gen 20)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Job prays for his two friends (Job 42:7-9)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Elisha raises the Shunnamite woman’s son (2 Kings 4)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Moses prays for the people (Num 11:2; 12:13; 21:7)",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "We ask the saints for their intercessions, guidance, and protection, especially our patron saints and guardian angels.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "The veneration we give the saints is distinct from the divine adoration we owe to God alone."
+    },
+    {
+     "type": "bullet",
+     "text": "The Greek word “Latria” means sacrificial worship: only for God.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Greek word “Dulia” means a veneration of honor.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Both God and everything consecrated to God (saints, Bible, icons, etc.) deserve reverence.",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "We honor the saints in various ways: celebrate feast days, go on pilgrimages to shrines, venerate icons, light candles, lamps, and incense.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Instead of admiring worldly heroes or vain celebrities, Christians should venerate spiritual heroes.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The reality of the saints is a fulfilment of man’s original vocation to be the image of God, manifesting God’s presence in the world.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "What about 1 Timothy 2:5?"
+    },
+    {
+     "type": "bullet",
+     "text": "“First of all, then, I urge that supplications, prayers, intercessions, and thanksgivings be made for all men, for kings and all who are in high positions, that we may lead a quiet and peaceable life, godly and respectful in every way. This is good, and it is acceptable in the sight of God our Savior, who desires all men to be saved and to come to the knowledge of the truth. For there is one God, and there is one mediator between God and men, the man Christ Jesus.”",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Does the cult of the Saints nullify the fact that Jesus is the one mediator?",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Absolutely not! No one substitutes for Christ.",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": ". All the Saints lead us to Christ."
+    },
+    {
+     "type": "para",
+     "text": ". The Head is always with His body, the Church (that is, the Saints)"
+    },
+    {
+     "type": "bullet",
+     "text": "We come not only to God, but to the assembly of Saints in heaven as well.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "“We also are compassed about with so great a cloud of witnesses” (literally, “martyrs”) (Heb 12:1).",
+     "level": 2
+    },
+    {
+     "type": "bullet",
+     "text": "“But you have come to Mount Zion and to the city of the living God, the heavenly Jerusalem, to an innumerable company of angels, to the general assembly and church of the firstborn who are registered in heaven, to God the Judge of all, to the spirits of just men made perfect, to Jesus the Mediator of the new covenant” (Heb 12:22-24).",
+     "level": 2
+    },
+    {
+     "type": "para",
+     "text": ". Paul says we come directly not only to God, but to an assembly of Saints in heaven (the just men made perfect) exactly in the context of Jesus being the mediator!"
+    },
+    {
+     "type": "heading",
+     "text": "[v] Relics of Saints"
+    },
+    {
+     "type": "para",
+     "text": "We venerate the relics of the saints as reminders of the reality of the bodily Resurrection."
+    },
+    {
+     "type": "bullet",
+     "text": "A testimony to the abiding, incorruptible grace in the Saint: the body remains a temple of the Holy Spirit even after death",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Biblical: Elisha’s bones resurrected dead (2 Kings 13:21); napkins touched to St Paul’s body healed people (Acts 19:11-12); St Peter’s shadow (Acts 5:15).",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Veneration of relics dates back to the early Church (Martyrdom of Polycarp, cc. 17-18)",
+     "level": 1
+    },
+    {
+     "type": "heading",
+     "text": "Key Points and Practical Applications for our Life in Christ"
+    },
+    {
+     "type": "para",
+     "text": "We need the Saints. Not just their examples, as in a book."
+    },
+    {
+     "type": "bullet",
+     "text": "We need the power of their prayers, their energy, their wisdom, their unconquerable faith, their unwavering love for Christ, and their patient guidance.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "The Saints are alive."
+    },
+    {
+     "type": "bullet",
+     "text": "They are not distant from us, but pray with us, and pray for us.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "They assist us to live in and for Christ, such that we too can be sanctified.",
+     "level": 1
+    },
+    {
+     "type": "bullet",
+     "text": "In short, the Saints love us.",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "“Through his self-offering to Christ, through his communion with Christ, and through Christ, with all men, the saint restores his humanity completely … He has become simple, because he has surrendered himself entirely to God. That is why he can surrender himself entirely to others” – Dumitru Stăniloae, The Experience of God, vol. 1, pp. 234-5."
+    },
+    {
+     "type": "para",
+     "text": "“Belief in the deification of the body and in its eventual resurrection helps to explain the Orthodox veneration of relics. Since the body is redeemed and sanctified along with soul, and since the body will rise again, it is only fitting that Christians should show respect for the bodily remains of the saints. Reverence for relics is not the fruit of ignorance and superstition, but springs from a highly developed theology of the body” (Kallistos Ware, quoted in Coniaris, Introducing the Orthodox Church, p. 103)."
+    },
+    {
+     "type": "heading",
+     "text": "From the Fathers"
+    },
+    {
+     "type": "para",
+     "text": "“How the Creator and Provider of all has honored and adorned our nature! The saints shine with His light; they are hallowed by His grace, having conquered sin and washed away every impurity of body and spirit; they are glorious with His glory; they are incorruptible through His incorruption. Glory to God, Who has so honored, enlightened, and exalted our nature.”"
+    },
+    {
+     "type": "para",
+     "text": "– St. John of Kronstadt, The Spiritual Counsels."
+    },
+    {
+     "type": "para",
+     "text": "“Though the soul is not present, a power resides in the bodies of the saints because of the righteous soul which has for many years dwelt in it, or used it as its minister” (St. Cyril of Jerusalem, Catechetical Lectures, XVIII, 16)."
+    },
+    {
+     "type": "heading",
+     "text": "BRIEF BIBLIOGRAPHY: ORTHODOX CATECHISMS"
+    },
+    {
+     "type": "para",
+     "text": "Alfeyev, Hilarion, Catechism: A Short Guide to Orthodox Christianity (New York: SVS Press, 2024). Carlton, Clark, The Faith: Understanding Orthodox Christianity. An Orthodox Catechism (Salisbury: Regina Orthodox Press, 1997) 286 pp."
+    },
+    {
+     "type": "para",
+     "text": "Carlton, Clark, The Life: The Orthodox Doctrine of Salvation. An Orthodox Catechism (Salisbury: Regina Orthodox Press, 2000) 190 pp."
+    },
+    {
+     "type": "bullet",
+     "text": "Some repetition of themes from The Faith: Creation, fall, Christ, Church, Salvation",
+     "level": 1
+    },
+    {
+     "type": "para",
+     "text": "Constantinou, Eugenia S., Thinking Orthodox. Understanding and Acquiring the Orthodox Christian Mind. (Chesterton, Indiana: Ancient Faith Publishing, 2020). 350pp. Gregorios, Hieromonk, The Orthodox Faith, Worship, and Life. Orthodox Catechism: An Outline. Trans. Chara Dimakopoulou (Columbia, Missouri: Newrome Press, 2020). Hopko, Thomas, The Orthodox Faith: An Elementary Handbook on the Orthodox Church. 4 vols. 2nd Edition (Crestwood: SVS Press, 2016). Lossky, Vladimir, Orthodox Theology: An Introduction (Crestwood: SVS Press, 1989) 137pp. Pomazansky, Michael, Orthodox Dogmatic Theology: A Concise Exposition. Seraphim Rose, trans. (Platina: St Herman Press, 1994). Schmemann, Alexander, For the Life of the World (Crestwood: SVS Press, 1974). Shanbour, Michael, Know the Faith. A Handbook for Orthodox Christians and Inquirers (Chesterton: Ancient Faith Publishing, 2016) 345pp. Tibbs, Eve, A Basic Guide to Eastern Orthodox Theology. Introducing Beliefs and Practices. (Grand Rapids, Michigan: Baker Academic, 2021) 224 pp."
+    },
+    {
+     "type": "para",
+     "text": "Ware, Timothy (Kallistos), The Orthodox Church: An Introduction to Eastern Christianity. Third Edition (London: Penguin Books, 2015). Ware, Kallistos, The Orthodox Way (Crestwood: SVS Press, 1995)."
+    }
+   ],
+   "footnotes": [],
+   "page_start": 74,
+   "title": "The Intercession of the Saints"
+  }
+ ]
+}
