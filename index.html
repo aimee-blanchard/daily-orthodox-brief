@@ -234,7 +234,11 @@
     max-height: calc(100dvh - 80px);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    overscroll-behavior: contain;
+    /* Let a swipe that reaches the end of the box carry on scrolling the page
+       (like the old service-text panel), so she can move on to other sections.
+       Only sideways overscroll is contained. */
+    overscroll-behavior-x: contain;
+    overscroll-behavior-y: auto;
     scrollbar-color: #ffffff transparent;
     padding: 0.8rem 1.25rem 1.1rem;
   }
