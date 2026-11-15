@@ -607,7 +607,66 @@
     font-family: var(--serif);
     font-size: 1rem;
     line-height: 1.5;
+    /* White scrollbar, like the service-text scroll box (color-scheme makes
+       iOS draw its overlay scroll indicator light on the dark box). */
+    overflow-y: auto;
+    color-scheme: dark;
+    scrollbar-color: #ffffff transparent;
   }
+  .notes-textarea::-webkit-scrollbar { width: 8px; }
+  .notes-textarea::-webkit-scrollbar-track { background: transparent; }
+  .notes-textarea::-webkit-scrollbar-thumb { background-color: #ffffff; border-radius: 8px; }
+
+  /* Parish practice in the Divine Liturgy Full Outline (see parishPractice). */
+  .parish-tag {
+    display: inline-block; font-family: var(--sans, system-ui, sans-serif); font-style: normal;
+    font-size: 0.66rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--accent); border: 1px solid var(--accent); border-radius: 999px;
+    padding: 0.05rem 0.45rem; margin-right: 0.35rem; vertical-align: 0.12em;
+  }
+  .parish-rubric {
+    margin: -0.35rem 0 0.9rem 1.8rem; font-family: var(--serif); font-style: italic;
+    font-size: 0.98rem; line-height: 1.45; color: var(--accent);
+  }
+  .heading-line + .parish-rubric, .parish-rubric + .parish-rubric { margin-left: 0; }
+  .heading-line + .parish-rubric { margin-top: -0.3rem; }
+  .parish-rubric + .parish-rubric { margin-top: -0.5rem; }
+  .line-main { display: flex; flex-direction: column; min-width: 0; }
+  .choir-resp {
+    font-family: var(--serif); font-style: italic; font-size: 0.95rem; color: var(--ink-faint); margin-top: 0.15rem;
+  }
+  .line-ref {
+    align-self: flex-start; margin-top: 0.25rem; font-size: 0.8rem; color: var(--accent);
+    border: 1px solid var(--rule); border-radius: 6px; padding: 0.05rem 0.4rem;
+  }
+  /* "The choir responds ... to each petition": its response is shown after
+     every petition instead, so the instruction line itself is hidden. */
+  .checkable-line.rubric-line { display: none; }
+  .checkable-line.parish-title .title-sub {
+    font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 0.92rem; color: var(--ink-faint); margin-top: 0.2rem;
+  }
+  .checkable-line.reading-title { cursor: default; margin: 0.6rem 0 0.5rem; }
+  .reading-kicker {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent);
+  }
+  .checkable-line.reading-title .line-text { font-weight: 600; }
+  .checkable-line.reading-line { border-left: 3px solid var(--accent); padding-left: 0.6rem; margin-left: -0.2rem; }
+  .reading-fill { border-left: 3px solid var(--accent); padding-left: 0.75rem; margin: 0 0 0.85rem; font-family: var(--serif); font-size: 1.05rem; line-height: 1.5; }
+  .reading-fill p { margin: 0; }
+  .reading-fill .reading-fill-src { font-size: 0.8rem; color: var(--ink-faint); font-style: italic; margin-bottom: 0.2rem; }
+  .parish-skip { margin: 0.2rem 0 0.9rem; }
+  .parish-skip-toggle {
+    appearance: none; display: block; width: 100%; text-align: left; background: transparent;
+    border: 1px dashed var(--rule); border-radius: 8px; padding: 0.55rem 0.7rem; color: var(--accent);
+    font-family: var(--serif); font-style: italic; font-size: 0.98rem; line-height: 1.4; cursor: pointer;
+  }
+  .parish-skip-show {
+    display: block; margin-top: 0.2rem; font-style: normal; font-size: 0.8rem; color: var(--ink-faint);
+  }
+  .parish-skip-show::after { content: " \25BE"; }
+  .parish-skip-toggle[aria-expanded="true"] .parish-skip-show::after { content: " \25B4"; }
+  .parish-skip.collapsed .parish-skip-rows { display: none; }
+  .parish-skip-rows { opacity: 0.55; margin-top: 0.7rem; }
   .notes-actions {
     display: flex;
     align-items: center;
@@ -970,25 +1029,169 @@
     return 0;
   }
 
-  function renderCheckableBody(text, storageKey, serviceLabel) {
+  /* ---- Parish practice (Divine Liturgy Full Outline) --------------------
+     Aimee's notes from attending Liturgy at her parish, applied to the Full
+     Outline every day it appears. This never adds liturgical text: it only
+     re-styles existing lines (title / instruction / reading), hides blocks
+     behind a toggle, repeats the choir response the book itself names after
+     each petition, and adds short "Our parish" rubrics in her words.
+     Paragraph indexes are untouched, so saved progress and pinned notes
+     still line up. */
+  var GOSPEL_BOOK_RE = /^(st\.?\s*)?(matthew|mark|luke|john)\b/i;
+  function startsWithCI(p, prefix) { return p.toLowerCase().indexOf(prefix.toLowerCase()) === 0; }
+  function findPara(paras, prefix, from) {
+    for (var i = from || 0; i < paras.length; i++) if (startsWithCI(paras[i], prefix)) return i;
+    return -1;
+  }
+  function verseSig(s) { var m = /[0-9]+:[0-9]+/.exec(s || ""); return m ? m[0] : null; }
+  function isFallbackPara(p) { return /^\(See the parish bulletin/i.test(p); }
+
+  function parishPractice(label, paras, lit) {
+    var pp = { rows: {}, skips: [] };
+    if (!/full outline/i.test(label || "")) return pp;
+    function row(i) { return pp.rows[i] || (pp.rows[i] = { after: [] }); }
+    var readings = (lit && lit.readings) || [];
+    function matchReading(ref) {
+      var sig = verseSig(ref);
+      if (!sig) return null;
+      return readings.filter(function (r) { return verseSig(r.display) === sig; })[0] || null;
+    }
+
+    // 1-2. Epistle and Gospel laid out as readings, with their titles shown
+    // where the reader / deacon announces them.
+    function reading(kicker, introPrefix, endPrefix, announcePrefix, pickFallback, rubric) {
+      var intro = findPara(paras, introPrefix);
+      if (intro < 0) return;
+      var t = intro + 1, end = findPara(paras, endPrefix, t);
+      if (t >= paras.length || end < 0 || end - t > 12) return;
+      var ref = paras[t], fill = null;
+      if (isFallbackPara(paras[t])) {
+        fill = pickFallback();
+        if (!fill) return;
+        ref = fill.display;
+        row(t).mode = "reading-title"; row(t).kicker = kicker; row(t).display = ref; row(t).fill = fill.text;
+      } else {
+        var r = matchReading(ref);
+        if (r) ref = r.display;
+        row(t).mode = "reading-title"; row(t).kicker = kicker; row(t).display = ref;
+        for (var i = t + 1; i < end; i++) row(i).mode = "reading";
+      }
+      if (rubric) row(end - 1).after.push(rubric);
+      var ann = findPara(paras, announcePrefix);
+      if (ann >= 0 && ann < t) row(ann).ref = ref;
+    }
+    reading("The Epistle", "The reader chants the appointed epistle", "PRIEST: Peace be to thee that readest",
+      "READER: (says the title of the epistle)",
+      function () { return readings.filter(function (r) { return r.text && !GOSPEL_BOOK_RE.test(r.display || ""); })[0]; }, null);
+    reading("The Gospel", "DEACON: Let us attend. (and he chants the appointed lection)", "PRIEST: Peace be to thee that proclaimest",
+      "DEACON: The reading from the holy gospel according to",
+      function () { return readings.filter(function (r) { return r.text && GOSPEL_BOOK_RE.test(r.display || ""); })[0]; },
+      "The Gospel is read in English, then in Arabic.");
+
+    // 3. The homily is a section title, not a checkbox.
+    var hom = findPara(paras, "The priest preaches the homily");
+    if (hom >= 0) { row(hom).mode = "title"; row(hom).display = "THE HOMILY"; }
+
+    // 7. Prayer for the catechumens: skipped here.
+    var cat = findPara(paras, "PRAYER FOR THE CATECHUMENS");
+    if (cat >= 0) {
+      var catEnd = cat + 1;
+      while (catEnd < paras.length && !isHeadingLine(paras[catEnd])) catEnd++;
+      if (catEnd - 1 > cat) pp.skips.push({ start: cat + 1, end: catEnd - 1, label: "Skipped at our parish (done during the Great Entrance)" });
+    }
+
+    // 8-9. "The choir responds X to each petition" is an instruction, not a
+    // line to check off; the response goes after each petition instead.
+    paras.forEach(function (p, i) {
+      var m = /^The choir responds (.+?) to (this and the following|each) petitions?(?: until noted)?\.?$/i.exec(p);
+      if (!m) return;
+      var resp = "Choir: " + m[1].replace(/[.\s]+$/, "") + ".";
+      row(i).mode = "instruction";
+      var prev = i - 1;
+      if (prev >= 0 && !isHeadingLine(paras[prev]) && (m[2].toLowerCase() !== "each" ? !SPEAKER_TAG_PATTERN.test(paras[prev]) : /^deacon\s*:/i.test(paras[prev]))) {
+        row(prev).resp = resp;
+      }
+      for (var j = i + 1; j < paras.length; j++) {
+        var q = paras[j];
+        if (isHeadingLine(q) || SPEAKER_TAG_PATTERN.test(q) || /^The choir responds/i.test(q)) break;
+        if (j + 1 < paras.length && /^choir\s*:/i.test(paras[j + 1])) break; // has its own response line
+        row(j).resp = resp;
+      }
+    });
+
+    // 10-14. Short parish rubrics.
+    var bow = findPara(paras, "PRIEST: The grace of our Lord Jesus Christ and the love of God the Father");
+    if (bow >= 0) row(bow).after.push("We bow.");
+    var hearts = findPara(paras, "PRIEST: Let us lift up our hearts");
+    if (hearts >= 0) row(hearts).after.push("We hold out our hands.");
+    var epi = paras.indexOf("THE EPICLESIS");
+    if (epi >= 0) {
+      row(epi).after.push("The people say many of the deacon\u2019s responses here, mostly the Amens.");
+      row(epi).after.push("The offering is collected during the Epiclesis.");
+    }
+    var ofa = paras.indexOf("THE OUR FATHER");
+    if (ofa >= 0) row(ofa).after.push("We hold out our hands. Said in English, then in Arabic.");
+
+    // 15. The fraction dialogue isn't said aloud here.
+    var dv = findPara(paras, "DEACON: Divide, master, the holy bread");
+    var dvEnd = dv >= 0 ? findPara(paras, "DEACON: The warmth of the Holy Spirit", dv) : -1;
+    if (dv >= 0 && dvEnd >= dv && dvEnd - dv < 15) pp.skips.push({ start: dv, end: dvEnd, label: "Not said aloud at our parish" });
+    return pp;
+  }
+
+  function parishRubricHtml(text) {
+    return '<div class="parish-rubric"><span class="parish-tag">Our parish</span> <span class="parish-rubric-text">' + esc(text) + "</span></div>";
+  }
+
+  function renderCheckableBody(text, storageKey, serviceLabel, lit) {
     var paragraphs = text.split(/\n+/).map(function (p) { return p.trim(); }).filter(Boolean);
     var preambleCount = countPreambleLines(paragraphs);
-    var rows = paragraphs
-      .map(function (p, i) {
-        if (i < preambleCount) {
-          return '<div class="checkable-line meta-line" data-para="' + i + '"><span class="line-text">' + esc(p) + "</span></div>";
-        }
-        if (isHeadingLine(p)) {
-          return '<div class="checkable-line heading-line" data-para="' + i + '"><span class="line-text">' + esc(p) + "</span></div>";
-        }
-        return (
-          '<label class="checkable-line" data-para="' + i + '">' +
-          '<input type="checkbox" class="line-check" data-index="' + i + '">' +
-          '<span class="line-text">' + esc(p) + "</span>" +
-          "</label>"
+    var pp = parishPractice(serviceLabel, paragraphs, lit);
+    function rowHtml(p, i) {
+      var r = pp.rows[i] || { after: [] };
+      var after = r.after.map(parishRubricHtml).join("");
+      if (i < preambleCount) {
+        return '<div class="checkable-line meta-line" data-para="' + i + '"><span class="line-text">' + esc(p) + "</span></div>";
+      }
+      if (r.mode === "title") {
+        return '<div class="checkable-line heading-line parish-title" data-para="' + i + '"><span class="line-main"><span class="line-text">' + esc(r.display) + '</span><span class="title-sub">' + esc(p) + "</span></span></div>" + after;
+      }
+      if (r.mode === "instruction") {
+        return '<div class="checkable-line rubric-line" data-para="' + i + '"><span class="line-text">' + esc(p) + "</span></div>" + after;
+      }
+      if (r.mode === "reading-title") {
+        return '<div class="checkable-line reading-title" data-para="' + i + '"><span class="line-main"><span class="reading-kicker">&#x1F4D6; ' + esc(r.kicker) + '</span><span class="line-text">' + esc(r.display) + "</span></span></div>" +
+          (r.fill ? '<div class="reading-fill"><p class="reading-fill-src">From today&rsquo;s readings</p><p>' + esc(r.fill) + "</p></div>" : "") + after;
+      }
+      if (isHeadingLine(p)) {
+        return '<div class="checkable-line heading-line" data-para="' + i + '"><span class="line-text">' + esc(p) + "</span></div>" + after;
+      }
+      var extra = (r.resp ? '<span class="choir-resp">' + esc(r.resp) + "</span>" : "") + (r.ref ? '<span class="line-ref">' + esc(r.ref) + "</span>" : "");
+      return (
+        '<label class="checkable-line' + (r.mode === "reading" ? " reading-line" : "") + '" data-para="' + i + '">' +
+        '<input type="checkbox" class="line-check" data-index="' + i + '">' +
+        (extra ? '<span class="line-main"><span class="line-text">' + esc(p) + "</span>" + extra + "</span>" : '<span class="line-text">' + esc(p) + "</span>") +
+        "</label>" + after
+      );
+    }
+    var html = [];
+    for (var i = 0; i < paragraphs.length; i++) {
+      var sk = pp.skips.filter(function (s) { return s.start === i; })[0];
+      if (sk) {
+        var inner = [];
+        for (var j = sk.start; j <= sk.end; j++) inner.push(rowHtml(paragraphs[j], j));
+        html.push(
+          '<div class="parish-skip collapsed">' +
+          '<button type="button" class="parish-skip-toggle" aria-expanded="false">' +
+          '<span class="parish-tag">Our parish</span> <span class="parish-rubric-text">' + esc(sk.label) + '</span><span class="parish-skip-show">Show text</span></button>' +
+          '<div class="parish-skip-rows">' + inner.join("") + "</div></div>"
         );
-      })
-      .join("");
+        i = sk.end;
+        continue;
+      }
+      html.push(rowHtml(paragraphs[i], i));
+    }
+    var rows = html.join("");
     return (
       '<div class="checkable-body" data-storage-key="' + esc(storageKey) + '" data-service="' + esc(serviceLabel || "") + '">' +
       '<div class="checkable-header">' +
@@ -1014,7 +1217,7 @@
     var items = lit.service_texts.map(function (s) {
       if (!s.text) return s;
       var storageKey = "serviceProgress:" + dateStr + ":" + s.label;
-      return { label: s.label, html: renderCheckableBody(s.text, storageKey, s.label) };
+      return { label: s.label, html: renderCheckableBody(s.text, storageKey, s.label, lit) };
     });
     serviceOrder = lit.service_texts.map(function (s) { return s.label; });
     return renderCollapsible("services", "Service Texts", lit.service_texts.map(function (s) { return s.label; }).join(" · "),
@@ -1298,9 +1501,11 @@
         var key = container.getAttribute("data-storage-key");
         var n = parseInt(localStorage.getItem(key) || "0", 10);
         if (n <= 0) return;
-        var lastChecked = container.querySelector('.line-check[data-index="' + (n - 1) + '"]');
-        if (!lastChecked) return;
-        var line = lastChecked.closest(".checkable-line");
+        var line = null;
+        container.querySelectorAll(".checkable-rows .checkable-line[data-para]").forEach(function (r) {
+          if (+r.getAttribute("data-para") <= n - 1) line = r;
+        });
+        if (!line) return;
         ensureSectionOpen(line);
         line.scrollIntoView({ block: "center" });
         line.classList.add("search-current");
@@ -1602,17 +1807,75 @@
         localStorage.setItem(key, textarea.value);
       });
 
-      textarea.addEventListener("keydown", function (e) {
-        if (e.key !== "Enter" || e.shiftKey) return;
+      // Every new line starts with a bullet, always. iOS Safari doesn't
+      // reliably let keydown cancel Enter (autocorrect/predictive text turns
+      // it into an input event), so: beforeinput (insertLineBreak /
+      // insertParagraph) is the main path, keydown covers browsers without
+      // it, and an input-time check bullets any bare new line that still
+      // slips through.
+      var BULLET = "\u2022 ";
+      var handledAt = 0;
+      function insertBullet() {
+        var start = textarea.selectionStart, end = textarea.selectionEnd;
+        var insert = "\n" + BULLET;
+        textarea.setRangeText(insert, start, end, "end");
+        handledAt = Date.now();
+        save();
+        keepCaretVisible();
+      }
+      function save() { localStorage.setItem(key, textarea.value); }
+      textarea.addEventListener("beforeinput", function (e) {
+        if (e.inputType !== "insertLineBreak" && e.inputType !== "insertParagraph") return;
         e.preventDefault();
-        var start = textarea.selectionStart;
-        var end = textarea.selectionEnd;
-        var insert = "\n• ";
-        textarea.value = textarea.value.slice(0, start) + insert + textarea.value.slice(end);
-        var pos = start + insert.length;
-        textarea.setSelectionRange(pos, pos);
-        localStorage.setItem(key, textarea.value);
+        // keydown already handled this Enter (its preventDefault was ignored).
+        if (Date.now() - handledAt < 50) return;
+        insertBullet();
       });
+      textarea.addEventListener("keydown", function (e) {
+        if (e.key !== "Enter" || e.shiftKey || e.isComposing) return;
+        e.preventDefault();
+        insertBullet();
+      });
+      textarea.addEventListener("input", function (e) {
+        // A newline that got in anyway (e.g. autocorrect committing a word
+        // and Enter together): make sure the line after it is bulleted.
+        var pos = textarea.selectionStart;
+        var v = textarea.value;
+        if (e.inputType && e.inputType.indexOf("insert") !== 0) { keepCaretVisible(); return; } // let deletes join lines
+        if (pos > 0 && v.charAt(pos - 1) === "\n" && v.slice(pos, pos + BULLET.length) !== BULLET) {
+          textarea.setRangeText(BULLET, pos, pos, "end");
+          save();
+        }
+        keepCaretVisible();
+      });
+
+      // Keep the line she's typing in view inside the notes box.
+      var mirror = null;
+      function keepCaretVisible() {
+        var pos = textarea.selectionEnd;
+        if (pos >= textarea.value.length - 1) {
+          textarea.scrollTop = textarea.scrollHeight;
+          return;
+        }
+        if (!mirror) {
+          mirror = document.createElement("div");
+          mirror.setAttribute("aria-hidden", "true");
+          document.body.appendChild(mirror);
+        }
+        var cs = getComputedStyle(textarea);
+        ["boxSizing", "width", "paddingTop", "paddingRight", "paddingBottom", "paddingLeft", "borderTopWidth", "borderRightWidth",
+          "borderBottomWidth", "borderLeftWidth", "fontFamily", "fontSize", "fontWeight", "lineHeight", "letterSpacing", "wordSpacing"]
+          .forEach(function (k) { mirror.style[k] = cs[k]; });
+        mirror.style.position = "absolute"; mirror.style.visibility = "hidden"; mirror.style.top = "0"; mirror.style.left = "-9999px";
+        mirror.style.whiteSpace = "pre-wrap"; mirror.style.wordWrap = "break-word"; mirror.style.borderStyle = "solid";
+        mirror.textContent = textarea.value.slice(0, pos);
+        var marker = document.createElement("span");
+        marker.textContent = "\u200b";
+        mirror.appendChild(marker);
+        var caretTop = marker.offsetTop, lh = parseFloat(cs.lineHeight) || 24;
+        if (caretTop + lh > textarea.scrollTop + textarea.clientHeight) textarea.scrollTop = caretTop + lh - textarea.clientHeight + 4;
+        else if (caretTop < textarea.scrollTop) textarea.scrollTop = Math.max(0, caretTop - 4);
+      }
 
       var card = textarea.closest(".notes-card");
       var status = card.querySelector(".notes-copy-status");
@@ -1700,7 +1963,19 @@
   function ensureSectionOpen(el) {
     var sec = el && el.closest ? el.closest(".cs") : null;
     if (sec && !sec.classList.contains("open")) setSectionOpen(sec, true);
+    var skip = el && el.closest ? el.closest(".parish-skip.collapsed") : null;
+    if (skip) setSkipOpen(skip, true);
   }
+  function setSkipOpen(skip, open) {
+    skip.classList.toggle("collapsed", !open);
+    var b = skip.querySelector(".parish-skip-toggle");
+    b.setAttribute("aria-expanded", open ? "true" : "false");
+    b.querySelector(".parish-skip-show").textContent = open ? "Hide text" : "Show text";
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest(".parish-skip-toggle");
+    if (b) setSkipOpen(b.closest(".parish-skip"), b.getAttribute("aria-expanded") !== "true");
+  });
   window.BriefSections = { render: renderCollapsible, open: function (id) { setSectionOpen(document.querySelector('.cs[data-cs="' + id + '"]'), true); }, ensureOpen: ensureSectionOpen, setOpen: setSectionOpen };
   document.addEventListener("click", function (e) {
     var t = e.target.closest && e.target.closest(".svc-notes-toggle");

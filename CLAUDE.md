@@ -171,6 +171,27 @@ articles are cached in `data/cache/newadvent.json`; bump
 - Switching service texts: a sticky chip row (`.text-switch`, built by `renderTextChooser`) sits at the very top of the Service Texts scroll box, and the search header sticks just under it (`--switch-h`, measured in `wireTextChoosers`). It used to be a plain `<select>` at the top of the scroll box that scrolled out of view, especially with Liturgy Notes open, so on her phone there was no way to switch texts (Nov 2026). Keep the switcher pinned. Readings show Epistle and Gospel together, so they need no switcher. The catechism lesson picker (`.cat-sticky`) is already pinned.
 - `window.BriefSections` (`render`, `open`, `setOpen`, `ensureOpen`) lets other code open a section: search hits, "Resume where I left off", and the catechism review reminder auto-expand a collapsed section. Opening and closing fire a bubbling `cs-toggle` event; catechism.js uses it to load lessons lazily.
 
+### Parish practice in the Divine Liturgy (Full Outline)
+
+- `parishPractice()` in index.html applies Aimee's notes from attending Liturgy at her parish to the "Divine Liturgy (Full Outline)" text at render time, so every day's data gets them, past and future, with no data edits. It matches lines of `liturgy_outline.txt` by their opening words. If a line isn't found, that one change is skipped quietly.
+- Rule: never add liturgical text. It only re-styles existing lines, hides blocks behind a "Show text" toggle, repeats the response the book itself names, and adds short "Our parish" rubrics in her words (italic, accent colour, pill tag, never a checkbox).
+- Current rules:
+  - The Epistle and Gospel are shown as reading blocks, with their reference on the announcing line. If the outline only has the bulletin fallback, the text is filled from the day's readings.
+  - Rubric after the Gospel: "The Gospel is read in English, then in Arabic."
+  - "THE HOMILY" is a title, not a checkbox.
+  - The Prayer for the Catechumens is collapsed: "Skipped at our parish (done during the Great Entrance)".
+  - The "The choir responds X to each petition / this and the following" lines are hidden, and "Choir: X." follows each petition instead.
+  - "We bow." after "The grace of our Lord Jesus Christ…".
+  - "We hold out our hands." after "Let us lift up our hearts".
+  - Two Epiclesis rubrics: the people say most of the deacon's Amens; the offering is collected then.
+  - Our Father: "We hold out our hands. Said in English, then in Arabic."
+  - The fraction dialogue ("Divide, master…" through "The warmth of the Holy Spirit. Amen.") is collapsed: "Not said aloud at our parish".
+- Paragraph indexes (`data-para`) stay the same, so saved progress and pinned notes still line up. Search and Resume open a collapsed block when they land inside it.
+- Liturgy Notes textarea:
+  - Every new line starts with "• ". This is handled on beforeinput (insertParagraph / insertLineBreak), on keydown, and by an input-time check, because iOS doesn't always let keydown cancel Enter.
+  - The caret is kept in view.
+  - The scrollbar is white.
+
 ### Catechism class (data/catechism/lessons.json, catechism.js, catechism.css)
 
 - Lesson text comes from the parish's Adult Catechism handout ("Adult Catechism – All Lessons (complete) – rev 05", 80 pp, 14 lessons). `tools/extract_catechism.py` turns the PDF into `data/catechism/lessons.json`: per lesson `id`, `title`, `synopsis`, `blocks` (`heading` / `para` / `bullet` with `level` 1–3) and `footnotes` (`[^n]` refs inline). Page numbers and PDF artifacts are dropped and line wraps re-joined heuristically. It's static: re-run the script only when the parish issues a new revision. `fetch.py` doesn't touch it.
