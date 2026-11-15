@@ -276,8 +276,6 @@
   .story-text p { margin: 0 0 0.6rem; }
   .story-text p:last-child { margin-bottom: 0; }
 
-  .fast-desc { font-size: 1.05rem; margin: 0 0 0.35rem; }
-  .fast-abstentions { font-size: 0.9rem; color: var(--ink-soft); margin: 0 0 0.6rem; }
   .fast-cal-link { font-size: 0.85rem; }
 
   a.mini-fast {
@@ -834,28 +832,6 @@
     return '<section class="card"><h2>About Today&rsquo;s Saints</h2>' + blocks + "</section>";
   }
 
-  function renderFastingSection(lit) {
-    if (!lit || !lit.fasting) return "";
-    var f = lit.fasting;
-    var abst = f.abstentions && f.abstentions.length
-      ? '<p class="fast-abstentions">Abstain from: ' + f.abstentions.map(esc).join(", ") + "</p>"
-      : "";
-    var calLink =
-      '<p class="fast-cal-link"><a href="fasting.html" target="_blank" rel="opener">Full fasting calendar &rarr;</a>' +
-      (index.links.fasting_calendar_pdf
-        ? ' &middot; <a href="' + esc(index.links.fasting_calendar_pdf) + '" target="_blank" rel="noopener">Archdiocese PDF</a>'
-        : "") +
-      "</p>";
-    return (
-      '<section class="card"><h2>Fasting</h2><p class="fast-desc">' +
-      esc(f.description) +
-      "</p>" +
-      abst +
-      calLink +
-      "</section>"
-    );
-  }
-
   /* Compact current-month fasting calendar shown at the top of the brief.
      Tapping it opens the full calendar (fasting.html) in a new tab. */
   function renderMiniFastingCalendar(dateStr) {
@@ -1029,13 +1005,13 @@
         );
       })
       .join("");
-    return (
-      '<section class="card"><h2>Parish Events Today</h2><ul class="event-list">' +
-      items +
+    var meta = day.events.length + (day.events.length === 1 ? " event" : " events") + " · " +
+      day.events.map(function (ev) { return ev.title; }).join(" · ");
+    return renderCollapsible("events", "Parish Events Today", meta,
+      '<ul class="event-list">' + items +
       '</ul><p class="fast-cal-link" style="margin-top:0.6rem"><a href="' +
       esc(index.links.parish_calendar) +
-      '" target="_blank" rel="noopener">Parish calendar &rarr;</a></p></section>'
-    );
+      '" target="_blank" rel="noopener">Parish calendar &rarr;</a></p>');
   }
 
   function renderPrayerListSection() {
@@ -1060,7 +1036,10 @@
       })
       .join("");
     if (!body) return "";
-    return '<section class="card"><h2>Prayer List</h2>' + body + "</section>";
+    var total = groups.reduce(function (n, g) { return n + ((pl[g.key] || []).length); }, 0);
+    var meta = total + " names · " + groups.filter(function (g) { return pl[g.key] && pl[g.key].length; })
+      .map(function (g) { return { sick: "Health", military: "Armed forces", catechumens: "Catechumens" }[g.key]; }).join(" · ");
+    return renderCollapsible("prayer", "Prayer List", meta, body);
   }
 
   function renderStalenessBanners() {
@@ -1577,7 +1556,6 @@
 
     html += renderStalenessBanners();
     html += renderFeastSection(lit);
-    html += renderFastingSection(lit);
     html += renderSaintsSection(lit);
     html += renderStoriesSection(lit);
     html += renderServiceLinksSection(lit, dateStr);

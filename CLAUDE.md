@@ -33,7 +33,7 @@ has it.
 - Liturgy link
 - Feast for the day
 - Reading for the day
-- Fasting for the day, plus a quick link to the full-year fasting calendar
+- Fasting for the day: shown by the mini fasting calendar at the top of the brief (no separate fasting card), which links to the full-year calendar (fasting.html)
 - Vespers link
 - Saints commemorated today, with a link to read more about them
 
@@ -163,7 +163,9 @@ articles are cached in `data/cache/newadvent.json`; bump
 
 ### Collapsible sections
 
-- Synaxarion (Saints Commemorated + New Advent bios), Service Texts, Catechism and Daily Bible Readings render via `renderCollapsible()` in index.html as thin bars (title, one-line summary, chevron), collapsed by default. Several can be open at once; open/closed state isn't remembered.
+- There's no separate Fasting card any more (Aimee: the calendar is enough). Today's fast shows in the mini fasting calendar at the top, and the full detail is on fasting.html. `fetch.py` still writes `liturgical.fasting` to day files; the page just doesn't render it as a card.
+
+- Synaxarion (Saints Commemorated + New Advent bios), Service Texts, Catechism, Parish Events, Prayer List and Daily Bible Readings render via `renderCollapsible()` in index.html as thin bars (title, one-line summary, chevron), collapsed by default. Several can be open at once; open/closed state isn't remembered.
 - An open section's body is the one scroll box: `max-height: calc(100dvh - 80px)` (vh fallback), `overflow-y: auto`, vertical scroll chaining left on (a swipe past the end carries on scrolling the page), white scrollbar like the old service-text panel. The service-text panel no longer scrolls on its own inside it. The bar is sticky, and the service-text search header and catechism lesson picker stick to the top of the scroll box.
 - `window.BriefSections` (`render`, `open`, `setOpen`, `ensureOpen`) lets other code open a section: search hits, "Resume where I left off", and the catechism review reminder auto-expand a collapsed section. Opening and closing fire a bubbling `cs-toggle` event; catechism.js uses it to load lessons lazily.
 
