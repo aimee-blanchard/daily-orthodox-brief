@@ -129,6 +129,20 @@ The daily lectionary lives at `https://www.antiochian.org/epistleliturgicday/`.
 - Where the annual fasting calendar PDF lives and whether its URL is
   year-predictable or must be hardcoded and updated each September
 
+### Fasting calendar (data/fasting.json, fasting.html)
+
+Built daily by `build_fasting_calendar()` in `fetch.py` for this year and next.
+Per-day precedence: antiochian.org daily page (in the 98-day window) >
+the Archdiocese's annual color-coded PDF
+(`antiochianprodsa.blob.core.windows.net/liturgicalinstructions/{year} Fasting Calendar.pdf`,
+cell colors mapped through the legend printed on the PDF) > orthocal.info Greek
+API, used only for a year whose PDF isn't published yet and flagged
+`provisional`. The next year's PDF has appeared in late November. Season names
+(Great Lent, Apostles' Fast, fast-free weeks...) are computed from the
+Paschalion purely as labels; fast levels always come from a source.
+`index.html` shows a mini month calendar at the top; tapping opens
+`fasting.html` in a new tab. Shared code: `fasting.js`, `fasting.css`.
+
 ### constantinehelen.com
 
 Entirely uninspected. Nothing is known about the platform, the calendar

@@ -6,6 +6,7 @@
 <title>Daily Orthodox Brief</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="stylesheet" href="fasting.css">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#060606">
@@ -158,6 +159,25 @@
   .fast-desc { font-size: 1.05rem; margin: 0 0 0.35rem; }
   .fast-abstentions { font-size: 0.9rem; color: var(--ink-soft); margin: 0 0 0.6rem; }
   .fast-cal-link { font-size: 0.85rem; }
+
+  a.mini-fast {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  a.mini-fast:active section.card { background: #232320; }
+  .mini-fast section.card { padding: 0.85rem 1rem 0.8rem; }
+  .mini-fast-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  .mini-fast-head h2 { margin: 0 !important; }
+  .mini-fast-open { font-size: 0.75rem; color: var(--accent); white-space: nowrap; }
+  .mini-fast-today { font-size: 0.85rem; color: var(--ink-soft); margin: 0.55rem 0 0; }
+  .mini-fast-note { font-size: 0.7rem; color: var(--ink-faint); margin: 0.35rem 0 0; }
 
   .reading-block { margin-bottom: 1.4rem; }
   .reading-block:last-child { margin-bottom: 0; }
@@ -437,6 +457,7 @@
   <div class="empty-state" id="loading">Loading today&rsquo;s brief&hellip;</div>
 </main>
 
+<script src="fasting.js"></script>
 <script>
 (function () {
   "use strict";
@@ -444,6 +465,7 @@
   var app = document.getElementById("app");
   var dayCache = {};
   var index = null;
+  var fastingData = null;
   var currentDate = null;
 
   function esc(s) {
@@ -573,9 +595,12 @@
     var abst = f.abstentions && f.abstentions.length
       ? '<p class="fast-abstentions">Abstain from: ' + f.abstentions.map(esc).join(", ") + "</p>"
       : "";
-    var calLink = index.links.fasting_calendar_pdf
-      ? '<p class="fast-cal-link"><a href="' + esc(index.links.fasting_calendar_pdf) + '" target="_blank" rel="noopener">Full-year fasting calendar &rarr;</a></p>'
-      : "";
+    var calLink =
+      '<p class="fast-cal-link"><a href="fasting.html" target="_blank" rel="noopener">Full fasting calendar &rarr;</a>' +
+      (index.links.fasting_calendar_pdf
+        ? ' &middot; <a href="' + esc(index.links.fasting_calendar_pdf) + '" target="_blank" rel="noopener">Archdiocese PDF</a>'
+        : "") +
+      "</p>";
     return (
       '<section class="card"><h2>Fasting</h2><p class="fast-desc">' +
       esc(f.description) +
@@ -583,6 +608,35 @@
       abst +
       calLink +
       "</section>"
+    );
+  }
+
+  /* Compact current-month fasting calendar shown at the top of the brief.
+     Tapping it opens the full calendar (fasting.html) in a new tab. */
+  function renderMiniFastingCalendar(dateStr) {
+    if (!fastingData || !window.Fasting) return "";
+    var F = window.Fasting;
+    var y = +dateStr.slice(0, 4), m = +dateStr.slice(5, 7);
+    var info = F.dayInfo(fastingData, dateStr);
+    if (!info.covered) return "";
+    var today = F.todayCentral();
+    var who = dateStr === today ? "Today" : "This day";
+    var line = info.levelInfo
+      ? who + ": <strong>" + F.esc(info.levelInfo.label) + "</strong>"
+      : info.fastFree ? who + ": fast-free" : who + ": no fast";
+    var context = info.season ? info.season.name : info.fastFree ? info.fastFree.name.replace(/^Fast-free: /, "") : "";
+    if (context) line += " &middot; " + F.esc(context);
+    var levels = F.levelsInMonth(fastingData, y, m);
+    var href = "fasting.html?m=" + y + "-" + F.pad(m) + "&d=" + dateStr;
+    return (
+      '<a class="mini-fast" href="' + href + '" target="_blank" rel="noopener" aria-label="Open the full fasting calendar">' +
+      '<section class="card"><div class="mini-fast-head"><h2>Fasting &middot; ' + F.MONTHS[m - 1] + " " + y + "</h2>" +
+      '<span class="mini-fast-open">Full calendar &#8599;</span></div>' +
+      F.monthGrid(fastingData, y, m, { today: today, selected: dateStr, compact: true }) +
+      F.legend(fastingData, levels, { free: F.hasFastFree(fastingData, y, m), today: true }) +
+      '<p class="mini-fast-today">' + line + "</p>" +
+      (info.provisional ? '<p class="mini-fast-note">Provisional &mdash; the Archdiocese hasn&rsquo;t published this year&rsquo;s calendar yet.</p>' : "") +
+      "</section></a>"
     );
   }
 
@@ -761,6 +815,7 @@
     if (!s.liturgical_ok) messages.push("Couldn&rsquo;t reach the liturgical calendar this morning &mdash; showing the most recent data available.");
     if (!s.parish_events_ok) messages.push("Couldn&rsquo;t reach the parish calendar this morning &mdash; events shown may be out of date.");
     if (!s.bulletin_ok) messages.push("Couldn&rsquo;t find a new bulletin &mdash; linking to the last known one.");
+    if (s.fasting_data_ok === false) messages.push("Couldn&rsquo;t refresh the fasting calendar &mdash; showing the last known one.");
     if (!s.prayer_list_ok) messages.push("Couldn&rsquo;t read the prayer list from the bulletin &mdash; showing the last known list.");
     if (!messages.length) return "";
     return messages.map(function (m) { return '<div class="banner">' + m + "</div>"; }).join("");
@@ -979,6 +1034,7 @@
     var lit = day.liturgical && day.liturgical.status === "ok" ? day.liturgical : null;
 
     var html = "";
+    html += renderMiniFastingCalendar(dateStr);
     html += renderNavBar(dateStr);
 
     if (dateStr !== index.today) {
@@ -999,6 +1055,7 @@
 
     if (!lit) {
       html =
+        renderMiniFastingCalendar(dateStr) +
         renderNavBar(dateStr) +
         '<div class="banner">Couldn&rsquo;t reach the liturgical calendar for this day.</div>' +
         renderNotesSection(dateStr) +
@@ -1029,7 +1086,11 @@
       });
   }
 
-  loadIndex()
+  var fastingReady = window.Fasting
+    ? window.Fasting.load().then(function (d) { fastingData = d; }).catch(function () { fastingData = null; })
+    : Promise.resolve();
+
+  Promise.all([loadIndex(), fastingReady])
     .then(function () { return loadDay(index.today); })
     .then(function (day) { render(index.today, day); })
     .catch(function (err) {

@@ -730,6 +730,286 @@ def fetch_fasting_calendar_link() -> str:
 
 
 # ---------------------------------------------------------------------------
+# Source: Antiochian Archdiocese annual fasting calendar (PDF) -> data/fasting.json
+#
+# The Archdiocese publishes one color-coded PDF per year in a public Azure blob
+# container, at a predictable name ("2026 Fasting Calendar.pdf"). The next
+# year's PDF has historically appeared in late November. We read each day's
+# cell fill color and map it to the legend printed on the same PDF.
+#
+# Per-day precedence (most to least authoritative):
+#   1. antiochian.org's own daily page (already in data/days/, source=antiochian)
+#   2. the Archdiocese's annual fasting-calendar PDF
+#   3. orthocal.info Greek-tradition API -- only for a year whose Antiochian
+#      PDF isn't published yet; marked "provisional" so the UI can say so.
+# Days are never inferred from rules: every level comes from one of the above.
+# ---------------------------------------------------------------------------
+
+FASTING_PDF_URL = "https://antiochianprodsa.blob.core.windows.net/liturgicalinstructions/{year}%20Fasting%20Calendar.pdf"
+ORTHOCAL_MONTH_URL = "https://orthocal.info/api/greek/gregorian/{year}/{month}/"
+
+# Keyed by what is abstained from, matching the Antiochian PDF legend.
+FAST_LEVELS = {
+    "strict": {
+        "label": "Strict fast",
+        "allows": "No meat, dairy, eggs, fish, olive oil or wine",
+        "abstain": ["meat", "dairy", "eggs", "fish", "olive oil", "wine"],
+    },
+    "wine": {
+        "label": "Wine allowed",
+        "allows": "Wine allowed; no meat, dairy, eggs, fish or olive oil",
+        "abstain": ["meat", "dairy", "eggs", "fish", "olive oil"],
+    },
+    "wine_oil": {
+        "label": "Wine & oil allowed",
+        "allows": "Wine and olive oil allowed; no meat, dairy, eggs or fish",
+        "abstain": ["meat", "dairy", "eggs", "fish"],
+    },
+    "fish": {
+        "label": "Fish, wine & oil allowed",
+        "allows": "Fish, wine and olive oil allowed; no meat, dairy or eggs",
+        "abstain": ["meat", "dairy", "eggs"],
+    },
+    "dairy": {
+        "label": "Dairy, eggs & fish allowed",
+        "allows": "Dairy, eggs and fish allowed; no meat",
+        "abstain": ["meat"],
+    },
+}
+
+
+def fast_level_from_abstentions(abstentions) -> str | None:
+    a = {x.strip().lower() for x in abstentions or []}
+    a = {"olive oil" if x == "oil" else x for x in a}
+    if not a:
+        return None
+    if {"wine", "olive oil"} <= a:
+        return "strict"
+    if "olive oil" in a:
+        return "wine"
+    if "fish" in a:
+        return "wine_oil"
+    if "dairy" in a or "eggs" in a:
+        return "fish"
+    if "meat" in a:
+        return "dairy"
+    return None
+
+
+def _pdf_color(c) -> tuple | None:
+    if c is None:
+        return None
+    if isinstance(c, (int, float)):
+        c = (c,)
+    c = tuple(float(x) for x in c)
+    if len(c) == 1:
+        c = (c[0], c[0], c[0])
+    if len(c) != 3:
+        return None
+    return c
+
+
+def _is_neutral(c) -> bool:
+    return max(c) - min(c) < 0.05  # black / white / gray: borders & headers
+
+
+def parse_fasting_pdf(pdf_bytes: bytes, year: int) -> dict:
+    """Returns {"YYYY-MM-DD": level_key} for every fasting day in the PDF."""
+    import calendar as _cal
+    month_names = list(_cal.month_name)[1:]
+    with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
+        page = pdf.pages[0]
+        words = page.extract_words()
+        rects = [r for r in page.rects if r.get("fill") and r["width"] > 3 and r["height"] > 3]
+
+        def fill_at(x, y):
+            for r in rects:
+                if r["x0"] <= x <= r["x1"] and r["top"] <= y <= r["bottom"]:
+                    c = _pdf_color(r.get("non_stroking_color"))
+                    if c and not _is_neutral(c):
+                        return c
+            return None
+
+        # Legend: each colored row holds an "Abstain from ..." line.
+        lines = {}
+        for w in words:
+            lines.setdefault(round(w["top"]), []).append(w)
+        legend = []
+        for top, ws in lines.items():
+            text = " ".join(w["text"] for w in sorted(ws, key=lambda w: w["x0"]))
+            if not text.lower().startswith("abstain from"):
+                continue
+            c = fill_at((ws[0]["x0"] + ws[-1]["x1"]) / 2, (ws[0]["top"] + ws[0]["bottom"]) / 2)
+            level = fast_level_from_abstentions(re.sub(r"(?i)^abstain from\s*", "", text).split(","))
+            if c and level:
+                legend.append((c, level))
+        if len({lvl for _, lvl in legend}) < 4:
+            raise ValueError(f"fasting PDF {year}: legend not recognised ({legend})")
+
+        def nearest_level(c):
+            best = min(legend, key=lambda e: sum((a - b) ** 2 for a, b in zip(e[0], c)))
+            dist = sum((a - b) ** 2 for a, b in zip(best[0], c)) ** 0.5
+            if dist > 0.25:
+                raise ValueError(f"fasting PDF {year}: unknown cell color {c}")
+            return best[1]
+
+        heads = [w for w in words if w["text"] in month_names]
+        if len(heads) != 12:
+            raise ValueError(f"fasting PDF {year}: found {len(heads)} month headings")
+        title = " ".join(w["text"] for w in words[:6])
+        if str(year) not in title:
+            raise ValueError(f"fasting PDF {year}: title doesn't mention the year ({title!r})")
+
+        seen = {m: set() for m in range(1, 13)}
+        result = {}
+        for w in words:
+            if not w["text"].isdigit():
+                continue
+            cx, cy = (w["x0"] + w["x1"]) / 2, (w["top"] + w["bottom"]) / 2
+            above = [h for h in heads if h["top"] < cy and abs((h["x0"] + h["x1"]) / 2 - cx) < 110]
+            if not above:
+                continue
+            month = month_names.index(max(above, key=lambda h: h["top"])["text"]) + 1
+            day = int(w["text"])
+            seen[month].add(day)
+            c = fill_at(cx, cy)
+            if c:
+                result[date(year, month, day).isoformat()] = nearest_level(c)
+        for m, days in seen.items():
+            if days != set(range(1, _cal.monthrange(year, m)[1] + 1)):
+                raise ValueError(f"fasting PDF {year}: month {m} grid incomplete")
+    return result
+
+
+def fetch_antiochian_fasting_year(year: int) -> dict:
+    url = FASTING_PDF_URL.format(year=year)
+    return {"url": url, "days": parse_fasting_pdf(http_get(url), year)}
+
+
+def fetch_orthocal_fasting_year(year: int) -> dict:
+    days = {}
+    for month in range(1, 13):
+        for raw in http_get_json(ORTHOCAL_MONTH_URL.format(year=year, month=month)):
+            if not raw.get("fast_level"):
+                continue
+            level = fast_level_from_abstentions(raw.get("fast_abstentions"))
+            if raw.get("fast_exception_desc") == "Strict Fast":
+                level = "strict"
+            if level:
+                days[date(year, month, raw["day"]).isoformat()] = level
+    return {"url": "https://orthocal.info/api/greek/gregorian/", "days": days}
+
+
+def orthodox_pascha(year: int) -> date:
+    """Orthodox Pascha (Julian computus), as a Gregorian date. Used only to
+    *name* fasting seasons; the fasting levels themselves come from sources."""
+    a, b, c = year % 4, year % 7, year % 19
+    d = (19 * c + 15) % 30
+    e = (2 * a + 4 * b - d + 34) % 7
+    month, day = divmod(d + e + 114, 31)
+    return date(year, month, day + 1) + timedelta(days=13)
+
+
+def fasting_seasons(year: int) -> list:
+    p = orthodox_pascha(year)
+    pentecost = p + timedelta(days=49)
+    seasons = [
+        ("fast_free", "Fast-free: Nativity to Theophany", date(year, 1, 1), date(year, 1, 4)),
+        ("fast_free", "Fast-free week after the Publican & Pharisee", p - timedelta(days=69), p - timedelta(days=63)),
+        ("season", "Cheesefare Week", p - timedelta(days=55), p - timedelta(days=49)),
+        ("season", "Great Lent", p - timedelta(days=48), p - timedelta(days=7)),
+        ("season", "Holy Week", p - timedelta(days=6), p - timedelta(days=1)),
+        ("fast_free", "Fast-free: Bright Week", p, p + timedelta(days=6)),
+        ("fast_free", "Fast-free: Week after Pentecost", pentecost, pentecost + timedelta(days=6)),
+        ("season", "Apostles' Fast", pentecost + timedelta(days=8), date(year, 6, 28)),
+        ("season", "Dormition Fast", date(year, 8, 1), date(year, 8, 14)),
+        ("season", "Nativity Fast", date(year, 11, 15), date(year, 12, 24)),
+        ("fast_free", "Fast-free: Nativity to Theophany", date(year, 12, 25), date(year, 12, 31)),
+    ]
+    return [
+        {"kind": k, "name": n, "start": s.isoformat(), "end": e.isoformat()}
+        for k, n, s, e in seasons if s <= e
+    ]
+
+
+def build_fasting_calendar(today: date) -> bool:
+    """Writes data/fasting.json covering this year and next. Returns True if
+    every year got data from some source this run."""
+    path = DATA_DIR / "fasting.json"
+    prior = load_json(path) or {}
+    prior_years = prior.get("years", {})
+    years = [today.year, today.year + 1]
+    now_iso = datetime.now(CENTRAL).isoformat()
+
+    out_years, days = {}, {}
+    all_ok = True
+    for y in years:
+        meta, year_days = None, None
+        try:
+            got = fetch_antiochian_fasting_year(y)
+            meta = {"source": "antiochian_pdf", "provisional": False, "url": got["url"], "fetched_at": now_iso}
+            year_days = got["days"]
+        except Exception as exc:
+            print(f"[info] Antiochian fasting PDF for {y} unavailable: {exc}", file=sys.stderr)
+            prev = prior_years.get(str(y))
+            if prev and prev.get("source") == "antiochian_pdf":
+                # Keep the last good official data rather than downgrading.
+                meta = prev
+                year_days = {k: v["level"] for k, v in prior.get("days", {}).items()
+                             if k.startswith(f"{y}-") and v.get("source") == "antiochian_pdf"}
+            else:
+                try:
+                    got = fetch_orthocal_fasting_year(y)
+                    meta = {"source": "orthocal", "provisional": True, "url": got["url"], "fetched_at": now_iso}
+                    year_days = got["days"]
+                except Exception as exc2:
+                    print(f"[warn] orthocal fasting fallback for {y} failed: {exc2}", file=sys.stderr)
+                    if prev:
+                        meta = prev
+                        year_days = {k: v["level"] for k, v in prior.get("days", {}).items() if k.startswith(f"{y}-")}
+                    else:
+                        all_ok = False
+                        continue
+        out_years[str(y)] = meta
+        for k, lvl in year_days.items():
+            days[k] = {"level": lvl, "source": meta["source"]}
+
+    # antiochian.org's own daily pages override the annual sources.
+    for p in DAYS_DIR.glob("*.json"):
+        d = load_json(p) or {}
+        lit = d.get("liturgical") or {}
+        if lit.get("status") != "ok" or lit.get("source") != "antiochian" or d.get("date", "")[:4] not in out_years:
+            continue
+        key = d["date"]
+        level = fast_level_from_abstentions((lit.get("fasting") or {}).get("abstentions"))
+        prev = days.get(key, {}).get("level")
+        if prev != level:
+            print(f"[info] fasting {key}: antiochian.org daily page says {level}, annual source said {prev}", file=sys.stderr)
+        if level:
+            days[key] = {"level": level, "source": "antiochian_daily"}
+        else:
+            days.pop(key, None)
+
+    seasons = [s for y in years if str(y) in out_years for s in fasting_seasons(y)]
+    data = {
+        "generated_at": now_iso,
+        "years": out_years,
+        "levels": FAST_LEVELS,
+        "seasons": seasons,
+        "days": dict(sorted(days.items())),
+        "sources": {
+            "antiochian_daily": "antiochian.org daily liturgical page",
+            "antiochian_pdf": "Antiochian Archdiocese annual fasting calendar (PDF)",
+            "orthocal": "orthocal.info (Greek/Antiochian tradition, beta) -- provisional until the Archdiocese publishes its calendar",
+        },
+        "note": "On the day of a parish's patronal feast, fish, wine and oil are allowed if it falls on a fasting day. When fasting, consult your spiritual father.",
+    }
+    if out_years:
+        path.write_text(json.dumps(data, indent=1))
+    return all_ok and bool(out_years)
+
+
+# ---------------------------------------------------------------------------
 # Cache helpers
 # ---------------------------------------------------------------------------
 
@@ -871,6 +1151,12 @@ def main():
         fasting_calendar_link = None
         fasting_calendar_ok = False
 
+    try:
+        fasting_ok = build_fasting_calendar(today)
+    except Exception as exc:
+        print(f"[warn] fasting calendar build failed: {exc}", file=sys.stderr)
+        fasting_ok = False
+
     links = dict(STATIC_LINKS)
     links["bulletin_pdf"] = (bulletin or {}).get("url") or prior_links.get("bulletin_pdf")
     links["bulletin_posted"] = (bulletin or {}).get("posted") or prior_links.get("bulletin_posted")
@@ -896,6 +1182,8 @@ def main():
         last_successful["fasting_calendar"] = now_iso
     if prayer_list_ok:
         last_successful["prayer_list"] = now_iso
+    if fasting_ok:
+        last_successful["fasting_data"] = now_iso
 
     available_dates = sorted(p.stem for p in DAYS_DIR.glob("*.json"))
 
@@ -912,6 +1200,7 @@ def main():
             "bulletin_ok": bulletin_ok,
             "fasting_calendar_ok": fasting_calendar_ok,
             "prayer_list_ok": prayer_list_ok,
+            "fasting_data_ok": fasting_ok,
         },
     }
     (DATA_DIR / "index.json").write_text(json.dumps(index, indent=2))
@@ -919,7 +1208,7 @@ def main():
     print(f"Wrote {len(available_dates)} day files. Today: {today.isoformat()}")
     print(f"liturgical_ok={liturgical_ok} parish_events_ok={events_ok} "
           f"bulletin_ok={bulletin_ok} fasting_calendar_ok={fasting_calendar_ok} "
-          f"prayer_list_ok={prayer_list_ok}")
+          f"prayer_list_ok={prayer_list_ok} fasting_data_ok={fasting_ok}")
 
 
 if __name__ == "__main__":
