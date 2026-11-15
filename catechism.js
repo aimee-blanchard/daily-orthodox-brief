@@ -177,18 +177,8 @@
       return { date: latest, count: those.length, lesson: those[0].lesson };
     }
 
-    function renderCollapsed() {
-      var recent = recentClassNotes();
-      slot.innerHTML =
-        '<div class="cat-entry">' +
-        (recent
-          ? '<button type="button" class="cat-open cat-recent" data-view="notes">&#x1F4DD; ' + recent.count +
-            (recent.count === 1 ? " note" : " notes") + " from " + esc(shortDate(recent.date)) + "&rsquo;s catechism class (Lesson " +
-            esc(recent.lesson) + ") &mdash; review</button>"
-          : "") +
-        '<button type="button" class="cat-open cat-link" data-view="lesson">&#x1F4D6; Catechism lessons &amp; class notes &rsaquo;</button>' +
-        "</div>";
-    }
+    function inner() { return slot.querySelector(".cat-inner"); }
+    function section() { return slot.querySelector('.cs[data-cs="catechism"]'); }
 
     function notesView() {
       var all = loadNotes();
@@ -223,9 +213,8 @@
       var hint = state.suggestion && state.suggestion.suggested && state.suggestion.after
         ? '<p class="cat-suggest">Suggested: the lesson after Lesson ' + esc(state.suggestion.after) + " from your last class. Change it if class covers something else.</p>"
         : "";
-      slot.innerHTML =
-        '<section class="card cat-card" id="catechismCard">' +
-        '<div class="cat-head"><h2>Catechism Class</h2>' + (ev ? "" : '<button type="button" class="cat-hide">Hide</button>') + "</div>" +
+      inner().innerHTML =
+        '<div class="cat-card">' +
         '<p class="cat-sub">' + sub + "</p>" +
         '<div class="cat-tabs" role="tablist">' +
         '<button type="button" role="tab" class="cat-tab' + (state.view === "lesson" ? " active" : "") + '" data-view="lesson">Lesson</button>' +
@@ -243,7 +232,7 @@
             '<div class="cat-lesson-actions"><span class="cat-lesson-count"></span>' +
             '<button type="button" class="cat-doxy" data-lesson="' + esc(lesson.id) + '">Send to Doxy &#8599;</button></div>'
           : '<div class="cat-notes-view">' + notesView() + "</div>") +
-        "</section>";
+        "</div>";
       wireOpen();
       renderMarkers();
     }
@@ -340,8 +329,6 @@
 
     function wireOpen() {
       var card = slot.querySelector(".cat-card");
-      var hide = card.querySelector(".cat-hide");
-      if (hide) hide.addEventListener("click", function () { state.open = false; renderCollapsed(); });
       card.querySelectorAll(".cat-tab").forEach(function (t) {
         t.addEventListener("click", function () { state.view = t.getAttribute("data-view"); renderOpen(); });
       });
@@ -351,8 +338,7 @@
         state.suggestion = null;
         rememberLesson(dateStr, sel.value);
         renderOpen();
-        var c = slot.querySelector(".cat-card");
-        if (c.getBoundingClientRect().top < 0) c.scrollIntoView({ block: "start" });
+        slot.querySelector(".cs-body").scrollTop = 0;
       });
       var rows = card.querySelector(".cat-rows");
       if (rows) {
@@ -427,26 +413,51 @@
       });
     }
 
-    function open(view) {
-      state.view = view || "lesson";
-      state.open = true;
-      slot.innerHTML = '<section class="card cat-card"><h2>Catechism Class</h2><p class="cat-sub">Loading lessons&hellip;</p></section>';
-      load().then(function () {
-        if (!state.lesson) {
-          state.suggestion = lessonFor(dateStr, !!ev);
-          state.lesson = state.suggestion.id;
-        }
-        renderOpen();
-      }).catch(function () {
-        slot.innerHTML = '<section class="card cat-card"><h2>Catechism Class</h2><p class="cat-sub">Couldn&rsquo;t load the lessons. Try again later.</p></section>';
-      });
+    var loading = null;
+    function ensureLoaded() {
+      if (!loading) {
+        inner().innerHTML = '<p class="cat-sub">Loading lessons&hellip;</p>';
+        loading = load().then(function () {
+          if (!state.lesson) {
+            state.suggestion = lessonFor(dateStr, !!ev);
+            state.lesson = state.suggestion.id;
+          }
+          renderOpen();
+        }).catch(function () {
+          loading = null;
+          inner().innerHTML = '<p class="cat-sub">Couldn&rsquo;t load the lessons. Try again later.</p>';
+        });
+      }
+      return loading;
+    }
+    // Open the section (if closed) on a given view, e.g. from the review reminder.
+    function show(view) {
+      var sec = section();
+      var changed = state.view !== view;
+      state.view = view;
+      if (!sec.classList.contains("open")) window.BriefSections.setOpen(sec, true);  // fires cs-toggle -> ensureLoaded
+      ensureLoaded().then(function () { if (changed) renderOpen(); sec.scrollIntoView({ block: "start" }); });
     }
 
+    var recent = recentClassNotes();
+    var meta = ev
+      ? (dateStr === opts.today ? "Tonight" : shortDate(dateStr)) + (eventTime(ev.start) ? " · " + eventTime(ev.start) : "") + " · " + ev.title
+      : "Lessons & class notes · look back anytime";
+    slot.innerHTML =
+      (recent
+        ? '<button type="button" class="cat-open cat-recent" data-view="notes">&#x1F4DD; ' + recent.count +
+          (recent.count === 1 ? " note" : " notes") + " from " + esc(shortDate(recent.date)) + "&rsquo;s catechism class (Lesson " +
+          esc(recent.lesson) + ") &mdash; review</button>"
+        : "") +
+      window.BriefSections.render("catechism", ev ? "Catechism Class" : "Catechism lessons & class notes", meta,
+        '<div class="cat-inner"></div>', ev ? "cs-highlight" : "");
+    var sec = section();
+    sec.id = "catechismCard";
+    sec.addEventListener("cs-toggle", function (e) { if (e.detail.open) ensureLoaded(); });
     slot.addEventListener("click", function (e) {
       var b = e.target.closest(".cat-open");
-      if (b) open(b.getAttribute("data-view"));
+      if (b) show(b.getAttribute("data-view"));
     });
-    if (ev) open("lesson"); else renderCollapsed();
   }
 
   window.Catechism = { mount: mount, classEvent: classEvent, doxyUrl: doxyUrl, _load: load };
