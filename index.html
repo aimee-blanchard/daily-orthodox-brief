@@ -82,7 +82,62 @@
   .nav-btn:disabled { color: var(--rule); cursor: default; }
   .nav-btn:not(:disabled):active { background: var(--rule); }
 
-  .date-heading { text-align: center; flex: 1; }
+  .date-heading {
+    text-align: center;
+    flex: 1;
+    appearance: none;
+    background: none;
+    border: none;
+    color: var(--ink);
+    font: inherit;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+  }
+  .date-heading:active, .date-heading[aria-expanded="true"] { background: #1c1c1a; }
+  .date-caret { font-size: 0.7em; color: var(--accent); vertical-align: 0.15em; }
+  .date-picker {
+    position: relative;
+    z-index: 5;
+    background: var(--card-bg);
+    border: 1px solid var(--accent);
+    border-radius: 14px;
+    padding: 0.9rem 1rem;
+    margin: -0.75rem 0 1.25rem;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
+  }
+  .date-picker[hidden] { display: none; }
+  .date-picker-row { display: grid; grid-template-columns: 1fr 1.6fr 1.3fr; gap: 0.5rem; }
+  .date-picker label span {
+    display: block;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 0.25rem;
+  }
+  .date-picker select {
+    width: 100%;
+    background: var(--bg);
+    color: var(--ink);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 0.55rem 0.45rem;
+    font-size: 1rem;
+    font-family: var(--sans);
+  }
+  .date-picker-actions { display: flex; gap: 0.5rem; margin-top: 0.75rem; }
+  .date-picker-actions button {
+    flex: 1;
+    appearance: none;
+    border-radius: 8px;
+    padding: 0.6rem;
+    font-size: 0.95rem;
+    font-family: var(--sans);
+    cursor: pointer;
+  }
+  .dp-today { background: none; border: 1px solid var(--rule); color: var(--ink); }
+  .dp-go { background: var(--accent); border: 1px solid var(--accent); color: #1c1c1a; font-weight: 700; }
   .date-heading .weekday {
     display: block;
     font-size: 0.8rem;
@@ -148,6 +203,21 @@
 
   .synaxarion-panel { margin-top: 0.5rem; }
   .service-text-panel.synaxarion-panel { max-height: calc(25vh + 96px); }
+
+  .na-section { margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--rule); }
+  .na-heading { margin: 0 0 0.6rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+  .na-bio { margin-bottom: 0.9rem; }
+  .na-bio summary { list-style: none; cursor: pointer; }
+  .na-bio summary::-webkit-details-marker { display: none; }
+  .na-title { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.25rem; }
+  .na-excerpt { display: block; font-family: var(--serif); font-size: 1.02rem; line-height: 1.55; color: var(--ink-soft); }
+  .na-bio[open] .na-excerpt { display: none; }
+  .na-more { display: inline-block; margin-top: 0.3rem; font-size: 0.85rem; color: var(--accent); }
+  .na-bio[open] .na-more { display: none; }
+  .na-full { font-family: var(--serif); font-size: 1.02rem; line-height: 1.6; color: var(--ink-soft); }
+  .na-full p { margin: 0 0 0.6rem; }
+  .na-link { display: inline-block; margin-top: 0.3rem; font-size: 0.85rem; }
+  .na-note { font-size: 0.72rem; color: var(--ink-faint); margin: 0.2rem 0 0; }
 
   .story-block { margin-bottom: 1.1rem; }
   .story-block:last-child { margin-bottom: 0; }
@@ -298,6 +368,81 @@
     cursor: pointer;
   }
   .jump-to-progress:active { background: var(--rule); }
+  .header-actions { display: flex; gap: 0.5rem; align-items: stretch; }
+  .header-actions .jump-to-progress { flex: 1; }
+  .add-note-btn {
+    appearance: none;
+    background: none;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    color: var(--accent);
+    padding: 0.45rem 0.7rem;
+    margin: 0.5rem 0;
+    font-size: 0.85rem;
+    font-family: var(--sans);
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .add-note-btn:active { background: var(--rule); }
+  .checkable-rows .checkable-line { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+  .checkable-line.note-pressing { background: rgba(217, 154, 108, 0.12); border-radius: 8px; }
+  .anchored-note {
+    display: block;
+    width: 100%;
+    text-align: left;
+    appearance: none;
+    background: rgba(217, 154, 108, 0.08);
+    border: none;
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    line-height: 1.45;
+    padding: 0.45rem 0.7rem;
+    margin: -0.4rem 0 0.9rem 1.8rem;
+    width: calc(100% - 1.8rem);
+    white-space: pre-wrap;
+    cursor: pointer;
+  }
+  .anchored-note::before { content: "\1F4DD  "; }
+  .notes-hint { font-size: 0.75rem; color: var(--ink-faint); margin: 0.6rem 0 0; }
+  .anchored-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-top: 0.7rem;
+    padding-top: 0.7rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+  .anchored-summary[hidden] { display: none; }
+  .anchored-summary .notes-doxy { width: auto; margin: 0; white-space: nowrap; flex-shrink: 0; }
+  .note-sheet-backdrop {
+    position: fixed; inset: 0; z-index: 50;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex; align-items: flex-end; justify-content: center;
+  }
+  .note-sheet {
+    width: 100%; max-width: 640px;
+    background: var(--card-bg);
+    border: 1px solid var(--rule);
+    border-radius: 16px 16px 0 0;
+    padding: 1rem 1.1rem calc(1rem + env(safe-area-inset-bottom));
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.6);
+  }
+  .note-sheet h3 { margin: 0 0 0.3rem; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+  .note-sheet .note-quote { font-family: var(--serif); font-size: 0.95rem; color: var(--ink-soft); margin: 0 0 0.6rem; font-style: italic; }
+  .note-sheet textarea { min-height: 6rem; }
+  .note-sheet-actions { display: flex; gap: 0.5rem; margin-top: 0.6rem; }
+  .note-sheet-actions button {
+    flex: 1; appearance: none; background: none; border: 1px solid var(--rule); border-radius: 8px;
+    color: var(--ink); padding: 0.6rem; font-size: 0.9rem; font-family: var(--sans); cursor: pointer;
+  }
+  .note-sheet-actions .note-save { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+  .note-sheet-actions .note-delete { color: #e07a6e; }
   .text-search-bar {
     display: flex;
     align-items: center;
@@ -392,7 +537,21 @@
     cursor: pointer;
     flex: 1;
   }
-  .notes-copy:active, .notes-text-link:active { background: var(--rule); }
+  .notes-copy:active, .notes-text-link:active, .notes-doxy:active { background: var(--rule); }
+  .notes-doxy {
+    appearance: none;
+    display: block;
+    width: 100%;
+    margin-top: 0.6rem;
+    background: none;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    color: var(--accent);
+    padding: 0.55rem 0.7rem;
+    font-size: 0.85rem;
+    font-family: var(--sans);
+    cursor: pointer;
+  }
   .notes-copy-status {
     display: block;
     font-size: 0.8rem;
@@ -466,6 +625,7 @@
   var dayCache = {};
   var index = null;
   var fastingData = null;
+  var serviceOrder = [];
   var currentDate = null;
 
   function esc(s) {
@@ -569,7 +729,32 @@
       '<section class="card"><h2>Saints Commemorated</h2>' +
       summary +
       synaxarion +
+      renderNewAdvent(lit) +
       "</section>"
+    );
+  }
+
+  /* Biographies from the Catholic Encyclopedia (1913) on newadvent.org,
+     attached by fetch.py only when the match is unambiguous. */
+  function renderNewAdvent(lit) {
+    if (!lit.newadvent || !lit.newadvent.length) return "";
+    var blocks = lit.newadvent.map(function (b) {
+      var more = b.more && b.more.length > b.excerpt.length + 40;
+      return (
+        '<details class="na-bio">' +
+        '<summary><span class="na-title">' + esc(b.title) + '</span>' +
+        '<span class="na-excerpt">' + esc(b.excerpt) + "</span>" +
+        (more ? '<span class="na-more">Read more &#9662;</span>' : "") +
+        "</summary>" +
+        (more ? '<div class="na-full">' + b.more.split(/\n\n+/).map(function (para) { return "<p>" + esc(para) + "</p>"; }).join("") + "</div>" : "") +
+        '<a class="na-link" href="' + esc(b.url) + '" target="_blank" rel="noopener">Full article on New Advent &#8599;</a>' +
+        "</details>"
+      );
+    }).join("");
+    return (
+      '<div class="na-section"><h3 class="na-heading">From the Catholic Encyclopedia (New Advent)</h3>' +
+      blocks +
+      '<p class="na-note">Written in 1913 from a Roman Catholic perspective; Orthodox lives of the saints may differ.</p></div>'
     );
   }
 
@@ -700,19 +885,19 @@
     return 0;
   }
 
-  function renderCheckableBody(text, storageKey) {
+  function renderCheckableBody(text, storageKey, serviceLabel) {
     var paragraphs = text.split(/\n+/).map(function (p) { return p.trim(); }).filter(Boolean);
     var preambleCount = countPreambleLines(paragraphs);
     var rows = paragraphs
       .map(function (p, i) {
         if (i < preambleCount) {
-          return '<div class="checkable-line meta-line"><span class="line-text">' + esc(p) + "</span></div>";
+          return '<div class="checkable-line meta-line" data-para="' + i + '"><span class="line-text">' + esc(p) + "</span></div>";
         }
         if (isHeadingLine(p)) {
-          return '<div class="checkable-line heading-line"><span class="line-text">' + esc(p) + "</span></div>";
+          return '<div class="checkable-line heading-line" data-para="' + i + '"><span class="line-text">' + esc(p) + "</span></div>";
         }
         return (
-          '<label class="checkable-line">' +
+          '<label class="checkable-line" data-para="' + i + '">' +
           '<input type="checkbox" class="line-check" data-index="' + i + '">' +
           '<span class="line-text">' + esc(p) + "</span>" +
           "</label>"
@@ -720,9 +905,12 @@
       })
       .join("");
     return (
-      '<div class="checkable-body" data-storage-key="' + esc(storageKey) + '">' +
+      '<div class="checkable-body" data-storage-key="' + esc(storageKey) + '" data-service="' + esc(serviceLabel || "") + '">' +
       '<div class="checkable-header">' +
+      '<div class="header-actions">' +
       '<button type="button" class="jump-to-progress" aria-label="Jump to last checked line">&#8617; Resume where I left off</button>' +
+      '<button type="button" class="add-note-btn" aria-label="Add a note at the top visible line">&#xFF0B; Note</button>' +
+      "</div>" +
       '<div class="text-search-bar">' +
       '<input type="text" class="text-search-input" placeholder="Search this text&hellip;" autocomplete="off" autocapitalize="off">' +
       '<button type="button" class="text-search-clear" aria-label="Clear search" hidden>&times;</button>' +
@@ -741,9 +929,15 @@
     var items = lit.service_texts.map(function (s) {
       if (!s.text) return s;
       var storageKey = "serviceProgress:" + dateStr + ":" + s.label;
-      return { label: s.label, html: renderCheckableBody(s.text, storageKey) };
+      return { label: s.label, html: renderCheckableBody(s.text, storageKey, s.label) };
     });
-    return '<section class="card"><h2>Service Texts</h2>' + renderTextChooser("service", items) + "</section>";
+    serviceOrder = lit.service_texts.map(function (s) { return s.label; });
+    return (
+      '<section class="card"><h2>Service Texts</h2>' + renderTextChooser("service", items) +
+      '<p class="notes-hint">Tip: press and hold any line (or tap &ldquo;&#xFF0B; Note&rdquo;) to add a note there.</p>' +
+      '<div class="anchored-summary" hidden></div>' +
+      "</section>"
+    );
   }
 
   function renderNotesSection(dateStr) {
@@ -757,6 +951,7 @@
       '<button type="button" class="notes-copy">Copy notes</button>' +
       '<button type="button" class="notes-text-link">Text to myself</button>' +
       "</div>" +
+      '<button type="button" class="notes-doxy">Send to Doxy &#8599;</button>' +
       '<span class="notes-copy-status" aria-live="polite"></span>' +
       "</section>"
     );
@@ -846,19 +1041,86 @@
     return (
       '<div class="nav-bar">' +
       '<button class="nav-btn" id="prevBtn" ' + (canGoBack(dateStr) ? "" : "disabled") + ' aria-label="Previous day">&larr;</button>' +
-      '<div class="date-heading"><span class="weekday">' + esc(fd.weekday) + '</span><span class="date">' + esc(fd.date) + "</span></div>" +
+      '<button type="button" class="date-heading" id="datePickerBtn" aria-haspopup="dialog" aria-expanded="false" aria-label="Choose a date">' +
+      '<span class="weekday">' + esc(fd.weekday) + '</span><span class="date">' + esc(fd.date) + ' <span class="date-caret">&#9662;</span></span></button>' +
       '<button class="nav-btn" id="nextBtn" ' + (canGoForward(dateStr) ? "" : "disabled") + ' aria-label="Next day">&rarr;</button>' +
-      "</div>"
+      "</div>" +
+      '<div class="date-picker" id="datePicker" role="dialog" aria-label="Choose a date" hidden>' +
+      '<div class="date-picker-row">' +
+      '<label><span>Year</span><select id="dpYear"></select></label>' +
+      '<label><span>Month</span><select id="dpMonth"></select></label>' +
+      '<label><span>Day</span><select id="dpDay"></select></label>' +
+      "</div>" +
+      '<div class="date-picker-actions">' +
+      '<button type="button" class="dp-today" id="dpToday">Today</button>' +
+      '<button type="button" class="dp-go" id="dpGo">Go</button>' +
+      "</div></div>"
     );
+  }
+
+  var MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+  function wireDatePicker(dateStr) {
+    var btn = document.getElementById("datePickerBtn");
+    var box = document.getElementById("datePicker");
+    var ySel = document.getElementById("dpYear"), mSel = document.getElementById("dpMonth"), dSel = document.getElementById("dpDay");
+    if (!btn || !box) return;
+    var dates = index.available_dates;
+    function uniq(arr) { return arr.filter(function (v, i) { return arr.indexOf(v) === i; }); }
+    function fill(sel, values, labelFn, want) {
+      sel.innerHTML = values.map(function (v) { return '<option value="' + v + '">' + esc(labelFn(v)) + "</option>"; }).join("");
+      sel.value = values.indexOf(want) !== -1 ? want : values[0];
+    }
+    function fillMonths(wantM, wantD) {
+      var months = uniq(dates.filter(function (d) { return d.slice(0, 4) === ySel.value; }).map(function (d) { return d.slice(5, 7); }));
+      fill(mSel, months, function (m) { return MONTH_NAMES[+m - 1]; }, wantM);
+      fillDays(wantD);
+    }
+    function fillDays(wantD) {
+      var prefix = ySel.value + "-" + mSel.value + "-";
+      var days = dates.filter(function (d) { return d.indexOf(prefix) === 0; }).map(function (d) { return d.slice(8, 10); });
+      fill(dSel, days, function (d) {
+        var wd = parseISODate(prefix + d).toLocaleDateString("en-US", { weekday: "short" });
+        return +d + " (" + wd + ")";
+      }, wantD);
+    }
+    function open() {
+      fill(ySel, uniq(dates.map(function (d) { return d.slice(0, 4); })), function (y) { return y; }, dateStr.slice(0, 4));
+      fillMonths(dateStr.slice(5, 7), dateStr.slice(8, 10));
+      box.hidden = false;
+      btn.setAttribute("aria-expanded", "true");
+    }
+    function close() { box.hidden = true; btn.setAttribute("aria-expanded", "false"); }
+    btn.addEventListener("click", function () { if (box.hidden) open(); else close(); });
+    ySel.addEventListener("change", function () { fillMonths(mSel.value, dSel.value); });
+    mSel.addEventListener("change", function () { fillDays(dSel.value); });
+    document.getElementById("dpGo").addEventListener("click", function () {
+      close();
+      goTo(ySel.value + "-" + mSel.value + "-" + dSel.value);
+    });
+    document.getElementById("dpToday").addEventListener("click", function () { close(); goTo(index.today); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); }, { once: true });
+  }
+
+  // Arrows step to the nearest day we actually have (a backfill may leave gaps).
+  function stepAvailable(dateStr, dir) {
+    var dates = index.available_dates;
+    if (dir > 0) {
+      for (var i = 0; i < dates.length; i++) if (dates[i] > dateStr) return dates[i];
+    } else {
+      for (var j = dates.length - 1; j >= 0; j--) if (dates[j] < dateStr) return dates[j];
+    }
+    return null;
   }
 
   function wireNavBar(dateStr) {
     var prevBtn = document.getElementById("prevBtn");
     var nextBtn = document.getElementById("nextBtn");
     var todayBtn = document.getElementById("todayBtn");
-    if (prevBtn) prevBtn.addEventListener("click", function () { goTo(addDays(dateStr, -1)); });
-    if (nextBtn) nextBtn.addEventListener("click", function () { goTo(addDays(dateStr, 1)); });
+    if (prevBtn) prevBtn.addEventListener("click", function () { var d = stepAvailable(dateStr, -1); if (d) goTo(d); });
+    if (nextBtn) nextBtn.addEventListener("click", function () { var d = stepAvailable(dateStr, 1); if (d) goTo(d); });
     if (todayBtn) todayBtn.addEventListener("click", function () { goTo(index.today); });
+    wireDatePicker(dateStr);
   }
 
   function wireTextChoosers() {
@@ -963,10 +1225,25 @@
       }
 
       input.addEventListener("input", runSearch);
-      clearBtn.addEventListener("click", function () {
+      // Clearing must not pop the keyboard up or move her place in the text:
+      // keep the tap from focusing anything, clear, then blur the input and
+      // restore the scroll positions the keyboard/relayout may have nudged.
+      // (mousedown, not touchstart: cancelling touchstart would also cancel
+      // the click on touch screens.)
+      ["pointerdown", "mousedown"].forEach(function (evt) {
+        clearBtn.addEventListener(evt, function (e) { e.preventDefault(); });
+      });
+      clearBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        var panel = container.closest(".service-text-panel");
+        var panelTop = panel ? panel.scrollTop : 0;
+        var winY = window.scrollY;
         input.value = "";
         runSearch();
-        input.focus();
+        input.blur();
+        if (document.activeElement && document.activeElement !== document.body) document.activeElement.blur();
+        if (panel) panel.scrollTop = panelTop;
+        window.scrollTo(window.scrollX, winY);
       });
       container.querySelectorAll(".text-search-nav").forEach(function (btn) {
         btn.addEventListener("click", function () {
@@ -974,6 +1251,202 @@
         });
       });
     });
+  }
+
+  /* ---- Anchored notes -------------------------------------------------
+     Notes pinned to a line of a service text, saved on this device only
+     (localStorage, one list per day). Press-and-hold a line, or tap
+     "＋ Note" to pin to the top visible line. */
+  function anchoredKey(dateStr) { return "anchoredNotes:" + dateStr; }
+  function loadAnchored(dateStr) {
+    try { return JSON.parse(localStorage.getItem(anchoredKey(dateStr)) || "[]"); } catch (e) { return []; }
+  }
+  function saveAnchored(dateStr, list) {
+    if (list.length) localStorage.setItem(anchoredKey(dateStr), JSON.stringify(list));
+    else localStorage.removeItem(anchoredKey(dateStr));
+  }
+  function quoteOf(text, words) {
+    var w = text.trim().split(/\s+/);
+    return w.slice(0, words).join(" ") + (w.length > words ? "…" : "");
+  }
+  function sortedAnchored(dateStr) {
+    return loadAnchored(dateStr).slice().sort(function (a, b) {
+      var sa = serviceOrder.indexOf(a.service), sb = serviceOrder.indexOf(b.service);
+      if (sa !== sb) return (sa < 0 ? 999 : sa) - (sb < 0 ? 999 : sb);
+      return a.para - b.para;
+    });
+  }
+
+  function renderAnchoredMarkers(dateStr) {
+    var notes = loadAnchored(dateStr);
+    document.querySelectorAll(".anchored-note").forEach(function (el) { el.remove(); });
+    notes.forEach(function (n) {
+      document.querySelectorAll(".checkable-body").forEach(function (body) {
+        if (body.getAttribute("data-service") !== n.service) return;
+        var row = body.querySelector('.checkable-line[data-para="' + n.para + '"]');
+        if (!row) return;
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "anchored-note";
+        btn.setAttribute("data-note-id", n.id);
+        btn.textContent = n.text;
+        row.insertAdjacentElement("afterend", btn);
+      });
+    });
+    var summary = document.querySelector(".anchored-summary");
+    if (summary) {
+      summary.hidden = !notes.length;
+      summary.innerHTML = notes.length
+        ? "<span>&#x1F4DD; " + notes.length + (notes.length === 1 ? " note" : " notes") + " on this day&rsquo;s services</span>" +
+          '<button type="button" class="notes-doxy">Send to Doxy &#8599;</button>'
+        : "";
+    }
+  }
+
+  function openNoteSheet(dateStr, opts) {
+    // opts: {id} to edit, or {service, para, lineText} to add
+    var list = loadAnchored(dateStr);
+    var existing = opts.id ? list.filter(function (n) { return n.id === opts.id; })[0] : null;
+    var quote = existing ? existing.quote : quoteOf(opts.lineText, 8);
+    var service = existing ? existing.service : opts.service;
+    var backdrop = document.createElement("div");
+    backdrop.className = "note-sheet-backdrop";
+    backdrop.innerHTML =
+      '<div class="note-sheet" role="dialog" aria-label="Note">' +
+      "<h3>Note &middot; " + esc(service) + "</h3>" +
+      '<p class="note-quote">&ldquo;' + esc(quote) + "&rdquo;</p>" +
+      '<textarea class="notes-textarea" autocapitalize="sentences" placeholder="Your note…"></textarea>' +
+      '<div class="note-sheet-actions">' +
+      (existing ? '<button type="button" class="note-delete">Delete</button>' : "") +
+      '<button type="button" class="note-cancel">Cancel</button>' +
+      '<button type="button" class="note-save">Save</button>' +
+      "</div></div>";
+    document.body.appendChild(backdrop);
+    var ta = backdrop.querySelector("textarea");
+    ta.value = existing ? existing.text : "";
+    setTimeout(function () { ta.focus(); }, 50);
+    function close() { backdrop.remove(); }
+    backdrop.addEventListener("click", function (e) { if (e.target === backdrop) close(); });
+    backdrop.querySelector(".note-cancel").addEventListener("click", close);
+    backdrop.querySelector(".note-save").addEventListener("click", function () {
+      var text = ta.value.trim();
+      var cur = loadAnchored(dateStr);
+      if (existing) {
+        cur = cur.map(function (n) { return n.id === existing.id ? Object.assign({}, n, { text: text, updated: new Date().toISOString() }) : n; });
+        if (!text) cur = cur.filter(function (n) { return n.id !== existing.id; });
+      } else if (text) {
+        cur.push({ id: "n" + Date.now().toString(36), service: service, para: opts.para, quote: quote, text: text, updated: new Date().toISOString() });
+      }
+      saveAnchored(dateStr, cur);
+      close();
+      renderAnchoredMarkers(dateStr);
+    });
+    var del = backdrop.querySelector(".note-delete");
+    if (del) del.addEventListener("click", function () {
+      if (!confirm("Delete this note?")) return;
+      saveAnchored(dateStr, loadAnchored(dateStr).filter(function (n) { return n.id !== existing.id; }));
+      close();
+      renderAnchoredMarkers(dateStr);
+    });
+  }
+
+  function wireAnchoredNotes(dateStr) {
+    document.querySelectorAll(".checkable-body").forEach(function (body) {
+      var service = body.getAttribute("data-service");
+      var rows = body.querySelector(".checkable-rows");
+      var timer = null, pressed = null, suppressClick = false, startX = 0, startY = 0;
+      function cancel() {
+        if (timer) clearTimeout(timer);
+        timer = null;
+        if (pressed) pressed.classList.remove("note-pressing");
+        pressed = null;
+      }
+      rows.addEventListener("pointerdown", function (e) {
+        var row = e.target.closest(".checkable-line");
+        if (!row || e.target.closest(".anchored-note")) return;
+        startX = e.clientX; startY = e.clientY;
+        pressed = row;
+        row.classList.add("note-pressing");
+        timer = setTimeout(function () {
+          timer = null;
+          row.classList.remove("note-pressing");
+          suppressClick = true;
+          if (navigator.vibrate) navigator.vibrate(15);
+          openNoteSheet(dateStr, { service: service, para: +row.getAttribute("data-para"), lineText: row.querySelector(".line-text").textContent });
+        }, 550);
+      });
+      rows.addEventListener("pointermove", function (e) {
+        if (timer && (Math.abs(e.clientX - startX) > 8 || Math.abs(e.clientY - startY) > 8)) cancel();
+      });
+      ["pointerup", "pointercancel", "pointerleave"].forEach(function (t) { rows.addEventListener(t, cancel); });
+      rows.addEventListener("contextmenu", function (e) { if (e.target.closest(".checkable-line")) e.preventDefault(); });
+      // A long-press must not also toggle the line's checkbox.
+      rows.addEventListener("click", function (e) {
+        if (suppressClick) { suppressClick = false; e.preventDefault(); e.stopPropagation(); return; }
+        var marker = e.target.closest(".anchored-note");
+        if (marker) { e.preventDefault(); openNoteSheet(dateStr, { id: marker.getAttribute("data-note-id") }); }
+      }, true);
+
+      body.querySelector(".add-note-btn").addEventListener("click", function () {
+        // Pin to the first line visible below the sticky header.
+        var panel = body.closest(".service-text-panel");
+        var header = body.querySelector(".checkable-header");
+        var minTop = header.getBoundingClientRect().bottom;
+        var target = null;
+        body.querySelectorAll(".checkable-rows .checkable-line").forEach(function (row) {
+          if (target) return;
+          if (row.getBoundingClientRect().bottom > minTop + 4) target = row;
+        });
+        if (!target) return;
+        openNoteSheet(dateStr, { service: service, para: +target.getAttribute("data-para"), lineText: target.querySelector(".line-text").textContent });
+      });
+    });
+    renderAnchoredMarkers(dateStr);
+  }
+
+  document.addEventListener("click", onDoxyClick);
+  function onDoxyClick(e) {
+    var btn = e.target.closest(".notes-doxy");
+    if (!btn) return;
+    var ta = document.querySelector(".notes-card .notes-textarea");
+    window.open(doxyIssueUrl(currentDate, ta ? ta.value : ""), "_blank", "noopener");
+  }
+
+  /* "Send to Doxy": a prefilled GitHub new-issue link. No token or secret is
+     involved; GitHub asks her to sign in and she submits it herself. */
+  var DOXY_ISSUE_BASE = "https://github.com/aimee-blanchard/daily-orthodox-brief/issues/new";
+  var DOXY_MAX_URL = 7500;
+
+  function doxyIssueUrl(dateStr, generalNote) {
+    var fd = friendlyDate(dateStr);
+    var title = "Service notes – " + fd.weekday + ", " + fd.date;
+    var general = (generalNote || "").replace(/^[•\s]+$/, "").trim();
+    var anchored = sortedAnchored(dateStr);
+    function clip(t, n) { return n == null || t.length <= n ? t : t.slice(0, n) + "…"; }
+    function build(limit) {
+      var out = "**Date:** " + fd.weekday + ", " + fd.date + " (" + dateStr + ")\n";
+      var lastService = null;
+      anchored.forEach(function (n, i) {
+        if (n.service !== lastService) {
+          out += "\n### " + n.service + "\n";
+          lastService = n.service;
+        }
+        out += "\n**" + (i + 1) + ".** At “" + n.quote + "” (paragraph " + (n.para + 1) + ")\n\n" +
+          clip(n.text, limit).split("\n").map(function (l) { return "> " + l; }).join("\n") + "\n";
+      });
+      if (general) out += "\n### General notes\n\n" + clip(general, limit) + "\n";
+      if (!anchored.length && !general) out += "\n(No notes yet.)\n";
+      if (limit != null) out += "\n> ⚠️ Some notes were too long for a link and were cut off (marked …). Paste the rest below.\n";
+      return DOXY_ISSUE_BASE + "?labels=doxy-notes&title=" + encodeURIComponent(title) + "&body=" + encodeURIComponent(out);
+    }
+    var url = build(null);
+    if (url.length <= DOXY_MAX_URL) return url;
+    var lo = 20, hi = 5000;
+    while (lo < hi) {
+      var mid = Math.ceil((lo + hi) / 2);
+      if (build(mid).length <= DOXY_MAX_URL) lo = mid; else hi = mid - 1;
+    }
+    return build(lo);
   }
 
   function fallbackCopy(textarea, done) {
@@ -1072,10 +1545,11 @@
     wireCheckableBodies();
     wireTextSearch();
     wireJumpButtons();
+    wireAnchoredNotes(dateStr);
   }
 
   function goTo(dateStr) {
-    if (dateStr < index.available_dates[0] || dateStr > index.available_dates[index.available_dates.length - 1]) return;
+    if (index.available_dates.indexOf(dateStr) === -1) return;
     app.innerHTML = '<div class="empty-state">Loading&hellip;</div>';
     loadDay(dateStr)
       .then(function (day) { render(dateStr, day); })
