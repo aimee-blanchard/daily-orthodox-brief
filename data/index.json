@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T05:29:51.139825-06:00",
+  "generated_at": "2026-11-15T21:08:19.197677-06:00",
   "today": "2026-11-15",
   "available_dates": [
     "2026-05-16",
@@ -371,12 +371,12 @@
     "2027-05-17"
   ],
   "last_successful": {
-    "liturgical": "2026-11-15T05:29:51.139825-06:00",
-    "parish_events": "2026-11-15T05:29:51.139825-06:00",
-    "bulletin": "2026-11-15T05:29:51.139825-06:00",
-    "fasting_calendar": "2026-11-15T05:29:51.139825-06:00",
-    "prayer_list": "2026-11-15T05:29:51.139825-06:00",
-    "fasting_data": "2026-11-15T05:29:51.139825-06:00"
+    "liturgical": "2026-11-15T21:08:19.197677-06:00",
+    "parish_events": "2026-11-15T21:08:19.197677-06:00",
+    "bulletin": "2026-11-15T21:08:19.197677-06:00",
+    "fasting_calendar": "2026-11-15T21:08:19.197677-06:00",
+    "prayer_list": "2026-11-15T21:08:19.197677-06:00",
+    "fasting_data": "2026-11-15T21:08:19.197677-06:00"
   },
   "links": {
     "parish_calendar": "https://www.constantinehelen.com/calendar/",
@@ -465,6 +465,6 @@
     "fasting_calendar_ok": true,
     "prayer_list_ok": true,
     "fasting_data_ok": true,
-    "window_complete": true
+    "window_complete": false
   }
 }
