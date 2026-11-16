@@ -1,17 +1,17 @@
 {
- "generated_at": "2026-11-15T21:16:41.240607-06:00",
+ "generated_at": "2026-11-16T05:59:58.013009-06:00",
  "years": {
   "2026": {
    "source": "antiochian_pdf",
    "provisional": false,
    "url": "https://antiochianprodsa.blob.core.windows.net/liturgicalinstructions/2026%20Fasting%20Calendar.pdf",
-   "fetched_at": "2026-11-15T21:16:41.240607-06:00"
+   "fetched_at": "2026-11-16T05:59:58.013009-06:00"
   },
   "2027": {
    "source": "orthocal",
    "provisional": true,
    "url": "https://orthocal.info/api/greek/gregorian/",
-   "fetched_at": "2026-11-15T21:16:41.240607-06:00"
+   "fetched_at": "2026-11-16T05:59:58.013009-06:00"
   }
  },
  "levels": {
