@@ -74,7 +74,9 @@ repo/
 │   └── days/2026-09-09.json  # one file per day in the window
 ├── index.html                # the brief (loads brief.css / brief.js)
 ├── services.html             # Service Texts page (same brief.css / brief.js, <body data-page="services">)
-├── brief.css, brief.js       # shared styles and app code (bump the ?v= in both HTML files when changing them)
+├── saints.html, catechism.html, parish.html, readings.html
+│                             # one page per brief section (<body data-page="saints|catechism|parish|readings">)
+├── brief.css, brief.js       # shared styles and app code (bump the ?v= in EVERY HTML file when changing them)
 ├── manifest.webmanifest      # makes "Add to Home Screen" behave like an app
 ├── icons/
 └── .github/workflows/daily.yml
@@ -163,11 +165,37 @@ two candidates tie. Prefer no match over a wrong one. The index and fetched
 articles are cached in `data/cache/newadvent.json`; bump
 `NEWADVENT_MATCH_VERSION` to re-match every day after changing the rules.
 
+**New Advent is a Catholic site** (Aimee, Nov 2026). Its content is always
+labeled "Source: New Advent (Catholic Encyclopedia, 1913)" with a link to the
+article, plus a note that it's written from a Roman Catholic perspective.
+Truncation: `na_truncate` doesn't stop at a period after an abbreviation
+(`NA_ABBREV_END`: "St.", "Sts.", "Ven.", "c.", initials...); excerpts used to end
+"...erected by St." (fixed in match version 3; `fixExcerpt` in brief.js also
+repairs older data on screen).
+
+### Orthodox lives (data/orthodox_lives.json, OCA)
+
+Where the OCA has a life of the same saint, the saints page shows it **first**,
+labeled "Source: Orthodox Church in America (Lives of the Saints, oca.org)", and
+the New Advent article second under "Also in the Catholic Encyclopedia".
+On Antiochian synaxarion days the day's Orthros synaxarion still comes first,
+labeled "Source: Antiochian Archdiocese".
+`OCALives` in `fetch.py` reads oca.org/saints/lives/YYYY/MM/DD (OCA is
+New Calendar, same dates as ours) and matches only saints that already have a
+New Advent bio: the given name must be in the OCA name, the distinguishing
+words must overlap (or appear in the bio), "sister/disciple of X" mentions and
+one-sided hierarchs are rejected, and a tie attaches nothing. Prefer no match
+over a wrong one; never write a bio ourselves. Output lives in its own file
+(`{"version","days":{date:[{commemoration,newadvent_url,title,url,source,excerpt,more}]}}`)
+so it doesn't conflict with the day files; at most `OCA_MAX_FETCHES_PER_RUN`
+page fetches per run, 1 s apart. Bump `ORTHODOX_LIVES_VERSION` to rebuild.
+Initial backfill (Nov 2026): 43 of 88 New Advent bios got an OCA life.
+
 ### Collapsible sections
 
 - There's no separate Fasting card any more (Aimee: the calendar is enough). Today's fast shows in the mini fasting calendar at the top, and the full detail is on fasting.html. `fetch.py` still writes `liturgical.fasting` to day files; the page just doesn't render it as a card.
 
-- Synaxarion (Saints Commemorated + New Advent bios), Catechism, "Parish Events & Prayer List" (one bar, events then prayer list, each with a subheading; `renderParishSection`) and Daily Bible Readings render via `renderCollapsible()` in index.html as thin bars (title, one-line summary, chevron), collapsed by default. Several can be open at once; open/closed state isn't remembered.
+- **Every section opens on its own page in a new tab** (Aimee, Nov 2026: "would make scrolling easier"), like the fasting calendar and Service Texts. On the brief, `renderCollapsible()` returns a link bar (title, one-line summary, ↗) for ids in `SECTION_PAGES`: synaxarion → saints.html, catechism → catechism.html, parish → parish.html (events then prayer list, `renderParishSection`), readings → readings.html, each `?d=YYYY-MM-DD`. `renderSectionPage()` builds the page: "← Back to brief", title and date, then the same section rendered with class `page-mode` (no bar, always open, the window scrolls). The catechism review reminder on the brief opens `catechism.html?d=…&view=notes`. The collapsible code below is still used on these pages and is kept for any future section without its own page.
 - An open section's body is the one scroll box: `max-height: calc(100dvh - 80px)` (vh fallback), `overflow-y: auto`, vertical scroll chaining left on (a swipe past the end carries on scrolling the page), white scrollbar like the old service-text panel. The service-text panel no longer scrolls on its own inside it. The bar is sticky, and the service-text search header and catechism lesson picker stick to the top of the scroll box.
 - Service Texts has its own page, services.html?d=YYYY-MM-DD. It opens in a new tab like the fasting calendar, from a bar on the brief with an ↗ icon, the list of texts, and a 📝 note count that updates through the `storage` event. The page has:
   - "← Back to brief" (focuses the opener tab and closes this one, else a plain link)

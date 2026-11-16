@@ -159,11 +159,11 @@
 
   /* ---------- the card ---------- */
   function mount(slot, opts) {
-    // opts: {dateStr, events, collapsed}
+    // opts: {dateStr, today, events, view ("notes" opens on Notes from class)}
     if (!slot) return;
     var dateStr = opts.dateStr;
     var ev = classEvent(opts.events);
-    var state = { lesson: null, suggestion: null, view: "lesson", open: !!ev };
+    var state = { lesson: null, suggestion: null, view: opts.view === "notes" ? "notes" : "lesson", open: !!ev };
 
     function recentClassNotes() {
       // Notes from a class in the past week (for resurfacing later in the week).
@@ -338,7 +338,9 @@
         state.suggestion = null;
         rememberLesson(dateStr, sel.value);
         renderOpen();
-        slot.querySelector(".cs-body").scrollTop = 0;
+        var sec0 = section();
+        if (sec0.classList.contains("page-mode")) { if (sec0.getBoundingClientRect().top < 0) sec0.scrollIntoView({ block: "start" }); }
+        else slot.querySelector(".cs-body").scrollTop = 0;
       });
       var rows = card.querySelector(".cat-rows");
       if (rows) {
@@ -433,6 +435,11 @@
     // Open the section (if closed) on a given view, e.g. from the review reminder.
     function show(view) {
       var sec = section();
+      // On the brief the section is a link to catechism.html: open it there.
+      if (sec.classList.contains("cs-link-card")) {
+        window.open("catechism.html?d=" + encodeURIComponent(dateStr) + "&view=" + encodeURIComponent(view), "_blank");
+        return;
+      }
       var changed = state.view !== view;
       state.view = view;
       if (!sec.classList.contains("open")) window.BriefSections.setOpen(sec, true);  // fires cs-toggle -> ensureLoaded

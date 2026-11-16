@@ -10,6 +10,12 @@
   var serviceOrder = [];
   var currentDate = null;
   var PAGE = document.body.getAttribute("data-page") || "brief";
+  var renderDate = null;      // the day being rendered (for section links)
+  var orthodoxLives = null;   // data/orthodox_lives.json (saints page)
+  /* Each section of the brief opens on its own page in a new tab (like the
+     fasting calendar), so long sections scroll as a normal page. */
+  var SECTION_PAGES = { synaxarion: "saints", catechism: "catechism", parish: "parish", readings: "readings" };
+  var PAGE_TITLES = { saints: "Saints Commemorated", catechism: "Catechism", parish: "Parish Events & Prayer List", readings: "Daily Bible Readings" };
 
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
@@ -110,6 +116,8 @@
   /* A collapsible section: thin bar (title, optional one-line meta, chevron),
      collapsed by default. See wireCollapsibles(). */
   function renderCollapsible(id, title, meta, inner, extraClass, foot) {
+    if (PAGE === "brief" && SECTION_PAGES[id]) return renderSectionLink(id, title, meta, extraClass);
+    if (PAGE !== "brief") extraClass = (extraClass ? extraClass + " " : "") + "page-mode";
     return (
       '<section class="card cs' + (extraClass ? " " + extraClass : "") + '" data-cs="' + esc(id) + '">' +
       '<button type="button" class="cs-bar" aria-expanded="false" aria-controls="cs-body-' + esc(id) + '">' +
@@ -121,11 +129,25 @@
     );
   }
 
+  // On the brief: a bar (title, one-line summary, ↗) that opens the section's page in a new tab.
+  function renderSectionLink(id, title, meta, extraClass) {
+    var href = SECTION_PAGES[id] + ".html?d=" + renderDate;
+    return (
+      '<section class="card cs cs-link-card' + (extraClass ? " " + extraClass : "") + '" data-cs="' + esc(id) + '">' +
+      '<a class="cs-bar cs-link" href="' + esc(href) + '" target="_blank" rel="opener" aria-label="Open ' + esc(title) + ' in a new tab">' +
+      '<span class="cs-titles"><span class="cs-title">' + esc(title) + '</span><span class="cs-meta">' + (meta ? esc(meta) : "") + "</span></span>" +
+      '<span class="cs-open" aria-hidden="true">&#8599;</span></a></section>'
+    );
+  }
+
   function renderSaintsSection(lit) {
     if (!lit || !lit.saints || !lit.saints.length) return "";
     var summary = lit.summary_title ? '<p class="summary-title">' + esc(lit.summary_title) + "</p>" : "";
     var synaxarion = lit.synaxarion
-      ? '<div class="synaxarion-panel"><div class="service-text-body">' + esc(lit.synaxarion) + "</div></div>"
+      ? '<div class="synaxarion-panel"><div class="service-text-body">' + esc(lit.synaxarion) + "</div>" +
+        (lit.source === "antiochian"
+          ? '<p class="src-label">Source: <a href="https://www.antiochian.org/liturgicday" target="_blank" rel="noopener">Antiochian Archdiocese</a> (Synaxarion from the day&rsquo;s Orthros text)</p>'
+          : "") + "</div>"
       : "";
     return renderCollapsible("synaxarion", "Synaxarion · Saints Commemorated", lit.summary_title || lit.saints.slice(0, 2).join(" · "),
       summary + synaxarion + renderNewAdvent(lit));
@@ -133,26 +155,63 @@
 
   /* Biographies from the Catholic Encyclopedia (1913) on newadvent.org,
      attached by fetch.py only when the match is unambiguous. */
+  // New Advent excerpts made before the fetch.py fix can end on an
+  // abbreviation ("…erected by St."): finish the sentence from the longer text.
+  var ABBREV_END = /(?:\b(?:sts?|ss|ven|bl|fr|mt|mk|lk|jn|ca|cf|c|ch|vol|abp|bp)|\b[A-Z])\.$/i;
+  function fixExcerpt(excerpt, more) {
+    excerpt = (excerpt || "").trim();
+    if (!ABBREV_END.test(excerpt) || !more) return excerpt;
+    var flat = more.replace(/\s+/g, " "), ex = excerpt.replace(/\s+/g, " ");
+    var start = flat.indexOf(ex);
+    if (start < 0) return excerpt + "\u2026";
+    excerpt = ex;
+    var rest = flat.slice(start + ex.length);
+    var re = /[.;](?=\s|$)/g, m;
+    while ((m = re.exec(rest))) {
+      var cand = excerpt + rest.slice(0, m.index + 1);
+      if (!ABBREV_END.test(cand)) return cand.length < excerpt.length + 400 ? cand : excerpt + "\u2026";
+    }
+    return excerpt + "\u2026";
+  }
+
+  function bioBlock(b, source) {
+    var excerpt = fixExcerpt(b.excerpt, b.more);
+    var more = b.more && b.more.length > excerpt.length + 40;
+    var linkText = source === "oca" ? "Full life on oca.org &#8599;" : "Full article on New Advent &#8599;";
+    var label = source === "oca"
+      ? 'Source: <a href="' + esc(b.url) + '" target="_blank" rel="noopener">Orthodox Church in America</a> (Lives of the Saints, oca.org)'
+      : 'Source: <a href="' + esc(b.url) + '" target="_blank" rel="noopener">New Advent</a> (Catholic Encyclopedia, 1913)';
+    return (
+      '<details class="na-bio ' + (source === "oca" ? "bio-oca" : "bio-na") + '">' +
+      '<summary><span class="na-title">' + esc(b.title) + '</span>' +
+      '<span class="src-label src-' + source + '">' + label + "</span>" +
+      '<span class="na-excerpt">' + esc(excerpt) + "</span>" +
+      (more ? '<span class="na-more">Read more &#9662;</span>' : "") +
+      "</summary>" +
+      (more ? '<div class="na-full">' + b.more.split(/\n\n+/).map(function (para) { return "<p>" + esc(para) + "</p>"; }).join("") + "</div>" +
+        '<button type="button" class="na-less">Read less &#9652;</button>' : "") +
+      '<a class="na-link" href="' + esc(b.url) + '" target="_blank" rel="noopener">' + linkText + "</a>" +
+      "</details>"
+    );
+  }
+
+  /* Lives of the day's saints. An Orthodox life from the OCA comes first when
+     fetch.py found one for the same saint (data/orthodox_lives.json); the
+     Catholic Encyclopedia article (New Advent) is kept as a second, labeled
+     source. Nothing here is written by us. */
   function renderNewAdvent(lit) {
     if (!lit.newadvent || !lit.newadvent.length) return "";
+    var lives = (orthodoxLives && orthodoxLives.days && orthodoxLives.days[renderDate]) || [];
     var blocks = lit.newadvent.map(function (b) {
-      var more = b.more && b.more.length > b.excerpt.length + 40;
-      return (
-        '<details class="na-bio">' +
-        '<summary><span class="na-title">' + esc(b.title) + '</span>' +
-        '<span class="na-excerpt">' + esc(b.excerpt) + "</span>" +
-        (more ? '<span class="na-more">Read more &#9662;</span>' : "") +
-        "</summary>" +
-        (more ? '<div class="na-full">' + b.more.split(/\n\n+/).map(function (para) { return "<p>" + esc(para) + "</p>"; }).join("") + "</div>" +
-          '<button type="button" class="na-less">Read less &#9652;</button>' : "") +
-        '<a class="na-link" href="' + esc(b.url) + '" target="_blank" rel="noopener">Full article on New Advent &#8599;</a>' +
-        "</details>"
-      );
+      var o = lives.filter(function (l) { return l.newadvent_url === b.url || l.commemoration === b.commemoration; })[0];
+      if (!o) return '<div class="saint-life">' + bioBlock(b, "na") + "</div>";
+      return '<div class="saint-life">' + bioBlock(o, "oca") +
+        '<div class="also-na"><p class="also-na-head">Also in the Catholic Encyclopedia</p>' + bioBlock(b, "na") + "</div></div>";
     }).join("");
     return (
-      '<div class="na-section"><h3 class="na-heading">From the Catholic Encyclopedia (New Advent)</h3>' +
+      '<div class="na-section"><h3 class="na-heading">Lives of today&rsquo;s saints</h3>' +
       blocks +
-      '<p class="na-note">Written in 1913 from a Roman Catholic perspective; Orthodox lives of the saints may differ.</p></div>'
+      '<p class="na-note">New Advent is a Catholic site: its Catholic Encyclopedia (1913) is written from a Roman Catholic perspective, and Orthodox lives of the saints may differ.</p></div>'
     );
   }
 
@@ -1084,6 +1143,7 @@
 
   function render(dateStr, day) {
     var lit = day.liturgical && day.liturgical.status === "ok" ? day.liturgical : null;
+    renderDate = dateStr;
 
     var html = "";
     html += renderMiniFastingCalendar(dateStr);
@@ -1199,6 +1259,31 @@
     if (card) card.remove();
   });
 
+  function renderSectionPage(page, dateStr, day) {
+    var lit = day.liturgical && day.liturgical.status === "ok" ? day.liturgical : null;
+    renderDate = dateStr;
+    var fd = friendlyDate(dateStr);
+    document.title = PAGE_TITLES[page] + " \u2013 " + fd.weekday + ", " + fd.date;
+    var html = '<div class="back-bar"><a class="back-link" id="backToBrief" href="' + esc(briefHref(dateStr)) + '">&larr; Back to brief</a></div>' +
+      '<header class="svc-page-head"><h1>' + esc(PAGE_TITLES[page]) + "</h1><p>" + esc(fd.weekday + ", " + fd.date) + "</p></header>";
+    var body = "";
+    if (page === "saints") body = lit ? renderSaintsSection(lit) + renderStoriesSection(lit) : "";
+    else if (page === "parish") body = renderParishSection(day);
+    else if (page === "readings") body = renderReadingSection(lit);
+    else if (page === "catechism") body = '<div id="catechismSlot"></div>';
+    html += body || '<div class="banner">Nothing for this day.</div>';
+    app.innerHTML = html;
+    currentDate = dateStr;
+    if (page === "catechism" && window.Catechism) {
+      window.Catechism.mount(document.getElementById("catechismSlot"), {
+        dateStr: dateStr, today: index.today, events: day.events,
+        view: new URLSearchParams(location.search).get("view") || null,
+      });
+    }
+    // On its own page the section is simply open (no collapsing).
+    document.querySelectorAll(".cs.page-mode").forEach(function (sec) { setSectionOpen(sec, true); });
+  }
+
   function renderServicesPage(dateStr, day) {
     var lit = day.liturgical && day.liturgical.status === "ok" ? day.liturgical : null;
     var fd = friendlyDate(dateStr);
@@ -1258,14 +1343,20 @@
 
   // Optional ?d=YYYY-MM-DD opens the brief (or the services page) on that day.
   var startDate = null;
-  var ready = PAGE === "services" ? [loadIndex(), loadParish()] : [loadIndex(), fastingReady, loadParish()];
+  var ready = PAGE === "brief" ? [loadIndex(), fastingReady, loadParish()]
+    : PAGE === "saints" ? [loadIndex(), fetchJSON("data/orthodox_lives.json").then(function (d) { orthodoxLives = d; }).catch(function () {})]
+    : [loadIndex(), loadParish()];
   Promise.all(ready)
     .then(function () {
       var q = new URLSearchParams(location.search).get("d") || "";
       startDate = (/^\d{4}-\d{2}-\d{2}$/.test(q) && index.available_dates.indexOf(q) !== -1) ? q : index.today;
       return loadDay(startDate);
     })
-    .then(function (day) { (PAGE === "services" ? renderServicesPage : render)(startDate, day); })
+    .then(function (day) {
+      if (PAGE === "services") renderServicesPage(startDate, day);
+      else if (PAGE_TITLES[PAGE]) renderSectionPage(PAGE, startDate, day);
+      else render(startDate, day);
+    })
     .catch(function (err) {
       app.innerHTML = '<div class="empty-state">Couldn&rsquo;t load the brief.<br><span style="font-size:0.8rem">' + esc(err.message) + "</span></div>";
     });
