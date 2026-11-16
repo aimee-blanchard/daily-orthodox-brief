@@ -1049,7 +1049,7 @@ def build_fasting_calendar(today: date) -> bool:
 
 NEWADVENT_BASE = "https://www.newadvent.org/cathen/"
 NEWADVENT_CACHE_PATH = DATA_DIR / "cache" / "newadvent.json"
-NEWADVENT_MATCH_VERSION = 2
+NEWADVENT_MATCH_VERSION = 3  # 3: no more excerpts cut off at "St."
 NEWADVENT_INDEX_MAX_AGE_DAYS = 180
 NEWADVENT_MAX_FETCHES_PER_RUN = 150
 NEWADVENT_DELAY_SECONDS = 1.0
@@ -1253,11 +1253,20 @@ def na_article_text(page_html: str) -> tuple[str, list]:
     return title, paras
 
 
+# Abbreviations whose full stop is not the end of a sentence ("St. Andrew",
+# "c. 450"): cutting there left excerpts ending in a dangling "St.".
+NA_ABBREV_END = re.compile(r"(?:\b(?i:sts?|ss|ven|bl|fr|mt|mk|lk|jn|dr|mr|ca|cf|c|vol|ch|chap|ed|op|vv?|ff|i\.e|e\.g|viz|etc|abp|bp|gen|ex|ps|is|rom|cor|gal|eph|heb|rev|acts)|\b[A-Z])\.$")
+
+
 def na_truncate(text: str, limit: int) -> str:
     if len(text) <= limit:
         return text
     cut = text[:limit]
-    stop = max(cut.rfind(". "), cut.rfind("; "))
+    stop = -1
+    for m in re.finditer(r"[.;](?= )", cut):
+        if m.group() == "." and NA_ABBREV_END.search(cut[: m.end()]):
+            continue
+        stop = m.start()
     return (cut[: stop + 1] if stop > limit * 0.5 else cut.rsplit(" ", 1)[0] + "\u2026").strip()
 
 
@@ -1436,6 +1445,166 @@ class NewAdventMatcher:
 
 
 # ---------------------------------------------------------------------------
+# Source: oca.org -- Orthodox lives of the saints, shown before New Advent
+#
+# For each saint that got a New Advent biography, look for the same saint's
+# life on the OCA's "Lives of the Saints" page for that date (New Calendar,
+# like antiochian.org). Same rule as New Advent: no match beats a wrong one.
+# The OCA name (parenthetical asides removed) must contain the saint's given
+# name; when several do, the one sharing the most places/epithets/roles with
+# the commemoration wins, and a tie attaches nothing. Results live in
+# data/orthodox_lives.json (by date), not the day files.
+# ---------------------------------------------------------------------------
+
+OCA_BASE = "https://www.oca.org"
+ORTHODOX_LIVES_PATH = DATA_DIR / "orthodox_lives.json"
+ORTHODOX_LIVES_VERSION = 1
+OCA_MAX_FETCHES_PER_RUN = 120
+OCA_DELAY_SECONDS = 1.0
+OCA_EXCERPT_CHARS = 420
+OCA_MORE_CHARS = 3200
+
+
+# OCA titles' honorifics that say nothing about which saint this is.
+OCA_HONORIFIC_NORM = {na_norm_word(w) for w in (
+    "all-praised", "allpraised", "praised", "glorious", "enlightener", "evangelizer", "equal", "equal-to-the-apostles",
+    "monastic", "prince", "princess", "author", "twelve", "seventy", "children", "with", "him", "her", "them",
+    "those", "nun", "schemamonk", "passion-bearer", "unmercenary", "unmercenaries", "fool-for-christ", "wonderworking")}
+
+
+class OCABudgetExhausted(Exception):
+    pass
+
+
+def oca_clean(fragment: str) -> str:
+    text = re.sub(r"<[^>]+>", " ", fragment)
+    return re.sub(r"\s+", " ", html.unescape(text)).strip()
+
+
+def oca_parse_day(page_html: str, d: date) -> list:
+    """[{name, url, description}] from an OCA Lives of the Saints day page."""
+    out = []
+    for art in re.findall(r'<article class="saint[^"]*">(.*?)</article>', page_html, re.DOTALL):
+        nm = re.search(r'<h2 class="name">(.*?)</h2>', art, re.DOTALL)
+        link = re.search(r'href="(/saints/lives/%d/%02d/%02d/[^"]+)"' % (d.year, d.month, d.day), art)
+        if not nm or not link:
+            continue
+        desc = re.search(r'<p class="description">(.*?)</p>', art, re.DOTALL)
+        out.append({"name": oca_clean(re.sub(r"<!--.*?-->", "", nm.group(1))), "url": OCA_BASE + link.group(1),
+                    "description": oca_clean(desc.group(1)) if desc else ""})
+    return out
+
+
+def oca_parse_life(page_html: str) -> list:
+    """Paragraph texts of one OCA life page (the <article> body)."""
+    m = re.search(r"<article>(.*?)</article>", page_html, re.DOTALL)
+    body = m.group(1) if m else ""
+    body = re.sub(r"<header.*?</header>|<figure.*?</figure>", "", body, flags=re.DOTALL)
+    paras = [oca_clean(p) for p in re.split(r"<p[^>]*>", body)]
+    return [p for p in paras if len(p) > 1]
+
+
+class OCALives:
+    def __init__(self):
+        self.data = load_json(ORTHODOX_LIVES_PATH) or {}
+        if self.data.get("version") != ORTHODOX_LIVES_VERSION:
+            self.data = {"version": ORTHODOX_LIVES_VERSION, "days": {}}
+        self.fetches = 0
+        self.dirty = False
+
+    def _get(self, url: str) -> str:
+        if self.fetches >= OCA_MAX_FETCHES_PER_RUN:
+            raise OCABudgetExhausted()
+        if self.fetches:
+            time.sleep(OCA_DELAY_SECONDS)
+        self.fetches += 1
+        return http_get(url).decode("utf-8", errors="replace")
+
+    def has(self, d: date) -> bool:
+        return d.isoformat() in self.data["days"]
+
+    @staticmethod
+    def match(mention: dict, entries: list, bio_text: str = "") -> dict | None:
+        """The OCA entry for the saint of `mention`, checked against the New
+        Advent article (`bio_text`) so both sources are about one person."""
+        bio_words = na_words(bio_text)
+        hierarch = re.compile(r"\b(bishop|archbishop|patriarch|pope|metropolitan)\b", re.IGNORECASE)
+        scored = []
+        for e in entries:
+            name = re.sub(r"\([^)]*\)", " ", re.sub(r"^[^:]*:\s*", "", e["name"]))
+            words = na_words(name)
+            if mention["given"] not in words:
+                continue
+            # The given name must name this saint, not a relative or teacher
+            # mentioned after "sister of" / "disciple of".
+            rel = re.search(r"\b(sister|brother|mother|father|son|daughter|wife|husband|disciple|teacher)s? of\b", name, re.IGNORECASE)
+            if rel and mention["given"] not in na_words(name[: rel.start()]):
+                continue
+            others = words - NA_GENERIC_NORM - {mention["given"]} - OCA_HONORIFIC_NORM
+            others = {w for w in others if not w.isdigit()}
+            # The OCA name names a place/epithet the commemoration doesn't
+            # share at all: a namesake, not this saint.
+            if others and mention["distinct"] and not (others & mention["distinct"]):
+                continue
+            # Places/epithets only the OCA name has must be confirmed by the
+            # New Advent article ("Babylas of Nicomedia" vs Babylas of Antioch).
+            extra = others - mention["distinct"]
+            if extra and not (others & mention["distinct"]) and not (extra & bio_words):
+                continue
+            # A hierarch on one side only: the article must say so too.
+            if hierarch.search(name) and not hierarch.search(mention["text"]) and not hierarch.search(bio_text[:600]):
+                continue
+            overlap = mention["distinct"] & (others | na_words(e["description"][:400]))
+            roles = {r for r in mention["roles"] if re.search(rf"{r}", name, re.IGNORECASE)}
+            scored.append((2 * len(overlap) + len(roles) + len(extra & bio_words), e))
+        if not scored:
+            return None
+        scored.sort(key=lambda t: -t[0])
+        if len(scored) > 1 and scored[0][0] == scored[1][0]:
+            return None
+        return scored[0][1]
+
+    def lives_for(self, d: date, liturgical: dict) -> list:
+        """Orthodox lives for the saints that have a New Advent bio."""
+        bios = liturgical.get("newadvent") or []
+        if not bios:
+            return []
+        entries = oca_parse_day(self._get(f"{OCA_BASE}/saints/lives/{d.year}/{d.month:02d}/{d.day:02d}"), d)
+        out = []
+        for b in bios:
+            mention = na_parse_mention(b["commemoration"])
+            e = self.match(mention, entries, b.get("title", "") + " " + (b.get("more") or b.get("excerpt") or "")) if mention else None
+            if not e:
+                continue
+            paras = oca_parse_life(self._get(e["url"])) or [e["description"].rstrip("\u2026")]
+            text = "\n\n".join(paras)
+            out.append({
+                "commemoration": b["commemoration"],
+                "newadvent_url": b["url"],
+                "title": re.sub(r"^[^:]*(?:Sunday|Saturday)[^:]*:\s*", "", e["name"]),
+                "url": e["url"],
+                "source": "OCA",
+                "excerpt": na_truncate(paras[0], OCA_EXCERPT_CHARS),
+                "more": na_truncate(text, OCA_MORE_CHARS),
+            })
+        return out
+
+    def update(self, d: date, liturgical: dict):
+        self.data["days"][d.isoformat()] = self.lives_for(d, liturgical)
+        self.dirty = True
+
+    def prune(self, window_start: date, window_end: date):
+        for k in list(self.data["days"]):
+            if not (window_start.isoformat() <= k <= window_end.isoformat()):
+                del self.data["days"][k]
+                self.dirty = True
+
+    def save(self):
+        if self.dirty:
+            ORTHODOX_LIVES_PATH.write_text(json.dumps(self.data, indent=1, ensure_ascii=False))
+
+
+# ---------------------------------------------------------------------------
 # Cache helpers
 # ---------------------------------------------------------------------------
 
@@ -1536,6 +1705,8 @@ def build_day_files(window_start: date, window_end: date) -> tuple[str, bool, bo
             browser.close()
 
     newadvent = NewAdventMatcher()
+    oca = OCALives()
+    oca.prune(window_start, window_end)
     window_complete = not deferred
 
     for d in date_range(window_start, window_end):
@@ -1557,8 +1728,10 @@ def build_day_files(window_start: date, window_end: date) -> tuple[str, bool, bo
         if liturgical.get("status") == "ok":
             text_blob = " ".join(filter(None, [liturgical.get("summary_title")] + (liturgical.get("feasts") or [])))
             liturgical["great_feast"] = identify_great_feast(text_blob)
+            rematched = False
             if liturgical.get("newadvent_version") != NEWADVENT_MATCH_VERSION:
                 try:
+                    rematched = True
                     bios = newadvent.biographies_for(liturgical)
                     liturgical["newadvent"] = bios
                     liturgical["newadvent_version"] = NEWADVENT_MATCH_VERSION
@@ -1566,6 +1739,15 @@ def build_day_files(window_start: date, window_end: date) -> tuple[str, bool, bo
                     window_complete = False  # finish matching on a later run
                 except Exception as exc:
                     print(f"[warn] New Advent lookup failed for {d}: {exc}", file=sys.stderr)
+            # Orthodox lives (OCA) for those saints, looked up once per day
+            # (again if New Advent was re-matched).
+            if liturgical.get("newadvent") is not None and (not oca.has(d) or rematched):
+                try:
+                    oca.update(d, liturgical)
+                except OCABudgetExhausted:
+                    window_complete = False
+                except Exception as exc:
+                    print(f"[warn] OCA lives lookup failed for {d}: {exc}", file=sys.stderr)
 
         if events_ok:
             events = events_by_date.get(d.isoformat(), [])
@@ -1580,6 +1762,7 @@ def build_day_files(window_start: date, window_end: date) -> tuple[str, bool, bo
         day_file_path(d).write_text(json.dumps(day_data, indent=2))
 
     newadvent.save()
+    oca.save()
     return now_iso, any_liturgical_ok, events_ok, window_complete
 
 
