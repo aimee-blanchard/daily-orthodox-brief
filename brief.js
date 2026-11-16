@@ -552,8 +552,10 @@
     return '<section class="card svc-page">' + renderTextChooser("service", items) + "</section>";
   }
 
-  function renderEventsSection(day) {
-    if (!day.events || !day.events.length) return "";
+  /* Parish Events and the Prayer List share one collapsible bar. Each part
+     returns {body, meta} or null when there's nothing to show. */
+  function eventsPart(day) {
+    if (!day.events || !day.events.length) return null;
     var items = day.events
       .map(function (ev) {
         var time = formatEventTime(ev.start);
@@ -565,18 +567,18 @@
         );
       })
       .join("");
-    var meta = day.events.length + (day.events.length === 1 ? " event" : " events") + " · " +
-      day.events.map(function (ev) { return ev.title; }).join(" · ");
-    return renderCollapsible("events", "Parish Events Today", meta,
-      '<ul class="event-list">' + items +
-      '</ul><p class="fast-cal-link" style="margin-top:0.6rem"><a href="' +
-      esc(index.links.parish_calendar) +
-      '" target="_blank" rel="noopener">Parish calendar &rarr;</a></p>');
+    return {
+      meta: day.events.length + (day.events.length === 1 ? " event" : " events"),
+      body: '<ul class="event-list">' + items +
+        '</ul><p class="fast-cal-link" style="margin-top:0.6rem"><a href="' +
+        esc(index.links.parish_calendar) +
+        '" target="_blank" rel="noopener">Parish calendar &rarr;</a></p>',
+    };
   }
 
-  function renderPrayerListSection() {
+  function prayerListPart() {
     var pl = index.prayer_list;
-    if (!pl) return "";
+    if (!pl) return null;
     var groups = [
       { key: "sick", label: "For the health of body and soul" },
       { key: "military", label: "Serving in our armed forces" },
@@ -595,11 +597,20 @@
         );
       })
       .join("");
-    if (!body) return "";
+    if (!body) return null;
     var total = groups.reduce(function (n, g) { return n + ((pl[g.key] || []).length); }, 0);
-    var meta = total + " names · " + groups.filter(function (g) { return pl[g.key] && pl[g.key].length; })
-      .map(function (g) { return { sick: "Health", military: "Armed forces", catechumens: "Catechumens" }[g.key]; }).join(" · ");
-    return renderCollapsible("prayer", "Prayer List", meta, body);
+    return { meta: total + (total === 1 ? " name" : " names"), body: body };
+  }
+
+  function renderParishSection(day) {
+    var ev = eventsPart(day), pr = prayerListPart();
+    if (!ev && !pr) return "";
+    var meta = [ev ? ev.meta : "No events today", pr ? pr.meta : ""].filter(Boolean).join(" · ");
+    var inner =
+      '<div class="parish-part parish-events"><h3 class="parish-sub">Parish Events Today</h3>' +
+      (ev ? ev.body : '<p class="parish-none">No parish events today.</p>') + "</div>" +
+      (pr ? '<div class="parish-part parish-prayer"><h3 class="parish-sub">Prayer List</h3>' + pr.body + "</div>" : "");
+    return renderCollapsible("parish", "Parish Events & Prayer List", meta, inner);
   }
 
   function renderStalenessBanners() {
@@ -1088,8 +1099,7 @@
     html += renderStoriesSection(lit);
     html += renderServicesLink(lit, dateStr);
     html += '<div id="catechismSlot"></div>';
-    html += renderEventsSection(day);
-    html += renderPrayerListSection();
+    html += renderParishSection(day);
     html += renderReadingSection(lit);
     html += renderFooter();
 
@@ -1099,8 +1109,7 @@
         renderNavBar(dateStr) +
         '<div class="banner">Couldn&rsquo;t reach the liturgical calendar for this day.</div>' +
         '<div id="catechismSlot"></div>' +
-        renderEventsSection(day) +
-        renderPrayerListSection() +
+        renderParishSection(day) +
         renderFooter();
     }
 
