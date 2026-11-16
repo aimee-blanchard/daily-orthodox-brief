@@ -1731,8 +1731,10 @@ def build_day_files(window_start: date, window_end: date) -> tuple[str, bool, bo
             rematched = False
             if liturgical.get("newadvent_version") != NEWADVENT_MATCH_VERSION:
                 try:
-                    rematched = True
+                    old_urls = [b.get("url") for b in liturgical.get("newadvent") or []]
                     bios = newadvent.biographies_for(liturgical)
+                    # Only redo the OCA lives if the matched saints changed.
+                    rematched = [b.get("url") for b in bios] != old_urls
                     liturgical["newadvent"] = bios
                     liturgical["newadvent_version"] = NEWADVENT_MATCH_VERSION
                 except NewAdventBudgetExhausted:
