@@ -1,0 +1,42 @@
+{
+  "date": "2027-05-20",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": null,
+    "saints": [
+      "Martyr Thalelaeus of Cilicia",
+      "Unc. Rel. St Aleksy, Metropolitan of Kiev",
+      "Mark the Hermit",
+      "John, Joseph, and Nikitas the Monks of Chios"
+    ],
+    "summary_title": "Martyr Thalelaeus of Cilicia; Unc. Rel. St Aleksy, Metropolitan of Kiev; Mark the Hermit",
+    "stories": [
+      {
+        "title": "Martyr Thalelaeus of Cilicia",
+        "html": "<p>The holy Thalelaeus is counted as one of the Unmercenary Physicians. He was a physician, born in Lebanon to a Berucius (a bishop) and Romylia. During the persecutions by the Emperor Numerian, he fled to Cilicia, but was captured and brought before Theodore, the governor. When Thalelaeus boldly confessed Christ, the cruel governor ordered two soldiers, Alexander and Asterius, to bore holes through his leg-bones, pass a rope through them, and hang him from a tree. But the executioners, by the power of God, were momentarily deprived of their wits and bored through a wooden plank instead, which they hung in the tree. The governor angrily ordered that the soldiers be flogged; during their flogging they cried out: \u2018The Lord is alive to us; from now on, we are become Christians. We believe in Christ, and suffer for Him.\u2019 Hearing these words, the governor ordered that both be beheaded. He then seized their awl and attempted to bore through Thalelaeus\u2019 legs himself; but his hand suddenly became paralyzed. The compassionate physician prayed to Christ and healed his persecutor\u2019 hand. His heart still hardened, the governor next ordered that the Saint be thrown into water and drowned; but he survived. Next he was thrown to wild beasts, but they licked his feet and rubbed tamely against him. Finally the holy Martyr was beheaded.</p>"
+      },
+      {
+        "title": "Unc. Rel. St Aleksy, Metropolitan of Kiev",
+        "html": "<p>He was born in Moscow in 1292. In 1354 he was ordained Metropolitan of Moscow by Philotheus, Patriarch of Constantinople. He founded several monasteries, including the first women\u2019s monastery in Moscow. He translated the Holy Gospel from Greek into Slavonic. At that time Russia was under the rule of the Tartars, and St Alexis twice visited the Tartar Khan to plead with him to ease the oppression of the Russian people. On one of these visits he healed Taidula, the Khan\u2019s wife. He founded the Chudov Monastery in Moscow on land given him by the Khan and his wife in thanksgiving for this miraculous healing; the Saint\u2019s relics are enshrined at this same monastery. This is the feast of the uncovering of his holy relics in 1431.</p>"
+      }
+    ],
+    "fasting": null,
+    "readings": [
+      {
+        "display": "Acts 8.26-39",
+        "text": "And the angel of the Lord spake unto Philip, saying, Arise, and go toward the south unto the way that goeth down from Jerusalem unto Gaza, which is desert. And he arose and went: and, behold, a man of Ethiopia, an eunuch of great authority under Candace queen of the Ethiopians, who had the charge of all her treasure, and had come to Jerusalem for to worship, Was returning, and sitting in his chariot read Esaias the prophet. Then the Spirit said unto Philip, Go near, and join thyself to this chariot. And Philip ran thither to him, and heard him read the prophet Esaias, and said, Understandest thou what thou readest? And he said, How can I, except some man should guide me? And he desired Philip that he would come up and sit with him. The place of the scripture which he read was this, He was led as a sheep to the slaughter; and like a lamb dumb before his shearer, so opened he not his mouth: In his humiliation his judgment was taken away: and who shall declare his generation? for his life is taken from the earth. And the eunuch answered Philip, and said, I pray thee, of whom speaketh the prophet this? of himself, or of some other man? Then Philip opened his mouth, and began at the same scripture, and preached unto him Jesus. And as they went on their way, they came unto a certain water: and the eunuch said, See, here is water; what doth hinder me to be baptized? And Philip said, If thou believest with all thine heart, thou mayest. And he answered and said, I believe that Jesus Christ is the Son of God. And he commanded the chariot to stand still: and they went down both into the water, both Philip and the eunuch; and he baptized him. And when they were come up out of the water, the Spirit of the Lord caught away Philip, that the eunuch saw him no more: and he went on his way rejoicing."
+      },
+      {
+        "display": "John 6.40-44",
+        "text": "And this is the will of him that sent me, that every one which seeth the Son, and believeth on him, may have everlasting life: and I will raise him up at the last day. The Jews then murmured at him, because he said, I am the bread which came down from heaven. And they said, Is not this Jesus, the son of Joseph, whose father and mother we know? how is it then that he saith, I came down from heaven? Jesus therefore answered and said unto them, Murmur not among yourselves. No man can come to me, except the Father which hath sent me draw him: and I will raise him up at the last day."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 3
+  },
+  "events": []
+}
