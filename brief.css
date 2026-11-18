@@ -749,11 +749,23 @@
   .back-link:active { background: var(--rule); }
   .svc-page-head h1 { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; margin: 0; }
   .svc-page-head p { margin: 0.15rem 0 0; color: var(--ink-faint); font-size: 0.9rem; }
-  body[data-page]:not([data-page="services"]) .svc-page-head { margin-bottom: 0.9rem; }
+  /* Pinned page header on section pages: back link, title and date stay put
+     while the window scrolls; other sticky bars stack under it via --page-head-h. */
+  html { scroll-padding-top: var(--page-head-h, 0px); }
+  .page-head-sticky {
+    position: sticky; top: 0; z-index: 15;
+    margin: -1.75rem -1.25rem 0.9rem;
+    padding: max(0.75rem, env(safe-area-inset-top)) 1.25rem 0.6rem;
+    background: var(--bg); border-bottom: 1px solid var(--rule);
+  }
+  .page-head-sticky .back-bar { margin: 0 0 0.5rem; }
+  .page-head-sticky .svc-page-head { margin: 0; }
+  .page-head-sticky .svc-page-head h1 { font-size: 1.35rem; line-height: 1.2; }
+  .page-head-sticky .svc-page-head p { font-size: 0.85rem; }
   body[data-page="services"] .notes-hint { margin: 0.4rem 0 0.8rem; }
   section.card.svc-page { padding-top: 0; }
-  .svc-page .text-switch { top: 0; box-shadow: none; padding-top: 0.6rem; border-radius: 14px 14px 0 0; }
-  .svc-page .checkable-header { top: var(--switch-h, 0px); }
+  .svc-page .text-switch { top: var(--page-head-h, 0px); box-shadow: none; padding-top: 0.6rem; border-radius: 14px 14px 0 0; }
+  .svc-page .checkable-header { top: calc(var(--page-head-h, 0px) + var(--switch-h, 0px)); }
   .svc-page .service-text-panel { max-height: none; overflow: visible; }
   .svc-page-foot {
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
@@ -775,8 +787,8 @@
      plain open card and the window scrolls; no bar, no inner scroll box. */
   section.card.cs.page-mode > .cs-bar { display: none; }
   .cs.page-mode > .cs-body { max-height: none; overflow: visible; padding-top: 1rem; }
-  .cs.page-mode .cs-body .cat-sticky { top: 0; box-shadow: none; }
-  .cs.page-mode .cs-body .checkable-header { top: 0; box-shadow: none; }
+  .cs.page-mode .cs-body .cat-sticky { top: var(--page-head-h, 0px); box-shadow: none; }
+  .cs.page-mode .cs-body .checkable-header { top: var(--page-head-h, 0px); box-shadow: none; }
 
   /* Where a text comes from (Antiochian, OCA, New Advent). */
   .src-label { display: block; font-family: var(--sans); font-size: 0.75rem; color: var(--ink-faint); margin: 0.1rem 0 0.35rem; }

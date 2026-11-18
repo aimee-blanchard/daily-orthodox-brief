@@ -1215,7 +1215,7 @@
     var opening = !sec.classList.contains("open");
     setSectionOpen(sec, opening);
     // When closing a section she had scrolled into, bring its bar back into view.
-    if (!opening && sec.getBoundingClientRect().top < 0) sec.scrollIntoView({ block: "start" });
+    if (!opening && sec.getBoundingClientRect().top < pageHeadH()) sec.scrollIntoView({ block: "start" });
   });
 
   // "Read less" collapses a New Advent biography and brings its start back into view.
@@ -1227,7 +1227,7 @@
     e.preventDefault();
     bio.open = false;
     var top = bio.getBoundingClientRect().top;
-    if (top < 0 || top > window.innerHeight * 0.6) bio.scrollIntoView({ block: "start" });
+    if (top < pageHeadH() || top > window.innerHeight * 0.6) bio.scrollIntoView({ block: "start" });
   });
 
   /* ---- Service Texts page (services.html) ------------------------------ */
@@ -1259,13 +1259,30 @@
     if (card) card.remove();
   });
 
+  /* Section pages: "← Back to brief", the title and the date stay pinned at
+     the top while the page scrolls (Aimee, Nov 2026). Its height goes into
+     --page-head-h so the chips, search header and lesson picker stack under it. */
+  function pageHead(title, fd, dateStr) {
+    return '<div class="page-head-sticky" id="pageHead">' +
+      '<div class="back-bar"><a class="back-link" id="backToBrief" href="' + esc(briefHref(dateStr)) + '">&larr; Back to brief</a></div>' +
+      '<header class="svc-page-head"><h1>' + esc(title) + "</h1><p>" + esc(fd.weekday + ", " + fd.date) + "</p></header></div>";
+  }
+  function pageHeadH() {
+    var h = document.getElementById("pageHead");
+    return h ? h.offsetHeight : 0;
+  }
+  function measurePageHead() {
+    var h = pageHeadH();
+    if (h) document.documentElement.style.setProperty("--page-head-h", h + "px");
+  }
+  window.addEventListener("resize", measurePageHead);
+
   function renderSectionPage(page, dateStr, day) {
     var lit = day.liturgical && day.liturgical.status === "ok" ? day.liturgical : null;
     renderDate = dateStr;
     var fd = friendlyDate(dateStr);
     document.title = PAGE_TITLES[page] + " \u2013 " + fd.weekday + ", " + fd.date;
-    var html = '<div class="back-bar"><a class="back-link" id="backToBrief" href="' + esc(briefHref(dateStr)) + '">&larr; Back to brief</a></div>' +
-      '<header class="svc-page-head"><h1>' + esc(PAGE_TITLES[page]) + "</h1><p>" + esc(fd.weekday + ", " + fd.date) + "</p></header>";
+    var html = pageHead(PAGE_TITLES[page], fd, dateStr);
     var body = "";
     if (page === "saints") body = lit ? renderSaintsSection(lit) + renderStoriesSection(lit) : "";
     else if (page === "parish") body = renderParishSection(day);
@@ -1273,6 +1290,7 @@
     else if (page === "catechism") body = '<div id="catechismSlot"></div>';
     html += body || '<div class="banner">Nothing for this day.</div>';
     app.innerHTML = html;
+    measurePageHead();
     currentDate = dateStr;
     if (page === "catechism" && window.Catechism) {
       window.Catechism.mount(document.getElementById("catechismSlot"), {
@@ -1288,8 +1306,7 @@
     var lit = day.liturgical && day.liturgical.status === "ok" ? day.liturgical : null;
     var fd = friendlyDate(dateStr);
     document.title = "Service Texts – " + fd.weekday + ", " + fd.date;
-    var html = '<div class="back-bar"><a class="back-link" id="backToBrief" href="' + esc(briefHref(dateStr)) + '">&larr; Back to brief</a></div>' +
-      '<header class="svc-page-head"><h1>Service Texts</h1><p>' + esc(fd.weekday + ", " + fd.date) + "</p></header>";
+    var html = pageHead("Service Texts", fd, dateStr);
     var body = lit ? renderServicesPageBody(lit, dateStr) : "";
     if (!body || !orderedServiceTexts(lit).length) {
       html += '<div class="banner">No service texts for this day.</div>';
@@ -1306,6 +1323,7 @@
     html += '<div class="svc-page-foot"><span class="anchored-summary"></span>' +
       '<button type="button" class="notes-doxy">Send to Doxy &#8599;</button></div>';
     app.innerHTML = html;
+    measurePageHead();
     currentDate = dateStr;
     wireTextChoosers();
     wireCheckableBodies();

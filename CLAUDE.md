@@ -203,6 +203,7 @@ Initial backfill (Nov 2026): 43 of 88 New Advent bios got an OCA life.
   - all the parish-practice transforms
   - a fixed bottom bar with the note count and one Send to Doxy button
   It reopens the text she last chose that day (`serviceTextChoice:<date>`).
+- **Pinned page header** (Aimee, Nov 2026): on every section page, services.html and fasting.html, "← Back to brief", the title and the date (`.page-head-sticky`, built by `pageHead()` in brief.js) stick to the top with a solid background. Its measured height is `--page-head-h` on `<html>`; the services chips, the search header (`+ --switch-h`) and the catechism lesson picker stick under it, and `scroll-padding-top` keeps jumps from landing under it.
 - Chip order: the Full Outline comes immediately before the Variables (`orderedServiceTexts`).
 - There's no Liturgy Notes box any more (Nov 2026: she notes inline instead). Send to Doxy sends every inline note for the day, from every text, in one doxy-notes issue grouped by text. Text she typed in the old box (`liturgyNotes:<date>`) isn't lost: the services page shows it read-only in an "Earlier Liturgy Notes" card with a Delete button, and Send to Doxy includes it.
 - Switching service texts: the chip row (`.text-switch`, built by `renderTextChooser`) must stay pinned. It used to be a plain `<select>` that scrolled out of view, so on her phone there was no way to switch texts (Nov 2026). `--switch-h` (measured in `wireTextChoosers`) stacks the search header under it.

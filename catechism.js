@@ -339,7 +339,7 @@
         rememberLesson(dateStr, sel.value);
         renderOpen();
         var sec0 = section();
-        if (sec0.classList.contains("page-mode")) { if (sec0.getBoundingClientRect().top < 0) sec0.scrollIntoView({ block: "start" }); }
+        if (sec0.classList.contains("page-mode")) { var ph = document.getElementById("pageHead"); if (sec0.getBoundingClientRect().top < (ph ? ph.offsetHeight : 0)) sec0.scrollIntoView({ block: "start" }); }
         else slot.querySelector(".cs-body").scrollTop = 0;
       });
       var rows = card.querySelector(".cat-rows");
