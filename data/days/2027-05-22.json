@@ -1,0 +1,54 @@
+{
+  "date": "2027-05-22",
+  "liturgical": {
+    "status": "ok",
+    "source": "orthocal",
+    "feasts": null,
+    "saints": [
+      "Martyr Basiliscus, Bishop of Comana",
+      "Holy New Martyrs Demetrius and Paul of Tripoli",
+      "John-Vladimir, Ruler of Serbia",
+      "Righteous Melchizedek, king of Salem.",
+      "Commemoration of the Second Ecumenical Council (381)."
+    ],
+    "summary_title": "Martyr Basiliscus, Bishop of Comana; Righteous Melchizedek, king of Salem.; Commemoration of the Second Ecumenical Council (381).",
+    "stories": [
+      {
+        "title": "Martyr Basiliscus, Bishop of Comana",
+        "html": "<p>He was from Amasea on the Black Sea, and was a nephew of St Theodore the Tyro (February 17). He was a fellow-martyr of Eutropius and Cleonicus (March 3), but is commemorated because, after they were crucified, he was shut in prison. A new governor replaced the one who had killed Basiliscus\u2019 companions, and Basiliscus prayed in tears that he not be deprived of a martyr\u2019s death. The Lord Jesus appeared to him, promised that his prayer would be answered, and told him to go to his village to say farewell to his mother and brothers. The new governor, Agrippa, sent soldiers to the village and had Basiliscus brought back to him. On the way to Amasea, many wonders were worked throught the Saint, and many were brought to Christ. Brought before the governor, Basiliscus again refused to worship the idols or deny Christ: he was beheaded in Comana and his body thrown into the river. Upon the holy Saint\u2019s execution, Agrippa instantly went mad, remaining so until he smeared himself with some of the Martyr\u2019s blood, which immediately healed him. Convinced by this wonder of the truth of the Faith, Agrippa was baptised. All of this happened during the reign of Diocletian.</p>"
+      },
+      {
+        "title": "Righteous Melchizedek, king of Salem.",
+        "html": "<p>He was a \u201cpriest of the most high God\u201d (Genesis 14:18-20), who blessed our Forefather Abraham and \u201cbrought forth bread and wine,\u201d prefiguring the Holy Eucharist, centuries before the Law was given to Moses or Christ became incarnate. The Epistle to the Hebrews (ch. 7) reveals Melchizedek, the Priest-King, to be a type of Christ.</p>"
+      },
+      {
+        "title": "Commemoration of the Second Ecumenical Council (381).",
+        "html": "<p>The council was called by the Emperor Theodosius the Great, primarily to clarify the Church\u2019s teaching on the Holy Spirit. Macedonius, bishop of Constantinople, had falsely taught that the Spirit is a creature rather than a Divine Person \u201cWho together with the Father and the Son is worshiped and glorified.\u201d Partly to correct this error, the council revised and expanded the text of the Nicene Creed into the form that we know today.</p>"
+      }
+    ],
+    "fasting": null,
+    "readings": [
+      {
+        "display": "Acts 9.19-31",
+        "text": "And when he had received meat, he was strengthened. Then was Saul certain days with the disciples which were at Damascus. And straightway he preached Christ in the synagogues, that he is the Son of God. But all that heard him were amazed, and said; Is not this he that destroyed them which called on this name in Jerusalem, and came hither for that intent, that he might bring them bound unto the chief priests? But Saul increased the more in strength, and confounded the Jews which dwelt at Damascus, proving that this is very Christ. And after that many days were fulfilled, the Jews took counsel to kill him: But their laying await was known of Saul. And they watched the gates day and night to kill him. Then the disciples took him by night, and let him down by the wall in a basket. And when Saul was come to Jerusalem, he assayed to join himself to the disciples: but they were all afraid of him, and believed not that he was a disciple. But Barnabas took him, and brought him to the apostles, and declared unto them how he had seen the Lord in the way, and that he had spoken to him, and how he had preached boldly at Damascus in the name of Jesus. And he was with them coming in and going out at Jerusalem. And he spake boldly in the name of the Lord Jesus, and disputed against the Grecians: but they went about to slay him. Which when the brethren knew, they brought him down to C\u00e6sarea, and sent him forth to Tarsus. Then had the churches rest throughout all Jud\u00e6a and Galilee and Samaria, and were edified; and walking in the fear of the Lord, and in the comfort of the Holy Ghost, were multiplied."
+      },
+      {
+        "display": "John 15.17-16.2",
+        "text": "These things I command you, that ye love one another. If the world hate you, ye know that it hated me before it hated you. If ye were of the world, the world would love his own: but because ye are not of the world, but I have chosen you out of the world, therefore the world hateth you. Remember the word that I said unto you, The servant is not greater than his lord. If they have persecuted me, they will also persecute you; if they have kept my saying, they will keep yours also. But all these things will they do unto you for my name\u2019s sake, because they know not him that sent me. If I had not come and spoken unto them, they had not had sin: but now they have no cloke for their sin. He that hateth me hateth my Father also. If I had not done among them the works which none other man did, they had not had sin: but now have they both seen and hated both me and my Father. But this cometh to pass, that the word might be fulfilled that is written in their law, They hated me without a cause. But when the Comforter is come, whom I will send unto you from the Father, even the Spirit of truth, which proceedeth from the Father, he shall testify of me: And ye also shall bear witness, because ye have been with me from the beginning. These things have I spoken unto you, that ye should not be offended. They shall put you out of the synagogues: yea, the time cometh, that whosoever killeth you will think that he doeth God service."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": null,
+    "newadvent": [],
+    "newadvent_version": 3
+  },
+  "events": [
+    {
+      "title": "Great Vespers",
+      "start": "2027-05-22 17:00:00",
+      "end": "2027-05-22 18:00:00",
+      "url": "https://www.constantinehelen.com/event/great-vespers/2027-05-22/"
+    }
+  ]
+}
