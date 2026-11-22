@@ -693,6 +693,7 @@
       esc(relativeStaleness(ls.parish_events)) +
       "<br>Brief generated " +
       esc(relativeStaleness(index.generated_at)) +
+      '<br><button type="button" class="sync-status sync-status-foot"></button>' +
       "</footer>"
     );
   }
@@ -789,6 +790,7 @@
     if (nextBtn) nextBtn.addEventListener("click", function () { var d = stepAvailable(dateStr, 1); if (d) goTo(d); });
     if (todayBtn) todayBtn.addEventListener("click", function () { goTo(index.today); });
     wireDatePicker(dateStr);
+    DoxySync.renderStatus();
   }
 
   function wireTextChoosers() {
@@ -1035,6 +1037,7 @@
   function saveAnchored(dateStr, list) {
     if (list.length) localStorage.setItem(anchoredKey(dateStr), JSON.stringify(list));
     else localStorage.removeItem(anchoredKey(dateStr));
+    DoxySync.changed(dateStr);
   }
   function quoteOf(text, words) {
     var w = text.trim().split(/\s+/);
@@ -1188,25 +1191,37 @@
   var DOXY_ISSUE_BASE = "https://github.com/aimee-blanchard/daily-orthodox-brief/issues/new";
   var DOXY_MAX_URL = 7500;
 
-  function doxyIssueUrl(dateStr, generalNote) {
+  function doxyTitle(dateStr) {
     var fd = friendlyDate(dateStr);
-    var title = "Service notes – " + fd.weekday + ", " + fd.date;
+    return "Service notes – " + fd.weekday + ", " + fd.date;
+  }
+
+  // Markdown body for a day's notes (manual link and auto-send share it).
+  // `limit` clips each note (only needed to fit the manual link's URL).
+  function doxyNotesBody(dateStr, generalNote, limit) {
+    var fd = friendlyDate(dateStr);
     var general = (generalNote || "").replace(/^[•\s]+$/, "").trim();
     var anchored = sortedAnchored(dateStr);
     function clip(t, n) { return n == null || t.length <= n ? t : t.slice(0, n) + "…"; }
+    var out = "**Date:** " + fd.weekday + ", " + fd.date + " (" + dateStr + ")\n";
+    var lastService = null;
+    anchored.forEach(function (n, i) {
+      if (n.service !== lastService) {
+        out += "\n### " + n.service + "\n";
+        lastService = n.service;
+      }
+      out += "\n**" + (i + 1) + ".** At “" + n.quote + "” (paragraph " + (n.para + 1) + ")\n\n" +
+        clip(n.text, limit).split("\n").map(function (l) { return "> " + l; }).join("\n") + "\n";
+    });
+    if (general) out += "\n### Liturgy Notes (earlier notes box)\n\n" + clip(general, limit) + "\n";
+    if (!anchored.length && !general) out += "\n(No notes yet.)\n";
+    return { body: out, count: anchored.length + (general ? 1 : 0) };
+  }
+
+  function doxyIssueUrl(dateStr, generalNote) {
+    var title = doxyTitle(dateStr);
     function build(limit) {
-      var out = "**Date:** " + fd.weekday + ", " + fd.date + " (" + dateStr + ")\n";
-      var lastService = null;
-      anchored.forEach(function (n, i) {
-        if (n.service !== lastService) {
-          out += "\n### " + n.service + "\n";
-          lastService = n.service;
-        }
-        out += "\n**" + (i + 1) + ".** At “" + n.quote + "” (paragraph " + (n.para + 1) + ")\n\n" +
-          clip(n.text, limit).split("\n").map(function (l) { return "> " + l; }).join("\n") + "\n";
-      });
-      if (general) out += "\n### Liturgy Notes (earlier notes box)\n\n" + clip(general, limit) + "\n";
-      if (!anchored.length && !general) out += "\n(No notes yet.)\n";
+      var out = doxyNotesBody(dateStr, generalNote, limit).body;
       if (limit != null) out += "\n> ⚠️ Some notes were too long for a link and were cut off (marked …). Paste the rest below.\n";
       return DOXY_ISSUE_BASE + "?labels=doxy-notes&title=" + encodeURIComponent(title) + "&body=" + encodeURIComponent(out);
     }
@@ -1219,6 +1234,343 @@
     }
     return build(lo);
   }
+
+  /* ---- Auto-send notes to Doxy ------------------------------------------
+     Optional. Aimee creates a fine-grained GitHub token once, scoped to this
+     repo with Issues read/write only, and pastes it on her phone. It's kept
+     only in that phone's localStorage (never in the repo or the page code).
+     Then each day's service notes are copied to ONE GitHub issue per day
+     (label doxy-notes, title "Service notes – <day>"; the body carries a
+     hidden <!-- doxy-sync date=YYYY-MM-DD --> marker), created on the first
+     note and updated in place a few seconds after every change, when she
+     leaves the page, and when the phone comes back online. Notes always save
+     locally first, so they work offline and with auto-send off; the manual
+     Send to Doxy link stays as a fallback. */
+  var DoxySync = (function () {
+    var OWNER = "aimee-blanchard", REPO = OWNER + "/daily-orthodox-brief";
+    var API = "https://api.github.com";
+    var TOKEN_KEY = "doxySync:token", STATE_KEY = "doxySync:state", LOCK_KEY = "doxySync:lock";
+    var DEBOUNCE_MS = 4000;
+    var TOKEN_URL = "https://github.com/settings/personal-access-tokens/new?" + [
+      "name=" + encodeURIComponent("Doxy notes auto-send"),
+      "description=" + encodeURIComponent("Daily Orthodox Brief: lets the phone file service notes as issues in aimee-blanchard/daily-orthodox-brief. Issues only."),
+      "target_name=" + OWNER, "expires_in=366", "issues=write"].join("&");
+    var timer = null, busy = false, again = false, sending = false;
+
+    function token() { try { return localStorage.getItem(TOKEN_KEY) || ""; } catch (e) { return ""; } }
+    function enabled() { return !!token(); }
+    function state() {
+      var s = null;
+      try { s = JSON.parse(localStorage.getItem(STATE_KEY) || "null"); } catch (e) {}
+      s = s || {};
+      s.dates = s.dates || {}; s.dirty = s.dirty || {};
+      return s;
+    }
+    function setState(s) { try { localStorage.setItem(STATE_KEY, JSON.stringify(s)); } catch (e) {} }
+    function hash(str) {
+      var h = 5381;
+      for (var i = 0; i < str.length; i++) h = ((h << 5) + h + str.charCodeAt(i)) | 0;
+      return (h >>> 0).toString(36);
+    }
+    function marker(d) { return "<!-- doxy-sync date=" + d + " -->"; }
+    function chicago(iso) {
+      try {
+        return new Date(iso).toLocaleString("en-US", { timeZone: "America/Chicago", weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" });
+      } catch (e) { return iso; }
+    }
+    function timeOnly(iso) {
+      try { return new Date(iso).toLocaleTimeString("en-US", { timeZone: "America/Chicago", hour: "numeric", minute: "2-digit" }); } catch (e) { return ""; }
+    }
+    function issueFor(d) {
+      var nb = doxyNotesBody(d, legacyLiturgyNotes(d), null);
+      var body = nb.body + "\n---\n_Sent automatically from the Daily Orthodox Brief · " + nb.count +
+        (nb.count === 1 ? " note" : " notes") + " · last updated " + chicago(new Date().toISOString()) + "_\n" + marker(d) + "\n";
+      // The hash ignores the timestamp so an unchanged day isn't re-sent.
+      return { title: doxyTitle(d), body: body, count: nb.count, hash: hash(doxyTitle(d) + nb.body) };
+    }
+
+    function api(method, path, body, opts) {
+      var init = {
+        method: method,
+        headers: { Accept: "application/vnd.github+json", Authorization: "Bearer " + ((opts && opts.token) || token()), "X-GitHub-Api-Version": "2022-11-28" },
+        cache: "no-store",
+      };
+      if (body !== undefined) { init.headers["Content-Type"] = "application/json"; init.body = JSON.stringify(body); }
+      if (opts && opts.keepalive) init.keepalive = true;
+      return fetch(API + path, init).then(function (r) {
+        return r.text().then(function (t) {
+          var j = null;
+          try { j = t ? JSON.parse(t) : null; } catch (e) {}
+          return { status: r.status, ok: r.ok, json: j };
+        });
+      });
+    }
+
+    function changed(d) {
+      if (!enabled() || !d) { renderStatus(); return; }
+      var s = state();
+      s.dirty[d] = Date.now();
+      setState(s);
+      renderStatus();
+      schedule(DEBOUNCE_MS);
+    }
+    function schedule(ms) {
+      clearTimeout(timer);
+      timer = setTimeout(flush, ms);
+    }
+
+    function takeLock() {
+      var now = Date.now(), held = +(localStorage.getItem(LOCK_KEY) || 0);
+      if (held && now - held < 20000) return false;
+      localStorage.setItem(LOCK_KEY, String(now));
+      return true;
+    }
+    function dropLock() { localStorage.removeItem(LOCK_KEY); }
+
+    function flush() {
+      if (!enabled()) return Promise.resolve();
+      if (busy) { again = true; return Promise.resolve(); }
+      var s = state();
+      var dates = Object.keys(s.dirty).sort();
+      if (!dates.length) { renderStatus(); return Promise.resolve(); }
+      if (navigator.onLine === false) { renderStatus(); return Promise.resolve(); }
+      if (!takeLock()) { schedule(5000); return Promise.resolve(); }
+      busy = true; sending = true; renderStatus();
+      var chain = Promise.resolve();
+      dates.forEach(function (d) { chain = chain.then(function () { return syncDate(d); }); });
+      return chain.then(function () {
+        var st = state(); st.error = null; setState(st);
+      }).catch(function (err) {
+        var st = state();
+        st.error = { kind: err && err.kind || "network", status: err && err.status || 0, at: new Date().toISOString() };
+        setState(st);
+        // Network trouble: try again later; key problems wait for her.
+        if (!err || err.kind === "network" || err.kind === "server") schedule(60000);
+      }).then(function () {
+        busy = false; sending = false; dropLock(); renderStatus();
+        if (again) { again = false; schedule(1000); }
+      });
+    }
+
+    function fail(r) {
+      var e = new Error("GitHub " + r.status);
+      e.status = r.status;
+      e.kind = r.status === 401 ? "auth" : (r.status === 403 || r.status === 404) ? "access" : r.status >= 500 ? "server" : "other";
+      if (r.status === 403 && r.json && /rate limit/i.test(r.json.message || "")) e.kind = "server";
+      return e;
+    }
+    function net() { var e = new Error("network"); e.kind = "network"; return e; }
+
+    function findIssue(d) {
+      return api("GET", "/repos/" + REPO + "/issues?labels=doxy-notes&state=all&creator=" + OWNER + "&per_page=100&sort=created&direction=desc")
+        .catch(function () { throw net(); })
+        .then(function (r) {
+          if (!r.ok) throw fail(r);
+          var hit = (r.json || []).filter(function (i) { return !i.pull_request && (i.body || "").indexOf(marker(d)) !== -1; })[0];
+          return hit || null;
+        });
+    }
+
+    function syncDate(d) {
+      var s = state(), rec = s.dates[d] || {}, iss = issueFor(d);
+      function done(issue) {
+        var st = state();
+        st.dates[d] = { issue: issue.number, url: issue.html_url, hash: iss.hash, sentAt: new Date().toISOString(), count: iss.count };
+        // A change made while this request was in flight stays queued.
+        if (st.dirty[d] && st.dirty[d] <= (s.dirty[d] || 0)) delete st.dirty[d];
+        setState(st);
+      }
+      function clearDirty() { var st = state(); if (st.dirty[d] <= (s.dirty[d] || 0)) delete st.dirty[d]; setState(st); }
+      if (rec.hash === iss.hash && rec.issue) { clearDirty(); return Promise.resolve(); }
+      function create() {
+        if (!iss.count) { clearDirty(); return Promise.resolve(); } // nothing to send yet
+        return api("POST", "/repos/" + REPO + "/issues", { title: iss.title, body: iss.body, labels: ["doxy-notes"] })
+          .catch(function () { throw net(); })
+          .then(function (r) { if (!r.ok) throw fail(r); done(r.json); });
+      }
+      function update(num) {
+        var patch = { title: iss.title, body: iss.body };
+        if (iss.count) patch.state = "open"; // new notes reopen a day Doxy already closed
+        return api("PATCH", "/repos/" + REPO + "/issues/" + num, patch)
+          .catch(function () { throw net(); })
+          .then(function (r) {
+            if (r.status === 404 || r.status === 410) { var st = state(); delete st.dates[d]; setState(st); return create(); }
+            if (!r.ok) throw fail(r);
+            done(r.json);
+          });
+      }
+      if (rec.issue) return update(rec.issue);
+      return findIssue(d).then(function (found) { return found ? update(found.number) : create(); });
+    }
+
+    // Leaving the page: send what we can in one go (needs a known issue).
+    function flushOnHide() {
+      if (!enabled() || navigator.onLine === false) return;
+      clearTimeout(timer);
+      var s = state();
+      Object.keys(s.dirty).forEach(function (d) {
+        var rec = s.dates[d];
+        if (!rec || !rec.issue) return;
+        var iss = issueFor(d);
+        if (iss.hash === rec.hash) return;
+        var patch = { title: iss.title, body: iss.body };
+        if (iss.count) patch.state = "open";
+        try { api("PATCH", "/repos/" + REPO + "/issues/" + rec.issue, patch, { keepalive: true }).then(function (r) { if (r.ok) { var st = state(); st.dates[d].hash = iss.hash; st.dates[d].sentAt = new Date().toISOString(); delete st.dirty[d]; setState(st); } }).catch(function () {}); } catch (e) {}
+      });
+    }
+
+    /* -- status line + setup sheet -- */
+    function statusText(d) {
+      if (!enabled()) return { cls: "off", html: "Auto-send to Doxy: off &middot; <u>Set up</u>" };
+      var s = state(), dirty = Object.keys(s.dirty).length;
+      if (s.error && (s.error.kind === "auth" || s.error.kind === "access"))
+        return { cls: "err", html: "&#9888;&#xFE0E; Auto-send paused: " + (s.error.kind === "auth" ? "GitHub key expired or removed" : "key can&rsquo;t reach this repo") + " &middot; <u>Fix</u>" };
+      if (sending) return { cls: "busy", html: "Auto-send: sending&hellip;" };
+      if (dirty && navigator.onLine === false) return { cls: "wait", html: "Auto-send: offline &middot; will send when back online" };
+      if (dirty) return { cls: "wait", html: "Auto-send: waiting to send&hellip;" };
+      var rec = d && s.dates[d];
+      if (rec && rec.sentAt) return { cls: "ok", html: "&#10003; Auto-sent to Doxy " + esc(timeOnly(rec.sentAt)) };
+      return { cls: "ok", html: "&#10003; Auto-send to Doxy is on" };
+    }
+    function renderStatus() {
+      document.querySelectorAll(".sync-status").forEach(function (el) {
+        var st = statusText(el.getAttribute("data-date") || (typeof renderDate === "string" ? renderDate : null));
+        el.innerHTML = st.html;
+        el.className = el.className.replace(/\bsync-(off|err|busy|wait|ok)\b/g, "").trim() + " sync-" + st.cls;
+      });
+    }
+
+    function openSheet() {
+      var on = enabled(), s = state();
+      var backdrop = document.createElement("div");
+      backdrop.className = "note-sheet-backdrop";
+      var recent = Object.keys(s.dates).sort().reverse().slice(0, 5).map(function (d) {
+        var r = s.dates[d];
+        return '<li><a href="' + esc(r.url || "#") + '" target="_blank" rel="noopener">' + esc(doxyTitle(d)) + "</a> &middot; " +
+          (r.count || 0) + (r.count === 1 ? " note" : " notes") + " &middot; " + esc(chicago(r.sentAt)) + "</li>";
+      }).join("");
+      var err = s.error && (s.error.kind === "auth" || s.error.kind === "access")
+        ? '<p class="sync-msg sync-msg-err">' + (s.error.kind === "auth"
+          ? "GitHub says the key has expired or was deleted. Make a new one below and paste it in."
+          : "The key can&rsquo;t reach this repository. Make sure it&rsquo;s set to <b>Only select repositories &rarr; daily-orthodox-brief</b> with <b>Issues: Read and write</b>.") + "</p>"
+        : "";
+      var setup =
+        '<ol class="sync-steps">' +
+        '<li><a class="sync-token-link" href="' + esc(TOKEN_URL) + '" target="_blank" rel="noopener">Open GitHub to make the key &#8599;</a><br>' +
+        "Sign in as <b>" + OWNER + "</b> if asked. The name, expiry (1 year) and <b>Issues: Read and write</b> are filled in.</li>" +
+        "<li>Under <b>Repository access</b>, choose <b>Only select repositories</b> and pick <b>daily-orthodox-brief</b>. Leave everything else as it is.</li>" +
+        "<li>Tap <b>Generate token</b>, then copy the key (it starts with <code>github_pat_</code>).</li>" +
+        '<li>Come back here, paste it, and tap Save.<br><input type="password" class="sync-token-input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="github_pat_…">' +
+        '<button type="button" class="sync-save">Save</button></li></ol>';
+      backdrop.innerHTML =
+        '<div class="note-sheet sync-sheet" role="dialog" aria-label="Auto-send notes to Doxy">' +
+        "<h3>Auto-send notes to Doxy</h3>" +
+        (on
+          ? '<p class="sync-lead">On for this phone. Each day&rsquo;s service notes go to one GitHub issue for Doxy, a few seconds after you change them.</p>' + err +
+            (recent ? '<ul class="sync-recent">' + recent + "</ul>" : '<p class="sync-lead">Nothing sent yet: add a note and it&rsquo;ll go out on its own.</p>') +
+            '<div class="note-sheet-actions"><button type="button" class="sync-now">Send now</button><button type="button" class="sync-off">Turn off</button><button type="button" class="note-cancel">Close</button></div>' +
+            '<details class="sync-replace"' + (err ? " open" : "") + "><summary>Replace the key</summary>" + setup + "</details>"
+          : '<p class="sync-lead">Your notes already save on this phone. Set this up once and each day&rsquo;s notes are sent to Doxy automatically, so you don&rsquo;t have to tap Send to Doxy.</p>' + err + setup +
+            '<div class="note-sheet-actions"><button type="button" class="note-cancel">Not now</button></div>') +
+        '<p class="sync-status-msg" aria-live="polite"></p>' +
+        '<p class="sync-fine">The key stays only on this phone (not in the app&rsquo;s code or on GitHub Pages) and can only open and edit issues in this one repository. Notes keep saving offline and with auto-send off, and the Send to Doxy button still works. &ldquo;Turn off&rdquo; removes the key from this phone; you can also delete it any time in GitHub &rarr; Settings &rarr; Developer settings &rarr; Fine-grained tokens.</p>' +
+        "</div>";
+      document.body.appendChild(backdrop);
+      var msg = backdrop.querySelector(".sync-status-msg");
+      function close() { backdrop.remove(); renderStatus(); }
+      backdrop.addEventListener("click", function (e) { if (e.target === backdrop) close(); });
+      backdrop.querySelectorAll(".note-cancel").forEach(function (b) { b.addEventListener("click", close); });
+      var save = backdrop.querySelector(".sync-save");
+      if (save) save.addEventListener("click", function () {
+        var t = backdrop.querySelector(".sync-token-input").value.trim();
+        save.disabled = true;
+        msg.textContent = "Checking the key with GitHub…";
+        verify(t).then(function () {
+          localStorage.setItem(TOKEN_KEY, t);
+          var st = state(); st.error = null;
+          // Start with today's and recent days' notes (not old ones already sent by hand).
+          Object.keys(localStorage).forEach(function (k) {
+            var m = /^(?:anchoredNotes|liturgyNotes):(\d{4}-\d{2}-\d{2})$/.exec(k);
+            if (m && m[1] >= recentCutoff()) st.dirty[m[1]] = Date.now();
+          });
+          setState(st);
+          msg.textContent = "Saved. Auto-send is on.";
+          setTimeout(function () { close(); flush(); }, 700);
+        }).catch(function (e) {
+          save.disabled = false;
+          msg.textContent = e.message;
+        });
+      });
+      var now = backdrop.querySelector(".sync-now");
+      if (now) now.addEventListener("click", function () {
+        var st = state(); st.error = null;
+        Object.keys(localStorage).forEach(function (k) {
+          var m = /^(?:anchoredNotes|liturgyNotes):(\d{4}-\d{2}-\d{2})$/.exec(k);
+          if (m && m[1] >= recentCutoff()) st.dirty[m[1]] = Date.now();
+        });
+        if (typeof currentDate === "string" && currentDate) st.dirty[currentDate] = Date.now();
+        setState(st);
+        msg.textContent = "Sending…";
+        flush().then(function () {
+          var e = state().error;
+          msg.textContent = e ? "Couldn’t send (" + (e.kind === "network" ? "no connection, will retry" : "GitHub " + e.status) + ")." : "Sent.";
+        });
+      });
+      var off = backdrop.querySelector(".sync-off");
+      if (off) off.addEventListener("click", function () {
+        if (!confirm("Turn off auto-send on this phone? Your notes stay here; use Send to Doxy to send them.")) return;
+        localStorage.removeItem(TOKEN_KEY);
+        var st = state(); st.dirty = {}; st.error = null; setState(st);
+        close();
+      });
+    }
+    function recentCutoff() {
+      var d = new Date(Date.now() - 2 * 86400000);
+      return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+    }
+
+    // Check a pasted key without changing anything on GitHub.
+    function verify(t) {
+      if (!t) return Promise.reject(new Error("Paste the key first."));
+      if (/^(ghp|gho|ghu|ghs)_/.test(t)) return Promise.reject(new Error("That's a classic token, which can reach everything in your account. Please make a fine-grained one with the link in step 1."));
+      if (!/^github_pat_[A-Za-z0-9_]{30,}$/.test(t)) return Promise.reject(new Error("That doesn't look like a GitHub fine-grained key (it should start with github_pat_)."));
+      var o = { token: t };
+      function netErr() { throw new Error("Couldn't reach GitHub. Check the connection and try again."); }
+      return api("GET", "/user", undefined, o).catch(netErr).then(function (r) {
+        if (r.status === 401) throw new Error("GitHub didn't accept that key. Copy it again (the whole thing) and paste it.");
+        if (!r.ok) throw new Error("GitHub said " + r.status + " when checking the key.");
+        var login = (r.json && r.json.login) || "";
+        if (login.toLowerCase() !== OWNER) throw new Error("That key belongs to " + login + ", not " + OWNER + ". Make it while signed in as " + OWNER + ".");
+        return api("GET", "/repos/" + REPO + "/issues?labels=doxy-notes&per_page=1", undefined, o).catch(netErr);
+      }).then(function (r) {
+        if (!r.ok) throw new Error("The key can't read this repository's issues. Choose Only select repositories → daily-orthodox-brief.");
+        // An empty issue is refused (422) only after GitHub has checked the
+        // key may create issues here; 403 means it may not. Nothing is created.
+        return api("POST", "/repos/" + REPO + "/issues", {}, o).catch(netErr);
+      }).then(function (r) {
+        if (r.status === 422) return true;
+        if (r.status === 403 || r.status === 404) throw new Error("The key can't create issues. Set Issues to Read and write for daily-orthodox-brief.");
+        throw new Error("Unexpected answer from GitHub (" + r.status + ").");
+      });
+    }
+
+    document.addEventListener("click", function (e) {
+      var b = e.target.closest && e.target.closest(".sync-status");
+      if (b) { e.preventDefault(); openSheet(); }
+    });
+    window.addEventListener("pagehide", flushOnHide);
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) flushOnHide(); else if (enabled()) schedule(500);
+    });
+    window.addEventListener("online", function () { renderStatus(); if (enabled()) schedule(500); });
+    window.addEventListener("offline", renderStatus);
+    window.addEventListener("storage", function (e) {
+      if (e.key === STATE_KEY || e.key === TOKEN_KEY) renderStatus();
+    });
+    if (enabled()) setTimeout(function () { if (Object.keys(state().dirty).length) flush(); }, 1500);
+
+    return { changed: changed, flush: flush, renderStatus: renderStatus, open: openSheet, enabled: enabled, _state: state };
+  })();
 
   function render(dateStr, day) {
     var lit = day.liturgical && day.liturgical.status === "ok" ? day.liturgical : null;
@@ -1334,6 +1686,7 @@
     if (!b) return;
     if (!window.confirm("Delete these earlier Liturgy Notes? This can't be undone.")) return;
     localStorage.removeItem("liturgyNotes:" + currentDate);
+    DoxySync.changed(currentDate);
     var card = b.closest(".legacy-notes");
     if (card) card.remove();
   });
@@ -1399,7 +1752,8 @@
         '<div class="legacy-notes-text">' + esc(legacy) + "</div>" +
         '<button type="button" class="legacy-notes-delete">Delete these notes</button></section>';
     }
-    html += '<div class="svc-page-foot"><span class="anchored-summary"></span>' +
+    html += '<div class="svc-page-foot"><span class="foot-left"><span class="anchored-summary"></span>' +
+      '<button type="button" class="sync-status" data-date="' + esc(dateStr) + '"></button></span>' +
       '<button type="button" class="notes-doxy">Send to Doxy &#8599;</button></div>';
     app.innerHTML = html;
     measurePageHead();
@@ -1409,6 +1763,7 @@
     wireTextSearch();
     wireJumpButtons();
     wireAnchoredNotes(dateStr);
+    DoxySync.renderStatus();
     // Open the text she last had open for this day, else the first with text.
     var choiceKey = "serviceTextChoice:" + dateStr;
     var chips = [].slice.call(document.querySelectorAll(".text-chip"));
