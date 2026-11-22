@@ -804,6 +804,7 @@
         var chip = e.target.closest(".text-chip");
         if (!chip) return;
         var idx = chip.getAttribute("data-index");
+        if (PAGE === "services") TextScroll.save();
         sw.querySelectorAll(".text-chip").forEach(function (c) {
           var on = c === chip;
           c.classList.toggle("active", on);
@@ -820,9 +821,87 @@
         var panel = document.querySelector('.service-text-panel[data-group="' + group + '"][data-index="' + idx + '"]');
         if (scroller && panel) scroller.scrollTop = Math.max(0, panel.offsetTop - scroller.offsetTop - sw.offsetHeight);
         measure();
+        // services.html: pick up this text where she left it (top if never opened).
+        if (PAGE === "services") TextScroll.restore();
       });
     });
   }
+
+  /* Per-text scroll memory on services.html (Aimee, Nov 2026: "when I switch
+     between service texts, it picks up where I left off"). Keyed by date +
+     chip label in localStorage (`serviceTextScroll:<date>:<label>`), so it
+     survives reloads. The spot is stored as the first line visible under the
+     pinned header + chips + search bar ({para, off}), with a pixel fallback, so
+     it holds even if fonts or notes shift the layout. Resume (last checked
+     line) and search jumps are explicit jumps: they just scroll, and the
+     place they land is remembered like any other scroll. */
+  var TextScroll = (function () {
+    var restoring = 0, timer = null, userMoved = false;
+    function activePanel() { return document.querySelector(".svc-page .service-text-panel:not([hidden])"); }
+    function key(panel) {
+      var chip = document.querySelector('.text-chip[data-index="' + panel.getAttribute("data-index") + '"]');
+      return chip && currentDate ? "serviceTextScroll:" + currentDate + ":" + chip.textContent : null;
+    }
+    // Bottom edge of everything pinned at the top (page header, chips, search bar).
+    function coverBottom(panel) {
+      var y = 0;
+      [document.getElementById("pageHead"), document.querySelector(".svc-page .text-switch"),
+        panel.querySelector(".checkable-header")].forEach(function (el) {
+        if (el && el.offsetParent) y = Math.max(y, el.getBoundingClientRect().bottom);
+      });
+      return y;
+    }
+    function save() {
+      var panel = activePanel();
+      if (!panel || restoring) return;
+      var k = key(panel);
+      if (!k) return;
+      var top = coverBottom(panel), rec = { y: Math.round(window.scrollY - (panel.getBoundingClientRect().top + window.scrollY)) };
+      var lines = panel.querySelectorAll(".checkable-line[data-para]");
+      for (var i = 0; i < lines.length; i++) {
+        var r = lines[i].getBoundingClientRect();
+        if (r.height && r.bottom > top + 1) { rec.para = +lines[i].getAttribute("data-para"); rec.off = Math.round(r.top - top); break; }
+      }
+      if (window.scrollY < 2) rec = { top: true };
+      try { localStorage.setItem(k, JSON.stringify(rec)); } catch (e) {}
+    }
+    function apply(panel, rec) {
+      if (!rec || rec.top) { window.scrollTo(0, 0); return; }
+      var line = rec.para != null ? panel.querySelector('.checkable-line[data-para="' + rec.para + '"]') : null;
+      if (line && line.getBoundingClientRect().height) {
+        window.scrollTo(0, window.scrollY + line.getBoundingClientRect().top - coverBottom(panel) - (rec.off || 0));
+      } else if (rec.y != null) {
+        window.scrollTo(0, panel.getBoundingClientRect().top + window.scrollY + rec.y);
+      }
+    }
+    function restore() {
+      var panel = activePanel();
+      if (!panel) return;
+      var k = key(panel), rec = null;
+      try { rec = k && JSON.parse(localStorage.getItem(k) || "null"); } catch (e) {}
+      restoring++; userMoved = false;
+      apply(panel, rec);
+      // Settle once more after late layout (fonts, measured sticky heights),
+      // unless she has started scrolling herself.
+      setTimeout(function () { if (!userMoved && activePanel() === panel) apply(panel, rec); }, 250);
+      setTimeout(function () { restoring--; }, 450);
+    }
+    function onScroll() {
+      if (restoring) return;
+      clearTimeout(timer);
+      timer = setTimeout(save, 250);
+    }
+    function wire() {
+      if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+      window.addEventListener("scroll", onScroll, { passive: true });
+      ["touchstart", "wheel", "keydown", "mousedown"].forEach(function (ev) {
+        window.addEventListener(ev, function () { userMoved = true; }, { passive: true });
+      });
+      window.addEventListener("pagehide", function () { clearTimeout(timer); save(); });
+      document.addEventListener("visibilitychange", function () { if (document.hidden) { clearTimeout(timer); save(); } });
+    }
+    return { save: save, restore: restore, wire: wire };
+  })();
 
   function applyProgress(container, n) {
     container.querySelectorAll(".line-check").forEach(function (cb) {
@@ -1340,7 +1419,8 @@
       var c = e.target.closest && e.target.closest(".text-chip");
       if (c) localStorage.setItem(choiceKey, c.textContent);
     });
-    if (pick) { pick.click(); window.scrollTo(0, 0); }
+    TextScroll.wire();
+    if (pick) pick.click(); // restores that text's saved spot (top if new)
   }
 
   function goTo(dateStr) {
