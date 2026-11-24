@@ -2,20 +2,26 @@
   "date": "2026-12-12",
   "liturgical": {
     "status": "ok",
-    "source": "antiochian",
-    "feasts": [
-      "Spyridon the Wonderworker of Trymithous"
-    ],
+    "source": "orthocal",
+    "feasts": null,
     "saints": [
-      "Spyridon the Wonderworker of Trymithous",
-      "Holy New Martyr Peter the Aleut",
-      "John (Or Joachim)",
-      "Bishop of Zichni"
+      "St Spyridon the Wonderworker",
+      "John (or Joachim), Bishop of Zichni",
+      "St Finian of Clonard (549)"
     ],
-    "summary_title": "Spyridon the Wonderworker of Trymithous, Holy New Martyr Peter the Aleut, John (Or Joachim), Bishop of Zichni",
-    "stories": [],
+    "summary_title": "St Spyridon the Wonderworker; St Finian of Clonard (549); John (or Joachim), Bishop of Zichni",
+    "stories": [
+      {
+        "title": "St Spyridon the Wonderworker",
+        "html": "<p>He was a humble shepherd who lived on the island of Cyprus with his wife and his one child, a daughter named Irene. Though he was poor himself, his house and table were always open to travelers and those in need. He kept his money in a box which he left open and available to all, not concerning himself with who took from it or whether they were deserving or not. In time, his wife died and, with less worldly cares, he redoubled his prayers and his almsgiving.</p>\n<p>He became so well-loved on the island that, when the bishop of the town of Tremithos died, the faithful unanimously chose Spyridon to succeed him, and he thus became a shepherd of rational sheep as well as the beasts he had tended. Despite his sudden elevation in rank, he kept to his former manner of life, traveling everywhere on foot, tending his animals as before, while fulfilling all the duties of a bishop as well. (To portray this godly humility, his icon shows him wearing bishop\u2019s vestments and a peasant\u2019s woven straw hat.)</p>\n<p>His compassion for others was boundless. Though he was very strict with himself, he would always break a fast to give comfort to a traveler. Once a band of robbers broke into his sheepfold by night, but found themselves confined there by an invisible force. When Spyridon found them in the morning, he freed them, admonished them to live honestly, and gave them two sheep in compensation, he said, for their keeping an all-night vigil.</p>\n<p>Pages could be filled with stories of the miracles wrought by the holy bishop for the good of his flock: by his prayers he ended a drought, turned a snake to gold to help a poor man, and even raised the dead son of a poor widow. His radiant virtue touched the consciences of those he met so that many would spontaneously fall at his feet and confess their sins.</p>\n<p>When the Emperor Constantine summoned the First Ecumenical Council in 325, Spyridon attended, dressed in his simple peasant\u2019s garb. At one of the sessions, a proud Arian philosopher challenged the Orthodox to a debate about the Holy Trinity, and was amazed when the simple Spyridon stepped forward to accept the challenge. He and all the other bishops were far more amazed when the uneducated peasant bishop confounded all the Arian\u2019s arguments with his eloquent, Spirit-inspired words. The humbled philosopher admitted that he was convinced, embraced the Orthodox faith, and called upon the other Arians to abandon their human wisdom and embrace the true and life-giving Faith.</p>\n<p>The holy bishop always celebrated the Divine Liturgy with joy. Once, serving in a remote, almost empty church, he turned to the invisible congregation and said \u201cPeace be unto all!\u201d, and his disciple heard a choir of angels respond \u201cAnd with thy spirit!\u201d</p>\n<p>Saint Spyridon reposed in peace in 348 at the age of seventy-eight. His incorrupt and wonder-working relics poured forth miracles for the people of Cyprus until the seventh century, when they were moved to Constantinople to escape the Arab invasion; when the City fell to the Turks, the relics were again moved to Corfu, where they are venerated to this day. Even after 1,500 years, the holy relics remain incorrupt and work many life-giving wonders. Saint Spyridon is venerated as the Patron of Corfu.</p>"
+      },
+      {
+        "title": "St Finian of Clonard (549)",
+        "html": "<p>\u201cSt Finian, known as the \u2018Tutor of the Saints of Ireland,\u2019 stands with St Enda of Aran at the head of the patriarchs of Irish monasticism. He showed great zeal and piety for God from his youth. He had already founded three churches before he set off for Wales to study at the feet of St Cadoc at Llancarfan (September 25, \u2020577). In Llancarfan he became close friends with St Gildas (January 29, \u2020570), another of St Cadoc\u2019s disciples. Upon his return to Ireland, he founded the great Monastery of Clonard during the same year the great St Enda (March 21, \u2020530) reposed in Aran. A multitude of illustrious and holy men studied under St Finian, including the famous \u2018Twelve Apostles of Ireland.\u2019 St Finian founded many other monasteries during his lifetime, including the famous island monastery of Skellig Michael off the southwest coast of Ireland.\u201d (<i>Saint Herman Calendar 2003</i>)</p>"
+      }
+    ],
     "fasting": {
-      "description": "Abstain From Meat, Fish, Dairy, Eggs",
+      "description": "Nativity Fast",
       "abstentions": [
         "meat",
         "fish",
@@ -25,12 +31,20 @@
     },
     "readings": [
       {
-        "display": "St. Paul's Letter to the Ephesians 5:8-19",
-        "text": "Brethren, walk as children of light (for the fruit of light is found in all that is good and right and true), and try to learn what is pleasing to the Lord. Take no part in the unfruitful works of darkness, but instead expose them. For it is a shame even to speak of the things that they do in secret; but when anything is exposed by the light it becomes visible, for anything that becomes visible is light. Therefore it is said, \"Awake, O sleeper, and arise from the dead, and Christ shall give you light.\" Look carefully then how you walk, not as unwise men but as wise, making the most of the time, because the days are evil. Therefore do not be foolish, but understand what the will of the Lord is. And do not get drunk with wine, for that is debauchery; but be filled with the Spirit, addressing one another in psalms and hymns and spiritual songs, singing and making melody to the Lord with all your heart."
+        "display": "Ephesians 1.16-23",
+        "text": "Cease not to give thanks for you, making mention of you in my prayers; That the God of our Lord Jesus Christ, the Father of glory, may give unto you the spirit of wisdom and revelation in the knowledge of him: The eyes of your understanding being enlightened; that ye may know what is the hope of his calling, and what the riches of the glory of his inheritance in the saints, And what is the exceeding greatness of his power to us-ward who believe, according to the working of his mighty power, Which he wrought in Christ, when he raised him from the dead, and set him at his own right hand in the heavenly places, Far above all principality, and power, and might, and dominion, and every name that is named, not only in this world, but also in that which is to come: And hath put all things under his feet, and gave him to be the head over all things to the church, Which is his body, the fulness of him that filleth all in all."
       },
       {
-        "display": "John 10:9-16",
-        "text": "The Lord said, \"I am the door; if any one enters by me, he will be saved, and will go in and out and find pasture. The thief comes only to steal and kill and destroy; I came that they may have life, and have it abundantly. I am the good shepherd. The good shepherd lays down his life for the sheep. He who is a hireling and not a shepherd, whose own the sheep are not, sees the wolf coming and leaves the sheep and flees; and the wolf snatches them and scatters them. He flees because he is a hireling and cares nothing for the sheep. I am the good shepherd; I know my own and my own know me, as the Father knows me and I know the Father; and I lay down my life for the sheep. And I have other sheep, that are not of this fold; I must bring them also, and they will heed my voice. So there shall be one flock, one shepherd."
+        "display": "Ephesians 5.8-19",
+        "text": "For ye were sometimes darkness, but now are ye light in the Lord: walk as children of light: (For the fruit of the Spirit is in all goodness and righteousness and truth;) Proving what is acceptable unto the Lord. And have no fellowship with the unfruitful works of darkness, but rather reprove them. For it is a shame even to speak of those things which are done of them in secret. But all things that are reproved are made manifest by the light: for whatsoever doth make manifest is light. Wherefore he saith, Awake thou that sleepest, and arise from the dead, and Christ shall give thee light. See then that ye walk circumspectly, not as fools, but as wise, Redeeming the time, because the days are evil. Wherefore be ye not unwise, but understanding what the will of the Lord is. And be not drunk with wine, wherein is excess; but be filled with the Spirit; Speaking to yourselves in psalms and hymns and spiritual songs, singing and making melody in your heart to the Lord;"
+      },
+      {
+        "display": "Luke 13.19-29",
+        "text": "It is like a grain of mustard seed, which a man took, and cast into his garden; and it grew, and waxed a great tree; and the fowls of the air lodged in the branches of it. And again he said, Whereunto shall I liken the kingdom of God? It is like leaven, which a woman took and hid in three measures of meal, till the whole was leavened. And he went through the cities and villages, teaching, and journeying toward Jerusalem. Then said one unto him, Lord, are there few that be saved? And he said unto them, Strive to enter in at the strait gate: for many, I say unto you, will seek to enter in, and shall not be able. When once the master of the house is risen up, and hath shut to the door, and ye begin to stand without, and to knock at the door, saying, Lord, Lord, open unto us; and he shall answer and say unto you, I know you not whence ye are: Then shall ye begin to say, We have eaten and drunk in thy presence, and thou hast taught in our streets. But he shall say, I tell you, I know you not whence ye are; depart from me, all ye workers of iniquity. There shall be weeping and gnashing of teeth, when ye shall see Abraham, and Isaac, and Jacob, and all the prophets, in the kingdom of God, and you yourselves thrust out. And they shall come from the east, and from the west, and from the north, and from the south, and shall sit down in the kingdom of God."
+      },
+      {
+        "display": "John 10.9-16",
+        "text": "I am the door: by me if any man enter in, he shall be saved, and shall go in and out, and find pasture. The thief cometh not, but for to steal, and to kill, and to destroy: I am come that they might have life, and that they might have it more abundantly. I am the good shepherd: the good shepherd giveth his life for the sheep. But he that is an hireling, and not the shepherd, whose own the sheep are not, seeth the wolf coming, and leaveth the sheep, and fleeth: and the wolf catcheth them, and scattereth the sheep. The hireling fleeth, because he is an hireling, and careth not for the sheep. I am the good shepherd, and know my sheep, and am known of mine. As the Father knoweth me, even so know I the Father: and I lay down my life for the sheep. And other sheep I have, which are not of this fold: them also I must bring, and they shall hear my voice; and there shall be one fold, and one shepherd."
       }
     ],
     "service_texts": [],

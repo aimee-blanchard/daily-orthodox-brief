@@ -2,20 +2,37 @@
   "date": "2026-12-15",
   "liturgical": {
     "status": "ok",
-    "source": "antiochian",
-    "feasts": [
-      "Eleutherios the Hieromartyr, Bishop of Illyricum, and His Mother Anthia"
-    ],
+    "source": "orthocal",
+    "feasts": null,
     "saints": [
-      "Eleutherios the Hieromartyr",
-      "Bishop of Illyricum",
-      "And His Mother Anthia",
-      "The Martyr Susannah the Deaconess"
+      "Hieromartyr Eleutherius of Illyria and his mother, Martyr Evanthia",
+      "St Stephen of Surozh",
+      "The Martyr Susannah the Deaconess",
+      "Holy Martyr Eleutherius the Cubicularius (4th c.)",
+      "Holy Martyr Bacchus the New (787)",
+      "Our Venerable Father Tryphon of Kola, apostle of Laponia (1583), and his disciple the Holy Martyr Jonah (1590)"
     ],
-    "summary_title": "Eleutherios the Hieromartyr, Bishop of Illyricum, And His Mother Anthia, The Martyr Susannah the Deaconess",
-    "stories": [],
+    "summary_title": "Hieromartyr Eleutherius of Illyria and his mother, Martyr Evanthia; St Stephen of Surozh; Holy Martyr Eleutherius the Cubicularius (4th c.)",
+    "stories": [
+      {
+        "title": "Hieromartyr Eleutherius of Illyria and his mother, Martyr Evanthia",
+        "html": "<p>His name is a form of the Greek word for \u201cfreedom.\u201d He was a native of Rome whose father died at a young age, leaving him to be brought up by his mother Anthia, a Christian who reared him in the fear of God and the love of holiness. His virtue and ability were so evident that he was ordained a priest at the age of seventeen and at twenty was made Bishop of Illyria, a large see roughly comprising modern-day Serbia.</p>\n<p>The young bishop\u2019s pastoral and evangelistic work was so successful that many pagans were converted to the Faith through him. His growing reputation drew the attention of the Emperor Hadrian, who sent one of his senior officers named Felix to arrest the holy bishop. But when Felix saw and heard Eleutherius, he was captivated by his teaching, believed in Christ, and was baptized. He and the St Eleutherius returned and presented themselves together before the Emperor, fearlessly confessing their faith.</p>\n<p>Eleutherius was subjected to brutal torture, during which the city prefect Coremonus, who had suggested some of the tortures, was enlightened through the Saint\u2019s prayers for his enemies, and proclaimed Christ. He was baptized by Eleutherius and later beheaded. After a time, when it became clear that fire and torture would not move the holy bishop, he was taken to the amphitheater and beheaded. At the moment of his death, his mother Anthia rushed forward and took his body in her arms. There she also was beheaded by the executioners.</p>\n<p>Pregnant women call on St Eleutherius that they may have a safe delivery.</p>"
+      },
+      {
+        "title": "Holy Martyr Eleutherius the Cubicularius (4th c.)",
+        "html": "<p>He was from a noble family in Constantinople, and rose to the rank of <i>Cubicularius</i> (Chamberlain). He was not only a counselor to, but a close friend of, the Emperor (probably Julian the Apostate). But Eleutherius was increasingly moved by a desire to become a Christian; so, obtaining a leave from the Imperial court, he moved to the countryside in Bithynia, where he was baptized. There he built a house that concealed an underground chapel.</p>\n<p>When Eleutherius returned to court, some jealous courtiers denounced him to the Emperor, who visited Eleutherius\u2019 country house and was furious to discover the underground church. When the Saint would not renounce his faith in Christ, the Emperor, ignoring all previous bonds of friendship, had him beheaded.</p>"
+      },
+      {
+        "title": "Holy Martyr Bacchus the New (787)",
+        "html": "<p>During the reign of Constantine VI and Irene, restorers of the holy icons, the Holy Land was under the control of the Muslim Arabs. Many Christians there apostatized, putting honors and security in this world above their eternal joy. One of these was the father of this Saint, who brought up seven children as Muslims. His wife however, never renounced her Faith and prayed constantly for the conversion of her husband and children. Upon the death of the father, her third son Dachak declared that he wished to become a Christian. He was baptized in the Monastery of St Sabas near Jerusalem, receiving the name Bacchus, and determined to be a monk. But the abbot, fearing reprisals against the Monastery, sent him back to his home in Jerusalem. His brothers, seeing his joy and boldness in confessing the Faith, decided to receive holy Baptism, except for one, who denounced Bacchus to the authorities. He was arrested and brought before the judge and, when he proved steadfast in his confession of Christ, was beheaded.</p>"
+      },
+      {
+        "title": "Our Venerable Father Tryphon of Kola, apostle of Laponia (1583), and his disciple the Holy Martyr Jonah (1590)",
+        "html": "<p>Saint Tryphon was the son of a priest from Novgorod. The <i>Synaxarion</i> records that, at the moment of his birth, the verse <i>Blessed is the life of those who dwell in the desert</i> was being sung in the Matins service. In 1525 he was moved by a divine revelation to flee to the far north of Russia and live as a hermit. He settled near the River Kola, where he devoted his nights to prayer, his days to proclaiming the Gospel of Christ to the native peoples there. The pagans were hostile at first, but his patience and humility won them over, and he baptized many. He built them a church with his own hands on the shores of Lake Ladoga, and later founded a monastery there. Saint Tryphon reposed in 1583. He predicted his own death and the coming destruction of the Monastery by the Swedes, which came to pass in 1590. All the monks were massacred. The first victim, Starets Jonah, worked many miracles at the Monastery after its restoration.</p>"
+      }
+    ],
     "fasting": {
-      "description": "Abstain From Meat, Fish, Dairy, Eggs",
+      "description": "Nativity Fast",
       "abstentions": [
         "meat",
         "fish",
@@ -25,12 +42,20 @@
     },
     "readings": [
       {
-        "display": "St. Paul's Second Letter to Timothy 1:8-18",
-        "text": "TIMOTHY, my son, do not be ashamed then of testifying to our Lord, nor of me his prisoner, but share in suffering for the gospel in the power of God, who saved us and called us with a holy calling, not in virtue of our works but in virtue of his own purpose and the grace which he gave us in Christ Jesus ages ago, and now has manifested through the appearing of our Savior Christ Jesus, who abolished death and brought life and immortality to light through the gospel. For this gospel I was appointed a preacher and apostle and teacher, and therefore I suffer as I do. But I am not ashamed, for I know whom I have believed, and I am sure that he is able to guard until that Day what has been entrusted to me. Follow the pattern of the sound words which you have heard from me, in the faith and love which are in Christ Jesus; guard the truth that has been entrusted to you by the Holy Spirit who dwells within us.You are aware that all who are in Asia turned away from me, and among them Phygelos and Hermogenes. May the Lord grant mercy to the household of Onesiphoros, for he often refreshed me; he was not ashamed of my chains, but when he arrived in Rome he searched for me eagerly and found me - may the Lord grant him to find mercy from the Lord on that Day and you well know all the service he rendered at Ephesos."
+        "display": "Hebrews 4.1-13",
+        "text": "Let us therefore fear, lest, a promise being left us of entering into his rest, any of you should seem to come short of it. For unto us was the gospel preached, as well as unto them: but the word preached did not profit them, not being mixed with faith in them that heard it. For we which have believed do enter into rest, as he said, As I have sworn in my wrath, if they shall enter into my rest: although the works were finished from the foundation of the world. For he spake in a certain place of the seventh day on this wise, And God did rest the seventh day from all his works. And in this place again, If they shall enter into my rest. Seeing therefore it remaineth that some must enter therein, and they to whom it was first preached entered not in because of unbelief: Again, he limiteth a certain day, saying in David, To day, after so long a time; as it is said, To day if ye will hear his voice, harden not your hearts. For if Jesus had given them rest, then would he not afterward have spoken of another day. There remaineth therefore a rest to the people of God. For he that is entered into his rest, he also hath ceased from his own works, as God did from his. Let us labour therefore to enter into that rest, lest any man fall after the same example of unbelief. For the word of God is quick, and powerful, and sharper than any twoedged sword, piercing even to the dividing asunder of soul and spirit, and of the joints and marrow, and is a discerner of the thoughts and intents of the heart. Neither is there any creature that is not manifest in his sight: but all things are naked and opened unto the eyes of him with whom we have to do."
       },
       {
-        "display": "Mark 2:23-28; 3:1-5",
-        "text": "At that time, Jesus was going through the grainfields; and as they made their way his disciples began to pluck heads of grain. And the Pharisees said to him, \"Look, why are they doing what is not lawful on the sabbath?\" And he said to them, \"Have you never read what David did, when he was in need and was hungry, he and those who were with him: how he entered the house of God, when Abiathar was high priest, and ate the bread of the Presence, which it is not lawful for any but the priests to eat, and also gave it to those who were with him?\" And he said to them, \"The sabbath was made for man, not man for the sabbath; so the Son of man is lord even of the sabbath. Again he entered the synagogue, and a man was there who had a withered hand. And they watched him, to see whether he would heal him on the sabbath, so that they might accuse him. And he said to the man who had the withered hand, \"Come here.\" And he said to them, \"Is it lawful on the sabbath to do good or to do harm, to save life or to kill?\" But they were silent. And he looked around at them with anger, grieved at their hardness of heart, and said to the man, \"Stretch it out, \" and his hand was restored."
+        "display": "2 Timothy 1.8-18",
+        "text": "Be not thou therefore ashamed of the testimony of our Lord, nor of me his prisoner: but be thou partaker of the afflictions of the gospel according to the power of God; Who hath saved us, and called us with an holy calling, not according to our works, but according to his own purpose and grace, which was given us in Christ Jesus before the world began, But is now made manifest by the appearing of our Saviour Jesus Christ, who hath abolished death, and hath brought life and immortality to light through the gospel: Whereunto I am appointed a preacher, and an apostle, and a teacher of the Gentiles. For the which cause I also suffer these things: nevertheless I am not ashamed: for I know whom I have believed, and am persuaded that he is able to keep that which I have committed unto him against that day. Hold fast the form of sound words, which thou hast heard of me, in faith and love which is in Christ Jesus. That good thing which was committed unto thee keep by the Holy Ghost which dwelleth in us. This thou knowest, that all they which are in Asia be turned away from me; of whom are Phygellus and Hermogenes. The Lord give mercy unto the house of Onesiphorus; for he oft refreshed me, and was not ashamed of my chain: But, when he was in Rome, he sought me out very diligently, and found me. The Lord grant unto him that he may find mercy of the Lord in that day: and in how many things he ministered unto me at Ephesus, thou knowest very well."
+      },
+      {
+        "display": "Mark 8.22-26",
+        "text": "And he cometh to Bethsaida; and they bring a blind man unto him, and besought him to touch him. And he took the blind man by the hand, and led him out of the town; and when he had spit on his eyes, and put his hands upon him, he asked him if he saw ought. And he looked up, and said, I see men as trees, walking. After that he put his hands again upon his eyes, and made him look up: and he was restored, and saw every man clearly. And he sent him away to his house, saying, Neither go into the town, nor tell it to any in the town."
+      },
+      {
+        "display": "Mark 2.23-3.5",
+        "text": "And it came to pass, that he went through the corn fields on the sabbath day; and his disciples began, as they went, to pluck the ears of corn. And the Pharisees said unto him, Behold, why do they on the sabbath day that which is not lawful? And he said unto them, Have ye never read what David did, when he had need, and was an hungred, he, and they that were with him? How he went into the house of God in the days of Abiathar the high priest, and did eat the shewbread, which is not lawful to eat but for the priests, and gave also to them which were with him? And he said unto them, The sabbath was made for man, and not man for the sabbath: Therefore the Son of man is Lord also of the sabbath. And he entered again into the synagogue; and there was a man there which had a withered hand. And they watched him, whether he would heal him on the sabbath day; that they might accuse him. And he saith unto the man which had the withered hand, Stand forth. And he saith unto them, Is it lawful to do good on the sabbath days, or to do evil? to save life, or to kill? But they held their peace. And when he had looked round about on them with anger, being grieved for the hardness of their hearts, he saith unto the man, Stretch forth thine hand. And he stretched it out: and his hand was restored whole as the other."
       }
     ],
     "service_texts": [],

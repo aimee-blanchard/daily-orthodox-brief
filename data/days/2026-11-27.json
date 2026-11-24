@@ -2,40 +2,46 @@
   "date": "2026-11-27",
   "liturgical": {
     "status": "ok",
-    "source": "antiochian",
-    "feasts": [
-      "Friday of the 10Th Week"
-    ],
+    "source": "orthocal",
+    "feasts": null,
     "saints": [
-      "James the Great Martyr of Persia",
-      "Nathaniel of Nitria & Pinouphrios of Egypt",
-      "The Righteous",
-      "Gregory of Sinai and His Disciple Gerasimos",
+      "Greatmartyr Jacob of Persia",
+      "Nathaniel of Nitria & Pinouphrios of Egypt, the Righteous",
+      "Gregory of Sinai and his disciple Gerasimos",
       "Arsenios of Rhaxos",
-      "James the Wonderworker",
-      "Bishop of Rostov"
+      "James the Wonderworker, Bishop of Rostov",
+      "Repose of Archimandrite Lazarus (Moore) (1992) (Nov. 14 OC)"
     ],
-    "summary_title": "James the Great Martyr of Persia, Nathaniel of Nitria & Pinouphrios of Egypt, The Righteous, Gregory of Sinai and His Disciple Gerasimos, Arsenios of Rhaxos, James the Wonderworker, Bishop of Rostov",
-    "stories": [],
+    "summary_title": "Greatmartyr Jacob of Persia; Repose of Archimandrite Lazarus (Moore) (1992) (Nov. 14 OC); Nathaniel of Nitria & Pinouphrios of Egypt, the Righteous",
+    "stories": [
+      {
+        "title": "Greatmartyr Jacob of Persia",
+        "html": "<p>\u201cThis Saint was from the city of Bythlaba and was of noble birth; he was the closest and most honoured friend of Isdiger (or Yazdegerd) I, King of Persia (reigned 399-420). Though a Christian from his youth, James renounced Christ because he was allured by the King\u2019s friendship and flatteries. When his mother and his wife learned of this, they declared to him by letter that they would have nothing more to do with him, since he had preferred a glory that is temporal to the love of Christ. Wounded in soul by these words and coming to himself, the Saint wept over his error, and repudiated the worship of the idols. Therefore, becoming exceedingly wroth, the King \u2014 this was Bahram (or Varahran) V (reigned 421-438), Isdiger\u2019s son and successor \u2014 condemned him to a most bitter death, the likes of which not even a brute beast was ever condemned to: that is, his body was dismembered at every joint of his arms and legs. And so, when he had been cut asunder limb by limb to his very hips and shoulders, the courageous Martyr was finally beheaded, in the year 421.\u201d <i>(Great Horologion)</i></p>"
+      },
+      {
+        "title": "Repose of Archimandrite Lazarus (Moore) (1992) (Nov. 14 OC)",
+        "html": "<p><i>Though he has not been glorified by the Church, Fr Lazarus was a pioneer and exemplar of Orthodoxy in the West.</i></p>\n<p>He was born in England in 1902. In his early manhood he moved to western Canada, where he worked as a farm laborer for several years. While working in Alberta, he sensed a call to become a missionary and went to an English missionary college for five years.</p>\n<p>Sad to say, our sources are unclear about how he came to the Orthodox faith from this unlikely beginning. But in 1934 he spent seven weeks on Mt Athos, then lived as a monk in Yugoslavia. He was ordained to the priesthood by Archbishop Theophan (Russian Orthodox Church Abroad), then sent to Palestine to serve the Russian Mission in Jerusalem.</p>\n<p>In 1948, the new State of Israel gave the Mission\u2019s property to the Soviet Union and the mission was left dispossessed. Fr Lazarus served as priest to the Russian Convent in A\u00efn Karim and Transjordan, then was sent to India in 1952, where he helped in Orthodox missionary work for twenty years. Several of his books and translations, such as his biography/study of St Seraphim of Sarov, were written while he lived in India. While there, he met Mother Gavrilia of Greece, whose beautiful biography <i>Ascetic of Love</i> includes good descriptions of him during his life in India. Though very strict in his Orthodoxy, he was flexible in externals: in India he wore a white rather than a black cassock, because black clothing had offensive connotations to the Indian people.</p>\n<p>In 1972 Fr Lazarus was called to Greece, then in 1974 to Australia, where he served for nine years. In 1983 he moved to California in answer to call from Fr Peter Gillquist to assist members of the former \u2018Evangelical Orthodox Church\u2019 in their move to Orthodoxy. In 1989 he moved to Alaska, where he continued this work. He reposed in Eagle River, Alaska in 1992. Following is an excerpt from an account of his last days by members of his community in Eagle River:</p>\n<p>\u201cFather always signed his name with TWA, \u201cTraveling With Angels\u201d. A few days before his death, after battling cancer many years, faithfully using the Jesus Prayer as the medicine for his affliction, the Archangel Michael appeared to help him. His final journey homeward had begun, TWA\u2026 \u2018the time of my departure is at hand. I have fought the good fight, I have finished the race, I have kept the faith.\u2019 (2 Timothy 4: 6-8).\u201d</p>"
+      }
+    ],
     "fasting": {
-      "description": "Abstain From Meat, Fish, Dairy, Eggs, Wine, Olive Oil",
+      "description": "Nativity Fast",
       "abstentions": [
         "meat",
         "fish",
         "dairy",
         "eggs",
         "wine",
-        "olive oil"
+        "oil"
       ]
     },
     "readings": [
       {
-        "display": "St. Paul's First Letter to Timothy 4:4-8, 16",
-        "text": "Timothy, my son, everything created by God is good, and nothing is to be rejected if it is received with thanksgiving; for then it is consecrated by the word of God and prayer. If you put these instructions before the brethren, you will be a good minister of Christ Jesus, nourished on the words of the faith and of the good doctrine which you have followed. Have nothing to do with godless and silly myths. Train yourself in godliness; for while bodily training is of some value, godliness is of value in every way, as it holds promise for the present life and also for the life to come. Take heed to yourself and to your teaching; hold to that, for by so doing you will save both yourself and your hearers."
+        "display": "1 Timothy 4.4-8, 16",
+        "text": "For every creature of God is good, and nothing to be refused, if it be received with thanksgiving: For it is sanctified by the word of God and prayer. If thou put the brethren in remembrance of these things, thou shalt be a good minister of Jesus Christ, nourished up in the words of faith and of good doctrine, whereunto thou hast attained. But refuse profane and old wives\u2019 fables, and exercise thyself rather unto godliness. For bodily exercise profiteth little: but godliness is profitable unto all things, having promise of the life that now is, and of that which is to come. Take heed unto thyself, and unto the doctrine; continue in them: for in doing this thou shalt both save thyself, and them that hear thee."
       },
       {
-        "display": "Luke 19:12-28",
-        "text": "The Lord said this parable, \"A nobleman went into a far country to receive a kingdom and then return. Calling ten of his servants, he gave them ten pounds, and said to them, 'Trade with these till I come.' But his citizens hated him and sent an embassy after him, saying, 'We do not want this man to reign over us.' When he returned, having received the kingdom, he commanded these servants, to whom he had given the money, to be called to him, that he might know what they had gained by trading. The first came before him, saying, 'Lord, your pound has made ten pounds more.' And he said to him, 'Well done, good servant! Because you have been faithful in a very little, you shall have authority over ten cities.' And the second came, saying, 'Lord, your pound has made five pounds.' And he said to him, 'And you are to be over five cities.' Then another came, saying, 'Lord, here is your pound, which I kept laid away in a napkin; for I was afraid of you, because you are a severe man; you take up what you did not lay down, and reap what you did not sow.' He said to him, 'I will condemn you out of your own mouth, you wicked servant! You knew that I was a severe man, taking up what I did not lay down and reaping what I did not sow? Why then did you not put my money into the bank, and at my coming I should have collected it with interest?' And he said to those who stood by, 'Take the pound from him, and give it to him who has the ten pounds.' (And they said to him, 'Lord, he has ten pounds!') 'I tell you, that to every one who has will more be given; but from him who has not, even what he has will be taken away. But as for these enemies of mine, who did not want me to reign over them, bring them here and slay them before me.'\" And when he had said this, he went on ahead, going up to Jerusalem."
+        "display": "Luke 19.12-28",
+        "text": "He said therefore, A certain nobleman went into a far country to receive for himself a kingdom, and to return. And he called his ten servants, and delivered them ten pounds, and said unto them, Occupy till I come. But his citizens hated him, and sent a message after him, saying, We will not have this man to reign over us. And it came to pass, that when he was returned, having received the kingdom, then he commanded these servants to be called unto him, to whom he had given the money, that he might know how much every man had gained by trading. Then came the first, saying, Lord, thy pound hath gained ten pounds. And he said unto him, Well, thou good servant: because thou hast been faithful in a very little, have thou authority over ten cities. And the second came, saying, Lord, thy pound hath gained five pounds. And he said likewise to him, Be thou also over five cities. And another came, saying, Lord, behold, here is thy pound, which I have kept laid up in a napkin: For I feared thee, because thou art an austere man: thou takest up that thou layedst not down, and reapest that thou didst not sow. And he saith unto him, Out of thine own mouth will I judge thee, thou wicked servant. Thou knewest that I was an austere man, taking up that I laid not down, and reaping that I did not sow: Wherefore then gavest not thou my money into the bank, that at my coming I might have required mine own with usury? And he said unto them that stood by, Take from him the pound, and give it to him that hath ten pounds. (And they said unto him, Lord, he hath ten pounds.) For I say unto you, That unto every one which hath shall be given; and from him that hath not, even that he hath shall be taken away from him. But those mine enemies, which would not that I should reign over them, bring hither, and slay them before me. And when he had thus spoken, he went before, ascending up to Jerusalem."
       }
     ],
     "service_texts": [],
