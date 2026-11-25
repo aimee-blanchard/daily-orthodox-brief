@@ -1,17 +1,17 @@
 {
- "generated_at": "2026-11-24T05:51:16.437034-06:00",
+ "generated_at": "2026-11-25T05:55:15.302316-06:00",
  "years": {
   "2026": {
    "source": "antiochian_pdf",
    "provisional": false,
    "url": "https://antiochianprodsa.blob.core.windows.net/liturgicalinstructions/2026%20Fasting%20Calendar.pdf",
-   "fetched_at": "2026-11-24T05:51:16.437034-06:00"
+   "fetched_at": "2026-11-25T05:55:15.302316-06:00"
   },
   "2027": {
    "source": "antiochian_pdf",
    "provisional": false,
    "url": "https://antiochianprodsa.blob.core.windows.net/liturgicalinstructions/2027%20Fasting%20Calendar.pdf",
-   "fetched_at": "2026-11-24T05:51:16.437034-06:00"
+   "fetched_at": "2026-11-25T05:55:15.302316-06:00"
   }
  },
  "levels": {
@@ -818,7 +818,7 @@
   },
   "2026-11-27": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-11-28": {
    "level": "fish",
@@ -830,67 +830,67 @@
   },
   "2026-11-30": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-12-01": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-12-02": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-12-03": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-12-04": {
    "level": "wine_oil",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-12-05": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-12-06": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-12-07": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-12-08": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-12-09": {
    "level": "wine_oil",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-12-10": {
    "level": "fish",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-12-11": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-12-12": {
    "level": "wine_oil",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-12-13": {
    "level": "wine_oil",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-12-14": {
    "level": "strict",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-12-15": {
    "level": "wine_oil",
-   "source": "antiochian_pdf"
+   "source": "antiochian_daily"
   },
   "2026-12-16": {
    "level": "strict",

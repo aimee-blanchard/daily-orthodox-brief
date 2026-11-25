@@ -2,33 +2,24 @@
   "date": "2026-12-04",
   "liturgical": {
     "status": "ok",
-    "source": "orthocal",
-    "feasts": null,
+    "source": "antiochian",
+    "feasts": [
+      "Barbara the Great Martyr"
+    ],
     "saints": [
-      "New Hieromartyr Seraphim, Bishop of the Phanar in Greece",
+      "Barbara the Great Martyr",
+      "John the Righteous of Damascus",
+      "New Hieromartyr Seraphim",
+      "Bishop of the Phanar in Greece",
       "Juliana the Martyr of Heliopolis",
-      "Holy Great Martyr Barbara (290)",
-      "Hieromartyr Alexander Hotovitzky, Missionary to America (1937)",
-      "Our Righteous Father John of Damascus (760)",
-      "Saint Gennadius, Archbishop of Novgorod (1505)"
+      "Alexander Hotovitzky",
+      "New Hieromartyr of Russia",
+      "Missionary to America"
     ],
-    "summary_title": "Holy Great Martyr Barbara (290); Our Righteous Father John of Damascus (760); Saint Gennadius, Archbishop of Novgorod (1505)",
-    "stories": [
-      {
-        "title": "Holy Great Martyr Barbara (290)",
-        "html": "<p>\u2018Saint Barbara was from Heliopolis of Phoenicia and lived during the reign of Maximian. She was the daughter of a certain idolater named Dioscorus. When Barbara came of age, she was enlightened in her pure heart and secretly believed in the Holy Trinity. About this time Dioscorus began building a bath-house; before it was finished he was required to go away to attend to certain matters, and in his absence Barbara directed the workmen to build a third window in addition to the two her father had commanded. She also inscribed the sign of the Cross with her finger upon the marble of the bath-house, leaving the saving sign cut as deeply into the marble as if it had been done with an iron tool. When the <i>Synaxarion </i> of Saint Barbara was written, the marble of the bath-house and the cross inscribed by Saint Barbara were still preserved, and many healings were worked there. When Dioscorus returned, he asked why the third window had been added; Barbara began to declare to him the mystery of the Trinity. Because she refused to renounce her faith, Dioscorus tortured Barbara inhumanly, and after subjecting her to many sufferings he beheaded her with his own hands, in the year 290.\u2019 <i>(Great Horologion)</i></p>"
-      },
-      {
-        "title": "Our Righteous Father John of Damascus (760)",
-        "html": "<p>This divinely-enlightened Harp of the Spirit was at the same time one of the Church\u2019s greatest hymnographers and one of Her greatest theologians and defenders of the Faith.</p>\n<p>The city of Damascus in Syria fell to the Muslims in 635. At the time of the Caliph Abdul-Malik, responsibility for government of the Christian population was given to Sergius Mansur, a prominent Christian of the city. This Sergius strove to govern in a godly way under the many disabilities imposed by the Caliph, and devoted his wealth to almsgiving and to ransoming Christian prisoners. His son John was born in 675, and along with his adoptive brother Cosmas (October 14) was brought up to love and serve Christ.</p>\n<p>John, whose exceptional education included a perfect knowledge of both Greek and Arabic, entered the civil administration and eventually succeeded to his father\u2019s position under the Caliph. When the Emperor Leo the Isaurian began to attack the holy icons, Saint John undertook a spirited defense of the Faith through letters to correspondents throughout the Empire. Normally the Emperor would have killed or exiled the Saint directly, but since he lived in Muslim lands the Emperor could not touch him (an interesting example of Islam unwittingly contributing to the defense of the Christian faith). So the wicked Emperor circulated a forged letter which made it appear that John was plotting against the Caliph. When this letter fell (as planned) into the Caliph\u2019s hands, he was furious, and ordered that the Saint\u2019s right hand be cut off. That evening John placed his severed hand before the icon of the Mother of God and prayed with tears that it might be restored. On awaking he found that his hand had been miraculously restored to him. The miracle convinced the Caliph of his counselor\u2019s innocence, and John was restored to favor; but now John wanted nothing more of worldly honor and wished only to be a monk. Giving up his position, he distributed his fortune among the poor and left for Jerusalem to become a monk at the Monastery of St Sabas.</p>\n<p>The Abbot of the monastery put John under an Elder who ordered him to have nothing to do with philosophy, science, poetry, chanting or reading, but to give himself uncomplainingly to menial tasks so as to advance in humility. This the Saint did. Some time later, however, a monk grieving over his brother\u2019s death persuaded John to write a funeral hymn for his consolation. Out of compassion, John wrote the hymn which is used to this day in the Funeral Service. For his disobedience, John was given the job of cleaning all the latrines of the monastery by hand, which, again, he did without complaint. A few days later the Theotokos appeared to the Elder and told him to allow John to compose hymns and poems, which, she told, him, would surpass the Psalms of David in beauty and grace.</p>\n<p>Thus the monk John began to write the large body of inspired hymns which grace the Church\u2019s services. Among these are the Canon chanted at the Pascha Service, as well as most of the Resurrectional hymns of the <i>Octoechos.</i></p>\n<p>Saint John\u2019s poetical gifts were matched by his gifts for expressing the Church\u2019s theology: he composed a powerful defense of the icons (in print under the title <i>On the Holy Images</i>), a complete exposition of the Orthodox Faith <i>(On the Orthodox Faith),</i> and the first written refutation of Islam, which he had come to understand well while serving in the Caliph\u2019s court.</p>\n<p>In old age, John was ordained a priest by the Patriarch of Jerusalem. He reposed in peace in 760 at the age of eighty-four.</p>"
-      },
-      {
-        "title": "Saint Gennadius, Archbishop of Novgorod (1505)",
-        "html": "<p>He was of noble birth, but entered monastic life at Valaam. He lived as a hermit on the island of Solovki from 1430 until 1447, when he was appointed abbot of the Chudov Monastery in Moscow. In 1484 he became Bishop of Novgorod. He found that the Tatar invasions had so disrupted the Church that a complete text of the Holy Scriptures could hardly be found in all of Russia. He ordered and oversaw the publication of the first printed Slavonic edition of the Holy Scriptures, set up schools for the instruction of the clergy, re-established order in the divine services, and fought various heresies. His devotion earned him enemies, and he resigned his episcopate to withdraw once again to a monastery. He reposed in peace in 1505.</p>"
-      }
-    ],
+    "summary_title": "Barbara the Great Martyr, John the Righteous of Damascus, New Hieromartyr Seraphim, Bishop of the Phanar in Greece, Juliana the Martyr of Heliopolis, Alexander Hotovitzky, New Hieromartyr of Russia, Missionary to America",
+    "stories": [],
     "fasting": {
-      "description": "Nativity Fast",
+      "description": "Abstain From Meat, Fish, Dairy, Eggs",
       "abstentions": [
         "meat",
         "fish",
@@ -38,28 +29,12 @@
     },
     "readings": [
       {
-        "display": "2 Timothy 1.1-2, 8-18",
-        "text": "Paul, an apostle of Jesus Christ by the will of God, according to the promise of life which is in Christ Jesus, To Timothy, my dearly beloved son: Grace, mercy, and peace, from God the Father and Christ Jesus our Lord. Be not thou therefore ashamed of the testimony of our Lord, nor of me his prisoner: but be thou partaker of the afflictions of the gospel according to the power of God; Who hath saved us, and called us with an holy calling, not according to our works, but according to his own purpose and grace, which was given us in Christ Jesus before the world began, But is now made manifest by the appearing of our Saviour Jesus Christ, who hath abolished death, and hath brought life and immortality to light through the gospel: Whereunto I am appointed a preacher, and an apostle, and a teacher of the Gentiles. For the which cause I also suffer these things: nevertheless I am not ashamed: for I know whom I have believed, and am persuaded that he is able to keep that which I have committed unto him against that day. Hold fast the form of sound words, which thou hast heard of me, in faith and love which is in Christ Jesus. That good thing which was committed unto thee keep by the Holy Ghost which dwelleth in us. This thou knowest, that all they which are in Asia be turned away from me; of whom are Phygellus and Hermogenes. The Lord give mercy unto the house of Onesiphorus; for he oft refreshed me, and was not ashamed of my chain: But, when he was in Rome, he sought me out very diligently, and found me. The Lord grant unto him that he may find mercy of the Lord in that day: and in how many things he ministered unto me at Ephesus, thou knowest very well."
+        "display": "St. Paul's Letter to the Galatians 3:23-29; 4:1-5",
+        "text": "Brethren, before faith came, we were confined under the law, kept under restraint until faith should be revealed. So that the law was our custodian until Christ came, that we might be justified by faith. But now that faith has come, we are no longer under a custodian; for in Christ Jesus you are all sons of God, through faith. For as many of you as were baptized into Christ have put on Christ. There is neither Jew nor Greek, there is neither slave nor free, there is neither male nor female; for you are all one in Christ Jesus. And if you are Christ's, then you are Abraham's offspring, heirs according to promise. I mean that the heir, as long as he is a child, is no better than a slave, though he is the owner of all the estate; but he is under guardians and trustees until the date set by the father. So with us; when we were children, we were slaves to the elemental spirits of the universe. But when the time had fully come, God sent forth his Son, born of a woman, born under the law, to redeem those who were under the law, so that we might receive adoption as sons."
       },
       {
-        "display": "Hebrews 13.7-16",
-        "text": "Remember them which have the rule over you, who have spoken unto you the word of God: whose faith follow, considering the end of their conversation. Jesus Christ the same yesterday, and to day, and for ever. Be not carried about with divers and strange doctrines. For it is a good thing that the heart be established with grace; not with meats, which have not profited them that have been occupied therein. We have an altar, whereof they have no right to eat which serve the tabernacle. For the bodies of those beasts, whose blood is brought into the sanctuary by the high priest for sin, are burned without the camp. Wherefore Jesus also, that he might sanctify the people with his own blood, suffered without the gate. Let us go forth therefore unto him without the camp, bearing his reproach. For here have we no continuing city, but we seek one to come. By him therefore let us offer the sacrifice of praise to God continually, that is, the fruit of our lips giving thanks to his name. But to do good and to communicate forget not: for with such sacrifices God is well pleased."
-      },
-      {
-        "display": "Galatians 3.23-4.5",
-        "text": "But before faith came, we were kept under the law, shut up unto the faith which should afterwards be revealed. Wherefore the law was our schoolmaster to bring us unto Christ, that we might be justified by faith. But after that faith is come, we are no longer under a schoolmaster. For ye are all the children of God by faith in Christ Jesus. For as many of you as have been baptized into Christ have put on Christ. There is neither Jew nor Greek, there is neither bond nor free, there is neither male nor female: for ye are all one in Christ Jesus. And if ye be Christ\u2019s, then are ye Abraham\u2019s seed, and heirs according to the promise. Now I say, That the heir, as long as he is a child, differeth nothing from a servant, though he be lord of all; But is under tutors and governors until the time appointed of the father. Even so we, when we were children, were in bondage under the elements of the world: But when the fulness of the time was come, God sent forth his Son, made of a woman, made under the law, To redeem them that were under the law, that we might receive the adoption of sons."
-      },
-      {
-        "display": "Luke 20.19-26",
-        "text": "And the chief priests and the scribes the same hour sought to lay hands on him; and they feared the people: for they perceived that he had spoken this parable against them. And they watched him, and sent forth spies, which should feign themselves just men, that they might take hold of his words, that so they might deliver him unto the power and authority of the governor. And they asked him, saying, Master, we know that thou sayest and teachest rightly, neither acceptest thou the person of any, but teachest the way of God truly: Is it lawful for us to give tribute unto C\u00e6sar, or no? But he perceived their craftiness, and said unto them, Why tempt ye me? Shew me a penny. Whose image and superscription hath it? They answered and said, C\u00e6sar\u2019s. And he said unto them, Render therefore unto C\u00e6sar the things which be C\u00e6sar\u2019s, and unto God the things which be God\u2019s. And they could not take hold of his words before the people: and they marvelled at his answer, and held their peace."
-      },
-      {
-        "display": "Luke 12.32-40",
-        "text": "Fear not, little flock; for it is your Father\u2019s good pleasure to give you the kingdom. Sell that ye have, and give alms; provide yourselves bags which wax not old, a treasure in the heavens that faileth not, where no thief approacheth, neither moth corrupteth. For where your treasure is, there will your heart be also. Let your loins be girded about, and your lights burning; And ye yourselves like unto men that wait for their lord, when he will return from the wedding; that when he cometh and knocketh, they may open unto him immediately. Blessed are those servants, whom the lord when he cometh shall find watching: verily I say unto you, that he shall gird himself, and make them to sit down to meat, and will come forth and serve them. And if he shall come in the second watch, or come in the third watch, and find them so, blessed are those servants. And this know, that if the goodman of the house had known what hour the thief would come, he would have watched, and not have suffered his house to be broken through. Be ye therefore ready also: for the Son of man cometh at an hour when ye think not."
-      },
-      {
-        "display": "Mark 5.24-34",
-        "text": "And Jesus went with him; and much people followed him, and thronged him. And a certain woman, which had an issue of blood twelve years, And had suffered many things of many physicians, and had spent all that she had, and was nothing bettered, but rather grew worse, When she had heard of Jesus, came in the press behind, and touched his garment. For she said, If I may touch but his clothes, I shall be whole. And straightway the fountain of her blood was dried up; and she felt in her body that she was healed of that plague. And Jesus, immediately knowing in himself that virtue had gone out of him, turned him about in the press, and said, Who touched my clothes? And his disciples said unto him, Thou seest the multitude thronging thee, and sayest thou, Who touched me? And he looked round about to see her that had done this thing. But the woman fearing and trembling, knowing what was done in her, came and fell down before him, and told him all the truth. And he said unto her, Daughter, thy faith hath made thee whole; go in peace, and be whole of thy plague."
+        "display": "Mark 5:24-34",
+        "text": "At that time, a great crowd followed Jesus and thronged about him. And there was a woman who had had a flow of blood for twelve years, and who had suffered much under many physicians, and had spent all that she had, and was no better but rather grew worse. She had heard the reports about Jesus, and came up behind him in the crowd and touched his garment. For she said, \"If I touch even his garments, I shall be made well.\" And immediately the hemorrhage ceased; and she felt in her body that she was healed of her disease. And Jesus, perceiving in himself that power had gone forth from him, immediately turned about in the crowd, and said, \"Who touched my garments?\" And his disciples said to him, \"You see the crowd pressing around you, and yet you say, 'Who touched me?'\" And he looked around to see who had done it. But the woman, knowing what had been done to her, came in fear and trembling and fell down before him, and told him the whole truth. And he said to her, \"Daughter, your faith has made you well; go in peace, and be healed of your disease.\""
       }
     ],
     "service_texts": [],
@@ -67,7 +42,7 @@
     "great_feast": null,
     "newadvent": [
       {
-        "commemoration": "Holy Great Martyr Barbara",
+        "commemoration": "Barbara the Great Martyr",
         "title": "St. Barbara",
         "url": "https://www.newadvent.org/cathen/02284d.htm",
         "excerpt": "Virgin and Martyr. There is no reference to St. Barbara contained in the authentic early historical authorities for Christian antiquity, neither does her name appear in the original recension of St. Jerome's martyrology. Veneration of the saint was common, however, from the seventh century.",

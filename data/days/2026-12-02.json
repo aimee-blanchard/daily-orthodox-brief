@@ -2,60 +2,39 @@
   "date": "2026-12-02",
   "liturgical": {
     "status": "ok",
-    "source": "orthocal",
-    "feasts": null,
+    "source": "antiochian",
+    "feasts": [
+      "Wednesday of the 11Th Week"
+    ],
     "saints": [
-      "Holy Prophet Habbakuk (Abbacum) (7th c. BC).",
+      "Habakkuk the Prophet",
       "Our Righteous Father Cyril of Phileus",
+      "Myrope the Martyr of Chios",
+      "Porphyrios of Kavsokalyvia",
       "Joannicos the Monk of Devich",
-      "Theophilos the Hermit",
-      "Holy Martyr Myrope (Myropea) of Chios (251)",
-      "Our Holy Father Athanasius \"the Resurrected,\" Recluse of the Kiev Caves (1176)",
-      "Saint (Stephen) Uro\u0161, King of Serbia (1367)",
-      "Saint Porphyrios of Kavsokalyvia (1991) (Nov. 19 OC)"
+      "Theophilos the Hermit"
     ],
-    "summary_title": "Holy Prophet Habbakuk (Abbacum) (7th c. BC).; Holy Martyr Myrope (Myropea) of Chios (251); Our Holy Father Athanasius \"the Resurrected,\" Recluse of the Kiev Caves (1176)",
-    "stories": [
-      {
-        "title": "Holy Prophet Habbakuk (Abbacum) (7th c. BC).",
-        "html": "<p>He prophesied in the time of Joachim, just before the Jewish people were taken into captivity in Babylon. He himself escaped captivity, and after Jerusalem was destroyed, returned to his homeland. Once he was taking some food to his harvesters when an Angel transported him to Babylon to feed the Prophet Daniel in the lions\u2019 den, then bore him back to Judea (this is told in the full version of the book of Daniel, ch. 6 LXX). The third chapter of his prophecy is used as the Fourth Ode of the Matins Canon(the Ode is usually sung in full only in monasteries during Lent, but the eirmos of the Fourth Ode, sung in many parishes, usually refers to the Prophet). His holy relics were found through a revelation in Palestine during the reign of Theodosius the Great, and a chapel built there. His name means \u201cFather of the Resurrection.\u201d</p>"
-      },
-      {
-        "title": "Holy Martyr Myrope (Myropea) of Chios (251)",
-        "html": "<p>She was born in Ephesus. At baptism, she was consecrated by her mother to serve at the shrine of St Hermione, one of the four daughters of the Apostle Philip. Many pilgrims came to be anointed with a miracle-working myrrh that flowed from St Hermione\u2019s body \u2014 and from her service at the shrine Myrope received the name by which she is known. Later, she and her mother went to the island of Chios to flee the persecution of the Emperor Decius.</p>\n<p>When the holy martyr Isidore (May 14) was beheaded, Myrope secretly recovered his body and gave it honorable burial. The governor Numerius was furious, and ordered his soldiers to find the body or themselves be beheaded. Unable to let innocent people suffer for her act, Myrope presented herself to the governor and told him where she had buried the body. At Numerius\u2019 order, the holy girl was tortured and thrown in prison. There a heavenly light illuminated her cell and St Isidore himself appeared to her with a company of angels, saying \u2018Peace to thee, Myrope: thy prayer has ascended to God, and thou shalt soon be with us and receive the crown prepared for thee.\u2019 Myrope, filled with joy, gave up her soul to God at that moment. One of the guards who had witnessed these events believed in Christ, and not long afterward was baptized and received a martyr\u2019s death.</p>"
-      },
-      {
-        "title": "Our Holy Father Athanasius \"the Resurrected,\" Recluse of the Kiev Caves (1176)",
-        "html": "<p>After many years of ascetic struggle, Athanasius died and was prepared for burial. After lying dead for two full days, he inexplicably came back to life: the monks who came to bury him were astonished to find him sitting up and weeping. The brethren gathered around him and asked him many questions about what he had seen of the next world, but he would only answer \u2018Save yourselves!\u2019 When they pressed him further, he said \u2018If I told you, you would not believe me or want to listen to me.\u2019 His final reply was \u2018Repent every moment, and pray to the Lord Jesus Christ and to His most pure Mother.\u2019 He then shut himself in his cell and lived another twelve years, taking only bread and water and never speaking again to anyone.</p>"
-      },
-      {
-        "title": "Saint (Stephen) Uro\u0161, King of Serbia (1367)",
-        "html": "<p>\u201cThe son of King Du\u0161an, he ruled during the difficult time of the fall of the Kindom of Serbia. Humble, pious and gentle, he refused to attempt to restrain the power of the powerful nobles by force. Amongst these was Vuka\u0161in, who brought about his death. Good King Uro\u0161 suffered a martyr\u2019s death on December 2nd, 1367, at the age of thirty-one. Killed by men, he was glorified by God. His wonderworking relics were preserved in the monastery of Jazak in the Fru\u0161ka Gora, whence they were taken to Belgrade in 1942, during the Second World War, and placed in the Cathedral beside the bodies of Prince Lazar and Despot Stephen \u0160tiljanovic. During the reign of this benevolent king, the monastery of St Nahum was built beside Lake Ochrid by one of Uro\u0161\u2019s nobles, Grgur.\u201d (<i>Prologue</i>)</p>"
-      },
-      {
-        "title": "Saint Porphyrios of Kavsokalyvia (1991) (Nov. 19 OC)",
-        "html": "<p>One of the true God-bearing Elders of our own time, he was glorified by the Church in 2013.</p>"
-      }
-    ],
+    "summary_title": "Habakkuk the Prophet, Our Righteous Father Cyril of Phileus, Myrope the Martyr of Chios, Porphyrios of Kavsokalyvia, Joannicos the Monk of Devich, Theophilos the Hermit",
+    "stories": [],
     "fasting": {
-      "description": "Nativity Fast",
+      "description": "Abstain From Meat, Fish, Dairy, Eggs, Wine, Olive Oil",
       "abstentions": [
         "meat",
         "fish",
         "dairy",
         "eggs",
         "wine",
-        "oil"
+        "olive oil"
       ]
     },
     "readings": [
       {
-        "display": "1 Timothy 5.22-6.11",
-        "text": "Lay hands suddenly on no man, neither be partaker of other men\u2019s sins: keep thyself pure. Drink no longer water, but use a little wine for thy stomach\u2019s sake and thine often infirmities. Some men\u2019s sins are open beforehand, going before to judgment; and some men they follow after. Likewise also the good works of some are manifest beforehand; and they that are otherwise cannot be hid. Let as many servants as are under the yoke count their own masters worthy of all honour, that the name of God and his doctrine be not blasphemed. And they that have believing masters, let them not despise them, because they are brethren; but rather do them service, because they are faithful and beloved, partakers of the benefit. These things teach and exhort. If any man teach otherwise, and consent not to wholesome words, even the words of our Lord Jesus Christ, and to the doctrine which is according to godliness; He is proud, knowing nothing, but doting about questions and strifes of words, whereof cometh envy, strife, railings, evil surmisings, Perverse disputings of men of corrupt minds, and destitute of the truth, supposing that gain is godliness: from such withdraw thyself. But godliness with contentment is great gain. For we brought nothing into this world, and it is certain we can carry nothing out. And having food and raiment let us be therewith content. But they that will be rich fall into temptation and a snare, and into many foolish and hurtful lusts, which drown men in destruction and perdition. For the love of money is the root of all evil: which while some coveted after, they have erred from the faith, and pierced themselves through with many sorrows. But thou, O man of God, flee these things; and follow after righteousness, godliness, faith, love, patience, meekness."
+        "display": "St. Paul's First Letter to Timothy 5:22-25; 6:1-11",
+        "text": "Timothy, my son, do not be hasty in the laying on of hands, nor participate in another man's sins; keep yourself pure. No longer drink only water, but use a little wine for the sake of your stomach and your frequent ailments. The sins of some men are conspicuous, pointing to judgment, but the sins of others appear later. So also good deeds are conspicuous; and even when they are not, they cannot remain hidden. Let all who are under the yoke of slavery regard their masters as worthy of all honor, so that the name of God and the teaching may not be defamed. Those who have believing masters must not be disrespectful on the ground that they are brethren; rather they must serve all the better since those who benefit by their service are believers and beloved. Teach and urge these duties. If any one teaches otherwise and does not agree with the sound words of our Lord Jesus Christ and the teaching which accords with godliness, he is puffed up with conceit, he knows nothing; he has a morbid craving for controversy and for disputes about words, which produce envy, dissension, slander, base suspicions, and wrangling among men who are depraved in mind and bereft of the truth, imagining that godliness is a means of gain. There is great gain in godliness with contentment; for we brought nothing into the world, and we cannot take anything out of the world; but if we have food and clothing, with these we shall be content. But those who desire to be rich fall into temptation, into a snare, into many senseless and hurtful desires that plunge men into ruin and destruction. For the love of money is the root of all evils; it is through this craving that some have wandered away from the faith and pierced their hearts with many pangs. But as for you, man of God, shun all this."
       },
       {
-        "display": "Luke 20.1-8",
-        "text": "And it came to pass, that on one of those days, as he taught the people in the temple, and preached the gospel, the chief priests and the scribes came upon him with the elders, And spake unto him, saying, Tell us, by what authority doest thou these things? or who is he that gave thee this authority? And he answered and said unto them, I will also ask you one thing; and answer me: The baptism of John, was it from heaven, or of men? And they reasoned with themselves, saying, If we shall say, From heaven; he will say, Why then believed ye him not? But and if we say, Of men; all the people will stone us: for they be persuaded that John was a prophet. And they answered, that they could not tell whence it was. And Jesus said unto them, Neither tell I you by what authority I do these things."
+        "display": "Luke 20:1-8",
+        "text": "At that time, as Jesus was teaching the people in the temple and preaching the gospel, the chief priests and the scribes with the elders came up and said to Him, 'Tell us by what authority you do these things, or who it is that gave you this authority.' He answered them, 'I also will ask you a question; now tell me, was the baptism of John from heaven or from men?' And they discussed it with one another, saying, 'If we say, 'From heaven, ' he will say, 'Why did you not believe him?' But if we say, 'From men, ' all the people will stone us; for they are convinced that John was a prophet.' So they answered that they did not know whence it was. And Jesus said to them, 'Neither will I tell you by what authority I do these things.'"
       }
     ],
     "service_texts": [],

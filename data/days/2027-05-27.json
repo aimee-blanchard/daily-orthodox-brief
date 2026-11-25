@@ -1,0 +1,38 @@
+{
+  "date": "2027-05-27",
+  "liturgical": {
+    "status": "ok",
+    "source": "antiochian",
+    "feasts": [
+      "4Th Thursday After Pascha"
+    ],
+    "saints": [
+      "The Holy Hieromartyr Helladius",
+      "John the Russian of Evia",
+      "Theodora the Virgin-Martyr & Didymos the Martyr",
+      "Venerable Bede"
+    ],
+    "summary_title": "The Holy Hieromartyr Helladius, John the Russian of Evia, Theodora the Virgin-Martyr & Didymos the Martyr, Venerable Bede",
+    "stories": [],
+    "fasting": null,
+    "readings": [
+      {
+        "display": "Acts of the Apostles 10:34-43",
+        "text": "In those days, Peter opened his mouth and said: \"Truly I perceive that God shows no partiality, but in every nation any one who fears him and does what is right is acceptable to him. You know the word which he sent to Israel, preaching good news of peace by Jesus Christ (he is Lord of all), the word which was proclaimed throughout all Judea, beginning from Galilee after the baptism which John preached: how God anointed Jesus of Nazareth with the Holy Spirit and with power; how he went about doing good and healing all that were oppressed by the devil, for God was with him. And we are witnesses to all that he did both in the country of the Jews and in Jerusalem. They put him to death by hanging him on a tree; but God raised him on the third day and made him manifest; not to all the people but to us who were chosen by God as witnesses, who ate and drank with him after he rose from the dead. And he commanded us to preach to the people, and to testify that he is the one ordained by God to be judge of the living and the dead. To him all the prophets bear witness that every one who believes in him receives forgiveness of sins through his name.\""
+      },
+      {
+        "display": "John 8:12-20",
+        "text": "Again Jesus spoke to them, saying, \"I am the light of the world; he who follows me will not walk in darkness, but will have the light of life.\" The Pharisees then said to him, \"You are bearing witness to yourself; your testimony is not true.\" Jesus answered, \"Even if I do bear witness to myself, my testimony is true, for I know whence I have come and whither I am going, but you do not know whence I come or whither I am going. You judge according to the flesh, I judge no one. Yet even if I do judge, my judgment is true, for it is not I alone that judge, but I and he who sent me. In your law it is written that the testimony of two men is true; I bear witness to myself, and the Father who sent me bears witness to me.\" They said to him therefore, \"Where is your Father?\" Jesus answered, \"You know neither me nor my Father; if you knew me, you would know my Father also.\" These words he spoke in the treasury, as he taught in the temple; but no one arrested him, because his hour had not yet come."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": {
+      "name": "Pascha",
+      "is_pascha": true
+    },
+    "newadvent": [],
+    "newadvent_version": 3
+  },
+  "events": []
+}

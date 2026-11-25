@@ -2,30 +2,24 @@
   "date": "2026-12-03",
   "liturgical": {
     "status": "ok",
-    "source": "orthocal",
-    "feasts": null,
+    "source": "antiochian",
+    "feasts": [
+      "Thursday of the 11Th Week"
+    ],
     "saints": [
-      "Prophet Zephaniah",
-      "Ven. Savva of Zvenigorod",
+      "The Holy Prophet Sophonias (Zephaniah)",
+      "Our Righteous Father John",
+      "Bishop and Hesychast",
       "Holy Martyrs Agapius and Seleucius",
-      "Theodore, Archbishop of Alexandria",
+      "Theodore",
+      "Archbishop of Alexandria",
       "Angelis the New Martyr",
-      "Karpos the Hieromartyr",
-      "Our Venerable Father John the Silent, Bishop of Colonia (558)"
+      "Karpos the Hieromartyr"
     ],
-    "summary_title": "Prophet Zephaniah; Ven. Savva of Zvenigorod; Our Venerable Father John the Silent, Bishop of Colonia (558)",
-    "stories": [
-      {
-        "title": "Prophet Zephaniah",
-        "html": "<p>He is ranked ninth among the Minor Prophets. He lived in Jerusalem in the reign of King Josiah (640-609), and according to some was the great-grandson of King Hezekiah. His name means \u201cThe Lord Protects\u201d or \u201cThe Lord\u2019s watch-post.\u201d</p>"
-      },
-      {
-        "title": "Our Venerable Father John the Silent, Bishop of Colonia (558)",
-        "html": "<p>He was born into a Christian family at Nikopolis in Armenia. When he was eighteen his parents died, and with twelve other young men he established a small monastery. After a few years, much against his will he was made Bishop of Colonia, but he continued to live the ascetic life of a monk. After nine years of service as bishop, discouraged by the worldliness and intrigue around him, he secretly left for Jerusalem to live as a monk. He was divinely guided to the monastery of St Sabas, who received him and, knowing nothing of his rank, assigned him a lowly place among the new monks. Saint John cheerfully undertook whatever task was given to him and served the other monks in humility and silence. After completing his novitiate he was given a cell where he lived in total silence, fasting five days a week. On Saturdays and Sundays he joined the brethren for prayer, Communion and meals; but even at these times the other monks were edified by his silence and unceasing compunction. Saint Sabas desired to make him a priest and took him to be ordained by the Patriarch of Jerusalem. Saint John asked the Patriarch for a private meeting and explained that he could not be ordained because he was already a bishop. The Patriarch returned St John to St Sabas, telling him only that it was impossible for him to ordain John, who should be allowed to live in silence and solitude. Saint Sabas was perplexed (thinking that some sin prevented the monk from being ordained), but soon received a revelation of John\u2019s true rank.</p>\n<p>After many years of reclusion, St John withdrew further to a cave in the desert for nine years. He became known as a divinely-enlightened counselor and a wonderworker, and cheerfully received all who came to him for guidance or prayer. In 509 he returned to the monastery, where he lived as an anchorite in his cell, communicating with the world only through one of his disciples. For many years he lived only on thin porridge, into which he would mix ashes. One day a disciple saw him pouring ashes into his food, and John abandoned the practice, not wanting to be known for the practice of any virtue.</p>\n<p>Once he asked God for a sign revealing whether he would be granted to enter the Kingdom of Heaven. Taking a fig-seed, he placed it on a bare rock outside his cell. Without soil or water, the seed brought forth a plant, put forth leaves and flowers, and produced three figs, which St John shared with his disciples. The Saint then made ready for death. He reposed in peace, at the age of 104.</p>"
-      }
-    ],
+    "summary_title": "The Holy Prophet Sophonias (Zephaniah), Our Righteous Father John, Bishop and Hesychast, Holy Martyrs Agapius and Seleucius, Theodore, Archbishop of Alexandria, Angelis the New Martyr, Karpos the Hieromartyr",
+    "stories": [],
     "fasting": {
-      "description": "Nativity Fast",
+      "description": "Abstain From Meat, Dairy, Eggs",
       "abstentions": [
         "meat",
         "dairy",
@@ -34,26 +28,18 @@
     },
     "readings": [
       {
-        "display": "1 Timothy 6.17-21",
-        "text": "Charge them that are rich in this world, that they be not highminded, nor trust in uncertain riches, but in the living God, who giveth us richly all things to enjoy; That they do good, that they be rich in good works, ready to distribute, willing to communicate; Laying up in store for themselves a good foundation against the time to come, that they may lay hold on eternal life. O Timothy, keep that which is committed to thy trust, avoiding profane and vain babblings, and oppositions of science falsely so called: Which some professing have erred concerning the faith. Grace be with thee. Amen."
+        "display": "St. Paul's First Letter to Timothy 6:17-21",
+        "text": "Timothy, my son, charge the rich in this world not to be haughty, nor to set their hopes on uncertain riches but on God who richly furnishes us with everything to enjoy. They are to do good, to be rich in good deeds, liberal and generous, thus laying up for themselves a good foundation for the future, so that they may take hold of the life which is life indeed. O Timothy, guard what has been entrusted to you. Avoid the godless chatter and contradictions of what is falsely called knowledge, for by professing it some have missed the mark as regards the faith. Grace be with you. Amen."
       },
       {
-        "display": "Luke 20.9-18",
-        "text": "Then began he to speak to the people this parable; A certain man planted a vineyard, and let it forth to husbandmen, and went into a far country for a long time. And at the season he sent a servant to the husbandmen, that they should give him of the fruit of the vineyard: but the husbandmen beat him, and sent him away empty. And again he sent another servant: and they beat him also, and entreated him shamefully, and sent him away empty. And again he sent a third: and they wounded him also, and cast him out. Then said the lord of the vineyard, What shall I do? I will send my beloved son: it may be they will reverence him when they see him. But when the husbandmen saw him, they reasoned among themselves, saying, This is the heir: come, let us kill him, that the inheritance may be ours. So they cast him out of the vineyard, and killed him. What therefore shall the lord of the vineyard do unto them? He shall come and destroy these husbandmen, and shall give the vineyard to others. And when they heard it, they said, God forbid. And he beheld them, and said, What is this then that is written, The stone which the builders rejected, the same is become the head of the corner? Whosoever shall fall upon that stone shall be broken; but on whomsoever it shall fall, it will grind him to powder."
+        "display": "Luke 20:9-18",
+        "text": "The Lord said this parable: \"A man planted a vineyard, and let it out to tenants, and went into another country for a long while. When the time came, he sent a servant to the tenants, that they should give him some of the fruit of the vineyard; but the tenants beat him, and sent him away empty-handed. And he sent another servant; him also they beat and treated shamefully, and sent him away empty-handed. And he sent yet a third; this one they wounded and cast out. Then the owner of the vineyard said, 'What shall I do? I will send my beloved son; it may be they will respect him.' But when the tenants saw him, they said to themselves, 'This is the heir; let us kill him, that the inheritance may be ours.' And they cast him out of the vineyard and killed him. What then will the owner of the vineyard do to them? He will come and destroy those tenants, and give the vineyard to others.\" When they heard this, they said, \"God forbid!\" But he looked at them and said, \"What then is this that is written: 'The very stone which the builders rejected has become the head of the corner'? Every one who falls on that stone will be broken to pieces; but when it falls on any one it will crush him."
       }
     ],
     "service_texts": [],
     "synaxarion": null,
     "great_feast": null,
-    "newadvent": [
-      {
-        "commemoration": "Our Venerable Father John the Silent, Bishop of Colonia",
-        "title": "St. John the Silent",
-        "url": "https://www.newadvent.org/cathen/08495a.htm",
-        "excerpt": "(Hesychastes, Silentiarius). Bishop of Colonia, in Armenia, b. at Nicopolis, Armenia, 8 Jan., 452; d. 558. His parents, Encratius and Euphemia, wealthy and honoured, belonged to families that had done great service in the State and had given to it renowned generals and governors, but they were also good Christians, and gave their son a holy education.",
-        "more": "(Hesychastes, Silentiarius).\n\nBishop of Colonia, in Armenia, b. at Nicopolis, Armenia, 8 Jan., 452; d. 558. His parents, Encratius and Euphemia, wealthy and honoured, belonged to families that had done great service in the State and had given to it renowned generals and governors, but they were also good Christians, and gave their son a holy education. After their death in 471, John distributed his inheritance among his relatives, retaining only a small share, with which he built a church and a monastery. Here, with ten congenial companions, he began a life of mortification and self-denial, wonderful traits of which are recorded by his biographer. The Bishop of Sebaste drew him out of his solitude and made him Bishop of Colonia (Taxara) in 481, against which promotion John vainly struggled. In his new dignity he preserved the monastic spirit entire, and the austerities and exercises as far as was compatible with duty. His brother-in-law Pasinius oppressed the Church to such an extent that John had to call upon the Emperor Zeno for assistance. As soon as matters had been properly arranged, John left his see, went to the Laura, near Jerusalem, and placed himself under the obedience of St. Sabas, without revealing his identity. In course of time Sabas, who had subjected John to all kinds of trials and had found him ready to perform even the most common and menial labours, thought him worthy of receiving priesthood, and for this purpose sent him to Elias, the Patriarch of Jerusalem. John now revealed all, and Elias informed Sabas that John had confided to him things which forbade his ordination. Sabas at first felt very sad, but was comforted by a vision in which the true state of affairs was made known to him. John with the permission of his superior entered a hut built against the face of a rock in the desert, and here passed the remainder of his days in seclusion and perpetual silence, whence his surname. A contemporary, Cyril of Scythopolis, wrote his life. His feast is on 13 May."
-      }
-    ],
+    "newadvent": [],
     "newadvent_version": 3
   },
   "events": []

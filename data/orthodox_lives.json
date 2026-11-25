@@ -1,7 +1,6 @@
 {
  "version": 1,
  "days": {
-  "2026-05-25": [],
   "2026-05-26": [
    {
     "commemoration": "Augustine, Archbishop of Canterbury",
@@ -405,7 +404,7 @@
   ],
   "2026-12-04": [
    {
-    "commemoration": "Holy Great Martyr Barbara",
+    "commemoration": "Barbara the Great Martyr",
     "newadvent_url": "https://www.newadvent.org/cathen/02284d.htm",
     "title": "Greatmartyr Barbara and Martyr Juliana, at Heliopolis in Syria",
     "url": "https://www.oca.org/saints/lives/2026/12/04/103472-greatmartyr-barbara-and-martyr-juliana-at-heliopolis-in-syria",
@@ -428,7 +427,7 @@
   ],
   "2026-12-07": [
    {
-    "commemoration": "St Ambrose, Bishop of Milan",
+    "commemoration": "Ambrose, Bishop of Milan",
     "newadvent_url": "https://www.newadvent.org/cathen/01383c.htm",
     "title": "Saint Ambrose, Bishop of Milan",
     "url": "https://www.oca.org/saints/lives/2026/12/07/103485-saint-ambrose-bishop-of-milan",
@@ -806,6 +805,7 @@
    }
   ],
   "2027-05-25": [],
-  "2027-05-26": []
+  "2027-05-26": [],
+  "2027-05-27": []
  }
 }

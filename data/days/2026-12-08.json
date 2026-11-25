@@ -2,27 +2,27 @@
   "date": "2026-12-08",
   "liturgical": {
     "status": "ok",
-    "source": "orthocal",
+    "source": "antiochian",
     "feasts": [
-      "Forefeast of the Conception by St Anna of the Theotokos"
+      "Tuesday of the 12Th Week"
     ],
     "saints": [
-      "Ven. Patapius of Thebes",
-      "Holy Apostles Sosthenes, Apollos, Tychicus and Epaphroditus, Cephas and Caesar"
+      "Forefeast of the Conception by St. Anna of the Most Holy Theotokos",
+      "Patapius the Righteous of Thebes",
+      "Sosthenes",
+      "Apollo",
+      "Cephas",
+      "Tychikos",
+      "Epaphroditos",
+      "Caesar",
+      "& Onesiphoros",
+      "Apostles of the 70",
+      "Parthenios the Venerable of Chios"
     ],
-    "summary_title": "Forefeast of the Conception by St Anna of the Theotokos",
-    "stories": [
-      {
-        "title": "Ven. Patapius of Thebes",
-        "html": "<p>He was born at Thebes in Egypt, and at a young age left his pious parents, his inheritance and his acquaintances to dwell in the Egyptian desert, devoting himself to ceaseless prayer. After many years, he reputation spread and, despite his desire for solitude, throngs of pilgrims would seek him out for his prayers and counsel. To escape the attentions of men, he did a surprising thing: he abandoned the desert and moved to Constantinople, settling in the Blachernae district, where, amid the bustle of the city, he was able to pass unnoticed, more secure in his solitude than he had been in the caves of Egypt.</p>\n<p>As he grew in obedience to the commandments of Christ, the grace of working miracles grew in him, and once again he gradually became known. Once a blind man cast himself before Patapius on the street, and the Saint cured him instantly by calling on the name of Christ. Once he healed a man crippled by dropsy, anointing him with the oil from a vigil lamp and signing him with the Cross.</p>\n<p>After blessing the Church for many years with his prayers and miracles, St Patapius fell asleep in peace, and was buried in the church of the Monastery of the Egyptians near Constantinople. In 1904 his precious and incorrupt relics were uncovered in the course of some building at a small monastery near Corinth. From that time the monastery has been dedicated to St Patapius, and many miracles are worked there.</p>"
-      },
-      {
-        "title": "Holy Apostles Sosthenes, Apollos, Tychicus and Epaphroditus, Cephas and Caesar",
-        "html": "<p>All of these Apostles are mentioned in the New Testament. Sosthenes was the ruler of the Synagogue in Corinth, and was converted through the preaching of St Paul. After traveling with St Paul for years, he became Bishop of Colophon near Ephesus. Apollos was a Jew from Alexandria, well educated and with a deep knowledge of the Scriptures. He was brought to the fulness of the Christian faith by Priscilla and Aquila in Ephesus, and went out preaching the Gospel among the pagans. His eloquence was so admired that for awhile the gentile Church divided into two factions, one for Paul and one for Apollos. Saint Apollos later became Bishop of Caesarea.</p>\n<p>(The Synaxarion lists Cephas and Caesar here; but some believe that St Paul\u2019s reference to Cephas in 1 Cor 1:12 refers to the Apostle Peter, not to a separate companion of St Paul; and that \u201cthose of Caesar\u2019s household\u201d (Phil. 4:22) refers to Christians in the Emperor\u2019s palace in Rome, not to a Christian named Caesar.)</p>"
-      }
-    ],
+    "summary_title": "Forefeast of the Conception by St. Anna of the Most Holy Theotokos, Patapius the Righteous of Thebes, Sosthenes, Apollo, Cephas, Tychikos, Epaphroditos, Caesar, & Onesiphoros, Apostles of the 70, Parthenios the Venerable of Chios",
+    "stories": [],
     "fasting": {
-      "description": "Nativity Fast",
+      "description": "Abstain From Meat, Dairy, Eggs",
       "abstentions": [
         "meat",
         "dairy",
@@ -31,12 +31,12 @@
     },
     "readings": [
       {
-        "display": "2 Timothy 3.16-4.4",
-        "text": "All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness: That the man of God may be perfect, throughly furnished unto all good works. I charge thee therefore before God, and the Lord Jesus Christ, who shall judge the quick and the dead at his appearing and his kingdom; Preach the word; be instant in season, out of season; reprove, rebuke, exhort with all longsuffering and doctrine. For the time will come when they will not endure sound doctrine; but after their own lusts shall they heap to themselves teachers, having itching ears; And they shall turn away their ears from the truth, and shall be turned unto fables."
+        "display": "St. Paul's Second Letter to Timothy 3:16-17; 4:1-4",
+        "text": "Timothy, my son, all scripture is inspired by God and profitable for teaching, for reproof, for correction, and for training in righteousness, that the man of God may be complete, equipped for every good work. I charge you in the presence of God and of Christ Jesus who is to judge the living and the dead, and by his appearing and his kingdom: preach the word, be urgent in season and out of season, convince, rebuke, and exhort, be unfailing in patience and in teaching. For the time is coming when people will not endure sound teaching, but having itching ears they will accumulate for themselves teachers to suit their own likings, and will turn away from listening to the truth and wander into myths."
       },
       {
-        "display": "Luke 21.12-19",
-        "text": "But before all these, they shall lay their hands on you, and persecute you, delivering you up to the synagogues, and into prisons, being brought before kings and rulers for my name\u2019s sake. And it shall turn to you for a testimony. Settle it therefore in your hearts, not to meditate before what ye shall answer: For I will give you a mouth and wisdom, which all your adversaries shall not be able to gainsay nor resist. And ye shall be betrayed both by parents, and brethren, and kinsfolks, and friends; and some of you shall they cause to be put to death. And ye shall be hated of all men for my name\u2019s sake. But there shall not an hair of your head perish. In your patience possess ye your souls."
+        "display": "Luke 21:12-19",
+        "text": "The Lord said to his disciples, \"Beware of men who will lay their hands on you and persecute you, delivering you up to the synagogues and prisons, and you will be brought before kings and governors for my name's sake. This will be a time for you to bear testimony. Settle it therefore in your minds, not to meditate beforehand how to answer; for I will give you a mouth and wisdom, which none of your adversaries will be able to withstand or contradict. You will be delivered up even by parents and brothers and kinsmen and friends, and some of you they will put to death; you will be hated by all for my name's sake. But not a hair of your head will perish. By your endurance you will gain your lives."
       }
     ],
     "service_texts": [],
