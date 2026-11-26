@@ -793,7 +793,8 @@
   /* Where a text comes from (Antiochian, OCA, New Advent). */
   .src-label { display: block; font-family: var(--sans); font-size: 0.75rem; color: var(--ink-faint); margin: 0.1rem 0 0.35rem; }
   .src-label a { color: var(--accent); }
-  .synaxarion-panel .src-label { margin-top: 0.6rem; }
+  .synaxarion-panel .src-label { margin: 0 0 0.45rem; }
+  .na-bio .src-label { margin: 0 0 0.15rem; }
   .src-na { color: #c9b28f; }
   .saint-life { margin-bottom: 1.1rem; }
   .saint-life + .saint-life { padding-top: 0.9rem; border-top: 1px solid var(--rule); }

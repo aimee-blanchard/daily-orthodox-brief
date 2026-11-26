@@ -179,7 +179,7 @@ Where the OCA has a life of the same saint, the saints page shows it **first**,
 labeled "Source: Orthodox Church in America (Lives of the Saints, oca.org)", and
 the New Advent article second under "Also in the Catholic Encyclopedia".
 On Antiochian synaxarion days the day's Orthros synaxarion still comes first,
-labeled "Source: Antiochian Archdiocese".
+labeled "Source: Antiochian Archdiocese". Every source label sits at the top of its text (above the synaxarion, above each life's title), not the bottom (Aimee, Nov 2026).
 `OCALives` in `fetch.py` reads oca.org/saints/lives/YYYY/MM/DD (OCA is
 New Calendar, same dates as ours) and matches only saints that already have a
 New Advent bio: the given name must be in the OCA name, the distinguishing

@@ -144,10 +144,12 @@
     if (!lit || !lit.saints || !lit.saints.length) return "";
     var summary = lit.summary_title ? '<p class="summary-title">' + esc(lit.summary_title) + "</p>" : "";
     var synaxarion = lit.synaxarion
-      ? '<div class="synaxarion-panel"><div class="service-text-body">' + esc(lit.synaxarion) + "</div>" +
+      ? '<div class="synaxarion-panel">' +
+        // Each text's source sits at its top (Aimee, Nov 2026).
         (lit.source === "antiochian"
           ? '<p class="src-label">Source: <a href="https://www.antiochian.org/liturgicday" target="_blank" rel="noopener">Antiochian Archdiocese</a> (Synaxarion from the day&rsquo;s Orthros text)</p>'
-          : "") + "</div>"
+          : "") +
+        '<div class="service-text-body">' + esc(lit.synaxarion) + "</div></div>"
       : "";
     return renderCollapsible("synaxarion", "Synaxarion · Saints Commemorated", lit.summary_title || lit.saints.slice(0, 2).join(" · "),
       summary + synaxarion + renderNewAdvent(lit));
@@ -183,8 +185,8 @@
       : 'Source: <a href="' + esc(b.url) + '" target="_blank" rel="noopener">New Advent</a> (Catholic Encyclopedia, 1913)';
     return (
       '<details class="na-bio ' + (source === "oca" ? "bio-oca" : "bio-na") + '">' +
-      '<summary><span class="na-title">' + esc(b.title) + '</span>' +
-      '<span class="src-label src-' + source + '">' + label + "</span>" +
+      '<summary><span class="src-label src-' + source + '">' + label + "</span>" +
+      '<span class="na-title">' + esc(b.title) + '</span>' +
       '<span class="na-excerpt">' + esc(excerpt) + "</span>" +
       (more ? '<span class="na-more">Read more &#9662;</span>' : "") +
       "</summary>" +
