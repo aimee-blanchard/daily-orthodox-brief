@@ -1,0 +1,57 @@
+{
+  "date": "2027-05-29",
+  "liturgical": {
+    "status": "ok",
+    "source": "antiochian",
+    "feasts": [
+      "4Th Saturday After Pascha"
+    ],
+    "saints": [
+      "Theodosia the Virgin-Martyr of Tyre",
+      "Theodosia",
+      "Virgin-Martyr of Constantinople",
+      "Seven New Martyrs of Kastoria",
+      "Andrew the New Martyr of Argentes",
+      "John of Smyrna the New Martyr",
+      "Alexander",
+      "Patriarch of Alexandria"
+    ],
+    "summary_title": "Theodosia the Virgin-Martyr of Tyre, Theodosia, Virgin-Martyr of Constantinople, Seven New Martyrs of Kastoria, Andrew the New Martyr of Argentes, John of Smyrna the New Martyr, Alexander, Patriarch of Alexandria",
+    "stories": [],
+    "fasting": null,
+    "readings": [
+      {
+        "display": "Acts of the Apostles 12:1-11",
+        "text": "About that time, Herod the king laid violent hands upon some who belonged to the church. He killed James the brother of John with the sword; and when he saw that it pleased the Jews, he proceeded to arrest Peter also. This was during the days of Unleavened Bread. And when he had seized him, he put him in prison, and delivered him to four squads of soldiers to guard him, intending after the Passover to bring him out to the people. So Peter was kept in prison; but earnest prayer for him was made to God by the Church. The very night when Herod was about to bring him out, Peter was sleeping between two soldiers, bound with two chains, and sentries before the door were guarding the prison; and behold, an angel of the Lord appeared, and a light shone in the cell; and he struck Peter on the side and woke him, saying, \"Get up quickly.\" And the chains fell off his hands. And the angel said to him, \"Wrap your mantle around you and follow me.\" And he went out and followed him; he did not know that what was done by the angel was real, but thought he was seeing a vision. When they had passed the first and the second guard, they came to the iron gate leading into the city. It opened to them of its own accord, and they went out and passed on through one street; and immediately the angel left him. And Peter came to himself, and said, \"Now I am sure that the Lord has sent his angel and rescued me from the hand of Herod and from all that the Jewish people were expecting."
+      },
+      {
+        "display": "John 8:31-42",
+        "text": "The Lord said to the Jews who had believed in him, \"If you continue in my word, you are truly my disciples, and you will know the truth, and the truth will make you free.\" They answered him, \"We are descendants of Abraham, and have never been in bondage to any one. How is it that you say, 'You will be made free'? Jesus answered them, \"Truly, truly, I say to you, every one who commits sin is a slave to sin. The slave does not continue in the house for ever; the son continues for ever. So if the Son makes you free, you will be free indeed. I know that you are descendants of Abraham; yet you seek to kill me, because my word finds no place in you. I speak of what I have seen with my Father, and you do what you have heard from your father. They answered him, \"Abraham is our father.\" Jesus said to them, \"If you were Abraham's children, you would do what Abraham did, but now you seek to kill me, a man who has told you the truth which I heard from God; this is not what Abraham did. You do what your father did.\" They said to him, \"We were not born of fornication; we have one Father, even God.\" Jesus said to them, \"If God were your Father, you would love me, for I proceeded and came forth from God; I came not of my own accord, but he sent me."
+      }
+    ],
+    "service_texts": [],
+    "synaxarion": null,
+    "great_feast": {
+      "name": "Pascha",
+      "is_pascha": true
+    },
+    "newadvent": [
+      {
+        "commemoration": "Alexander, Patriarch of Alexandria",
+        "title": "St. Alexander",
+        "url": "https://www.newadvent.org/cathen/01296a.htm",
+        "excerpt": "Patriarch of Alexandria, date of birth uncertain; died 17 April, 326. He is, apart from his own greatness, prominent by the fact that his appointment to the patriarchial see excluded the heresiarch Arius from that post. Arius had begun to teach his heresies in 300 when Peter, by whom he was excommunicated, was Patriarch.",
+        "more": "Patriarch of Alexandria, date of birth uncertain; died 17 April, 326. He is, apart from his own greatness, prominent by the fact that his appointment to the patriarchial see excluded the heresiarch Arius from that post. Arius had begun to teach his heresies in 300 when Peter, by whom he was excommunicated, was Patriarch. He was reinstated by Achillas, the successor of Peter and then began to scheme to be made a bishop. When Achillas died Alexander was elected, and after that Arius threw off all disguise. Alexander was particularly obnoxious to him, although so tolerant at first of the errors of Arius that the clergy nearly revolted. Finally the heresy was condemned in a council held in Alexandria, and later on, as is well known, in the general Council of Nicaea, whose Acts Alexander is credited with having drawn up. An additional merit of this great man is that during his priesthood he passed through the bloody persecutions of Galerius, Maximinus, and others. It was while his predecessor Peter was in prison, waiting for martyrdom, that he and Achillas succeeded in reaching the pontiff, and interceded for the reinstatement of Arius, which Peter absolutely refused declaring that Arius was doomed to perdition. The refusal evidently had little effect, for when Achillas succeeded Peter, Arius was made a priest; and when in turn Alexander came to the see, the heretic was still tolerated. It is worth recording that the great Athanasius succeeded Alexander, the dying pontiff compelling the future doctor of the Church to accept the post. Alexander is described as \"a man held in the highest honour by the people and clergy, magnificent, liberal, eloquent, just, a lover of God and man, devoted to the poor, good and sweet to all, so mortified that he never broke his fast while the sun was in the heavens.\" His feast is kept on 17 April."
+      }
+    ],
+    "newadvent_version": 3
+  },
+  "events": [
+    {
+      "title": "Great Vespers",
+      "start": "2027-05-29 17:00:00",
+      "end": "2027-05-29 18:00:00",
+      "url": "https://www.constantinehelen.com/event/great-vespers/2027-05-29/"
+    }
+  ]
+}
